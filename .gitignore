@@ -1,2 +1,22 @@
+# Docs
 docs/*
-dapp/broadcast/*
+
+# Environment files (contain private keys!)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+**/node_modules/
+
+# Build artifacts
+frontend/.next/
+dapp/out/
+dapp/cache/
+dapp/broadcast/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
