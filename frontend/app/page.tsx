@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { CONTRACTS, TOKENS, SAFE_ABI, ERC20_ABI, GUARD_STORAGE_SLOT } from "@/lib/contracts";
+import { useTxToast } from "@/components/TxToaster";
+import { useWallet } from "@/components/WalletProvider";
 
 type QuotePreview = {
   outputAmount: string;
@@ -41,6 +43,7 @@ type AgentVerdictResult = {
   teeProof: { text: string; signature: string } | null;
   verified: boolean | null;
   chatId: string;
+  failed?: boolean;
 };
 
 type ReviewResult = {
@@ -258,7 +261,8 @@ function Collapsible({ label, children }: { label: string; children: React.React
 const STEP_LABELS = ["Configure", "Mr. Inference", "Execute"];
 
 export default function Home() {
-  const [wallet, setWallet] = useState<string | null>(null);
+  const txToast = useTxToast();
+  const { wallet, connectWallet: globalConnect } = useWallet();
   const [tokenOut, setTokenOut] = useState("USDC");
   const [amountIn, setAmountIn] = useState("0.1");
   const [review, setReview] = useState<ReviewResult | null>(null);
@@ -546,39 +550,7 @@ export default function Home() {
 
   async function connectWallet() {
     try {
-      if (!window.ethereum) {
-        setError("MetaMask not found");
-        return;
-      }
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const network = await provider.getNetwork();
-
-      if (Number(network.chainId) !== TARGET_CHAIN_ID) {
-        try {
-          await window.ethereum.request({
-            method: "wallet_switchEthereumChain",
-            params: [{ chainId: `0x${TARGET_CHAIN_ID.toString(16)}` }],
-          });
-        } catch (switchErr: unknown) {
-          // 4902 = chain not added yet — add it
-          if ((switchErr as { code?: number })?.code === 4902) {
-            await window.ethereum.request({
-              method: "wallet_addEthereumChain",
-              params: [{
-                chainId: `0x${TARGET_CHAIN_ID.toString(16)}`,
-                chainName: "Anvil Local Fork",
-                rpcUrls: ["http://127.0.0.1:8545"],
-                nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
-              }],
-            });
-          } else {
-            throw switchErr;
-          }
-        }
-      }
-
-      const signer = await provider.getSigner();
-      setWallet(await signer.getAddress());
+      await globalConnect();
       setError("");
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Failed to connect");
@@ -631,6 +603,11 @@ export default function Home() {
       }
 
       setReview(data);
+
+      // Toast chain transactions from the review
+      if (data.storageTxHash) {
+        txToast.push("Verdict stored on 0G", data.storageTxHash, "storage");
+      }
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Review failed");
     } finally {
@@ -658,6 +635,9 @@ export default function Home() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
       setApproveResult(data);
+      if (data.txHash) {
+        txToast.push("Guard approval on-chain", data.txHash);
+      }
       goNext();
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Approval failed");
@@ -733,6 +713,7 @@ export default function Home() {
 
       const receipt = await tx.wait();
       console.log("Tx mined:", receipt.hash, "| status:", receipt.status);
+      txToast.push("Swap executed via Safe", receipt.hash);
 
       // --- Balances AFTER ---
       const safeEthAfter = await provider.getBalance(safeAddress);
@@ -1333,8 +1314,14 @@ export default function Home() {
                           {agent.notes}
                         </p>
                         <div className="flex items-center gap-3 text-[10px] text-[var(--sub)] pt-1 border-t border-white/5">
-                          <span>TEE: {agent.verified ? "Verified" : "Pending"}</span>
-                          <span>Sig: {agent.teeProof ? "Yes" : "No"}</span>
+                          {agent.failed ? (
+                            <span className="text-[var(--orange)]">Inference failed</span>
+                          ) : (
+                            <>
+                              <span>TEE: {agent.teeProof ? "Proof received" : "No proof"}</span>
+                              <span>Sig: {agent.teeProof?.signature ? "Present" : "None"}</span>
+                            </>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -1352,9 +1339,9 @@ export default function Home() {
                     </div>
                     <div className="flex items-center gap-6 text-sm mt-3">
                       <div className="flex items-center gap-2">
-                        <span className="text-[var(--sub)]">TEE Verified:</span>
-                        <span className={review.verified ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
-                          {review.verified ? "Yes" : "Pending"}
+                        <span className="text-[var(--sub)]">TEE Proof:</span>
+                        <span className={review.teeProof ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
+                          {review.teeProof ? "Received (unverified)" : "None"}
                         </span>
                       </div>
                       <div className="flex items-center gap-2">

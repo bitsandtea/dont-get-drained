@@ -136,6 +136,9 @@ contract InferenceGuard is IGuard {
         // Allow the Safe to call setGuard (so guard can be removed in emergency)
         if (to == safe && _isSetGuard(data)) return;
 
+        // Allow the Safe to manage this guard's config (setPanel, setPolicy, etc.)
+        if (to == address(this)) return;
+
         bytes32 txHash = _hashTx(to, value, data, operation, safeTxGas, baseGas, gasPrice, gasToken, refundReceiver);
 
         Approval storage approval = approvals[txHash];

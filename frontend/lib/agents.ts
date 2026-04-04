@@ -24,6 +24,7 @@ export interface AgentVerdict {
   teeProof: { text: string; signature: string } | null;
   verified: boolean | null;
   chatId: string;
+  failed?: boolean; // true if inference errored (network/timeout) — distinct from a genuine rejection
 }
 
 export type AggregationPolicy = "unanimous" | "majority" | "anyReject";
@@ -34,15 +35,17 @@ export function aggregateVerdicts(
   verdicts: AgentVerdict[],
   policy: AggregationPolicy
 ): boolean {
-  if (verdicts.length === 0) return false;
-  const approvals = verdicts.filter((v) => v.verdict).length;
+  // Exclude failed agents — they couldn't produce a verdict
+  const effective = verdicts.filter((v) => !v.failed);
+  if (effective.length === 0) return false;
+  const approvals = effective.filter((v) => v.verdict).length;
   switch (policy) {
     case "unanimous":
-      return approvals === verdicts.length;
+      return approvals === effective.length;
     case "majority":
-      return approvals > verdicts.length / 2;
+      return approvals > effective.length / 2;
     case "anyReject":
-      return approvals === verdicts.length;
+      return approvals === effective.length;
     default:
       return false;
   }
@@ -150,6 +153,23 @@ export async function updateAgentPromptOnChain(
   const directory = getDirectoryContract(wallet);
 
   const tx = await directory.updatePrompt(agentId, newPromptCid);
+  const receipt = await tx.wait();
+  return receipt.hash;
+}
+
+/** Update an agent's price on-chain */
+export async function updateAgentPriceOnChain(
+  agentId: string,
+  newPrice: bigint
+): Promise<string> {
+  const key = process.env.OG_PRIVATE_KEY;
+  if (!key) throw new Error("OG_PRIVATE_KEY not set");
+
+  const provider = new ethers.JsonRpcProvider(OG_RPC);
+  const wallet = new ethers.Wallet(key, provider);
+  const directory = getDirectoryContract(wallet);
+
+  const tx = await directory.setPrice(agentId, newPrice);
   const receipt = await tx.wait();
   return receipt.hash;
 }

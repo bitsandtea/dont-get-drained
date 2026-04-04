@@ -60,7 +60,7 @@ contract DeployGuard is Script {
     address constant FALLBACK_HANDLER = 0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4;
 
     function run() external {
-        uint256 pk = vm.envUint("PKEY");
+        uint256 pk = vm.envUint("OG_DEPLOYER");
         address owner = vm.addr(pk);
 
         uint256 relayerPk = vm.envUint("RELAYER_PRIVATE_KEY");

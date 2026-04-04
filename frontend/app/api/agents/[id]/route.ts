@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAgent, updateAgentPromptOnChain } from "@/lib/agents";
+import { getAgent, updateAgentPromptOnChain, updateAgentPriceOnChain } from "@/lib/agents";
 import { fetchFrom0G, storeOn0G } from "@/lib/og-inference";
+import { ethers } from "ethers";
 
 // GET /api/agents/[id] — Get single agent details + prompt text
 export async function GET(
@@ -23,7 +24,7 @@ export async function GET(
 
     return NextResponse.json({
       ...agent,
-      pricePerInference: agent.pricePerInference.toString(),
+      pricePerInference: ethers.formatEther(agent.pricePerInference),
       promptTemplate,
     });
   } catch (error: unknown) {
@@ -56,10 +57,17 @@ export async function PUT(
     // 1. Store new prompt on 0G Storage
     const { rootHash: newPromptCid } = await storeOn0G({ promptTemplate });
 
-    // 2. Update on-chain
+    // 2. Update prompt on-chain
     const txHash = await updateAgentPromptOnChain(id, newPromptCid);
 
-    return NextResponse.json({ agentId: id, newPromptCid, txHash });
+    // 3. Update price on-chain if provided
+    const { pricePerInference } = body;
+    if (pricePerInference !== undefined) {
+      const priceWei = ethers.parseEther(String(pricePerInference));
+      await updateAgentPriceOnChain(id, priceWei);
+    }
+
+    return NextResponse.json({ agentId: id, promptCid: newPromptCid, txHash });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     if (message.includes("NotCreator")) {

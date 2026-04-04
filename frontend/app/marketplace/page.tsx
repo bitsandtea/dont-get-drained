@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useWallet } from "@/components/WalletProvider";
 
 type Agent = {
   id: string;
@@ -21,8 +23,24 @@ function abbreviate(addr: string) {
   return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
 }
 
-function AgentCard({ agent }: { agent: Agent }) {
-  const isFree = agent.pricePerInference === "0";
+function formatPrice(eth: string): string {
+  const n = parseFloat(eth);
+  if (n === 0) return "Free";
+  return `${n.toFixed(4)} ETH`;
+}
+
+function AgentCard({
+  agent,
+  onAdd,
+  wallet,
+}: {
+  agent: Agent;
+  onAdd: (id: string) => void;
+  wallet: string | null;
+}) {
+  const isFree = parseFloat(agent.pricePerInference) === 0;
+  const isOwner =
+    wallet && agent.creator && wallet.toLowerCase() === agent.creator.toLowerCase();
 
   return (
     <div className="card p-5 space-y-3 flex flex-col justify-between">
@@ -39,7 +57,7 @@ function AgentCard({ agent }: { agent: Agent }) {
                 : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
             }`}
           >
-            {isFree ? "Free" : `${agent.pricePerInference} wei`}
+            {formatPrice(agent.pricePerInference)}
           </span>
         </div>
         <p className="text-sm text-[var(--sub)] line-clamp-2 leading-relaxed">
@@ -67,23 +85,38 @@ function AgentCard({ agent }: { agent: Agent }) {
         <span className="font-mono">{abbreviate(agent.creator)}</span>
       </div>
 
-      {/* Action */}
-      <button
-        disabled
-        title="Connect wallet and set a guard to add agents"
-        className="btn btn-accent w-full py-2 text-sm"
-      >
-        Add to Panel
-      </button>
+      {/* Actions */}
+      <div className="flex gap-2">
+        <button
+          onClick={() => onAdd(agent.id)}
+          className="btn btn-accent flex-1 py-2 text-sm"
+        >
+          Add to Panel
+        </button>
+        {isOwner && (
+          <Link
+            href={`/agents/create?id=${encodeURIComponent(agent.id)}`}
+            className="btn btn-green px-4 py-2 text-sm text-center"
+          >
+            Edit
+          </Link>
+        )}
+      </div>
     </div>
   );
 }
 
 export default function MarketplacePage() {
+  const router = useRouter();
   const [agents, setAgents] = useState<Agent[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
+  const { wallet } = useWallet();
+
+  function addToPanel(agentId: string) {
+    router.push(`/guard?add=${encodeURIComponent(agentId)}`);
+  }
 
   useEffect(() => {
     fetch("/api/agents")
@@ -201,7 +234,7 @@ export default function MarketplacePage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((agent) => (
-                <AgentCard key={agent.id} agent={agent} />
+                <AgentCard key={agent.id} agent={agent} onAdd={addToPanel} wallet={wallet} />
               ))}
             </div>
           </>

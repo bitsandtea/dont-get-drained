@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { ethers } from "ethers";
 import { listAgents, registerAgentOnChain } from "@/lib/agents";
 import { storeOn0G } from "@/lib/og-inference";
 
@@ -8,7 +9,7 @@ export async function GET() {
     // Serialize bigint fields to string for JSON
     const serialized = agents.map((a) => ({
       ...a,
-      pricePerInference: a.pricePerInference.toString(),
+      pricePerInference: ethers.formatEther(a.pricePerInference),
     }));
     return NextResponse.json(serialized);
   } catch (e) {
@@ -42,7 +43,7 @@ export async function POST(req: NextRequest) {
       name,
       description: description || "",
       promptCid,
-      pricePerInference: BigInt(pricePerInference || 0),
+      pricePerInference: ethers.parseEther(String(pricePerInference || "0")),
       capabilities: capabilities || "",
     });
 

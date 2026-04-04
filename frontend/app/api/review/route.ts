@@ -1,11 +1,27 @@
 import { NextRequest, NextResponse } from "next/server";
 import { computeGuardTxHash } from "@/lib/guard";
-import { CONTRACTS, TOKENS, INFERENCE_GUARD_ABI, AGENT_DIRECTORY_ABI } from "@/lib/contracts";
+import { CONTRACTS, TOKENS, INFERENCE_GUARD_ABI, AGENT_DIRECTORY_ABI, OG_RPC } from "@/lib/contracts";
 import { runInference, storeOn0G, fetchFrom0G } from "@/lib/og-inference";
 import { getSwapQuote } from "@/lib/uniswap";
 import { getPromptTemplate, renderPrompt } from "@/lib/prompt-store";
 import { getAgent, AgentVerdict, aggregateVerdicts, policyFromUint8 } from "@/lib/agents";
 import { ethers } from "ethers";
+
+// Record inference usage for an agent on the AgentDirectory (fire-and-forget)
+async function recordInference(agentId: string): Promise<void> {
+  const key = process.env.OG_PRIVATE_KEY;
+  const directoryAddr = process.env.NEXT_PUBLIC_DIRECTORY_ADDRESS;
+  if (!key || !directoryAddr) return;
+
+  try {
+    const provider = new ethers.JsonRpcProvider(OG_RPC);
+    const wallet = new ethers.Wallet(key, provider);
+    const directory = new ethers.Contract(directoryAddr, AGENT_DIRECTORY_ABI, wallet);
+    await directory.recordInference(agentId);
+  } catch (e) {
+    console.warn(`[REVIEW] Failed to record inference for ${agentId}:`, e instanceof Error ? e.message : e);
+  }
+}
 
 // ETH native address for the Trading API
 const ETH_ADDRESS = "0x0000000000000000000000000000000000000000";
@@ -40,6 +56,13 @@ async function runAgentInference(
 
   // Render the prompt with transaction variables
   const prompt = renderPrompt(template, vars);
+
+  console.log(`[REVIEW] === AGENT ${agentId.slice(0, 10)}... PROMPT ===`);
+  console.log(`[REVIEW] Agent name: ${agent.name}`);
+  console.log(`[REVIEW] Prompt CID: ${agent.promptCid}`);
+  console.log(`[REVIEW] Raw template (first 500 chars): ${template.slice(0, 500)}`);
+  console.log(`[REVIEW] Rendered prompt:\n${prompt}`);
+  console.log(`[REVIEW] === END AGENT PROMPT ===`);
 
   // Run inference on 0G Compute
   const inference = await runInference(prompt);
@@ -198,7 +221,7 @@ export async function POST(req: NextRequest) {
         if (result.status === "fulfilled") {
           return result.value;
         }
-        // Failed agent → treat as rejection
+        // Failed agent → mark as failed, not as a genuine rejection
         return {
           agentId: panel[i],
           name: `Agent ${panel[i].slice(0, 10)}...`,
@@ -207,6 +230,7 @@ export async function POST(req: NextRequest) {
           teeProof: null,
           verified: null,
           chatId: "",
+          failed: true,
         };
       });
     } else {
@@ -217,16 +241,7 @@ export async function POST(req: NextRequest) {
       console.log(prompt);
       console.log("[REVIEW] === END PROMPT ===");
 
-      // Stub inference for dev (uncomment runInference for production)
-      // const inference = await runInference(prompt);
-      const inference = {
-        answer: '{"approved": 1, "notes": "stub — inference disabled for prompt refinement"}',
-        model: "stub",
-        provider: "stub",
-        chatId: "stub",
-        verified: false,
-        teeProof: { text: "", signature: "" },
-      };
+      const inference = await runInference(prompt);
 
       let verdict = true;
       let notes = inference.answer;
@@ -253,6 +268,12 @@ export async function POST(req: NextRequest) {
       }];
     }
 
+    // Record inference usage for successful agents (fire-and-forget, don't block response)
+    const successfulAgents = agents.filter((a) => !a.failed && a.agentId !== "default");
+    if (successfulAgents.length > 0) {
+      Promise.allSettled(successfulAgents.map((a) => recordInference(a.agentId))).catch(() => {});
+    }
+
     // Aggregate verdicts
     const finalVerdict = aggregateVerdicts(agents, policyName);
 
@@ -270,13 +291,13 @@ export async function POST(req: NextRequest) {
         notes: a.notes,
         verified: a.verified,
         chatId: a.chatId,
+        ...(a.failed ? { failed: true } : {}),
       })),
       policy: policyName,
       finalVerdict,
     };
 
-    // const storage = await storeOn0G(fullResult);
-    const storage = { rootHash: "0x" + "0".repeat(64), txHash: "0x" + "0".repeat(64) };
+    const storage = await storeOn0G(fullResult);
 
     return NextResponse.json({
       txHash: guardTxHash,

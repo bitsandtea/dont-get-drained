@@ -2,6 +2,9 @@ import { ethers } from "ethers";
 import { createZGComputeNetworkBroker } from "@0glabs/0g-serving-broker";
 import OpenAI from "openai";
 import { Indexer, MemData } from "@0gfoundation/0g-ts-sdk";
+import fs from "fs";
+import os from "os";
+import path from "path";
 
 const OG_RPC = "https://evmrpc-testnet.0g.ai";
 const STORAGE_INDEXER = "https://indexer-storage-testnet-turbo.0g.ai";
@@ -44,9 +47,19 @@ export async function runInference(prompt: string): Promise<InferenceResult> {
   }
 
   // Find chatbot
-  const services = await broker.inference.listService();
+  let services: any[];
+  try {
+    services = await broker.inference.listService();
+  } catch (e) {
+    throw new Error(
+      `No inference services available on 0G network — broker unreachable: ${e instanceof Error ? e.message : e}`
+    );
+  }
+  if (!services || services.length === 0) {
+    throw new Error("No inference services available on 0G network — service list is empty");
+  }
   const chatbot = services.find((s: any) => s.serviceType === "chatbot");
-  if (!chatbot) throw new Error("No chatbot service found on 0G testnet");
+  if (!chatbot) throw new Error("No chatbot service found on 0G network — available types: " + services.map((s: any) => s.serviceType).join(", "));
 
   const providerAddr = chatbot.provider;
 
@@ -106,17 +119,49 @@ export async function storeOn0G(data: object): Promise<{ rootHash: string; txHas
 // In-memory cache for fetched 0G Storage data
 const fetchCache = new Map<string, string>();
 
-// Fetch data from 0G Storage by rootHash via REST API, returns decoded string
+// Fetch data from 0G Storage by rootHash
+// Tries SDK download first (proper storage node discovery), falls back to REST API
 export async function fetchFrom0G(rootHash: string): Promise<string> {
   const cached = fetchCache.get(rootHash);
   if (cached) return cached;
 
+  // Method 1: SDK indexer.download (storage node discovery + Merkle verification)
+  const indexer = new Indexer(STORAGE_INDEXER);
+  const tmpFile = path.join(os.tmpdir(), `0g-${rootHash.slice(0, 16)}-${Date.now()}`);
+
+  try {
+    const err = await indexer.download(rootHash, tmpFile, true);
+    if (err !== null) {
+      throw new Error(String(err));
+    }
+    const text = fs.readFileSync(tmpFile, "utf-8");
+    fetchCache.set(rootHash, text);
+    return text;
+  } catch (sdkErr) {
+    console.warn(`[0G] SDK download failed for ${rootHash.slice(0, 16)}...: ${sdkErr instanceof Error ? sdkErr.message : sdkErr}`);
+  } finally {
+    try { fs.unlinkSync(tmpFile); } catch {}
+  }
+
+  // Method 2: REST API fallback
+  console.log(`[0G] Trying REST fallback for ${rootHash.slice(0, 16)}...`);
   const res = await fetch(`${STORAGE_INDEXER}/file?root=${rootHash}`);
   if (!res.ok) {
-    throw new Error(`0G Storage download failed: ${res.status} ${res.statusText}`);
+    throw new Error(`0G Storage download failed (HTTP ${res.status}) for root ${rootHash.slice(0, 16)}...`);
   }
 
   const text = await res.text();
+
+  // The REST endpoint returns 200 with error JSON when file is not found
+  try {
+    const parsed = JSON.parse(text);
+    if (parsed.code && parsed.message) {
+      throw new Error(`0G Storage: ${parsed.message} (code ${parsed.code}) for root ${rootHash.slice(0, 16)}...`);
+    }
+  } catch (e) {
+    if (e instanceof Error && e.message.startsWith("0G Storage:")) throw e;
+  }
+
   fetchCache.set(rootHash, text);
   return text;
 }

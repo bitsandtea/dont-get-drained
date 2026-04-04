@@ -88,6 +88,39 @@ export async function PUT(req: NextRequest) {
     const calls: { to: string; data: string; description: string }[] = [];
 
     if (Array.isArray(agentIds)) {
+      // Validate that all agent IDs exist and are active in the AgentDirectory
+      const directoryAddress = process.env.NEXT_PUBLIC_DIRECTORY_ADDRESS;
+      if (directoryAddress && agentIds.length > 0) {
+        const ogProvider = new ethers.JsonRpcProvider(OG_RPC);
+        const directory = new ethers.Contract(directoryAddress, AGENT_DIRECTORY_ABI, ogProvider);
+
+        const invalid: string[] = [];
+        const inactive: string[] = [];
+        await Promise.all(
+          agentIds.map(async (id: string) => {
+            try {
+              const agent = await directory.getAgent(id);
+              if (!agent.active) inactive.push(id);
+            } catch {
+              invalid.push(id);
+            }
+          })
+        );
+
+        if (invalid.length > 0) {
+          return NextResponse.json(
+            { error: `Agent(s) not found in directory: ${invalid.map((id) => id.slice(0, 10) + "...").join(", ")}` },
+            { status: 400 }
+          );
+        }
+        if (inactive.length > 0) {
+          return NextResponse.json(
+            { error: `Agent(s) are deactivated: ${inactive.map((id) => id.slice(0, 10) + "...").join(", ")}` },
+            { status: 400 }
+          );
+        }
+      }
+
       calls.push({
         to: guardAddress,
         data: iface.encodeFunctionData("setPanel", [agentIds]),

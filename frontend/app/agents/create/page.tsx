@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useTxToast } from "@/components/TxToaster";
 
 const AVAILABLE_VARS = [
   { name: "signer", desc: "Address that initiated the transaction" },
@@ -31,6 +32,7 @@ interface PublishResult {
 }
 
 export default function AgentCreatePage() {
+  const txToast = useTxToast();
   const searchParams = useSearchParams();
   const editId = searchParams.get("id");
 
@@ -109,6 +111,12 @@ export default function AgentCreatePage() {
 
       const data = await res.json();
       setResult({ agentId: data.agentId, promptCid: data.promptCid });
+      if (data.txHash) {
+        txToast.push(editId ? "Agent updated on-chain" : "Agent registered on-chain", data.txHash);
+      }
+      if (data.promptCid) {
+        txToast.push("Prompt stored on 0G", data.promptCid, "storage");
+      }
       setStatus("success");
     } catch (e: any) {
       setError(e.message || "Failed to publish agent");
@@ -179,7 +187,7 @@ export default function AgentCreatePage() {
 
           <div className="flex items-center justify-center gap-3 mt-6">
             <a
-              href="/agents"
+              href="/marketplace"
               className="btn btn-accent px-5 py-2 text-sm no-underline"
             >
               View Marketplace
@@ -309,8 +317,8 @@ export default function AgentCreatePage() {
               className="input w-full px-3 py-2 text-sm"
               type="number"
               min="0"
-              step="0.001"
-              placeholder="0"
+              step="0.0001"
+              placeholder="0.0000"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />

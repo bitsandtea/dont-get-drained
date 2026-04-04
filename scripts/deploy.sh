@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "================================"
-echo "  AIGuard + Safe Deployment"
+echo "  InferenceGuard + Safe Deployment"
 echo "================================"
 echo ""
 
@@ -39,6 +39,16 @@ set -a
 source "$ROOT/dapp/.env"
 set +a
 
+# ── Fund deployer from Anvil default account ──
+DEPLOYER_ADDR=$(cast wallet address --private-key "$OG_DEPLOYER")
+echo "Funding deployer $DEPLOYER_ADDR with 100 ETH..."
+cast send "$DEPLOYER_ADDR" \
+  --value 100ether \
+  --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 \
+  --rpc-url http://127.0.0.1:8545 > /dev/null 2>&1
+echo "Deployer funded."
+echo ""
+
 # ── Deploy via Foundry ──
 echo "Deploying Guard + Safe..."
 echo ""
@@ -52,14 +62,14 @@ OUTPUT=$(cd "$ROOT/dapp" && forge script script/DeployGuard.s.sol:DeployGuard \
 }
 
 # ── Parse addresses from forge console.log output ──
-# Lines look like: "  Safe:      0x..." and "  AIGuard:   0x..."
+# Lines look like: "  Safe:      0x..." and "  InferenceGuard:   0x..."
 SAFE_ADDR=$(echo "$OUTPUT" | grep "NEXT_PUBLIC_SAFE_ADDRESS" | awk '{print $NF}')
 GUARD_ADDR=$(echo "$OUTPUT" | grep "NEXT_PUBLIC_GUARD_ADDRESS" | awk '{print $NF}')
 
 if [[ -z "$SAFE_ADDR" || -z "$GUARD_ADDR" ]]; then
   # Fallback: try the "=== DEPLOYED ===" section
   SAFE_ADDR=$(echo "$OUTPUT" | grep "Safe:" | grep -v "COPY" | grep -v "CONFIG" | grep -v "fund" | head -1 | awk '{print $NF}')
-  GUARD_ADDR=$(echo "$OUTPUT" | grep "AIGuard:" | head -1 | awk '{print $NF}')
+  GUARD_ADDR=$(echo "$OUTPUT" | grep "InferenceGuard:" | head -1 | awk '{print $NF}')
 fi
 
 if [[ -z "$SAFE_ADDR" || -z "$GUARD_ADDR" ]]; then
@@ -91,7 +101,7 @@ echo "  Deployment Complete"
 echo "========================================"
 echo ""
 echo "  Safe:      $SAFE_ADDR"
-echo "  AIGuard:   $GUARD_ADDR"
+echo "  InferenceGuard:   $GUARD_ADDR"
 echo "  Guard set: YES"
 echo "  Funded:    5 ETH (if deployer had balance)"
 echo ""
