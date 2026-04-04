@@ -1,0 +1,30 @@
+{
+  "article_id": "bald-rekt",
+  "title": "BALD on Base - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Rug pull on a memecoin with no established bridging UI, leading to a massive loss of funds.",
+  "attack_vector": "rug_pull",
+  "funds_lost": "23M USD",
+  "chain": "base",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Direct ETH deposits into a contract without a bridging UI",
+    "Rapid liquidity addition and subsequent price manipulation"
+  ],
+  "attacker_addresses": [
+    "0xccfa0530b9d52f970d1a2daea670ce58e4176389"
+  ],
+  "vulnerable_contracts": [
+    "BALD"
+  ],
+  "monitoring_rules": [],
+  "summary": "Users deposited ETH into a memecoin named BALD on Base without a bridging UI, leading to a rug pull that resulted in a loss of $23M.",
+  "_meta": {
+    "chatId": "chatcmpl-468546f8e10a43778c4cd0e602b98eb9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:16.607Z"
+  }
+}

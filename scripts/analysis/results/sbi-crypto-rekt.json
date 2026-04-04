@@ -1,0 +1,42 @@
+{
+  "article_id": "sbi-crypto-rekt",
+  "title": "SBI Crypto - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Multi-chain coordinated outflows via instant exchanges and Tornado Cash",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "24 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to Tornado Cash within 24 hours of an instant exchange transfer",
+      "trigger": "INSTANT_EXCHANGE_TRANSFER -> TO_TORNADO_CASH within 24 hours",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa0b86991",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "coordinated outflows",
+    "instant exchange routing",
+    "Tornado Cash endpoint"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "various instant exchanges"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT SENDS FUNDS TO TORNADO_CASH WITHIN 24 HOURS OF AN INSTANT_EXCHANGE_TRANSFER"
+  ],
+  "summary": "SBI Crypto lost $24 million across five blockchains through coordinated outflows via instant exchanges and Tornado Cash. A guard could have detected and blocked these transactions by monitoring for instant exchange transfers followed by Tornado Cash deposits within 24 hours.",
+  "_meta": {
+    "chatId": "chatcmpl-2d76d1ce99ec4a59b2eb8d51e178d63e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:21.885Z"
+  }
+}

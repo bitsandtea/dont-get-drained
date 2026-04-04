@@ -1,0 +1,42 @@
+{
+  "article_id": "arcadiafi-rekt",
+  "title": "ArcadiaFi - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by rebalance action with arbitrary swapData on rebalancer contract",
+  "attack_vector": "flash_loan",
+  "funds_lost": "$3.6M",
+  "chain": "base",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls flashAction() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> flashAction() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x60fe47b1"
+  ],
+  "red_flags": [
+    "Unusual rebalance actions with arbitrary swapData",
+    "Multiple suspicious transactions draining the protocol"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "AccountV1",
+    "Rebalancer"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS flashAction() AFTER A FLASH LOAN IN THE SAME TX"
+  ],
+  "summary": "The attacker used flash loans to trigger rebalance actions with arbitrary swapData, exploiting the lack of validation for router addresses. A guard could have blocked such transactions to prevent the theft.",
+  "_meta": {
+    "chatId": "chatcmpl-2acd0111860a4b189877d539b0b2a06b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:20.485Z"
+  }
+}

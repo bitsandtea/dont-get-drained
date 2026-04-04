@@ -1,0 +1,39 @@
+{
+  "article_id": "lastpass-users-rekt",
+  "title": "LastPass Users - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack on LastPass users leading to seed phrase exposure and subsequent theft of funds",
+  "attack_vector": "phishing",
+  "funds_lost": "37M+ USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that accesses seed phrases or private keys from a compromised LastPass account",
+      "trigger": "LASTPASS_COMPROMISE -> access_seed_phrase() || access_private_key()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "access_seed_phrase()",
+    "access_private_key()"
+  ],
+  "red_flags": [
+    "Primary theft txns are almost always between 10am–4pm UTC",
+    "Attacker swaps tokens for ETH inside wallet before sending ETH out",
+    "Successful rescue missions are COMMON",
+    "Funds are eventually sent to CEXs such as FixedFloat, SimpleSwap, SideShift, ChangeNOW, LetsExchange"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "Block any tx that accesses seed phrases or private keys from a compromised LastPass account"
+  ],
+  "summary": "A phishing attack on LastPass users led to the exposure of seed phrases and subsequent theft of over $37M across multiple chains. A guard could have prevented this by blocking transactions accessing seed phrases or private keys from compromised LastPass accounts.",
+  "_meta": {
+    "chatId": "chatcmpl-56ee9ab176db4961a79d74b810cf97e5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:10.283Z"
+  }
+}

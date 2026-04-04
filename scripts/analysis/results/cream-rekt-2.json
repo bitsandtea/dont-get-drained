@@ -1,0 +1,46 @@
+{
+  "article_id": "cream-rekt-2",
+  "title": "Cream Finance - REKT 2",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by manipulate price and withdraw large amounts on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "130 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls deposit() or borrow() in the same tx after a flash loan",
+      "trigger": "FLASHLOAN_BORROW -> deposit() || borrow() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4dd4ce8b",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Repeated lending and borrowing with flash-loaned funds",
+    "Price manipulation to double collateral value",
+    "Large-scale withdrawal from lending vaults"
+  ],
+  "attacker_addresses": [
+    "Address A",
+    "Address B"
+  ],
+  "vulnerable_contracts": [
+    "Cream Finance",
+    "MakerDAO",
+    "Curve",
+    "Yearn Finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls deposit() or borrow() in the same tx after a flash loan"
+  ],
+  "summary": "The attacker exploited a pricing vulnerability by repeatedly lending and borrowing flash-loaned funds across two addresses, manipulating the price to double the value of collateral, and then withdrawing large amounts from the lending vaults.",
+  "_meta": {
+    "chatId": "chatcmpl-067c8d7932554a9c966e55de6d99648d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:17.748Z"
+  }
+}

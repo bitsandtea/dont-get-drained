@@ -1,0 +1,41 @@
+{
+  "article_id": "uwulend-rekt",
+  "title": "Uwulend - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation attack involving flash loans to manipulate price feeds and exploit lending protocols",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "19400000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses flash loans to manipulate oracle prices followed by liquidation at an inflated rate",
+      "trigger": "FLASHLOAN -> manipulate oracle price -> liquidate at inflated rate",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x05fd7f6d",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "large trades with borrowed tokens to manipulate oracle prices",
+    "price discrepancy between borrowing and liquidation rates"
+  ],
+  "attacker_addresses": [
+    "0x841ddf093f5188989fa1524e7b893de64b421f47"
+  ],
+  "vulnerable_contracts": [
+    "UwuLend"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TRANSACTION THAT INVOLVES FLASH LOANS FOLLOWED BY PRICE MANIPULATION AND LIQUIDATION AT AN INFLATED RATE"
+  ],
+  "summary": "UwuLend was hacked for $19.4 million via an oracle manipulation attack using flash loans to artificially inflate prices and exploit the lending protocol. A concrete prevention rule would be to block any transaction involving flash loans followed by price manipulation and liquidation at an inflated rate.",
+  "_meta": {
+    "chatId": "chatcmpl-a7b56d057fde487e9ba1d16f946231bc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:05.347Z"
+  }
+}

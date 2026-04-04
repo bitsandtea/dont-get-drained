@@ -1,0 +1,43 @@
+{
+  "article_id": "stablemagnet-rekt",
+  "title": "StableMagnet - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Unverified library exploit leading to rug pull on BSC",
+  "attack_vector": "compiler_bug",
+  "funds_lost": "27 million USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys or updates a library with known vulnerabilities.",
+      "trigger": "DEPLOY_LIBRARY -> known_vulnerable_library_address",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xE25d05777BB4bD0FD0Ca1297C434e612803eaA9a"
+  ],
+  "red_flags": [
+    "Unverified library deployment",
+    "Large token transfers to unknown addresses"
+  ],
+  "attacker_addresses": [
+    "0x2bac04457e5de654cf1600b803e714c2c3fb96d7",
+    "0xDF5B180c0734fC448BE30B7FF2c5bFc262bDEF26",
+    "0xe5daac909a3205f99d370bc2b32b1810a4912a07"
+  ],
+  "vulnerable_contracts": [
+    "StableMagnet",
+    "SwapUtil"
+  ],
+  "monitoring_rules": [
+    "Monitor for library deployments from known vulnerable addresses"
+  ],
+  "summary": "StableMagnet suffered a rug pull due to an unverified library exploit. Attackers deployed a malicious library to drain funds and transfer them to Binance, then switched to Ethereum and exchanged USDT for DAI. Guards should block any tx deploying known vulnerable libraries.",
+  "_meta": {
+    "chatId": "chatcmpl-4ff208c3e2d1407b8da0793a9a8fa85f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:33.911Z"
+  }
+}

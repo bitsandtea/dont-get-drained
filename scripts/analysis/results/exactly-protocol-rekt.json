@@ -1,0 +1,41 @@
+{
+  "article_id": "exactly-protocol-rekt",
+  "title": "Exactly Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Insufficient check in DebtManager contract allowing fake market address insertion, draining users' collateral",
+  "attack_vector": "access_control",
+  "funds_lost": "7.2M USD",
+  "chain": "optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets an invalid market address in DebtManager contract",
+      "trigger": "DEBTMANAGER -> setMarketAddress(address)",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "setMarketAddress(address)"
+  ],
+  "red_flags": [
+    "Invalid market address insertion"
+  ],
+  "attacker_addresses": [
+    "0x3747dbbcb5c07786a4c59883e473a2e38f571af9",
+    "0xe4f34a72d7c18b6f666d6ca53fbc3790bc9da042",
+    "0x417179df13ba3ed138b0a58eaa0c3813430a20e0"
+  ],
+  "vulnerable_contracts": [
+    "DebtManager"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sets an invalid market address in DebtManager contract"
+  ],
+  "summary": "Exactly Protocol was hacked due to an insufficient check in the DebtManager contract, allowing attackers to insert fake market addresses and drain users' collateral. A guard could have blocked such transactions by monitoring and preventing the setting of invalid market addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-fee5073086a44ad5aa10a9d6f58c2a10",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:15.866Z"
+  }
+}

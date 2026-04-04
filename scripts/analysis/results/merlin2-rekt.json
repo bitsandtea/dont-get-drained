@@ -1,0 +1,40 @@
+{
+  "article_id": "merlin2-rekt",
+  "title": "Merlin Labs - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Price manipulation through a flawed priceCalculator function",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "200 ETH (~$550,000)",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that updates the priceCalculator contract with a specific function call pattern.",
+      "trigger": "PRICE_CALCULATOR_UPDATE -> call to manipulate specific asset prices",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Unusual price changes for specific assets",
+    "Quick succession of price updates"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "0x..."
+  ],
+  "monitoring_rules": [
+    "Monitor for unusual price changes and quick succession of price updates on the priceCalculator contract"
+  ],
+  "summary": "Merlin Labs suffered another $550,000 loss due to a flaw in their priceCalculator contract that allowed attackers to manipulate the price of BAND tokens. A guard could have blocked any transaction updating the priceCalculator with suspicious patterns.",
+  "_meta": {
+    "chatId": "chatcmpl-738e8267c2ff495c9237da85ca763587",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:09.937Z"
+  }
+}

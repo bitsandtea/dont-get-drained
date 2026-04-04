@@ -1,0 +1,42 @@
+{
+  "article_id": "zunami-protocol-rekt",
+  "title": "Zunami Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Price manipulation using flash loans to manipulate LP token prices",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "2.1M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls totalHoldings() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> totalHoldings() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x12345678",
+    "0x23456789"
+  ],
+  "red_flags": [
+    "Large token swaps using flash loans",
+    "Incorrect price calculation via totalHoldings function"
+  ],
+  "attacker_addresses": [
+    "0x5f4c21c9bb73c8b4a296cc256c0cde324db146df"
+  ],
+  "vulnerable_contracts": [
+    "zETH",
+    "UZD"
+  ],
+  "monitoring_rules": [
+    "BLOCK totalHoldings() calls within 10 minutes of a flash loan"
+  ],
+  "summary": "Zunami Protocol lost $2.1M due to a price manipulation attack using flash loans. A flawed price calculation function allowed attackers to manipulate LP token prices. A guard could have blocked transactions calling totalHoldings() shortly after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-82aea06f20af45d0a115319dc183a34f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:45.532Z"
+  }
+}

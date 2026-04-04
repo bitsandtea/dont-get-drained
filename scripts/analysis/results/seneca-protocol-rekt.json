@@ -1,0 +1,40 @@
+{
+  "article_id": "seneca-protocol-rekt",
+  "title": "Seneca Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Approval exploit involving transferFrom calls to drain assets from users with active approvals",
+  "attack_vector": "access_control",
+  "funds_lost": "6,400,000+ USD",
+  "chain": "ethereum | arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls transferFrom() with active approvals to Seneca's contracts",
+      "trigger": "transferFrom() -> Seneca contract in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "active approvals to Seneca's contracts",
+    "undeclared pause functionality"
+  ],
+  "attacker_addresses": [
+    "0x94641c01a4937f2c8ef930580cf396142a2942dc"
+  ],
+  "vulnerable_contracts": [
+    "Chamber contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls transferFrom() with active approvals to Seneca's contracts"
+  ],
+  "summary": "Seneca Protocol suffered a significant loss due to an approval exploit that drained assets from users with active approvals. A guard could have blocked such transactions by monitoring for calls to transferFrom() with active approvals to Seneca's contracts.",
+  "_meta": {
+    "chatId": "chatcmpl-47938ef5cba3479795fa108e615e0b9b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.176Z"
+  }
+}

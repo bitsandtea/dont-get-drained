@@ -1,0 +1,40 @@
+{
+  "article_id": "venus-protocol-rekt4",
+  "title": "Venus Protocol - Rekt IV",
+  "relevance_score": 8,
+  "relevance_summary": "Collateral inflation exploit via donation attack on supply cap",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "2.15M USD",
+  "chain": "bnb",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets Collateral Factor to zero after a large donation to supply cap",
+      "trigger": "DONATION_TO_SUPPLY_CAP -> COLLATERAL_FACTOR_SET_TO_ZERO",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22d9e7",
+    "0x0e09f36e"
+  ],
+  "red_flags": [
+    "Large donation to supply cap followed by setting Collateral Factor to zero"
+  ],
+  "attacker_addresses": [
+    "0x1A35bD28EFD46CfC46c2136f878777D69ae16231"
+  ],
+  "vulnerable_contracts": [
+    "vTHE"
+  ],
+  "monitoring_rules": [
+    "DONATION_TO_SUPPLY_CAP -> COLLATERAL_FACTOR_SET_TO_ZERO"
+  ],
+  "summary": "An attacker manipulated the supply cap of Venus Protocol's vTHE token by donating to it, then setting the Collateral Factor to zero, causing a significant loss of funds. A guard could have detected this by blocking any transaction that sets the Collateral Factor to zero after a large donation to the supply cap.",
+  "_meta": {
+    "chatId": "chatcmpl-2891440e02414bfcbb1b5c363541a7bc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:18.694Z"
+  }
+}

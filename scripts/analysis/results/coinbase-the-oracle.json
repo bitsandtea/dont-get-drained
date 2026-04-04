@@ -1,0 +1,41 @@
+{
+  "article_id": "coinbase-the-oracle",
+  "title": "Coinbase & The Oracle",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to mass liquidations on Compound Finance",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "over $110m",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates the price of a token on an oracle and then immediately triggers a liquidation on a lending protocol.",
+      "trigger": "PRICE_MANIPULATION -> LIQUIDATION_TRIGGERED",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "mass liquidations",
+    "price spike",
+    "single oracle dependency"
+  ],
+  "attacker_addresses": [
+    "not specified in the article"
+  ],
+  "vulnerable_contracts": [
+    "Compound Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_MANIPULATION_FOLLOWED_BY_LIQUIDATION"
+  ],
+  "summary": "A manipulation of the Coinbase oracle led to a price spike, causing mass liquidations on Compound Finance, resulting in significant losses.",
+  "_meta": {
+    "chatId": "chatcmpl-345d7a333b0a44c9b2827c05db9fcf09",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.498Z"
+  }
+}

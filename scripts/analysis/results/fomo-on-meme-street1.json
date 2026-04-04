@@ -1,0 +1,27 @@
+{
+  "article_id": "fomo-on-meme-street1",
+  "title": "FOMO on Meme Street",
+  "relevance_score": 2,
+  "relevance_summary": "Social media influence leading to speculative behavior and potential market manipulation",
+  "attack_vector": "governance_attack",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "celebrity involvement",
+    "mass speculation",
+    "irrelevant outsiders"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the impact of social media influence on speculative behavior in the crypto market, particularly highlighting the role of celebrities in promoting tokens. While it does not describe a specific attack, it highlights the risks of mass speculation and the potential for market manipulation through social media.",
+  "_meta": {
+    "chatId": "chatcmpl-c31fc40541f24015a02ec601bda4a281",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:39.022Z"
+  }
+}

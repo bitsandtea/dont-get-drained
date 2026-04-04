@@ -1,0 +1,39 @@
+{
+  "article_id": "euler-rekt",
+  "title": "Euler Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "197M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4d61746544617954657374"
+  ],
+  "red_flags": [
+    "donateToReserves() called after flash loan"
+  ],
+  "attacker_addresses": [
+    "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+  ],
+  "vulnerable_contracts": [
+    "euler-finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx"
+  ],
+  "summary": "The Euler Finance hack involved a flash loan followed by a call to donateToReserves(), allowing attackers to create an unbacked DToken debt. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-9c25c30019354082ad6e3074d3a8251b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:21.231Z"
+  }
+}

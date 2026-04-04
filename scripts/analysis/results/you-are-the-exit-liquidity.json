@@ -1,0 +1,35 @@
+{
+  "article_id": "you-are-the-exit-liquidity",
+  "title": "You Are the Exit Liquidity",
+  "relevance_score": 8,
+  "relevance_summary": "Quickie rug pull scams leveraging social media and influencers to trigger panic selling",
+  "attack_vector": "social_engineering",
+  "funds_lost": "Not specified",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx involving large transfers from known meme tokens during short periods after stealth launches.",
+      "trigger": "STEALTH_LAUNCH -> LARGE_TRANSFER_FROM_MEME_TOKEN",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Stealth launches",
+    "Large transfers from meme tokens",
+    "Panic selling"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "Monitor for stealth launches and large transfers from meme tokens within short timeframes"
+  ],
+  "summary": "Scammers use social media and influencers to create panic selling in meme tokens, exploiting FOMO and tribalism. A guard could prevent losses by blocking large transfers from meme tokens shortly after stealth launches.",
+  "_meta": {
+    "chatId": "chatcmpl-1b95fb6decda4ea398f4c2cedf1b2f0a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:14.146Z"
+  }
+}

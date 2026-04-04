@@ -1,0 +1,40 @@
+{
+  "article_id": "defilabs-rekt",
+  "title": "DeFiLabs - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Staking contract with a backdoor function allowing the funder address to drain the contract of user deposits",
+  "attack_vector": "access_control",
+  "funds_lost": "1,600,000 USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls withdrawFunds() from the funder address.",
+      "trigger": "withdrawFunds() called by funder address in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Backdoor function in staking contract",
+    "Audit not covering newly added contracts"
+  ],
+  "attacker_addresses": [
+    "0xee08d6c3a983eb22d7137022f0e9f5e7d4cf0be2"
+  ],
+  "vulnerable_contracts": [
+    "0xdEDbd1804569F369e33e453Ee311F0F97dCd0Bde"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls withdrawFunds() from the funder address."
+  ],
+  "summary": "DeFiLabs rug-pulled $1.6M from its users on BSC using a backdoor function in their staking contract. The contract allowed the funder address to drain the contract of user deposits. Despite audits, the contract was not covered, leading to the rugpull.",
+  "_meta": {
+    "chatId": "chatcmpl-466acbdc1a714582bc5288c8e362529b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:48.558Z"
+  }
+}

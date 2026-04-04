@@ -1,0 +1,40 @@
+{
+  "article_id": "mirror-rekt",
+  "title": "Mirror Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to drain of protocol assets through mispriced tokens",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "2M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deposits tokens into a protocol during an oracle mispricing event.",
+      "trigger": "ORACLE_MISPRICING -> DEPOSIT_TOKENS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "deposit_tokens()"
+  ],
+  "red_flags": [
+    "Mispriced tokens being deposited as collateral",
+    "Drain of protocol assets during oracle mispricing"
+  ],
+  "attacker_addresses": [
+    "Not explicitly mentioned in the article"
+  ],
+  "vulnerable_contracts": [
+    "Mirror Protocol contracts"
+  ],
+  "monitoring_rules": [
+    "ORACLE_MISPRICING -> DEPOSIT_TOKENS"
+  ],
+  "summary": "The Mirror Protocol was exploited due to a mispriced token (LUNC) being deposited as collateral during an oracle mispricing event. A guard could have detected and blocked such transactions to prevent the drain of protocol assets.",
+  "_meta": {
+    "chatId": "chatcmpl-9b9a7c20aebc4b3db531e5831927d8d3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:47.199Z"
+  }
+}

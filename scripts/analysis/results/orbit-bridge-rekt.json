@@ -1,0 +1,40 @@
+{
+  "article_id": "orbit-bridge-rekt",
+  "title": "Orbit Bridge - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Bridge withdrawal with compromised validator signatures",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "81.5M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a bridge contract to external addresses within a short timeframe.",
+      "trigger": "Bridged asset transfer -> External address transfer in quick succession",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Methodical tx pattern",
+    "Funding via Tornado Cash"
+  ],
+  "attacker_addresses": [
+    "0x9263e7873613ddc598a701709875634819176aff"
+  ],
+  "vulnerable_contracts": [
+    "Orbit Bridge"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sends funds from a bridge contract to external addresses within a short timeframe."
+  ],
+  "summary": "Orbit Bridge lost $81.5M to a compromised multisig attack, likely involving signature bypass. A guard could have detected and blocked suspicious transfers from the bridge contract.",
+  "_meta": {
+    "chatId": "chatcmpl-6e4a281a0d0044cdb8984b8270f0a56e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:17.810Z"
+  }
+}

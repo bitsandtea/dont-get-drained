@@ -1,0 +1,44 @@
+{
+  "article_id": "anyswap-rekt",
+  "title": "Anyswap - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "ECDSA signature vulnerability in AnySwap V3 Router leading to private key compromise and stablecoin theft",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "7.9M USD",
+  "chain": "ethereum | bsc | fantom",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses ECDSA for signature generation without ensuring unique k values per signature",
+      "trigger": "ECDSA signature generation with repeated k values",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1b8bb9ac",
+    "0x1c8aa6ca",
+    "0x1d8aa6ca",
+    "0x1e8aa6ca",
+    "0x1f8aa6ca"
+  ],
+  "red_flags": [
+    "Repeated k values in ECDSA signatures",
+    "Private key back-calculated from repeated k values"
+  ],
+  "attacker_addresses": [
+    "0x0aE1554860E51844B61AE20823eF1268C3949f7C"
+  ],
+  "vulnerable_contracts": [
+    "AnySwap V3 Router"
+  ],
+  "monitoring_rules": [
+    "Block any tx using ECDSA with repeated k values"
+  ],
+  "summary": "Anyswap V3 Router exploited due to repeated k values in ECDSA signatures, leading to private key compromise and stablecoin theft. A guard could have blocked such transactions by monitoring for repeated k values in ECDSA signatures.",
+  "_meta": {
+    "chatId": "chatcmpl-ebd16f4b5a514eb98e1e49bc2fe77eba",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:02:16.730Z"
+  }
+}

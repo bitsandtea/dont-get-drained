@@ -1,0 +1,42 @@
+{
+  "article_id": "alexlab-rekt",
+  "title": "AlexLab - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key compromise leading to bridge withdrawal with compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "4.3 million USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a withdrawal from a compromised vault after a private key compromise detected",
+      "trigger": "PRIVATE_KEY_COMPROMISE -> WITHDRAWAL_FROM_VAULT in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x94746d33792aeb27d2066b6d8f3c8a8c7410fe15c9500059f35e0b21c9bfb416",
+    "0x47e123af93add709bc2516f6a5db057dfbb1d66a75b693cd7980cd3eb28c7357"
+  ],
+  "red_flags": [
+    "private key compromise",
+    "targeted attack on vault admin",
+    "rapid transfer to exchanges"
+  ],
+  "attacker_addresses": [
+    "0x27055aE433E9DCb30f6EbCC1A374Cf5CC03C484E"
+  ],
+  "vulnerable_contracts": [
+    "AlexLabs"
+  ],
+  "monitoring_rules": [
+    "Block any tx that initiates a withdrawal from a compromised vault after a private key compromise detected"
+  ],
+  "summary": "AlexLab suffered a $4.3 million exploit due to a private key compromise, which led to a targeted attack on a vault admin, resulting in the draining of STX from the compromised vault. A guard could have blocked the withdrawal if it detected the private key compromise and subsequent vault withdrawal.",
+  "_meta": {
+    "chatId": "chatcmpl-a2a77cd3713f4b17becca8e877d0b6e8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:04:27.399Z"
+  }
+}

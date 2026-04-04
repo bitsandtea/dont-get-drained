@@ -1,0 +1,41 @@
+{
+  "article_id": "ethtrustfund-rekt",
+  "title": "ETHTrustFund - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "rug pull involving a project that raised funds through a treasury and then moved them to a new wallet, leading to significant losses.",
+  "attack_vector": "access_control",
+  "funds_lost": "2.1 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a treasury contract to a new wallet address.",
+      "trigger": "TREASURY_CONTRACT -> SEND_FUNDS_TO_NEW_WALLET() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9087c7458c66b0334c1dcc991503d70a0662f7043f8b95217e7cf75ec14369f"
+  ],
+  "red_flags": [
+    "sudden inactivity",
+    "deletion of social media accounts",
+    "vanishing founder"
+  ],
+  "attacker_addresses": [
+    "0x374f4BD39aD211e67e0f8Cb8Ebf1b4F6Ac3059aD"
+  ],
+  "vulnerable_contracts": [
+    "0xbfDB66a6783a6Dc757f539139c68BED75EB491c8"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sends funds from a treasury contract to a new wallet address."
+  ],
+  "summary": "ETHTrustFund, a project on Base Network, raised over $2 million and then moved all funds to a new wallet, leading to significant investor losses. A guard could have detected this by blocking any transaction that sends funds from a treasury contract to a new wallet.",
+  "_meta": {
+    "chatId": "chatcmpl-96510a730d2f4236b9f11b16c222cc97",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:22.568Z"
+  }
+}

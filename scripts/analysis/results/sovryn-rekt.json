@@ -1,0 +1,41 @@
+{
+  "article_id": "sovryn-rekt",
+  "title": "Sovryn - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by minting and burning tokens to manipulate price on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1.1M USD",
+  "chain": "rsk",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls mint() or burn() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> mint() OR burn() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00fdd58e",
+    "0xe91d155a"
+  ],
+  "red_flags": [
+    "External call of callTokensToSend function",
+    "Manipulation of token prices through minting and burning"
+  ],
+  "attacker_addresses": [
+    "0xc92ebecda030234c10e149beead6bba61197531a"
+  ],
+  "vulnerable_contracts": [
+    "sovryn-lending-pool"
+  ],
+  "monitoring_rules": [
+    "BLOCK mint() OR burn() if preceded by FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "The attack involved using a flash loan to manipulate token prices by minting and burning tokens, allowing the attacker to profit. A guard could have blocked such transactions by preventing mint() or burn() calls immediately following a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-8ad7346746194a23b974d012f86e961f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:53.882Z"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "article_id": "shitcoins",
+  "title": "Shitcoins",
+  "relevance_score": 2,
+  "relevance_summary": "Early bird and project creator advantage in meme coin investments",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "bsc",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "rapid token creation",
+    "low effort projects",
+    "massive market cap growth in short time"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the rapid growth of meme coins on BSC, highlighting the advantage of early bird investors and project creators. There are no specific technical vulnerabilities or attacks mentioned.",
+  "_meta": {
+    "chatId": "chatcmpl-a0cdfc9f452b4f31ab2be11129f7027b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:19.646Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "kannagi-finance-rekt",
+  "title": "Kannagi Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Rug pull involving a yield aggregator on zkSync with unverified contract and misleading audit reports",
+  "attack_vector": "rug_pull",
+  "funds_lost": "1.1M USD",
+  "chain": "zkSync",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a withdrawal on behalf of a user without proper verification and audit",
+      "trigger": "WITHDRAWAL_INITIATED_BY_MAINCHEF -> user_address_specified",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x79dfe1f8"
+  ],
+  "red_flags": [
+    "unverified contract",
+    "misleading audit report",
+    "centralized aspects present"
+  ],
+  "attacker_addresses": [
+    "0x95ec03b821f164ce55cbb26f23f591a9bd40d6c1"
+  ],
+  "vulnerable_contracts": [
+    "MainChef"
+  ],
+  "monitoring_rules": [
+    "BLOCK_WITHDRAWAL_INITIATED_BY_MAINCHEF"
+  ],
+  "summary": "Kannagi Finance, a yield aggregator on zkSync, was rug pulled, resulting in the loss of $1.1M. The contract was unverified and the audit report was misleading, highlighting the need for thorough verification and transparent audit processes.",
+  "_meta": {
+    "chatId": "chatcmpl-9b73a239c79346ec98d79dfa5badf87d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:09.950Z"
+  }
+}

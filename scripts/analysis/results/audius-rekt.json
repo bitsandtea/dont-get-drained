@@ -1,0 +1,43 @@
+{
+  "article_id": "audius-rekt",
+  "title": "Audius - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "6M AUDIO ($6M)",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies governance contracts and immediately transfers tokens from the treasury.",
+      "trigger": "MODIFY_GOVERNANCE_CONTRACTS -> TRANSFER_TOKENS_FROM_TREASURY in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd7841816",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Re-initialization of governance contracts",
+    "Setting governance addresses to custom deployments",
+    "Large erroneous delegations of tokens"
+  ],
+  "attacker_addresses": [
+    "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c"
+  ],
+  "vulnerable_contracts": [
+    "AudiusAdminUpgradabilityProxy",
+    "Staking & DelegateManagerV2 contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that modifies governance contracts and immediately transfers tokens from the treasury."
+  ],
+  "summary": "The attacker exploited a storage collision vulnerability in AudiusAdminUpgradabilityProxy to reinitialize governance contracts and bypass safeguards. They then passed a malicious proposal to transfer 18M AUDIO tokens from the treasury, which could have been detected if a guard monitored for such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-0f2ecb0006964911afa2273f979817ec",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:58.931Z"
+  }
+}

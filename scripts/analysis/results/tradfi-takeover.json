@@ -1,0 +1,23 @@
+{
+  "article_id": "tradfi-takeover",
+  "title": "TradFi Takeover",
+  "relevance_score": 0,
+  "relevance_summary": "No specific transaction details or attack vectors provided.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the potential for traditional financial institutions to enter the DeFi space, but does not provide specific details about a hack or malicious transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-bb8832c926ab4460932b6cebfd9551af",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:35.353Z"
+  }
+}

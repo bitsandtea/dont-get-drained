@@ -1,0 +1,33 @@
+{
+  "article_id": "return-to-the-dark-forest",
+  "title": "Return to the dark forest",
+  "relevance_score": 7,
+  "relevance_summary": "Frontrunning in the mempool before transactions are confirmed",
+  "attack_vector": "front_running",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that has a higher gas price than the average recent gas price and is identical to a tx in the mempool.",
+      "trigger": "HIGH_GAS_PRICE -> IDENTICAL_TX_IN_MEMPOOL",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "High gas price transactions identical to transactions in the mempool"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "BLOCK_HIGH_GAS_PRICE_IDENTICAL_TO_MEMPOOL_TX"
+  ],
+  "summary": "Frontrunners use the mempool to frontrun transactions by sending identical transactions with higher gas prices. A guard could block such transactions before they are confirmed.",
+  "_meta": {
+    "chatId": "chatcmpl-14405ac3fe6d417c86e8a1008cfa6deb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:36.352Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "article_id": "madmeerkat-finance-rekt",
+  "title": "MM Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Front-end exploit leading to user funds being redirected to attacker's wallet",
+  "attack_vector": "access_control",
+  "funds_lost": "2000000",
+  "chain": "cronos",
+  "prevention": [
+    {
+      "rule": "Block any tx that shows unusual interaction patterns with the frontend router contract.",
+      "trigger": "UNUSUAL_INTERACTION_ROUTER_CONTRACT",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Unusual interaction patterns with the frontend router contract",
+    "DNS vulnerability exploitation"
+  ],
+  "attacker_addresses": [
+    "0x145677FC4d9b8F19B5D56d1820c48e0443049a30"
+  ],
+  "vulnerable_contracts": [
+    "router contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_UNUSUAL_ROUTER_INTERACTIONS"
+  ],
+  "summary": "MM Finance experienced a front-end exploit where user transactions were redirected to the attacker's wallet, resulting in $2M loss. A DNS vulnerability allowed the attacker to modify the router contract address.",
+  "_meta": {
+    "chatId": "chatcmpl-fad759c6d559433a8009184bcbf5d59c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:27.491Z"
+  }
+}

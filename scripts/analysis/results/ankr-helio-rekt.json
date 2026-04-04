@@ -1,0 +1,40 @@
+{
+  "article_id": "ankr-helio-rekt",
+  "title": "Ankr & Helio - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Exploit involving private key compromise and unauthorized minting of aBNBc tokens",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "5M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls a function with selector 0x3b3a5522",
+      "trigger": "CALLER_VERIFICATION_BYPASS -> 0x3b3a5522",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x3b3a5522"
+  ],
+  "red_flags": [
+    "unauthorized minting of tokens",
+    "bypass of caller verification"
+  ],
+  "attacker_addresses": [
+    "0xf3a465c9fa6663ff50794c698f600faa4b05c777"
+  ],
+  "vulnerable_contracts": [
+    "aBNBc token contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_CALLER_VERIFICATION_BYPASS && FUNCTION_SELECTOR == 0x3b3a5522"
+  ],
+  "summary": "The exploit involved a private key compromise leading to unauthorized minting of aBNBc tokens via a bypass of caller verification. A guard could have detected and blocked the exploit by monitoring for calls to the specific function selector used in the exploit.",
+  "_meta": {
+    "chatId": "chatcmpl-31203b5c47e345a8bf2e9579b36cca7d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:49.068Z"
+  }
+}

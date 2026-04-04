@@ -1,0 +1,41 @@
+{
+  "article_id": "eminence-rekt-in-prod",
+  "title": "Eminence - Rekt in prod",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by manipulate token price on bonding curve",
+  "attack_vector": "flash_loan",
+  "funds_lost": "15000000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints a new token using a flash loan and immediately manipulates its price",
+      "trigger": "FLASHLOAN_MINT -> BONDING_CURVE_PRICE_MANIPULATION in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d6c",
+    "0x0d3648db"
+  ],
+  "red_flags": [
+    "Unusual token minting shortly after flash loan",
+    "Price manipulation on bonding curve"
+  ],
+  "attacker_addresses": [
+    "0xfifikobayashi"
+  ],
+  "vulnerable_contracts": [
+    "eminence.finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_MINTING_TOKEN_USING_FLASH_LOAN_AND_IMMANETLY_MANIPULATING_PRICE"
+  ],
+  "summary": "The attacker used a flash loan to mint EMN tokens and then manipulated the price of the tokens on the bonding curve, draining the contract of funds. A guard could have detected this by blocking any transaction that mints a new token using a flash loan and immediately manipulates its price.",
+  "_meta": {
+    "chatId": "chatcmpl-9b5153fe6c0547ac95822422fa46bac7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:15.724Z"
+  }
+}

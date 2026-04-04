@@ -1,0 +1,39 @@
+{
+  "article_id": "not-so-safe",
+  "title": "Not So Safe",
+  "relevance_score": 8,
+  "relevance_summary": "Malicious JavaScript injected into Safe{Wallet} website to exploit Cold Wallet signers",
+  "attack_vector": "social_engineering",
+  "funds_lost": "1.4 billion USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that originates from a known malicious Safe{Wallet} URL or injects malicious JavaScript",
+      "trigger": "MALICIOUS_SAFEWALLET_URL -> injects malicious JavaScript",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "compromised Safe{Wallet} developer machine",
+    "malicious JavaScript injection"
+  ],
+  "attacker_addresses": [
+    "TraderTraitor",
+    "Lazarus Group"
+  ],
+  "vulnerable_contracts": [
+    "Safe{Wallet}"
+  ],
+  "monitoring_rules": [
+    "Block any tx that originates from a known malicious Safe{Wallet} URL or injects malicious JavaScript"
+  ],
+  "summary": "North Korean hackers exploited a syntax error in a YAML file to inject malicious JavaScript into Safe{Wallet}'s website, tricking ByBit's Cold Wallet signers into executing a transaction that transferred funds to the attackers.",
+  "_meta": {
+    "chatId": "chatcmpl-80d6661f1cc24f72bd7828cceec7e7b8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:13.804Z"
+  }
+}

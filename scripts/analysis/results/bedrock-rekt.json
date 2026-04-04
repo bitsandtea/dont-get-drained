@@ -1,0 +1,41 @@
+{
+  "article_id": "bedrock-rekt",
+  "title": "Bedrock - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Native token handling vulnerability allowing unlimited minting of uniBTC tokens",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "2,000,000 USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that attempts to mint uniBTC using native tokens on non-native BTC chains.",
+      "trigger": "MINT_UNIBTC -> NATIVE_TOKEN_DETECTED_ON_NON_NATIVE_BTC_CHAIN",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f9840a8"
+  ],
+  "red_flags": [
+    "Unlimited minting of uniBTC",
+    "Failure to handle native tokens on non-native BTC chains"
+  ],
+  "attacker_addresses": [
+    "Not specified in the article"
+  ],
+  "vulnerable_contracts": [
+    "SigmaSupplier",
+    "Vault"
+  ],
+  "monitoring_rules": [
+    "BLOCK_MINT_UNIBTC_WITH_NATIVE_TOKENS_ON_NON_NATIVE_BTC_CHAIN"
+  ],
+  "summary": "Bedrock's uniBTC vault suffered a $2 million loss due to a vulnerability where the smart contracts failed to handle native tokens on non-native BTC chains, allowing unlimited minting of uniBTC tokens.",
+  "_meta": {
+    "chatId": "chatcmpl-3925629d809d4c4cb11e31d01aa4ec4e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:09.061Z"
+  }
+}

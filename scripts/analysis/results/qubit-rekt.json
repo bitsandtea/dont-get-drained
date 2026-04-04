@@ -1,0 +1,41 @@
+{
+  "article_id": "qubit-rekt",
+  "title": "Qubit Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain collateralization exploit using a logic bug in the deposit function",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "185 million USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls QBridge deposit function with tokenAddress set to 0x0",
+      "trigger": "QBRIDGE_DEPOSIT -> tokenAddress == 0x0",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "cross-chain collateralization",
+    "logic bug in deposit function",
+    "zero address token transfer"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Qubit Finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls QBridge deposit function with tokenAddress set to 0x0"
+  ],
+  "summary": "The attacker exploited a logic bug in Qubit Finance's deposit function, allowing them to use cross-chain collateralization without locking ETH. A guard could have blocked such transactions by monitoring for calls to the deposit function with a zero tokenAddress.",
+  "_meta": {
+    "chatId": "chatcmpl-4a089964b2de447883d81e1cb9e66f65",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:18.294Z"
+  }
+}

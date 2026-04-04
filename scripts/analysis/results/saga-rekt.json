@@ -1,0 +1,40 @@
+{
+  "article_id": "saga-rekt",
+  "title": "Saga - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain bridge exploit using IBC mechanism to mint tokens without collateral",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "7 million Saga Dollars (~$5.25 million)",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends custom IBC messages to a bridge precompile without proper validation",
+      "trigger": "CUSTOM_IBC_MESSAGE -> BRIDGE_PRECOMPILE",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "custom IBC message selector"
+  ],
+  "red_flags": [
+    "custom IBC messages bypassing validation",
+    "infinite minting of tokens without collateral"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "helper contract abusing IBC mechanisms"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT SENDS CUSTOM IBC MESSAGES TO A BRIDGE PRECOMPILE WITHOUT PROPER VALIDATION"
+  ],
+  "summary": "An attacker exploited Saga's IBC mechanism to mint $7 million worth of Saga Dollar tokens without collateral, then bridged the tokens to Ethereum and converted them to ETH. A guard could have blocked such transactions by monitoring for custom IBC messages sent to bridge precompiles.",
+  "_meta": {
+    "chatId": "chatcmpl-f85f6ce349184b8d89b7d1238f0713c4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:09.651Z"
+  }
+}

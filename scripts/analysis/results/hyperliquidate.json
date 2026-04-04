@@ -1,0 +1,41 @@
+{
+  "article_id": "hyperliquidate",
+  "title": "Hyperliquid - DPRK Hack Attempt",
+  "relevance_score": 8,
+  "relevance_summary": "Validator compromise attempt on a DeFi protocol with significant TVL",
+  "attack_vector": "access_control",
+  "funds_lost": "0",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that attempts to modify validator signatures or configurations.",
+      "trigger": "MODIFY_VALIDATOR_SIGNATURES -> validator configuration change in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+  ],
+  "red_flags": [
+    "Unusual trading activity by known malicious actors",
+    "Multiple DPRK-linked addresses testing system boundaries"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678",
+    "0x234567890abcdef1234567890abcdef123456789"
+  ],
+  "vulnerable_contracts": [
+    "Hyperliquid bridge contract"
+  ],
+  "monitoring_rules": [
+    "Monitor for any tx attempting to modify validator signatures or configurations"
+  ],
+  "summary": "North Korean hackers tested Hyperliquid's defenses by probing its validators, potentially aiming for a multi-billion dollar exploit. A security expert warned of the risks, but the protocol's response dismissed the concerns.",
+  "_meta": {
+    "chatId": "chatcmpl-89bfeac981154e868fdb4c0fa13f83de",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:36.696Z"
+  }
+}

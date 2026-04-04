@@ -1,0 +1,27 @@
+{
+  "article_id": "abracadabra",
+  "title": "Abracadabra",
+  "relevance_score": 8,
+  "relevance_summary": "User funds locked out due to lack of customer support and internal policies",
+  "attack_vector": "access_control",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "international users unable to withdraw funds",
+    "monthly fees applied without notice",
+    "CEO ignoring customer complaints"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "International users faced issues withdrawing funds from Abra due to internal policies and lack of customer support, leading to frustration and loss of trust.",
+  "_meta": {
+    "chatId": "chatcmpl-68a5e4e62e5c40fb93f769421764c447",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:33.794Z"
+  }
+}

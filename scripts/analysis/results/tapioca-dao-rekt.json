@@ -1,0 +1,41 @@
+{
+  "article_id": "tapioca-dao-rekt",
+  "title": "Tapioca DAO - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key compromise leading to token and stablecoin theft via contract ownership transfer",
+  "attack_vector": "access_control",
+  "funds_lost": "4.4 million USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers ownership of a contract and then immediately calls a mint function.",
+      "trigger": "OWNERSHIP_TRANSFER -> MINT_FUNCTION_CALL in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f588d46",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Immediate contract ownership transfer followed by minting function call"
+  ],
+  "attacker_addresses": [
+    "0xTeun"
+  ],
+  "vulnerable_contracts": [
+    "TAP token vesting contract",
+    "USDO stablecoin contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_WITH_CONSECUTIVE_OWNERSHIP_TRANSFER_AND_MINT"
+  ],
+  "summary": "Tapioca DAO suffered a $4.4 million loss due to a private key compromise that allowed the attacker to transfer ownership of the TAP token vesting contract and mint USDO tokens. A guard could have prevented this by blocking transactions that transfer contract ownership and immediately call a mint function.",
+  "_meta": {
+    "chatId": "chatcmpl-384dda2315564324a8be42213b3dc385",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.307Z"
+  }
+}

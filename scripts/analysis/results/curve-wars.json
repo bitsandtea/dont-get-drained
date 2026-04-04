@@ -1,0 +1,29 @@
+{
+  "article_id": "curve-wars",
+  "title": "Curve Wars",
+  "relevance_score": 2,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "flash-loaned votes on DAO"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Curve Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK any tx that proposes a governance change involving flash loans"
+  ],
+  "summary": "The article discusses the competition among DeFi protocols to accumulate veCRV tokens, which can be used to boost yields and control Curve Finance governance. While not explicitly mentioning a specific attack, the context suggests potential misuse of flash loans to manipulate governance decisions.",
+  "_meta": {
+    "chatId": "chatcmpl-92002a755ade4a0f927ebfcbcc2b6968",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:23.543Z"
+  }
+}

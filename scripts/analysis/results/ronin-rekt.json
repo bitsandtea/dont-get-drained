@@ -1,0 +1,40 @@
+{
+  "article_id": "ronin-rekt",
+  "title": "Ronin Network - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Validator compromise leading to large-scale withdrawal from a cross-chain bridge",
+  "attack_vector": "access_control",
+  "funds_lost": "624M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a withdrawal from a cross-chain bridge after a change in validator permissions.",
+      "trigger": "WITHDRAWAL -> CHANGE_VALIDATOR_PERMISSIONS in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa0b86991",
+    "0x23b872dd"
+  ],
+  "red_flags": [
+    "Validator permissions change followed by large withdrawal"
+  ],
+  "attacker_addresses": [
+    "0x098b716b8aaf21512996dc57eb0615e2383e2f96"
+  ],
+  "vulnerable_contracts": [
+    "Ronin Bridge contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT INITIATES WITHDRAWAL FROM CROSS-CHAIN BRIDGE AFTER CHANGING VALIDATOR PERMISSIONS"
+  ],
+  "summary": "The Ronin Network was hacked due to validator permissions not being properly managed, allowing an attacker to gain the necessary signatures to drain the bridge of 173,600 ETH and 25.5M USDC. A guard could have detected this by blocking withdrawals initiated shortly after changes in validator permissions.",
+  "_meta": {
+    "chatId": "chatcmpl-08aa0ffcf40946b19257ebb0648deb88",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:10.278Z"
+  }
+}

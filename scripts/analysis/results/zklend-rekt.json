@@ -1,0 +1,40 @@
+{
+  "article_id": "zklend-rekt",
+  "title": "zkLend - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Arithmetic manipulation using flash loans to exploit rounding errors in lending accumulator",
+  "attack_vector": "arithmetic_misuse",
+  "funds_lost": "9570000",
+  "chain": "starknet",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses flash loans followed by a series of operations that manipulate a lending accumulator to an extreme value.",
+      "trigger": "FLASHLOAN -> series of operations -> extreme value in lending accumulator",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x193da87dc0b317f8418ae0c8fb3e0301698ed2d1a4047191d4641ddabc1e2bf"
+  ],
+  "red_flags": [
+    "series of flash loan transactions",
+    "manipulation of lending accumulator to extreme value"
+  ],
+  "attacker_addresses": [
+    "0x04d7191dc8eac499bac710dd368706e3ce76c9945da52535de770d06ce7d3b26"
+  ],
+  "vulnerable_contracts": [
+    "0x0193da87dc0b317f8418ae0c8fb3e0301698ed2d1a4047191d4641ddabc1e2bf"
+  ],
+  "monitoring_rules": [
+    "BLOCK any tx that uses flash loans followed by a series of operations that manipulate a lending accumulator to an extreme value."
+  ],
+  "summary": "zkLend lost $9.57M due to an attacker exploiting rounding errors in their lending accumulator through a series of flash loan transactions. A guard could have detected and blocked such transactions by monitoring for flash loans followed by operations that manipulate the lending accumulator to an extreme value.",
+  "_meta": {
+    "chatId": "chatcmpl-405a13e400c64c2f9cb0a0660090eb41",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:17.558Z"
+  }
+}

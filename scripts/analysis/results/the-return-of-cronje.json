@@ -1,0 +1,29 @@
+{
+  "article_id": "the-return-of-cronje",
+  "title": "The Return of Cronje",
+  "relevance_score": 3,
+  "relevance_summary": "Unfinished code release leading to user losses due to unexpected changes",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "unexpected changes to contract parameters",
+    "code release with disclaimers"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "EMN",
+    "LBI"
+  ],
+  "monitoring_rules": [],
+  "summary": "Andre Cronje released unfinished code for testing purposes, but users deposited funds into it. Unexpected changes made by Cronje led to significant losses, highlighting the risks of using unfinished code.",
+  "_meta": {
+    "chatId": "chatcmpl-9fd5536f5c114cd7b462b297b35855b6",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:23.478Z"
+  }
+}

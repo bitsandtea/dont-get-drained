@@ -1,0 +1,40 @@
+{
+  "article_id": "indexed-finance-rekt",
+  "title": "Indexed Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "Over $6 million in ETH and USDC",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x4e3e12e1"
+  ],
+  "red_flags": [
+    "Unusual transaction patterns involving flash loans and protocol-specific functions"
+  ],
+  "attacker_addresses": [
+    "0x9d8b6c31c8c750e0c0c75f56e77e3c04c4b3c001"
+  ],
+  "vulnerable_contracts": [
+    "IndexedFinance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_FLASHLOAN_BORROW_FOLLOWED_BYDonateToReserves"
+  ],
+  "summary": "Attackers exploited a flash loan to manipulate the price of tokens on Indexed Finance, then used the manipulated prices to drain liquidity pools. A guard could have detected and blocked the attack by monitoring for flash loans followed by calls to donateToReserves().",
+  "_meta": {
+    "chatId": "chatcmpl-eaf0210e8c42439dbf88a4cb45215b4a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:36.085Z"
+  }
+}

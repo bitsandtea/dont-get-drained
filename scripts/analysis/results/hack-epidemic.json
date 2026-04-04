@@ -1,0 +1,39 @@
+{
+  "article_id": "hack-epidemic",
+  "title": "Hack Epidemic (Origin Protocol - REKT)",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by re-entrancy attack on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "8m USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls re-entrancy-vulnerable functions after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> REENTRANCY_VULNERABLE_FUNCTION in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "flash loan followed by re-entrancy"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Origin Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS RE-ENTRANCY-VULNERABLE-FUNCTION AFTER FLASHLOAN IN SAME TX"
+  ],
+  "summary": "Origin Protocol was hacked using a flash loan followed by a re-entrancy attack, resulting in $8 million loss. A guard could have blocked such transactions by preventing re-entrancy calls after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-009d5ac30fad47c98f3fe1c3c8d9e206",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:59.057Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "article_id": "deribit-rekt",
+  "title": "Deribit - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Hot wallet compromise leading to large fund loss via phishing attack",
+  "attack_vector": "access_control",
+  "funds_lost": "28000000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a known compromised address",
+      "trigger": "TX_FROM_COMPROMISED_ADDRESS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Compromised hot wallet",
+    "Phishing attack"
+  ],
+  "attacker_addresses": [
+    "0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd",
+    "bc1qw5g8lw4kzltpdcraehy2dt6dqda8080xd6vhl4kg4wwsypwerg9s3x6pvk"
+  ],
+  "vulnerable_contracts": [
+    "Deribit hot wallets"
+  ],
+  "monitoring_rules": [
+    "TX_FROM_COMPROMISED_ADDRESS"
+  ],
+  "summary": "Deribit lost $28M from their hot wallets due to a suspected phishing attack compromising their keys. A guard could have blocked transactions from known compromised addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-a98069f64fdd48a2bbc6dec4da1c7f0b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:46.763Z"
+  }
+}

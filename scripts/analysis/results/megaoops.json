@@ -1,0 +1,37 @@
+{
+  "article_id": "megaoops",
+  "title": "Megaoops",
+  "relevance_score": 7,
+  "relevance_summary": "Multisig error leading to unexpected contract execution",
+  "attack_vector": "access_control",
+  "funds_lost": "500 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies multisig contract parameters without proper approval",
+      "trigger": "MODIFY_MULTISIG_PARAMS without proper approval",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Multisig parameter modification without proper approval"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "MegaETH Pre-Deposit Contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_MODIFY_MULTISIG_PARAMS"
+  ],
+  "summary": "A multisig error caused $500 million to be locked in the MegaETH pre-deposit contract due to incorrect parameter modification. A guard could have prevented this by blocking any tx modifying multisig contract parameters without proper approval.",
+  "_meta": {
+    "chatId": "chatcmpl-05b076797bf44c68a41d7f17db0f0187",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:37.201Z"
+  }
+}

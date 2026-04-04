@@ -1,0 +1,44 @@
+{
+  "article_id": "LSC-FSL-rekt",
+  "title": "Lucky Star Currency, FSL - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Deployer withdrawing large amounts of tokens using privileged functions and immediately dumping them for BNB",
+  "attack_vector": "access_control",
+  "funds_lost": "2.79M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls withdrawToken() and immediately transfers tokens to an external address",
+      "trigger": "withdrawToken() -> transfer() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00f6c089",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Large token withdrawal followed by immediate transfer",
+    "Deployer minting and transferring large amounts of tokens"
+  ],
+  "attacker_addresses": [
+    "0x9ef72ee68a7c841986a0c60e0fdbae4e27446deb",
+    "0x281b8cb2AE64cd14501fc7Bcd2545be2836B173D"
+  ],
+  "vulnerable_contracts": [
+    "AwardCentre",
+    "NFTMerge",
+    "FLS token contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls withdrawToken() and immediately transfers tokens to an external address"
+  ],
+  "summary": "The Lucky Star Currency project deployed contracts with a privileged function that allowed the deployer to withdraw large amounts of tokens and immediately transfer them, leading to a rug pull. A guard could have detected and blocked this by monitoring for calls to withdrawToken() followed by a transfer to an external address.",
+  "_meta": {
+    "chatId": "chatcmpl-0fe2192152fe434fbf039fb0dd6d5fe6",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:26.199Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "article_id": "the-creeping-line",
+  "title": "The Creeping Line",
+  "relevance_score": 0,
+  "relevance_summary": "No relevant information for on-chain transaction monitoring.",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the evolution of AI and neural implant technology, focusing on the dark web and the commodification of human experiences. There is no specific information related to on-chain transaction monitoring or DeFi hacks.",
+  "_meta": {
+    "chatId": "chatcmpl-27bacd8e4488410f80164952c7a8a982",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:22.088Z"
+  }
+}

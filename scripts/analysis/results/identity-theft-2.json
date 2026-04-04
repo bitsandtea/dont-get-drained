@@ -1,0 +1,26 @@
+{
+  "article_id": "identity-theft-2",
+  "title": "Identity Theft 2.0",
+  "relevance_score": 5,
+  "relevance_summary": "Stealing AI agent data and cryptographic keys from compromised devices",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "exfiltration of .openclaw files",
+    "soul.md, AGENTS.md, MEMORY.md files containing behavioral data"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Attackers stole AI agent data and cryptographic keys from compromised devices, posing a significant threat to user identities and privacy.",
+  "_meta": {
+    "chatId": "chatcmpl-232267bfa78749fb9ba6fbf3b4c92b76",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:34.675Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "hundred-rekt2",
+  "title": "Hundred Finance - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "7.4M USD",
+  "chain": "optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4b746865426f726964",
+    "0x4b6f646865426f726964"
+  ],
+  "red_flags": [
+    "donateToReserves() called after flash loan"
+  ],
+  "attacker_addresses": [
+    "0x155da45d374a286d383839b1ef27567a15e67528"
+  ],
+  "vulnerable_contracts": [
+    "hWBTC"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx"
+  ],
+  "summary": "The attacker used a flash loan to donate large amounts of WBTC to the empty hWBTC contract, manipulating the exchange rate. A guard could have detected and blocked the transaction by monitoring for a flash loan followed by a call to donateToReserves().",
+  "_meta": {
+    "chatId": "chatcmpl-ffb2df90a3c44ca397a8c00bb90e2a96",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:11.630Z"
+  }
+}

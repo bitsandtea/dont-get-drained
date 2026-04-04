@@ -1,0 +1,40 @@
+{
+  "article_id": "jimbo-rekt",
+  "title": "Jimbo's Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by price manipulation on Arbitrum",
+  "attack_vector": "flash_loan",
+  "funds_lost": "7500000",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls shift() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> shift() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x5f3591e2921d5c9291f5b224e909ab978a22ba7e"
+  ],
+  "red_flags": [
+    "Price manipulation following flash loan",
+    "Overvaluing JIMBO token"
+  ],
+  "attacker_addresses": [
+    "0x102be4bccc2696c35fd5f5bfe54c1dfba416a741"
+  ],
+  "vulnerable_contracts": [
+    "JimboController"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls shift() after a flash loan borrow in the same tx"
+  ],
+  "summary": "Jimbo's Protocol suffered a flash loan attack where the attacker manipulated the price of JIMBO tokens, leading to a loss of over $7.5M. A guard could have blocked transactions calling shift() immediately after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-ae1a9bff6b86423f8a55974a0b8b8689",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:56.332Z"
+  }
+}

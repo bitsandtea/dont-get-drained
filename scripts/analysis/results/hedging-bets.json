@@ -1,0 +1,40 @@
+{
+  "article_id": "hedging-bets",
+  "title": "Hedging Bets",
+  "relevance_score": 7,
+  "relevance_summary": "Prediction market manipulation leading to oracle manipulation",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that updates oracle data based on external prediction market outcomes.",
+      "trigger": "ORACLE_UPDATE -> CALL_EXTERNAL_MARKET_DATA() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+  ],
+  "red_flags": [
+    "Oracle update triggered by external market data",
+    "Discrepancy between official results and prediction market outcomes"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "UMA Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK ORACLE_UPDATE if EXTERNAL_MARKET_DATA is called within the same transaction"
+  ],
+  "summary": "A prediction market manipulated its own outcome, leading to an oracle update that contradicted official results. A guard could have blocked oracle updates triggered by external market data.",
+  "_meta": {
+    "chatId": "chatcmpl-b25b03230d7e4bb7bd656cbcc5598fef",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:36.446Z"
+  }
+}

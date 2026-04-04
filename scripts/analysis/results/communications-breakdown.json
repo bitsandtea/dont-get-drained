@@ -1,0 +1,37 @@
+{
+  "article_id": "communications-breakdown",
+  "title": "Aave - Communication Breakdown",
+  "relevance_score": 7,
+  "relevance_summary": "Governance process bypassed and off-script actions taken by committee members",
+  "attack_vector": "governance_attack",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies governance-related contracts without proper governance approval.",
+      "trigger": "MODIFY_GOVERNANCE_CONTRACTS -> NO_GOV_APPROVAL",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Off-script actions",
+    "Bypassing governance process",
+    "Unauthorized transfers"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Gnosis Safe"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_MODIFYING_GOVERNANCE_CONTRACTS_WITHOUT_GOV_APPROVAL"
+  ],
+  "summary": "The GHO Liquidity Committee bypassed the governance process and performed unauthorized actions, leading to confusion and potential misuse of funds. A guard could have blocked these transactions if they lacked proper governance approval.",
+  "_meta": {
+    "chatId": "chatcmpl-20b8006081d24976a0f8a1585e9465b7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:01:09.611Z"
+  }
+}

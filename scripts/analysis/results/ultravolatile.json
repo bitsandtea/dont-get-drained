@@ -1,0 +1,23 @@
+{
+  "article_id": "ultravolatile",
+  "title": "Ultravolatile",
+  "relevance_score": 0,
+  "relevance_summary": "Market volatility and hype cycle analysis",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses market volatility and hype cycles in DeFi, without detailing any specific attack or vulnerability.",
+  "_meta": {
+    "chatId": "chatcmpl-e7c476e6eed14f65aaf5e6cbed13ed36",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:46.030Z"
+  }
+}

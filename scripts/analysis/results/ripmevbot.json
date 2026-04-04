@@ -1,0 +1,40 @@
+{
+  "article_id": "ripmevbot",
+  "title": "RIP MEV BOT",
+  "relevance_score": 8,
+  "relevance_summary": "Arbitrary function execution in flash loan contract allowing attacker to steal funds",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1,101 ETH",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls arbitrary functions after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_CALL -> arbitrary_function() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "callFunction()"
+  ],
+  "red_flags": [
+    "arbitrary function execution",
+    "improper flash loan protection"
+  ],
+  "attacker_addresses": [
+    "0xb9f78307ded12112c1f09c16009e03ef4ef16612"
+  ],
+  "vulnerable_contracts": [
+    "0xbadc0defafcf6d4239bdf0b66da4d7bd36fcf05a"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF FLASHLOAN_CALL && arbitrary_function() IN_SAME_TX"
+  ],
+  "summary": "The MEV bot 0xbad exploited flash loans but fell victim to an attacker who exploited the bot's arbitrary function execution vulnerability, stealing 1,101 ETH. A guard could have blocked such transactions by preventing arbitrary function calls after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-05a86636a5f34910a61f5aa40b9fa069",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:10.436Z"
+  }
+}

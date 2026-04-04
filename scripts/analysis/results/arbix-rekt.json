@@ -1,0 +1,42 @@
+{
+  "article_id": "arbix-rekt",
+  "title": "Arbix Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "rug pull involving direct vault fund draining and token minting followed by dumping on decentralized exchange",
+  "attack_vector": "rug_pull",
+  "funds_lost": "10 million USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints large amounts of tokens and immediately sells them on a DEX",
+      "trigger": "LARGE_TOKEN_MINT -> SELL_ON_DEX within short timeframe",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x78b4d179",
+    "0xe91d153e"
+  ],
+  "red_flags": [
+    "large token mint followed by immediate sale on DEX",
+    "deletion of website, Twitter, and Telegram accounts"
+  ],
+  "attacker_addresses": [
+    "0x4714a26e4e2e1334c80575332ec9eb043b61a2c4",
+    "0xdc85c1eb22b0ece7be559a83fd788fe57f5a7a9f"
+  ],
+  "vulnerable_contracts": [
+    "Arbix Finance vault contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints large amounts of tokens and immediately sells them on a DEX"
+  ],
+  "summary": "Arbix Finance, an arbitrage-focused project on Binance Smart Chain, was rug pulled, draining over $10 million in user funds and deleting their website and social media accounts. A guard could have detected this by blocking large token mints followed by immediate sales on a decentralized exchange.",
+  "_meta": {
+    "chatId": "chatcmpl-40c1831650be43b0a6c8a66b4830b0e7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:21.744Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "newgold-protocol-rekt",
+  "title": "New Gold Protocol - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by price oracle manipulation on BNB Chain",
+  "attack_vector": "flash_loan",
+  "funds_lost": "2,000,000 USD",
+  "chain": "bnb",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls getPrice() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> getPrice() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "price oracle manipulation",
+    "transfer logic issues"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "newgoldprotocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_CALLING_GETPRICE_AFTER_FLASH_LOAN_BORROW"
+  ],
+  "summary": "New Gold Protocol lost $2 million through a combination of flash loan manipulation and price oracle vulnerabilities. A real-time guard could have blocked transactions calling getPrice() immediately after a flash loan borrow.",
+  "_meta": {
+    "chatId": "chatcmpl-f0de12cad6a44ad788f539b1ba96680a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:09.962Z"
+  }
+}

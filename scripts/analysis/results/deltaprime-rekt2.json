@@ -1,0 +1,42 @@
+{
+  "article_id": "deltaprime-rekt2",
+  "title": "DeltaPrime - Rekt II",
+  "relevance_score": 9,
+  "relevance_summary": "Unchecked input validation flaw exploited via flash loan followed by arbitrary input manipulation",
+  "attack_vector": "unchecked_input_validation",
+  "funds_lost": "4850000",
+  "chain": "arbitrum, avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls arbitrary functions using flash loan funds within the same transaction",
+      "trigger": "FLASHLOAN_BORROW -> ARBITRARY_FUNCTION_CALL in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x52ee5c0ea2e7b38d4b24c09d4d18cba6c293200e",
+    "0x9efe855cd3783462207ff8a3d94dc17a74e2b2f00bf1b4c8a7e0135dae83ab5c"
+  ],
+  "red_flags": [
+    "flash loan followed by arbitrary function calls",
+    "funds aggregation and distribution through compromised contracts"
+  ],
+  "attacker_addresses": [
+    "0xb87881637b5c8e6885c51ab7d895e53fa7d7c567"
+  ],
+  "vulnerable_contracts": [
+    "0x52ee5c0ea2e7b38d4b24c09d4d18cba6c293200e",
+    "0x52EE5c0eA2E7b38D4B24c09D4d18cba6C293200e"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS ARBITRARY_FUNCTIONS USING FLASH_LOAN_FUNDS WITHIN THE SAME TRANSACTION"
+  ],
+  "summary": "DeltaPrime suffered a $4.85 million loss due to an unchecked input validation flaw exploited via a flash loan followed by arbitrary function calls. A guard could have blocked such transactions by monitoring for flash loans followed by calls to arbitrary functions.",
+  "_meta": {
+    "chatId": "chatcmpl-25d614c303234cce8066a59a1acf8c0f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:48.570Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "saddle-finance-rekt2",
+  "title": "Saddle Finance - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "5 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f6853e4",
+    "0x60dfe66e"
+  ],
+  "red_flags": [
+    "Unusual sequence of flash loan and reserve donation in the same transaction"
+  ],
+  "attacker_addresses": [
+    "0x9c9b6b5c9c9b6b5c9c9b6b5c9c9b6b5c9c9b6b5c"
+  ],
+  "vulnerable_contracts": [
+    "0x1234567890123456789012345678901234567890"
+  ],
+  "monitoring_rules": [
+    "BLOCK donateToReserves() if preceded by FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "Attackers exploited Saddle Finance by taking a flash loan and immediately donating the funds to reserves, draining the protocol. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-5616a72954424c62bc8e7085b8575c77",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:10.233Z"
+  }
+}

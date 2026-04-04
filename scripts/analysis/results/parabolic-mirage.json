@@ -1,0 +1,41 @@
+{
+  "article_id": "parabolic-mirage",
+  "title": "Parabolic Mirage",
+  "relevance_score": 9,
+  "relevance_summary": "Sybil attack followed by market manipulation on a decentralized finance platform",
+  "attack_vector": "market_manipulation",
+  "funds_lost": "170 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends tokens to multiple newly created wallets within a short timeframe",
+      "trigger": "CREATE_MULTIPLE_NEW_WALLETS -> SEND_TOKENS_TO_NEW_WALLETS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "CREATE_MULTIPLE_NEW_WALLETS",
+    "SEND_TOKENS_TO_NEW_WALLETS"
+  ],
+  "red_flags": [
+    "sudden creation of multiple new wallets",
+    "large volume of token transfers to these wallets"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "MYX Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CREATE_MULTIPLE_NEW_WALLETS -> SEND_TOKENS_TO_NEW_WALLETS"
+  ],
+  "summary": "MYX Finance used a Sybil attack to manipulate the market, creating numerous new wallets to send large volumes of tokens, leading to a significant market manipulation and loss of funds.",
+  "_meta": {
+    "chatId": "chatcmpl-08badcfadb984b4ea1a6c9a28ae34f32",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:18.477Z"
+  }
+}

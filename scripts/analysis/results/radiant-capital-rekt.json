@@ -1,0 +1,41 @@
+{
+  "article_id": "radiant-capital-rekt",
+  "title": "Radiant Capital - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by manipulation of collateral value in newly launched market",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1900 ETH ($4.5M)",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls flashloan() followed by a tx that manipulates collateral value in the same market within 60 seconds",
+      "trigger": "FLASHLOAN -> manipulateCollateralValue() in the same market within 60 seconds",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x715018a6",
+    "0x5f188d30"
+  ],
+  "red_flags": [
+    "quick execution of flash loan and manipulation within 6 seconds",
+    "newly launched market with zero total supply"
+  ],
+  "attacker_addresses": [
+    "0x826d5f4d8084980366f975e10db6c4cf1f9dde6d"
+  ],
+  "vulnerable_contracts": [
+    "Radiant Capital's USDC market on Arbitrum"
+  ],
+  "monitoring_rules": [
+    "BLOCK flashloan() -> manipulateCollateralValue() in the same market within 60 seconds"
+  ],
+  "summary": "Radiant Capital lost $4.5M due to a flash loan exploit in a newly launched market. The attacker manipulated the collateral value shortly after the market was activated, exploiting a rounding error. A guard could have blocked such transactions by monitoring for flash loans followed by collateral value manipulations.",
+  "_meta": {
+    "chatId": "chatcmpl-2e61cd91243248baafa5cba54e1646a5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:38.747Z"
+  }
+}

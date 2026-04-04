@@ -1,0 +1,40 @@
+{
+  "article_id": "solv-rekt",
+  "title": "Solv - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Self-reentrancy attack exploiting an unaudited contract on Solv Protocol",
+  "attack_vector": "reentrancy",
+  "funds_lost": "2.73 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls a contract with known reentrancy vulnerabilities.",
+      "trigger": "REENTRANCY_VULNERABLE_CONTRACT_CALL",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Double-minting pattern",
+    "Limited exploit affecting fewer than 10 users"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "SolvProtocol/BitcoinReserveOffering"
+  ],
+  "monitoring_rules": [
+    "BLOCK_REENTRANCY_ATTACKS"
+  ],
+  "summary": "A self-reentrancy attack exploited an unaudited contract on Solv Protocol, resulting in the minting of 567 million tokens worth $2.73 million. A guard could have detected and blocked the transaction by monitoring for known reentrancy patterns.",
+  "_meta": {
+    "chatId": "chatcmpl-ebd83f7ceede4761841294a929b9ceac",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.193Z"
+  }
+}

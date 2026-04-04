@@ -1,0 +1,39 @@
+{
+  "article_id": "merlin3-rekt",
+  "title": "Merlin Labs - R3KT",
+  "relevance_score": 8,
+  "relevance_summary": "Deposit followed by manual transfer to trigger reward minting on a testing vault",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "330,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deposits funds and then manually transfers a large amount to the same contract within a short timeframe",
+      "trigger": "DEPOSIT -> LARGE_MANUAL_TRANSFER in quick succession",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Manual transfer of large amounts shortly after deposit"
+  ],
+  "attacker_addresses": [
+    "0x2bADa393e53D0373788d15fD98CB5Fb1441645BD"
+  ],
+  "vulnerable_contracts": [
+    "Merlin Finance Alpaca single asset vaults"
+  ],
+  "monitoring_rules": [
+    "DEPOSIT -> LARGE_MANUAL_TRANSFER in quick succession"
+  ],
+  "summary": "A hacker exploited Merlin Finance by depositing BNB and then manually transferring a large amount to trigger reward minting on a testing vault. A guard could have blocked such transactions to prevent the exploit.",
+  "_meta": {
+    "chatId": "chatcmpl-2aaffb6e4610412c935f7782967b3432",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:10.586Z"
+  }
+}

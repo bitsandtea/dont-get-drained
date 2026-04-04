@@ -1,0 +1,41 @@
+{
+  "article_id": "agave-hundred-rekt",
+  "title": "Agave DAO, Hundred Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by nested borrow functions on lending protocol",
+  "attack_vector": "reentrancy",
+  "funds_lost": "11.7M USD",
+  "chain": "xdai",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls nested borrow functions after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> NESTED_BORROW in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "nested borrow functions",
+    "flash loan followed by borrow"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Agave DAO",
+    "Hundred Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS NESTED_BORROW AFTER FLASHLOAN IN SAME TX"
+  ],
+  "summary": "Agave DAO and Hundred Finance fell victim to a reentrancy attack using flash loans. Attackers nested borrow functions to increase borrowing amounts before updating debt balances, leading to significant losses. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-f2f007aa7e764087a9bc16d950390b6a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:33.209Z"
+  }
+}

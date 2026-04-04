@@ -1,0 +1,39 @@
+{
+  "article_id": "value-rekt3",
+  "title": "Value DeFi - REKT 3",
+  "relevance_score": 8,
+  "relevance_summary": "Incorrect use of Bancor formula in non-standard liquidity pools leading to fund drain",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "11M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls power() with baseN < baseD in the same tx",
+      "trigger": "power(baseN, baseD, expN, expD) with baseN < baseD in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x2fd0aaf0bad8e81d28d0ee6e4f4b5cbba693d7d0d063d1662653cdd2a135c2de"
+  ],
+  "red_flags": [
+    "swap() with crafted input violating baseN >= baseD assumption"
+  ],
+  "attacker_addresses": [
+    "0x2fd0aaf0bad8e81d28d0ee6e4f4b5cbba693d7d0d063d1662653cdd2a135c2de"
+  ],
+  "vulnerable_contracts": [
+    "vSwap pools"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls power() with baseN < baseD in the same tx"
+  ],
+  "summary": "The attack exploited incorrect usage of the Bancor formula in non-standard liquidity pools by crafting inputs that violated the baseN >= baseD assumption, allowing the attacker to drain funds. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-3b315477e0be43e1bca0cd01f6f1bfee",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:06.338Z"
+  }
+}

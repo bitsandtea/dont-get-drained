@@ -1,0 +1,39 @@
+{
+  "article_id": "alphapo-rekt",
+  "title": "AlphaPo - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack leading to hot wallet drain by Lazarus group",
+  "attack_vector": "phishing",
+  "funds_lost": "60M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a known compromised hot wallet address.",
+      "trigger": "TX_FROM_KNOWN_COMPROMISED_HOT_WALLET",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Large transfers from known compromised hot wallet addresses"
+  ],
+  "attacker_addresses": [
+    "0x040a96659fd7118259ebcd547771f6ecb9580d17",
+    "0x6d2e8a20b8afa88d92406d315b67822c01e53c38",
+    "0xde374094C837D192B61972172740BDAfc4eE16E0"
+  ],
+  "vulnerable_contracts": [
+    "alphapo.eth"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TXS_FROM_KNOWN_COMPROMISED_HOT_WALLETS"
+  ],
+  "summary": "AlphaPo, a crypto payments processor, lost $60M due to a phishing attack by Lazarus group. A hot wallet was drained, funds were consolidated, and dispersed. A guard could have blocked transactions from known compromised hot wallet addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-8a95a3c4fbcb4188bbaee7ed942a3e01",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:49.073Z"
+  }
+}

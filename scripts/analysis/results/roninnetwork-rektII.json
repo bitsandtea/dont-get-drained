@@ -1,0 +1,40 @@
+{
+  "article_id": "roninnetwork-rektII",
+  "title": "Ronin Network - Rekt II",
+  "relevance_score": 9,
+  "relevance_summary": "Bridge exploit involving improper contract upgrade",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "12 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that withdraws funds from a bridge within a short timeframe after a contract upgrade.",
+      "trigger": "CONTRACT_UPGRADE -> WITHDRAW_FUNDS within 24 hours",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "improper contract upgrade",
+    "withdrawal shortly after upgrade"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Ronin Bridge"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_CONTRACT_UPGRADE_FOLLOWED_BY_WITHDRAWAL_IN_24HOURS"
+  ],
+  "summary": "Ronin Network suffered a bridge exploit due to an improper contract upgrade, allowing attackers to withdraw funds. A guard could have blocked such transactions by monitoring contract upgrades followed by withdrawals within 24 hours.",
+  "_meta": {
+    "chatId": "chatcmpl-a44ec89214ce4763bc7fe25cf56c4ee2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.433Z"
+  }
+}

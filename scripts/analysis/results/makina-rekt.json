@@ -1,0 +1,43 @@
+{
+  "article_id": "makina-rekt",
+  "title": "Makina - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Oracle manipulation using flash loan to manipulate price and drain liquidity pools",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "4.13 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle price and then drains liquidity pools in the same transaction",
+      "trigger": "PRICE_MANIPULATION -> DRAIN_LIQUIDITY_POOL in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd0e30b88",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "synchronous deposit",
+    "atomic transaction",
+    "flash loan"
+  ],
+  "attacker_addresses": [
+    "0x2F934B0Fd5c4f99BAb37d47604a3a1AEADEF1CCc",
+    "0x935bfb495E33f74d2E9735DF1DA66acE442ede48"
+  ],
+  "vulnerable_contracts": [
+    "DUSD/USDC CurveStable pool"
+  ],
+  "monitoring_rules": [
+    "Monitor for flash loans followed by oracle price manipulation and subsequent liquidity pool draining"
+  ],
+  "summary": "Makina Finance lost $4.13 million due to an oracle manipulation attack using a flash loan. The attack involved manipulating the oracle price and draining liquidity pools in a single atomic transaction. A guard could have blocked such transactions by detecting a flash loan followed by oracle manipulation and subsequent liquidity pool draining.",
+  "_meta": {
+    "chatId": "chatcmpl-f323387e99784bcba44f2202f0078ac5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:21.794Z"
+  }
+}

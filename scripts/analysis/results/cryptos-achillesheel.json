@@ -1,0 +1,48 @@
+{
+  "article_id": "cryptos-achillesheel",
+  "title": "Crypto's Achilles' Heel",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attacks targeting human error to steal user data and assets",
+  "attack_vector": "phishing",
+  "funds_lost": "314M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to known phishing domains or IPs",
+      "trigger": "TX_DOMAIN -> known_phishing_domain() || TX_IP -> known_phishing_ip()",
+      "severity": "high"
+    },
+    {
+      "rule": "Alert on any tx that calls Permit, IncreaseAllowance, or Uniswap Permit2 functions",
+      "trigger": "PERMIT_CALL -> permit() || INCREASE_ALLOWANCE_CALL -> increaseAllowance() || UNISWAP_PERMIT2_CALL -> permit2()",
+      "severity": "medium"
+    }
+  ],
+  "on_chain_signatures": [
+    "permit()",
+    "increaseAllowance()",
+    "permit2()"
+  ],
+  "red_flags": [
+    "malicious link",
+    "phishing email",
+    "sneaky signature phishing tactics"
+  ],
+  "attacker_addresses": [
+    "not specified in the article"
+  ],
+  "vulnerable_contracts": [
+    "ERC20 tokens supporting Permit, IncreaseAllowance, Uniswap Permit2"
+  ],
+  "monitoring_rules": [
+    "TX_DOMAIN -> known_phishing_domain() || TX_IP -> known_phishing_ip()"
+  ],
+  "summary": "Evolve Bank and Trust suffered a significant data breach due to a phishing attack, resulting in the loss of user data and assets. A phishing campaign targeting ERC20 token theft via Permit, IncreaseAllowance, and Uniswap Permit2 functions poses a critical risk. Guards should monitor for these specific functions and block suspicious transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-6c8ac7b60a2e49cdb44a7cd47634e561",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:25.113Z"
+  }
+}

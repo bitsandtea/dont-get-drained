@@ -1,0 +1,40 @@
+{
+  "article_id": "chainswap-rekt",
+  "title": "ChainSwap - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain bridge exploit involving multiple repeated transactions to mint tokens and sell them for profit",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "4.4 million USD",
+  "chain": "ethereum | bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that repeatedly calls minting functions on bridge contracts within a short timeframe",
+      "trigger": "REPEATED_MINTING_CALLS -> mint() in quick succession",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d5c"
+  ],
+  "red_flags": [
+    "Repeated minting calls",
+    "Large volume of small ETH transactions"
+  ],
+  "attacker_addresses": [
+    "0xEda5066780dE29D00dfb54581A707ef6F52D8113"
+  ],
+  "vulnerable_contracts": [
+    "ChainSwap bridge contracts"
+  ],
+  "monitoring_rules": [
+    "BLOCK_REPEATED_MINTING_CALLS"
+  ],
+  "summary": "The attacker exploited the ChainSwap bridge by repeatedly minting tokens and selling them for profit, resulting in a loss of $4.4 million. A guard could have detected this by blocking repeated minting calls within a short timeframe.",
+  "_meta": {
+    "chatId": "chatcmpl-b214bdd8d4c244e9b274a72826d99af2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:01.394Z"
+  }
+}

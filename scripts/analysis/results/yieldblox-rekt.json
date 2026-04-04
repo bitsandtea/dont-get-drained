@@ -1,0 +1,41 @@
+{
+  "article_id": "yieldblox-rekt",
+  "title": "Yieldblox - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to liquidity drain on a DeFi protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "$10.97 million",
+  "chain": "stellar",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle prices and then borrows large amounts of assets in the same transaction.",
+      "trigger": "ORACLE_PRICE_MANIPULATION -> LARGE_ASSET_BORROW in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "Single transaction causing significant price manipulation",
+    "Large asset borrow immediately following price manipulation"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Blend V2",
+    "Reflector Oracle"
+  ],
+  "monitoring_rules": [
+    "BLOCK ORACLE_PRICE_MANIPULATION -> LARGE_ASSET_BORROW in single tx"
+  ],
+  "summary": "An attacker manipulated the Reflector oracle to report an inflated price of USTRY, allowing them to borrow millions of dollars worth of XLM and USDC from the YieldBlox DAO Pool on Blend V2. A guard could have blocked such transactions by detecting oracle price manipulation followed by large asset borrowing.",
+  "_meta": {
+    "chatId": "chatcmpl-06068c8bdef2405f854aaaaf11d5c52d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:45.330Z"
+  }
+}

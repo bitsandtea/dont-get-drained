@@ -1,0 +1,42 @@
+{
+  "article_id": "bonq-rekt",
+  "title": "BonqDAO - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation followed by flash loan and liquidation on Polygon-based lending and stablecoin protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "120M USD",
+  "chain": "polygon",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls submitValue() on TellorFlex contract followed by a flash loan in the same tx",
+      "trigger": "SUBMITVALUE -> FLASHLOAN in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4e3fced4",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Price feed manipulation",
+    "Flash loan followed by liquidation"
+  ],
+  "attacker_addresses": [
+    "0xcacf2d28b2a5309e099f0c6e8c60ec3ddf656642"
+  ],
+  "vulnerable_contracts": [
+    "0x8f55d884cad66b79e1a131f6bcb0e66f4fd84d5b",
+    "0x4248FD"
+  ],
+  "monitoring_rules": [
+    "BLOCK SUBMITVALUE -> FLASHLOAN in single tx"
+  ],
+  "summary": "BonqDAO was hacked through oracle manipulation where the attacker manipulated the price feed to allow a flash loan and subsequent liquidation, resulting in a loss of $120M. A guard could have blocked such transactions by detecting a submitValue() call followed by a flash loan in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-25148c5555b94a6b835f074c00e13dbf",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:41.221Z"
+  }
+}

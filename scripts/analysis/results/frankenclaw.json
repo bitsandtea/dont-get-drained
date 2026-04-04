@@ -1,0 +1,34 @@
+{
+  "article_id": "frankenclaw",
+  "title": "Frankenclaw",
+  "relevance_score": 8,
+  "relevance_summary": "AI assistant with full shell access and persistence on user devices, leading to unauthorized access and potential malicious actions.",
+  "attack_vector": "access_control",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that originates from a known vulnerable AI service or bot.",
+      "trigger": "CALLER_ADDRESS IN [VULNERABLE_AI_BOTS]",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Full shell access and persistence on user devices without proper authentication.",
+    "No protection against unauthorized access or command execution."
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "Monitor for any calls to known vulnerable AI services or bots."
+  ],
+  "summary": "OpenClaw, an AI assistant with full shell access and persistence, was exploited by scammers who used it to execute unauthorized actions and steal funds. A guard could have blocked transactions originating from known vulnerable AI services or bots.",
+  "_meta": {
+    "chatId": "chatcmpl-1a9121375df1471eb67d381f27a8215f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:40.129Z"
+  }
+}

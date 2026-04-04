@@ -1,0 +1,43 @@
+{
+  "article_id": "kokomo-finance-rekt",
+  "title": "Kokomo Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Deployer exploit involving contract upgrade and token transfer",
+  "attack_vector": "access_control",
+  "funds_lost": "4M USD",
+  "chain": "optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades a contract with a known malicious contract address",
+      "trigger": "CONTRACT_UPGRADE -> malicious contract address detected",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x804edaad"
+  ],
+  "red_flags": [
+    "contract upgrade",
+    "malicious contract deployment",
+    "token transfer"
+  ],
+  "attacker_addresses": [
+    "0x41BE",
+    "0x5a2d",
+    "0x5C8d"
+  ],
+  "vulnerable_contracts": [
+    "KOKO Token contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades a contract with a known malicious contract address"
+  ],
+  "summary": "Kokomo Finance, a lending protocol on Optimism, was exploited by the deployer who upgraded the contract to a malicious one, transferring tokens to themselves. A guard could have blocked the contract upgrade transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-b5966eeaa5c54ca9a9859b3ce6e8c8de",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:08.970Z"
+  }
+}

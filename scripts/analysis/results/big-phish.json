@@ -1,0 +1,41 @@
+{
+  "article_id": "big-phish",
+  "title": "Big Phish",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack targeting validator signatures on a DeFi network",
+  "attack_vector": "phishing",
+  "funds_lost": "625,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that attempts to sign a message or transfer validator signatures",
+      "trigger": "SIGNATURE_TRANSFER -> validator signature transfer in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x19..."
+  ],
+  "red_flags": [
+    "malicious document shared via Google Drive",
+    "browser-in-the-browser (BitB) attacks",
+    "Google Docs comments"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Ronin Network bridge"
+  ],
+  "monitoring_rules": [
+    "Block any tx that attempts to sign a message or transfer validator signatures"
+  ],
+  "summary": "The Lazarus Group, a North Korean state-sponsored hacking collective, exploited a small validator set on the Ronin Network to steal over $600 million. They used phishing to gain access to validator signatures.",
+  "_meta": {
+    "chatId": "chatcmpl-0ac66bf4c458409a971e30c1332183de",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:23.290Z"
+  }
+}

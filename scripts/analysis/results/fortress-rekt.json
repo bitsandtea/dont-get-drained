@@ -1,0 +1,40 @@
+{
+  "article_id": "fortress-rekt",
+  "title": "Fortress Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation followed by malicious governance proposal on lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "3,000,000 USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls submit() on the oracle contract if it has been flagged as malicious",
+      "trigger": "submit() -> malicious proposal in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f98..."
+  ],
+  "red_flags": [
+    "Publicly callable price submit() function",
+    "Malicious proposal with high collateral factor"
+  ],
+  "attacker_addresses": [
+    "0xA6AF2872176320015f8ddB2ba013B38Cb35d22Ad"
+  ],
+  "vulnerable_contracts": [
+    "0x..."
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls submit() on the oracle contract if it has been flagged as malicious"
+  ],
+  "summary": "Fortress Protocol was hacked due to a publicly callable oracle submit() function being manipulated to pass a malicious governance proposal, draining $3M worth of assets. A guard could have blocked any tx calling submit() if it led to a malicious proposal.",
+  "_meta": {
+    "chatId": "chatcmpl-fd26ab231c9c420a819706160e863d73",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.684Z"
+  }
+}

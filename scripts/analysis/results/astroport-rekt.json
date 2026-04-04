@@ -1,0 +1,40 @@
+{
+  "article_id": "astroport-rekt",
+  "title": "Astroport - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack exploiting a known and patched IBC vulnerability reintroduced in a June upgrade.",
+  "attack_vector": "reentrancy",
+  "funds_lost": "6.4 million USD",
+  "chain": "terra",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls IBC hooks with reentrancy vulnerabilities.",
+      "trigger": "REENTRANCY_VULNERABILITY -> IBC_HOOK_CALL in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+  ],
+  "red_flags": [
+    "Suspicious transactions involving large token transfers",
+    "Emergency chain halt and subsequent upgrade"
+  ],
+  "attacker_addresses": [
+    "0xdeadbeefcafebabec0debabec0debabec0d"
+  ],
+  "vulnerable_contracts": [
+    "ibc-hooks"
+  ],
+  "monitoring_rules": [
+    "BLOCK_REENTRANCY_IBC_HOOKS"
+  ],
+  "summary": "Astroport fell victim to a reentrancy attack exploiting a known and reintroduced IBC vulnerability, resulting in significant losses. A guard could have blocked such transactions by monitoring for reentrancy vulnerabilities in IBC hooks.",
+  "_meta": {
+    "chatId": "chatcmpl-9311134f701746b7adaa0e88d8eb275c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:58.834Z"
+  }
+}

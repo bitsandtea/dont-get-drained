@@ -1,0 +1,41 @@
+{
+  "article_id": "8ight-finance-rekt",
+  "title": "8ight Finance - REKT",
+  "relevance_score": 7,
+  "relevance_summary": "Transfer of funds from compromised validator addresses to Tornado Cash",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "1.75 million USD",
+  "chain": "harmony",
+  "prevention": [
+    {
+      "rule": "Block any tx sending funds to Tornado Cash from known compromised validator addresses",
+      "trigger": "TORNADO_CASH_DEPOSIT -> transferFrom(compromised_validator_address)",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "transferFrom(address,uint256)"
+  ],
+  "red_flags": [
+    "Transfer of large amounts of DAI from compromised validator addresses",
+    "Posting of private keys on social media"
+  ],
+  "attacker_addresses": [
+    "xxca1d",
+    "cc541"
+  ],
+  "vulnerable_contracts": [
+    "8ight Finance protocol"
+  ],
+  "monitoring_rules": [
+    "Block any tx sending funds to Tornado Cash from known compromised validator addresses"
+  ],
+  "summary": "8ight Finance lost $1.75 million due to compromised validator keys being used to transfer funds to Tornado Cash. A guard could have detected and blocked the transaction by monitoring for transfers from known compromised validator addresses to Tornado Cash.",
+  "_meta": {
+    "chatId": "chatcmpl-c7d895422e2e40d8ae1a12e620c6e271",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:00:46.945Z"
+  }
+}

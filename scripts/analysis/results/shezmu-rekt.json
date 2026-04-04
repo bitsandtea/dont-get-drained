@@ -1,0 +1,40 @@
+{
+  "article_id": "shezmu-rekt",
+  "title": "Shezmu - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Arbitrary collateral minting followed by flash loan and withdrawal on DeFi protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "4900000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints collateral and then immediately borrows a large amount using a flash loan.",
+      "trigger": "COLLATERAL_MINT -> FLASHLOAN_BORROW in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x8db5356ec348a991adaadfd7f366d72eccafcb0113c7ac31f1dddde9c8c3f81e"
+  ],
+  "red_flags": [
+    "Unusual minting followed by flash loan",
+    "Low liquidity leading to significant value loss"
+  ],
+  "attacker_addresses": [
+    "0xA3a64255484aD65158AF0F9d96B5577F79901a1D"
+  ],
+  "vulnerable_contracts": [
+    "0xEd4B3d468DEd53a322A8B8280B6f35aAE8bC499C"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints collateral and then immediately borrows a large amount using a flash loan."
+  ],
+  "summary": "The attacker exploited a vulnerability allowing arbitrary collateral minting, followed by a flash loan to withdraw $4.9 million. A guard could have detected and blocked such transactions by monitoring for minting followed by a flash loan in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-fc6efd51ac384c7a90734c71b89bb27e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:22.077Z"
+  }
+}

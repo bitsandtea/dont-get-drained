@@ -1,0 +1,41 @@
+{
+  "article_id": "bybit-rekt",
+  "title": "ByBit - Rekt",
+  "relevance_score": 10,
+  "relevance_summary": "Multisig signer tricked into approving a transaction that masked a malicious wallet implementation upgrade",
+  "attack_vector": "access_control",
+  "funds_lost": "1.43 billion USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys a contract with a known malicious function signature",
+      "trigger": "DEPLOY_CONTRACT -> contains 'sweepERC20()'",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe985e9cbbfeff5bde638da2a65835a2e55a3a77e6e3c1b70a57e5c5b7b60e8b5"
+  ],
+  "red_flags": [
+    "Masked UI",
+    "Routine transaction appearance",
+    "Unverified wallet implementation upgrade"
+  ],
+  "attacker_addresses": [
+    "0x47666Fab8bd0Ac7003bce3f5C3585383F09486E2"
+  ],
+  "vulnerable_contracts": [
+    "0x1Db92e2EeBC8E0c075a02BeA49a2935BcD2dFCF4"
+  ],
+  "monitoring_rules": [
+    "Block any tx deploying a contract with 'sweepERC20()'"
+  ],
+  "summary": "Hackers tricked ByBit multisig signers into approving a transaction that masked a malicious wallet implementation upgrade, allowing them to drain the wallet. A guard could have blocked the deployment of contracts containing the 'sweepERC20()' function.",
+  "_meta": {
+    "chatId": "chatcmpl-73b433abb0a445209e9727b9463740e0",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:46.992Z"
+  }
+}

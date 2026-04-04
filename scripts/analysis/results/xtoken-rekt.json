@@ -1,0 +1,40 @@
+{
+  "article_id": "xtoken-rekt",
+  "title": "XToken - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by minting tokens on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "500,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints tokens immediately after a flash loan borrow in the same transaction",
+      "trigger": "FLASHLOAN_BORROW -> MINT_TOKENS in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x42842e0e",
+    "0x7f22982a"
+  ],
+  "red_flags": [
+    "Unusual token minting activity shortly after a flash loan"
+  ],
+  "attacker_addresses": [
+    "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+  ],
+  "vulnerable_contracts": [
+    "XTokenLender"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_FLASHLOAN_BORROW_FOLLOWED_BY_MINT_TOKENS"
+  ],
+  "summary": "Attackers used a flash loan to mint tokens on the XTokenLender protocol, exploiting the lack of proper checks before minting. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-240a2e8ae3364db8b756048f73499c8c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:15.320Z"
+  }
+}

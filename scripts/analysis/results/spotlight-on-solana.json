@@ -1,0 +1,40 @@
+{
+  "article_id": "spotlight-on-solana",
+  "title": "Spotlight on Solana",
+  "relevance_score": 2,
+  "relevance_summary": "Cross-chain bridge exploit involving compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "Not specified in the article",
+  "chain": "solana",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a bridge withdrawal with compromised validator signatures",
+      "trigger": "BRIDGE_WITHDRAWAL -> validator_signature_check_fails()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x...validator_signature_check_fails..."
+  ],
+  "red_flags": [
+    "bridge withdrawal",
+    "compromised validator signatures"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "0x...bridge_contract..."
+  ],
+  "monitoring_rules": [
+    "BLOCK bridge_withdrawal if validator_signature_check_fails"
+  ],
+  "summary": "The hack involved a bridge exploit where validator signatures were compromised, allowing attackers to withdraw funds. A guard could have detected and blocked such transactions by monitoring for bridge withdrawals with failed validator signature checks.",
+  "_meta": {
+    "chatId": "chatcmpl-830daf45b7be4b6c872801c6adcec708",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:51.202Z"
+  }
+}

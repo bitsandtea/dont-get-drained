@@ -1,0 +1,42 @@
+{
+  "article_id": "burning-bridges",
+  "title": "Burning Bridges",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "N/A",
+  "chain": "polygon",
+  "prevention": [
+    {
+      "rule": "Block any tx that proposes a governance change involving flash loans.",
+      "trigger": "GOVERNANCE_PROPOSAL -> contains FLASH_LOAN_CALL",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Governance proposal involving flash loans",
+    "Unsolicited yield farming on bridge funds"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Polygon's PoS bridge",
+    "Morpho Vaults",
+    "Yearn"
+  ],
+  "monitoring_rules": [
+    "BLOCK_GOVERNANCE_FLASH_LOAN_PROPOSALS"
+  ],
+  "summary": "A governance proposal to use bridge funds for yield farming without user consent led to a controversial situation. A guard could have blocked such proposals involving flash loans.",
+  "_meta": {
+    "chatId": "chatcmpl-8b3d40965d34445fad4b297ced58ebfb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:08.655Z"
+  }
+}

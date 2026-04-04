@@ -1,0 +1,40 @@
+{
+  "article_id": "avi-arrested",
+  "title": "Highly regrettable trading strategy",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "115M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls governance functions with flash loaned funds in the same tx.",
+      "trigger": "FLASHLOAN -> GOVERNANCE_FUNCTION in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Manipulating governance token price",
+    "Using unrealized profit to drain lending pools"
+  ],
+  "attacker_addresses": [
+    "0xAvrahamEisenbergAddress"
+  ],
+  "vulnerable_contracts": [
+    "Mango Markets Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK_GOVERNANCE_FLASHLOAN"
+  ],
+  "summary": "Avraham Eisenberg manipulated the price of Mango’s governance token, MNGO, and used the profits to drain the protocol’s lending pools. A guard could have blocked transactions calling governance functions with flash loaned funds.",
+  "_meta": {
+    "chatId": "chatcmpl-681f2f4192904d7b924ae8cc1f4a1205",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.437Z"
+  }
+}

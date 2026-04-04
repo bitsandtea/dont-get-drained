@@ -1,0 +1,23 @@
+{
+  "article_id": "meltdown",
+  "title": "Meltdown",
+  "relevance_score": 0,
+  "relevance_summary": "No specific transaction details provided; focuses on macroeconomic and regulatory issues.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the collapse of SVB and its impact on the broader financial and crypto sectors without providing specific details about DeFi transactions or vulnerabilities.",
+  "_meta": {
+    "chatId": "chatcmpl-dd42c63bb37c4070ad766238926107f9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:36.663Z"
+  }
+}

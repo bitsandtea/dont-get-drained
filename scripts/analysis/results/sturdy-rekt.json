@@ -1,0 +1,41 @@
+{
+  "article_id": "sturdy-rekt",
+  "title": "Sturdy Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by price manipulation on lending protocol",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "800000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls manipulatePrice() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> MANIPULATE_PRICE in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x18160ddd",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Unusually rapid price changes",
+    "Front-running protection built into the attack contract"
+  ],
+  "attacker_addresses": [
+    "0x1e8419e724d51e87f78e222d935fbbdeb631a08b"
+  ],
+  "vulnerable_contracts": [
+    "0x0b09c86260c12294e3b967f0d523b4b2bcdfbeab"
+  ],
+  "monitoring_rules": [
+    "BLOCK MANIPULATE_PRICE if FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "Sturdy Finance lost $800k due to a price manipulation exploit using a flash loan. A flash loan was taken out, the price of collateral was manipulated, and then the profit was withdrawn. A guard could have blocked such transactions by preventing price manipulation calls after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-608ff9bc1374456a9337b0e627d71e9c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:54.318Z"
+  }
+}

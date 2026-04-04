@@ -1,0 +1,43 @@
+{
+  "article_id": "polynetwork-rekt",
+  "title": "Poly Network - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Cross-chain exploit using incorrect function signature verification",
+  "attack_vector": "compiler_bug",
+  "funds_lost": "611 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls EthCrossChainData contract with custom function signature",
+      "trigger": "CALL EthCrossChainData -> verifyHeaderAndExecuteTx -> executeCrossChainTx with custom _method",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "EthCrossChainData"
+  ],
+  "red_flags": [
+    "Incorrect function signature verification",
+    "Cross-chain message execution without proper validation"
+  ],
+  "attacker_addresses": [
+    "0xc8a65fadf0e0ddaf421f28feab69bf6e2e589963",
+    "0x0D6e286A7cfD25E0c01fEe9756765D8033B32C71"
+  ],
+  "vulnerable_contracts": [
+    "0x250e76987d838a75310c34bf422ea9f1ac4cc906",
+    "0x05f0fDD0E49A5225011fff92aD85cC68e1D1F08e",
+    "0x28FF66a1B95d7CAcf8eDED2e658f768F44841212"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS EthCrossChainData WITH CUSTOM FUNCTION SIGNATURE"
+  ],
+  "summary": "The Poly Network hack involved exploiting a vulnerability in the EthCrossChainManager contract due to incorrect function signature verification, allowing the attacker to execute arbitrary functions on the EthCrossChainData contract. A guard could have blocked such transactions by monitoring for calls to EthCrossChainData with custom function signatures.",
+  "_meta": {
+    "chatId": "chatcmpl-84b658fe79c64cbca0aacf80b8a78f77",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:17.131Z"
+  }
+}

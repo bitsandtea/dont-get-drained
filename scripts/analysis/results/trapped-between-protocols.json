@@ -1,0 +1,39 @@
+{
+  "article_id": "trapped-between-protocols",
+  "title": "Trapped Between Protocols",
+  "relevance_score": 8,
+  "relevance_summary": "Protocol-to-protocol hostage situation involving unannounced code changes and collateralized debt",
+  "attack_vector": "access_control",
+  "funds_lost": "32 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies critical smart contract code without proper governance approval.",
+      "trigger": "UNAUTHORIZED_CODE_CHANGE -> critical_contract_code_modification()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "critical_contract_code_modification()"
+  ],
+  "red_flags": [
+    "unilateral smart contract code change",
+    "collateralized debt without governance approval"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Alpha Finance",
+    "Iron Bank"
+  ],
+  "monitoring_rules": [
+    "BLOCK_UNAUTHORIZED_CODE_CHANGE"
+  ],
+  "summary": "Alpha Finance faced a protocol-to-protocol hostage situation where Iron Bank unilaterally changed smart contract code without proper governance approval, freezing user funds and causing significant financial loss.",
+  "_meta": {
+    "chatId": "chatcmpl-a3803f2cbcdb4ebeaa481040d1954040",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:33.040Z"
+  }
+}

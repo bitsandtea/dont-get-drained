@@ -1,0 +1,40 @@
+{
+  "article_id": "okx-dex-rekt",
+  "title": "OKX DEX - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Proxy admin upgrade to steal user funds via trusted contract",
+  "attack_vector": "access_control",
+  "funds_lost": "2700000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades a trusted contract with a known vulnerable pattern.",
+      "trigger": "UPGRADE -> trusted contract with known vulnerable pattern",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "trusted contract upgrade",
+    "proxy admin compromise"
+  ],
+  "attacker_addresses": [
+    "0xFacf375Af906f55453537ca31fFA99053A010239"
+  ],
+  "vulnerable_contracts": [
+    "0x55b35bf627944396f9950dd6bddadb5218110c76"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades a trusted contract with a known vulnerable pattern."
+  ],
+  "summary": "OKX DEX lost $2.7M due to a compromised proxy admin upgrading the contract to steal user funds. A guard could have blocked the upgrade transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-27986df716bc4484b827473c01aba156",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:17.164Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "value-rekt2",
+  "title": "Value DeFi - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Reinitialization of pool followed by governanceRecoverUnsupported() call to drain liquidity",
+  "attack_vector": "access_control",
+  "funds_lost": "10,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets operator role and calls governanceRecoverUnsupported() in the same transaction",
+      "trigger": "SET_OPERATOR_ROLE -> governanceRecoverUnsupported() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f5888fa",
+    "0x2e8a9040"
+  ],
+  "red_flags": [
+    "Reinitialization of pool",
+    "Missing line of code in migration"
+  ],
+  "attacker_addresses": [
+    "1Cm6WGvXQ9EgvvWX5dRsBxE2NvxFjfbcVF"
+  ],
+  "vulnerable_contracts": [
+    "Value DeFi Pool Contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sets operator role and calls governanceRecoverUnsupported() in the same transaction"
+  ],
+  "summary": "The attacker reinitialized the pool and set themselves as the operator, then drained the liquidity using the governanceRecoverUnsupported() function. A guard could have blocked such transactions by preventing the combination of setting the operator role and calling governanceRecoverUnsupported() in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-8b7461d9db1d48a98f1c5964478d97eb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:04.728Z"
+  }
+}

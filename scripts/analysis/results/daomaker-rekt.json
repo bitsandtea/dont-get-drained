@@ -1,0 +1,46 @@
+{
+  "article_id": "daomaker-rekt",
+  "title": "DAO Maker - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Init() function vulnerability exploited to reinitialize contracts and withdraw funds",
+  "attack_vector": "access_control",
+  "funds_lost": "4M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls init() after a series of emergencyExit() calls on multiple contracts",
+      "trigger": "init() -> emergencyExit() in multiple contracts in quick succession",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x60606040526000805460016000f3"
+  ],
+  "red_flags": [
+    "init() called after emergencyExit()",
+    "Multiple emergencyExit() calls on different contracts"
+  ],
+  "attacker_addresses": [
+    "0x6e70c88be1d5c2a4c0c8205764d01abe6a3d2e22",
+    "0xd6c8dd834abeeefa7a663c1265ce840ca457b1ec",
+    "0xdd571023d95ff6ce5716bf112ccb752e86212167",
+    "0xa43b89d5e7951d410585360f6808133e8b919289"
+  ],
+  "vulnerable_contracts": [
+    "0x6e70c88be1d5c2a4c0c8205764d01abe6a3d2e22",
+    "0xd6c8dd834abeeefa7a663c1265ce840ca457b1ec",
+    "0xdd571023d95ff6ce5716bf112ccb752e86212167",
+    "0xa43b89d5e7951d410585360f6808133e8b919289"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls init() after a series of emergencyExit() calls on multiple contracts"
+  ],
+  "summary": "DAO Maker's init() function was exploited to reinitialize contracts and withdraw funds. A guard could have blocked transactions calling init() after a series of emergencyExit() calls.",
+  "_meta": {
+    "chatId": "chatcmpl-ca3692ac1a69441dafb0590d43eb33fc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:06.656Z"
+  }
+}

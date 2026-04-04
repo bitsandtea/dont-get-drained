@@ -1,0 +1,40 @@
+{
+  "article_id": "cetus-rekt",
+  "title": "Cetus - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Arithmetic overflow leading to massive liquidity minting and subsequent draining of funds via flash loans",
+  "attack_vector": "arithmetic_overflow",
+  "funds_lost": "223 million USD",
+  "chain": "sui",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows a flash loan and immediately mints liquidity in the same transaction",
+      "trigger": "FLASHLOAN_BORROW -> GET_LIQUIDITY_FROM_A in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x12345678",
+    "0x23456789"
+  ],
+  "red_flags": [
+    "flash loan followed by liquidity minting in the same transaction"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "Cetus Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_FLASHLOAN_MINT_LIQUIDITY"
+  ],
+  "summary": "Attackers exploited a flaw in Cetus Protocol's get_liquidity_from_a formula to mint massive liquidity positions with a small flash loan, draining $223 million from Sui's largest DEX.",
+  "_meta": {
+    "chatId": "chatcmpl-1b782b1346f7422bad63908ffa3bc5f9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:52.191Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "socket-rekt",
+  "title": "Socket - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "500,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d6c",
+    "0x3b8e4b7e"
+  ],
+  "red_flags": [
+    "Unusual sequence of flash loan and reserves donation"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "0x0A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6"
+  ],
+  "monitoring_rules": [
+    "BLOCK FLASHLOAN_BORROW -> DONATE_TO_RESERVES in single tx"
+  ],
+  "summary": "The attacker exploited a flash loan to manipulate the lending protocol's reserves, draining funds. A guard could have blocked such transactions by detecting the sequence of flash loan followed by donating to reserves.",
+  "_meta": {
+    "chatId": "chatcmpl-426419e27230461aa408a36b8004afa5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:30.787Z"
+  }
+}

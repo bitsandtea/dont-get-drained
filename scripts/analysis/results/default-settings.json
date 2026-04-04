@@ -1,0 +1,40 @@
+{
+  "article_id": "default-settings",
+  "title": "Default Settings",
+  "relevance_score": 8,
+  "relevance_summary": "Default value left unchecked leading to fund loss via simple transaction manipulation",
+  "attack_vector": "other",
+  "funds_lost": "$5.16 million",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets default values in critical functions without explicit user input",
+      "trigger": "SET_DEFAULT_VALUE -> critical_function() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Unchanged default value in critical function",
+    "Single transaction draining funds"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Veil Cash"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sets default values in critical functions without explicit user input"
+  ],
+  "summary": "Veil Cash and FoomCash lost funds due to an unchanged default value in a critical function. A guard could have blocked such transactions by monitoring for default values being set in critical functions.",
+  "_meta": {
+    "chatId": "chatcmpl-d3962a123f924611901c405a4606dd75",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:47.890Z"
+  }
+}

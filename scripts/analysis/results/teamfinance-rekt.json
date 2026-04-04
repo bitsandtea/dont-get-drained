@@ -1,0 +1,40 @@
+{
+  "article_id": "teamfinance-rekt",
+  "title": "Team Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1.5 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4e3fced4",
+    "0x60dfe697"
+  ],
+  "red_flags": [
+    "Unusual sequence of flash loan and reserve donation"
+  ],
+  "attacker_addresses": [
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+  ],
+  "vulnerable_contracts": [
+    "TeamFinance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_FLASHLOAN_BORROW_FOLLOWED_BYDonateToReserves"
+  ],
+  "summary": "Attackers exploited a flash loan to drain liquidity from TeamFinance's lending protocol and then donated the stolen funds to reserves, draining the protocol's funds. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-d20a1e87b76c4bfe87f6ac8b8cf8d5c3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:25.876Z"
+  }
+}

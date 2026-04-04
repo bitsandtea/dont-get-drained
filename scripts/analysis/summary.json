@@ -1,0 +1,196 @@
+{
+  "generatedAt": "2026-04-04T09:29:05.348Z",
+  "model": "qwen/qwen-2.5-7b-instruct",
+  "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+  "totalArticles": 5,
+  "results": [
+    {
+      "article_id": "ronin-rekt",
+      "title": "Ronin Network - REKT",
+      "relevance_score": 8,
+      "attack_vector": "Access Control",
+      "funds_lost": "$624M",
+      "chain": "Ethereum",
+      "on_chain_signatures": [
+        "approval of Sky Mavis validators to sign transactions on behalf of Axie DAO"
+      ],
+      "red_flags": [
+        "unrevoked whitelist access for signing transactions",
+        "large withdrawals from the Ronin Bridge contract"
+      ],
+      "attacker_addresses": [
+        "0x098b716b8aaf21512996dc57eb0615e2383e2f96"
+      ],
+      "vulnerable_contracts": [
+        "Ronin Bridge contract"
+      ],
+      "monitoring_rules": [
+        "Monitor for unrevoked whitelist access for signing transactions",
+        "Detect large withdrawals from the Ronin Bridge contract"
+      ],
+      "summary": "The Ronin Network was hacked due to unrevoked whitelist access for signing transactions, allowing the attacker to drain $624M worth of assets. A real-time guard could have detected this by monitoring for unrevoked whitelist access and large withdrawals."
+    },
+    {
+      "article_id": "wormhole-rekt",
+      "title": "Wormhole - REKT",
+      "relevance_score": 9,
+      "attack_vector": "bridge exploit",
+      "funds_lost": "$326M",
+      "chain": "Solana, Ethereum",
+      "on_chain_signatures": [
+        "SignatureSet",
+        "verify_signatures",
+        "complete_wrapped"
+      ],
+      "red_flags": [
+        "bypassing guardians",
+        "discrepancy between solana_program::sysvar::instructions and solana_program",
+        "fraudulent minting of 120k whETH"
+      ],
+      "attacker_addresses": [
+        "0x629e7da20197a5429d30da36e77d06cdf796b71a"
+      ],
+      "vulnerable_contracts": [
+        "Wormhole Bridge"
+      ],
+      "monitoring_rules": [
+        "Detect unusual calls to 'verify_signatures' and 'complete_wrapped'",
+        "Monitor for discrepancies between 'solana_program::sysvar::instructions' and 'solana_program'"
+      ],
+      "summary": "The Wormhole bridge was exploited by providing a fraudulent 'SignatureSet', allowing the attacker to mint 120k whETH on Solana. A guard could have detected this by monitoring for unusual calls to 'verify_signatures' and 'complete_wrapped', and discrepancies between 'solana_program::sysvar::instructions' and 'solana_program'."
+    },
+    {
+      "article_id": "euler-rekt",
+      "title": "Euler Finance - REKT",
+      "relevance_score": 9,
+      "attack_vector": "Flash Loan",
+      "funds_lost": "$197M",
+      "chain": "Ethereum",
+      "on_chain_signatures": [
+        "donateToReserves",
+        "flash-loan"
+      ],
+      "red_flags": [
+        "use of donateToReserves without debt health check",
+        "large underwater position creation",
+        "immediate withdrawal of inflated eToken collateral"
+      ],
+      "attacker_addresses": [
+        "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+      ],
+      "vulnerable_contracts": [
+        "donateToReserves"
+      ],
+      "monitoring_rules": [
+        "BLOCK transactions involving donateToReserves without accompanying debt health checks",
+        "BLOCK large flash loans followed by immediate interaction with Euler Finance contracts"
+      ],
+      "summary": "The Euler Finance hack involved a flash loan and the misuse of the donateToReserves function, allowing attackers to create an unbacked debt position and withdraw assets. A guard could have blocked transactions involving donateToReserves without proper debt checks or large flash loans immediately interacting with Euler contracts."
+    },
+    {
+      "article_id": "curve-vyper-rekt",
+      "title": "Curve, Vyper - REKT",
+      "relevance_score": 8,
+      "attack_vector": "compiler bug, reentrancy",
+      "funds_lost": "$69M",
+      "chain": "Ethereum",
+      "on_chain_signatures": [
+        "add_liquidity",
+        "remove_liquidity"
+      ],
+      "red_flags": [
+        "reentrancy pattern",
+        "use of vulnerable Vyper versions"
+      ],
+      "attacker_addresses": [
+        "0x6ec21d1868743a44318c3c259a6d4953f9978538",
+        "0xdce5d6b41c32f578f875efffc0d422c57a75d7d8",
+        "0xc0ffeebabe5d496b2dde509f9fa189c25cf29671"
+      ],
+      "vulnerable_contracts": [
+        "JPEG’D pETH/ETH pool",
+        "Alchemix alETH/ETH pool",
+        "Metronome msETH-ETH pool",
+        "Curve CRV/ETH pool"
+      ],
+      "monitoring_rules": [
+        "Detect reentrancy patterns in Vyper contracts using vulnerable versions",
+        "Monitor for large transactions involving vulnerable pools"
+      ],
+      "summary": "The hack exploited a compiler bug in Vyper, causing a reentrancy vulnerability in Curve pools. A reentrancy pattern in transactions involving vulnerable Vyper versions could have triggered a block."
+    },
+    {
+      "article_id": "bybit-rekt",
+      "title": "ByBit - Rekt",
+      "relevance_score": 9,
+      "attack_vector": "multisig front-end spoofing",
+      "funds_lost": "$1.43 billion",
+      "chain": "Ethereum",
+      "on_chain_signatures": [
+        "sweepERC20()"
+      ],
+      "red_flags": [
+        "multisig signers approving seemingly legitimate transactions",
+        "hidden 'sweepERC20()' function in wallet implementation upgrade"
+      ],
+      "attacker_addresses": [
+        "0x47666Fab8bd0Ac7003bce3f5C3585383F09486E2"
+      ],
+      "vulnerable_contracts": [
+        "0x1Db92e2EeBC8E0c075a02BeA49a2935BcD2dFCF4"
+      ],
+      "monitoring_rules": [
+        "Block transactions involving multisig wallets with unknown or suspicious functions",
+        "Monitor for hidden functions like 'sweepERC20()' in wallet upgrades"
+      ],
+      "summary": "Hackers tricked ByBit multisig signers into approving a seemingly legitimate transaction, which actually contained a hidden 'sweepERC20()' function that drained the exchange's cold wallet. A real-time guard could have detected and blocked the transaction by monitoring for unknown functions in wallet upgrades."
+    }
+  ],
+  "highRelevance": [
+    {
+      "id": "ronin-rekt",
+      "score": 8,
+      "vector": "Access Control",
+      "rules": [
+        "Monitor for unrevoked whitelist access for signing transactions",
+        "Detect large withdrawals from the Ronin Bridge contract"
+      ]
+    },
+    {
+      "id": "wormhole-rekt",
+      "score": 9,
+      "vector": "bridge exploit",
+      "rules": [
+        "Detect unusual calls to 'verify_signatures' and 'complete_wrapped'",
+        "Monitor for discrepancies between 'solana_program::sysvar::instructions' and 'solana_program'"
+      ]
+    },
+    {
+      "id": "euler-rekt",
+      "score": 9,
+      "vector": "Flash Loan",
+      "rules": [
+        "BLOCK transactions involving donateToReserves without accompanying debt health checks",
+        "BLOCK large flash loans followed by immediate interaction with Euler Finance contracts"
+      ]
+    },
+    {
+      "id": "curve-vyper-rekt",
+      "score": 8,
+      "vector": "compiler bug, reentrancy",
+      "rules": [
+        "Detect reentrancy patterns in Vyper contracts using vulnerable versions",
+        "Monitor for large transactions involving vulnerable pools"
+      ]
+    },
+    {
+      "id": "bybit-rekt",
+      "score": 9,
+      "vector": "multisig front-end spoofing",
+      "rules": [
+        "Block transactions involving multisig wallets with unknown or suspicious functions",
+        "Monitor for hidden functions like 'sweepERC20()' in wallet upgrades"
+      ]
+    }
+  ]
+}

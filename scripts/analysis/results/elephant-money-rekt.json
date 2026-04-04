@@ -1,0 +1,41 @@
+{
+  "article_id": "elephant-money-rekt",
+  "title": "Elephant Money - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by price manipulation on stablecoin minting process",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "22.2M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls TRUNK minting function after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> TRUNK_MINTING in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x96e8ea1d",
+    "0x23b872dd"
+  ],
+  "red_flags": [
+    "Price manipulation during minting process",
+    "Multiple cycles of flash loan and minting"
+  ],
+  "attacker_addresses": [
+    "0xec317deb2f3efdc1dbf7ed5d3902cdf2c33ae512151646383a8cf8cbcd3d4577"
+  ],
+  "vulnerable_contracts": [
+    "TRUNK"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS TRUNK_MINTING AFTER FLASHLOAN_BORROW IN THE SAME TX"
+  ],
+  "summary": "The attacker used flash loans to manipulate the price of ELEPHANT during the minting process of TRUNK, resulting in a profit of over 27k WBNB ($11.2M). A guard could have blocked such transactions by preventing TRUNK minting after a flash loan borrow.",
+  "_meta": {
+    "chatId": "chatcmpl-8b9f90879c304c27988ce5603bad9d7d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:48.554Z"
+  }
+}

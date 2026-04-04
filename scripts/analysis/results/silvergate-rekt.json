@@ -1,0 +1,23 @@
+{
+  "article_id": "silvergate-rekt",
+  "title": "Silvergate - REKT",
+  "relevance_score": 0,
+  "relevance_summary": "CeFi bank's failure due to crypto market downturn and regulatory pressure; no specific transaction patterns or attack vectors.",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Silvergate, a CeFi bank known for its crypto services, announced its closure due to financial struggles and regulatory pressure. No specific transaction patterns or attack vectors were involved.",
+  "_meta": {
+    "chatId": "chatcmpl-2946e9cb141d4719aa87c9bc23a0a5dd",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:20.007Z"
+  }
+}

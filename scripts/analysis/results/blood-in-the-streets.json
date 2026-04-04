@@ -1,0 +1,39 @@
+{
+  "article_id": "blood-in-the-streets",
+  "title": "Blood in the streets",
+  "relevance_score": 2,
+  "relevance_summary": "Market crash due to overleveraged users and flash loans",
+  "attack_vector": "flash_loan",
+  "funds_lost": "2.9 billion USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows via flash loan and immediately liquidates positions",
+      "trigger": "FLASHLOAN_BORROW -> LIQUIDATE_POSITIONS in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7109709e",
+    "0x43180d0c"
+  ],
+  "red_flags": [
+    "Overleveraged users",
+    "Excessive use of flash loans"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Aave"
+  ],
+  "monitoring_rules": [
+    "BLOCK FLASHLOAN_BORROW -> LIQUIDATE_POSITIONS in single tx"
+  ],
+  "summary": "The market crashed due to overleveraged users who used flash loans to increase their liquidation ratios. Aave's flash loan feature was exploited, leading to significant losses. A guard could have blocked such transactions to prevent further damage.",
+  "_meta": {
+    "chatId": "chatcmpl-0447625ddb904f65b1326a690d268aed",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:29.736Z"
+  }
+}

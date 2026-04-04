@@ -1,0 +1,26 @@
+{
+  "article_id": "the-one-that-got-away",
+  "title": "The One That Got Away",
+  "relevance_score": 2,
+  "relevance_summary": "Weak private key generation leading to theft of 127,426 BTC worth over $14.8 billion",
+  "attack_vector": "compiler_bug",
+  "funds_lost": "127,426 BTC (~$14.8 billion)",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Weak 32-bit entropy private key generation",
+    "Catastrophic security vulnerabilities exposed over five years"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "LuBian, a Bitcoin mining pool, suffered a massive theft due to weak 32-bit entropy private key generation, which allowed attackers to brute-force the keys. The theft went unnoticed for five years, highlighting severe security flaws.",
+  "_meta": {
+    "chatId": "chatcmpl-14aaf4c2850644908a76cd65d7f01c18",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:05.846Z"
+  }
+}

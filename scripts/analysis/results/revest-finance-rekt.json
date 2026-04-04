@@ -1,0 +1,40 @@
+{
+  "article_id": "revest-finance-rekt",
+  "title": "Revest Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack on ERC1155 minting contract allowing attacker to add funds to existing positions",
+  "attack_vector": "reentrancy",
+  "funds_lost": "$2M",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls depositAdditionalToFNFT() after a mintAddressLock() in the same tx",
+      "trigger": "mintAddressLock() -> depositAdditionalToFNFT() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0f57df83"
+  ],
+  "red_flags": [
+    "re-entrancy via onERC1155Received",
+    "depositAdditionalToFNFT called immediately after mintAddressLock"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "REVEST FNFTHandler"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls depositAdditionalToFNFT() after a mintAddressLock() in the same tx"
+  ],
+  "summary": "Revest Finance fell victim to a reentrancy attack where an attacker exploited a vulnerability in the ERC1155 minting contract to add funds to existing positions. A guard could have blocked such transactions to prevent further losses.",
+  "_meta": {
+    "chatId": "chatcmpl-ae069cf7fe7a460e85e271546972fcbf",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:10.395Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "furucombo-rekt",
+  "title": "Furucombo - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Delegatecall to trusted handler with malicious implementation set via another delegatecall",
+  "attack_vector": "access_control",
+  "funds_lost": "14 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets a new implementation address through a delegatecall to a trusted handler.",
+      "trigger": "TRUSTED_HANDLER -> SET_IMPLEMENTATION_ADDRESS() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe8f33c21"
+  ],
+  "red_flags": [
+    "delegatecall to trusted handler with unknown implementation",
+    "malicious contract setting implementation address"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Furucombo Proxy Contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_SET_IMPLEMENTATION_ADDRESS"
+  ],
+  "summary": "A hacker exploited Furucombo by making the proxy contract think Aave V2 had a new malicious implementation, allowing them to steal funds. A guard could block any transaction setting a new implementation address through a delegatecall to a trusted handler.",
+  "_meta": {
+    "chatId": "chatcmpl-6cace156df5443d59462e7392c6c043b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:47.802Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "heco-htx-rekt",
+  "title": "HECO Bridge, HTX - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Bridge withdrawal with compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "15 million HTX (~$7.5M)",
+  "chain": "heco",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a bridge withdrawal with compromised validator signatures",
+      "trigger": "BRIDGE_WITHDRAWAL -> Validator signature verification fails",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Validator signatures being manipulated",
+    "Unusual bridge withdrawal patterns"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "0x..."
+  ],
+  "monitoring_rules": [
+    "BLOCK BRIDGE_WITHDRAWAL if validator signature verification fails"
+  ],
+  "summary": "The attackers manipulated validator signatures to withdraw funds from the HECO Bridge, resulting in significant losses. A guard could have detected and blocked such transactions by monitoring for failed validator signature verifications.",
+  "_meta": {
+    "chatId": "chatcmpl-f26f1f230ac4431690a4d769bd513fc0",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:58.630Z"
+  }
+}

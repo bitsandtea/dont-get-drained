@@ -1,0 +1,41 @@
+{
+  "article_id": "eco-friendly-rug-pull",
+  "title": "The Eco-Friendly Rug Pull",
+  "relevance_score": 8,
+  "relevance_summary": "Hidden mint function exploited for rug pull on a supposedly private blockchain",
+  "attack_vector": "access_control",
+  "funds_lost": "tens of millions",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints large amounts of tokens from a contract with no prior history",
+      "trigger": "NEW_CONTRACT_CREATION -> LARGE_TOKEN_MINT_WITH_NO_HISTORY",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x78b4d179"
+  ],
+  "red_flags": [
+    "hidden mint function",
+    "suspicious tokenomics",
+    "private blockchain with exposed RPC endpoints"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "0x01234567890ABCDEF01234567890abcdef0123456"
+  ],
+  "monitoring_rules": [
+    "BLOCK_NEW_CONTRACTS_WITH_LARGE_MINTS"
+  ],
+  "summary": "Rowan Energy used a hidden mint function in a private blockchain to execute a rug pull, exploiting the lack of transparency and security measures.",
+  "_meta": {
+    "chatId": "chatcmpl-704dc171c9104328a79e28a878878e19",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:48.397Z"
+  }
+}

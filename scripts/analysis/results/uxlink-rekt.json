@@ -1,0 +1,40 @@
+{
+  "article_id": "uxlink-rekt",
+  "title": "UXLink - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Admin privileges exploited via delegateCall to change ownership and withdraw funds across multiple blockchains",
+  "attack_vector": "access_control",
+  "funds_lost": "$41 million",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses delegateCall to modify admin roles within the same transaction",
+      "trigger": "DELEGATECALL -> addOwnerWithThreshold() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd60e1e1d"
+  ],
+  "red_flags": [
+    "delegateCall used to modify admin roles",
+    "sudden changes in ownership"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "UXLink"
+  ],
+  "monitoring_rules": [
+    "Block any tx that uses delegateCall to modify admin roles within the same transaction"
+  ],
+  "summary": "UXLink's treasury was exploited via admin privileges, using delegateCall to change ownership and withdraw millions across multiple blockchains. A guard could have detected and blocked such transactions by monitoring for delegateCall usage to modify admin roles.",
+  "_meta": {
+    "chatId": "chatcmpl-f325090655cd428babf5c7c6254814fe",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:34.005Z"
+  }
+}

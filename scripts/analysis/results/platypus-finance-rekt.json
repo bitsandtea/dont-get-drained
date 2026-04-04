@@ -1,0 +1,39 @@
+{
+  "article_id": "platypus-finance-rekt",
+  "title": "Platypus Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by emergencyWithdraw() on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "8.5M USD",
+  "chain": "avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls emergencyWithdraw() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> emergencyWithdraw() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x6080604052..."
+  ],
+  "red_flags": [
+    "emergencyWithdraw() called after flash loan"
+  ],
+  "attacker_addresses": [
+    "0xeff003d64046a6f521ba31f39405cb720e953958"
+  ],
+  "vulnerable_contracts": [
+    "0x67afdd6489d40a01dae65f709367e1b1d18a5322"
+  ],
+  "monitoring_rules": [
+    "BLOCK emergencyWithdraw() if preceded by flash loan borrow in the same transaction"
+  ],
+  "summary": "Platypus Finance lost $8.5M to a flash loan attack exploiting a flaw in the USP solvency check mechanism. A flash loan was taken, used as collateral to borrow USP, and then emergencyWithdraw() was called to drain liquidity. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-9ec66e1fd874462f85769a7124213cd4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:19.891Z"
+  }
+}

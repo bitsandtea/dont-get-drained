@@ -1,0 +1,40 @@
+{
+  "article_id": "nomad-rekt",
+  "title": "Nomad Bridge - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Cross-chain bridge exploit with zero-day vulnerability in process() function allowing invalid messages to be processed",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "190M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls process() with messages length of 0",
+      "trigger": "process() -> messages.length == 0",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7050c9ee"
+  ],
+  "red_flags": [
+    "process() called with messages length of 0",
+    "copy/paste tx patterns"
+  ],
+  "attacker_addresses": [
+    "0x4d68656c6c6f2e657468"
+  ],
+  "vulnerable_contracts": [
+    "Nomad Bridge Replica contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls process() with messages length of 0"
+  ],
+  "summary": "A security flaw in Nomad Bridge's Replica contract allowed attackers to call the process() function with invalid messages, draining $190M of liquidity. A guard could have blocked such transactions by monitoring for calls to process() with messages length of 0.",
+  "_meta": {
+    "chatId": "chatcmpl-7089f93039714783bafe4a62331c4439",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:10.606Z"
+  }
+}

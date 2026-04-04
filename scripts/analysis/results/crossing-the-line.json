@@ -1,0 +1,23 @@
+{
+  "article_id": "crossing-the-line",
+  "title": "Crossing the Line",
+  "relevance_score": 0,
+  "relevance_summary": "No relevant transaction patterns or security issues identified.",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses a personal harassment incident involving a venture capitalist and a crypto industry figure. It does not contain any information related to on-chain transactions or security vulnerabilities.",
+  "_meta": {
+    "chatId": "chatcmpl-39bc55486b1e4626ad5868d06d420c53",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:23.146Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "onyx-protocol-rekt",
+  "title": "Onyx Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "2100000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xf7c21600..."
+  ],
+  "red_flags": [
+    "donateToReserves() after flash loan"
+  ],
+  "attacker_addresses": [
+    "0x085bdff2c522e8637d4154039db8746bb8642bff",
+    "0x5083956303a145f70ba9f3d80c5e6cb5ac842706"
+  ],
+  "vulnerable_contracts": [
+    "Onyx Protocol"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx"
+  ],
+  "summary": "Onyx Protocol lost $2.1M due to a flash loan exploit where attackers manipulated the price of a newly added market, drained liquidity, and withdrew funds. A guard could have blocked such transactions by preventing calls to donateToReserves() immediately after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-5340a0522da54f338ab88acc3de83523",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:13.818Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "article_id": "pancakebunny2-rekt",
+  "title": "PancakeBunny - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Deposit followed by large deposit to MiniChefV2 and subsequent withdrawal to exploit minter",
+  "attack_vector": "flash_loan",
+  "funds_lost": "2,400,000 USD",
+  "chain": "polygon",
+  "prevention": [
+    {
+      "rule": "Block any tx that deposits to a vault and immediately makes a large deposit to MiniChefV2 followed by a withdrawAll call.",
+      "trigger": "DEPOSIT_VAULT -> DEPOSIT_MINICHEFV2 -> WITHDRAWALL",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x23b872dd",
+    "0x7f78c731",
+    "0x7f78c731"
+  ],
+  "red_flags": [
+    "Deposit to vault, large deposit to MiniChefV2, withdrawAll"
+  ],
+  "attacker_addresses": [
+    "0xa6021d8c36b2de6ceb4fe281b89d37d2be321431"
+  ],
+  "vulnerable_contracts": [
+    "polygon.pancakebunny USDT-USDC Vault",
+    "USDT-USDC MiniChefV2"
+  ],
+  "monitoring_rules": [
+    "DEPOSIT_VAULT -> DEPOSIT_MINICHEFV2 -> WITHDRAWALL"
+  ],
+  "summary": "The attacker deposited small amounts into a vault and a large amount into MiniChefV2, then executed withdrawAll to exploit the minter. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-d275cf74c55b4ed899809a637ebaba72",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:08.135Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "onyx-protocol-rekt2",
+  "title": "Onyx Protocol - Rekt II",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by mint and redeem loop on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "3.8 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls mint() and redeem() in quick succession after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> mint() -> redeem() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22a6f2",
+    "0x4e3c108a"
+  ],
+  "red_flags": [
+    "suspicious mint and redeem loop after flash loan",
+    "small amount of tokens being manipulated"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Onyx Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK mint() and redeem() calls within 10 blocks of a flash loan borrow"
+  ],
+  "summary": "Onyx Protocol was exploited using a flash loan followed by a series of mint and redeem loops, resulting in a loss of $3.8 million. A guard could have blocked such transactions by monitoring for quick succession of mint and redeem calls after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-88483c1db8814bd493c24829c19f49d4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:30.614Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "dego-finance-rekt",
+  "title": "Dego Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Compromised keys leading to large token theft across multiple chains",
+  "attack_vector": "access_control",
+  "funds_lost": "$10M",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers large amounts of tokens from a single address to another within a short timeframe",
+      "trigger": "large_token_transfer -> large_token_transfer in short timeframe",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "transfer(address,uint256)"
+  ],
+  "red_flags": [
+    "sudden large token transfers",
+    "price manipulation"
+  ],
+  "attacker_addresses": [
+    "0x118203b0f2a3ef9e749d871c8fef5e5e55ef5c91"
+  ],
+  "vulnerable_contracts": [
+    "DEGO",
+    "LP tokens on BSC and ETH"
+  ],
+  "monitoring_rules": [
+    "Block any tx that transfers large amounts of tokens from a single address to another within a short timeframe"
+  ],
+  "summary": "Dego Finance suffered a large token theft due to compromised keys. Attackers transferred large amounts of tokens and manipulated the price of DEGO. A guard could have detected and blocked suspicious token transfers.",
+  "_meta": {
+    "chatId": "chatcmpl-6244123a2f2f49aa84b8fdda686a4d7f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:02.830Z"
+  }
+}

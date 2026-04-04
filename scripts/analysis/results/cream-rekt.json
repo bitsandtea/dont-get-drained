@@ -1,0 +1,40 @@
+{
+  "article_id": "cream-rekt",
+  "title": "Cream Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by reentrancy attack on lending protocol",
+  "attack_vector": "reentrancy",
+  "funds_lost": "18.8M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls borrow() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> borrow() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x715018a6"
+  ],
+  "red_flags": [
+    "nested borrow() function during token transfer",
+    "use of flash loans to fund reentrancy attacks"
+  ],
+  "attacker_addresses": [
+    "0xce1f4b4f17224ec6df16eeb1e3e5321c54ff6ede"
+  ],
+  "vulnerable_contracts": [
+    "AMP token contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_CALLING_BORROW_AFTER_FLASH_LOAN"
+  ],
+  "summary": "Cream Finance suffered a $18.8M loss due to a reentrancy vulnerability exploited through a flash loan. A hacker nested a second borrow() function inside a token transfer, allowing them to withdraw more funds than initially lent.",
+  "_meta": {
+    "chatId": "chatcmpl-60366eb8be354a39a345178bd5a8a885",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:47.641Z"
+  }
+}

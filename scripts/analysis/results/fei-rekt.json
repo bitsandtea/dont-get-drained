@@ -1,0 +1,23 @@
+{
+  "article_id": "fei-rekt",
+  "title": "Fei - REKT",
+  "relevance_score": 2,
+  "relevance_summary": "Algorithmic stablecoin launch failure",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Fei Protocol's algorithmic stablecoin failed to maintain its $1 peg, leading to a significant loss of trust and value in the project.",
+  "_meta": {
+    "chatId": "chatcmpl-33537107a1d04468bb34ffbbe35b2099",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:11:09.512Z"
+  }
+}

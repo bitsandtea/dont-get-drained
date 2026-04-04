@@ -1,0 +1,48 @@
+{
+  "article_id": "veefinance-rekt",
+  "title": "Vee Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Oracle manipulation followed by leveraged trading on newly created trading pairs",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "34000000",
+  "chain": "avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates prices in newly created trading pairs and then conducts leveraged trading on those pairs",
+      "trigger": "PRICE_MANIPULATION -> LEVERAGED_TRADING(newly_created_pairs)",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe4e0a7a5",
+    "0x60fe47b1"
+  ],
+  "red_flags": [
+    "Price manipulation through trading pairs creation",
+    "Leveraged trading on manipulated pairs"
+  ],
+  "attacker_addresses": [
+    "0xeeee458c3a5eaafcfd68681d405fb55ef80595ba",
+    "0xeeeE458C3a5eaAfcFd68681D405FB55Ef80595BA"
+  ],
+  "vulnerable_contracts": [
+    "QI/WETH.e",
+    "XAVA/WETH.e",
+    "LINK.e/WETH.e",
+    "QI/LINK.e",
+    "XAVA/LINK.e",
+    "XAVA/WBTC.e",
+    "LINK.e/WBTC.e"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_MANIPULATION -> LEVERAGED_TRADING(newly_created_pairs)"
+  ],
+  "summary": "The attacker manipulated prices in newly created trading pairs and conducted leveraged trading, allowing them to bypass slippage checks and steal funds. A guard could have blocked such transactions by monitoring price manipulation followed by leveraged trading on newly created pairs.",
+  "_meta": {
+    "chatId": "chatcmpl-4959f1a7a48c4214918705526090f4ec",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:06.328Z"
+  }
+}

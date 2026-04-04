@@ -1,0 +1,41 @@
+{
+  "article_id": "phemex-rekt",
+  "title": "Phemex - Rekt",
+  "relevance_score": 10,
+  "relevance_summary": "Multi-chain access control breach leading to hot wallet drain across numerous blockchains",
+  "attack_vector": "access_control",
+  "funds_lost": "73540000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that accesses multiple hot wallets across different blockchains within a short timeframe",
+      "trigger": "MULTIPLE_HOT_WALLET_ACCESS -> within 1 hour",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "suspicious outflows detected",
+    "multiple chains affected",
+    "hot wallets drained quickly"
+  ],
+  "attacker_addresses": [
+    "0x5B34414e95a8b8D0B16a39BAf5b97CEc1d517E22"
+  ],
+  "vulnerable_contracts": [
+    "Phemex Hot Wallets"
+  ],
+  "monitoring_rules": [
+    "Block any tx that accesses multiple hot wallets across different blockchains within a short timeframe"
+  ],
+  "summary": "Phemex suffered a multi-chain access control breach, draining over $73.54 million from their hot wallets across 30 different blockchains. A critical prevention measure would be to block transactions accessing multiple hot wallets rapidly.",
+  "_meta": {
+    "chatId": "chatcmpl-f8794f200df84131b4e117a3fdbd8367",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:40.016Z"
+  }
+}

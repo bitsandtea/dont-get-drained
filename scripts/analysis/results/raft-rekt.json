@@ -1,0 +1,40 @@
+{
+  "article_id": "raft-rekt",
+  "title": "Raft - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by minting and dumping on a stablecoin protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "3.3M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls mint() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> mint() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22a36f",
+    "0x9ab6b21cdf116f611110b048987e58894786c244"
+  ],
+  "red_flags": [
+    "Over-valued collateral used to mint large amounts of stablecoin"
+  ],
+  "attacker_addresses": [
+    "0xc1f2b71a502b551a65eee9c96318afdd5fd439fa"
+  ],
+  "vulnerable_contracts": [
+    "0x9ab6b21cdf116f611110b048987e58894786c244"
+  ],
+  "monitoring_rules": [
+    "BLOCK mint() if preceded by FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "The attacker used a flash loan to over-value collateral and minted a large amount of stablecoin, which was then dumped. A guard could have blocked the minting transaction if it followed a flash loan in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-d8e1c82bfdcf48839c9e49b7901608a3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:18.557Z"
+  }
+}

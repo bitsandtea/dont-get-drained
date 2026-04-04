@@ -1,0 +1,25 @@
+{
+  "article_id": "rekt-is-one",
+  "title": "One year of rekt.news",
+  "relevance_score": 2,
+  "relevance_summary": "NFT and merchandise sales on DeFi platform",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "NFT and merchandise sales on DeFi platform"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the launch of merchandise and NFTs to celebrate the one-year anniversary of rekt.news. There is no indication of a specific attack vector or vulnerability.",
+  "_meta": {
+    "chatId": "chatcmpl-5f0c02f528804051a06f73d58ec23b4f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:35.810Z"
+  }
+}

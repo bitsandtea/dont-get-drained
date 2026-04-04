@@ -1,0 +1,40 @@
+{
+  "article_id": "akropolis-rekt",
+  "title": "Akropolis - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by reentrancy attack on lending protocol",
+  "attack_vector": "reentrancy",
+  "funds_lost": "2,000,000 DAI",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls deposit() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> deposit() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Reentrancy attack pattern",
+    "Multiple withdrawals in a single transaction"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Akropolis protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS DEPOSIT() AFTER A FLASH LOAN BORROW IN THE SAME TX"
+  ],
+  "summary": "Akropolis suffered a $2 million DAI loss due to a reentrancy attack combined with a flash loan. A malicious contract was used to repeatedly withdraw funds after depositing them, exploiting the deposit function. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-7bf43e40ab0d4b1f8ee631b3d925c326",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.385Z"
+  }
+}

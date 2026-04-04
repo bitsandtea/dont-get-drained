@@ -1,0 +1,40 @@
+{
+  "article_id": "prismafi-rekt",
+  "title": "PrismaFi - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by trove manipulation on restaking protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "11.6 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls closeTrove() or openTrove() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> closeTrove() or openTrove() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4856e18e",
+    "0x2e8a90b0"
+  ],
+  "red_flags": [
+    "Manipulation of troveManager functions after a flash loan"
+  ],
+  "attacker_addresses": [
+    "0xD996073019c74B2fB94eAD236e32032405bC027c"
+  ],
+  "vulnerable_contracts": [
+    "MigrateTroveZap"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS closeTrove() OR openTrove() IMMEDIATELY FOLLOWING A FLASHLOAN IN THE SAME TRANSACTION"
+  ],
+  "summary": "PrismaFi fell victim to a flash loan attack where the attacker manipulated troveManager functions to drain 3258 wstETH worth $11.6 million. A guard could have blocked such transactions by preventing calls to closeTrove() or openTrove() immediately following a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-16f395306e174eb8933511a19c3eed15",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:38.103Z"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "gamestonk",
+  "title": "Gamestonk",
+  "relevance_score": 2,
+  "relevance_summary": "Retail trading activity manipulation through platform restrictions",
+  "attack_vector": "governance_attack",
+  "funds_lost": "",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "retail trading restrictions",
+    "insider trading vs outsider trading"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses the impact of retail trading activity on financial institutions and the subsequent restrictions placed by platforms like Robinhood. While not a direct hack, it highlights the potential for governance attacks and the need for transparent and fair trading practices.",
+  "_meta": {
+    "chatId": "chatcmpl-d3ae9143f8d945a780b6e58c67547599",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:46.830Z"
+  }
+}

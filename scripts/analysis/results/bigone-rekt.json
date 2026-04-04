@@ -1,0 +1,43 @@
+{
+  "article_id": "bigone-rekt",
+  "title": "BigONE - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Supply chain attack exploiting internal infrastructure modifications",
+  "attack_vector": "access_control",
+  "funds_lost": "27000000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies critical contract functions during maintenance windows",
+      "trigger": "MAINTENANCE_MODE -> critical_function_modification",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "critical_function_modification"
+  ],
+  "red_flags": [
+    "system maintenance announcement coinciding with large token outflows",
+    "unauthorized access to hot wallet"
+  ],
+  "attacker_addresses": [
+    "bc1qwxm53zya6cuflxhcxy84t4c4wrmgrwqzd07jxm",
+    "0x9Bf7a4dDcA405929dba1FBB136F764F5892A8a7a",
+    "TKKGH8bwmEEvyp3QkzDCbK61EwCHXdo17c",
+    "HSr1FNv266zCnVtUdZhfYrhgWx1a4LNEpMPDymQzPg4R"
+  ],
+  "vulnerable_contracts": [
+    "BigONE production environment"
+  ],
+  "monitoring_rules": [
+    "Block any tx that modifies critical contract functions during maintenance windows"
+  ],
+  "summary": "BigONE suffered a supply chain attack where attackers modified internal infrastructure to drain funds. A guard could have blocked modifications during maintenance windows.",
+  "_meta": {
+    "chatId": "chatcmpl-533e4da962444b8da12fe24f4dfd762c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:23.471Z"
+  }
+}

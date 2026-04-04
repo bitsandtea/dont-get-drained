@@ -1,0 +1,28 @@
+{
+  "article_id": "uniswap-v3-lp-rekt",
+  "title": "Uniswap V3 LP - REKT",
+  "relevance_score": 2,
+  "relevance_summary": "Passive liquidity providers losing to impermanent loss due to complex concentrated liquidity positions",
+  "attack_vector": "impermanent_loss",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Impermanent loss outweighing trading fee income",
+    "Passive LPs losing to active LPs"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Uniswap V3"
+  ],
+  "monitoring_rules": [],
+  "summary": "Uniswap V3 LPs are losing money due to impermanent loss, with passive LPs losing more than active LPs. This highlights the risks associated with complex liquidity provision mechanisms.",
+  "_meta": {
+    "chatId": "chatcmpl-25f385c238fa48ac8ff73dd95b505a8b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:45.852Z"
+  }
+}

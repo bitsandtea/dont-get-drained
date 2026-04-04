@@ -1,0 +1,38 @@
+{
+  "article_id": "unusual-money",
+  "title": "Unusual Money",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to a zero-coupon bond being mispriced as a stablecoin",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "Hundreds of millions in user funds",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that updates the price of a token to a fixed value without market validation",
+      "trigger": "TOKEN_PRICE_UPDATE -> fixed_value_set()",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "fixed_value_set()"
+  ],
+  "red_flags": [
+    "Fixed price oracle",
+    "Four-year lockup with 13% exit fee"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Morpho markets"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TOKEN_PRICE_FIXED_UPDATE"
+  ],
+  "summary": "Usual Money protocol manipulated the oracle to misprice USD0++ as a stablecoin, leading to users losing hundreds of millions of dollars when the true value was revealed.",
+  "_meta": {
+    "chatId": "chatcmpl-9d26b16a7feb4b5b9277441d16290238",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:18.148Z"
+  }
+}

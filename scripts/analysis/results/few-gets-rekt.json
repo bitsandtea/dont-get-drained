@@ -1,0 +1,27 @@
+{
+  "article_id": "few-gets-rekt",
+  "title": "$FEW gets REKT",
+  "relevance_score": 2,
+  "relevance_summary": "Airdrop scam targeting Telegram group members with no real project backing",
+  "attack_vector": "governance_attack",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "No real project backing",
+    "Unverified Telegram group",
+    "Quickly growing Telegram group without proper planning"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The $FEW airdrop was a scam targeting Telegram group members with no real project backing. Participants lost faith when the group's intentions were made public before the token could be listed on Uniswap.",
+  "_meta": {
+    "chatId": "chatcmpl-9fde65ae2c734d279c86b9e20cd4d1f7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:28.781Z"
+  }
+}

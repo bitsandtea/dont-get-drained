@@ -1,0 +1,43 @@
+{
+  "article_id": "kiloex-rekt",
+  "title": "KiloEx - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Oracle manipulation leading to price manipulation and subsequent large fund drain across multiple chains",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "7,500,000 USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that directly modifies the price feed contract or any contract that indirectly controls the price feed.",
+      "trigger": "MODIFY_PRICE_FEED_CONTRACT -> ANY_FUNCTION_CALL",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd8d0cde1"
+  ],
+  "red_flags": [
+    "Anyone can change Kilo's price oracle",
+    "MinimalForwarder contract with no ID validation"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "KiloPriceFeed",
+    "Keeper",
+    "PositionKeeper",
+    "MinimalForwarder"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_MODIFYING_PRICE_FEED"
+  ],
+  "summary": "KiloEx suffered a $7.5 million loss due to a critical vulnerability in their oracle implementation, allowing attackers to manipulate prices and drain funds across multiple chains. A guard could have prevented this by blocking any transaction that modifies the price feed contract.",
+  "_meta": {
+    "chatId": "chatcmpl-6c02e88e074b4e5abe6f79aa537b985c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:46.701Z"
+  }
+}

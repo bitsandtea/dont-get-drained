@@ -1,0 +1,42 @@
+{
+  "article_id": "brincfi-rekt-coldcase",
+  "title": "BrincFi - Rekt Cold Case",
+  "relevance_score": 8,
+  "relevance_summary": "Admin privilege abuse leading to token drain and ETH theft via contract upgrade",
+  "attack_vector": "access_control",
+  "funds_lost": "290 ETH ($757k)",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers ownership of a contract to an external address and immediately upgrades the contract to a new implementation.",
+      "trigger": "TRANSFER_CONTRACT_OWNERSHIP -> UPGRADE_CONTRACT in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x09ae252d",
+    "0xc95e14ea"
+  ],
+  "red_flags": [
+    "transfer of ownership to external address",
+    "immediate contract upgrade",
+    "custom rescueTokens() function"
+  ],
+  "attacker_addresses": [
+    "0x6B0b61323F6d77ef8A1a35D11FA877631d8f67Bb"
+  ],
+  "vulnerable_contracts": [
+    "BrincFi's staking contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that transfers ownership of a contract to an external address and immediately upgrades the contract to a new implementation."
+  ],
+  "summary": "The BrincFi hack involved transferring ownership of the staking contract to an attacker's wallet and then upgrading it to a malicious implementation, allowing the attacker to drain tokens and ETH. A guard could have detected and blocked this by monitoring for transfers of contract ownership followed by immediate contract upgrades.",
+  "_meta": {
+    "chatId": "chatcmpl-8c6887ee0a094b73852b4ffdba78c93b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:41.186Z"
+  }
+}

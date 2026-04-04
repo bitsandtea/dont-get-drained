@@ -1,0 +1,40 @@
+{
+  "article_id": "tomb-finance-rekt",
+  "title": "Tomb Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Tax evasion through a UI that bypasses the protocol's fee system",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "",
+  "chain": "fantom",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls a function to bypass the fee system",
+      "trigger": "CALL to bypass_fee_function()",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "bypass_fee_function()"
+  ],
+  "red_flags": [
+    "UI allowing users to evade the tax",
+    "publicly known method to bypass the fee system"
+  ],
+  "attacker_addresses": [
+    "0xC1C6caCb78466a555b11dA0Df6D0BB07a1Afb708"
+  ],
+  "vulnerable_contracts": [
+    "Tomb Finance protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CALL_TO_BYPASS_FEE_FUNCTION"
+  ],
+  "summary": "Tomb Finance faced a situation where users could evade the protocol's fee system through a publicly available UI. This led to the deactivation of the fee system and subsequent loss of funds needed to stabilize the price.",
+  "_meta": {
+    "chatId": "chatcmpl-7c0c501ae83b4e2ba266a11304815c5e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:36.048Z"
+  }
+}

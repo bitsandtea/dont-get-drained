@@ -1,0 +1,44 @@
+{
+  "article_id": "balancer-rekt",
+  "title": "Balancer - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Price manipulation through rounding down logic in linear pools affecting boosted pools",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "2100000",
+  "chain": "ethereum, optimism, fantom",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates prices in linear pools and then interacts with boosted pools",
+      "trigger": "PRICE_MANIPULATION -> INTERACT_WITH_BOOSTED_POOL in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe4e7b153",
+    "0x95d89b41"
+  ],
+  "red_flags": [
+    "Unusual price movements in linear pools followed by interactions with boosted pools"
+  ],
+  "attacker_addresses": [
+    "0xB23711b9D92C0f1c7b211c4E2DC69791c2df38c1",
+    "0xed187f37e5ad87d5b3b2624c01de56c5862b7a9b",
+    "0x429313e53a220c4a5693cad1da26ae5045b5762f",
+    "0x64E08fa89C2bAE9F123cc8a293775f0E6CC86760",
+    "0xBC794F1ff9AD7711A9d2E69Be5b499e290B8fD3c"
+  ],
+  "vulnerable_contracts": [
+    "Balancer Boosted Pools"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_MANIPULATION_FOLLOWED_BY_BOOSTED_POOL_INTERACTION"
+  ],
+  "summary": "The hack involved price manipulation in linear pools, leading to inappropriate cached token rates in boosted pools. A guard could have detected and blocked transactions manipulating prices in linear pools followed by interactions with boosted pools.",
+  "_meta": {
+    "chatId": "chatcmpl-6b93409dc846407ca2fc6bcf43a8eb16",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:49.150Z"
+  }
+}

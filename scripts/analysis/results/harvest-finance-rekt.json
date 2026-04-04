@@ -1,0 +1,41 @@
+{
+  "article_id": "harvest-finance-rekt",
+  "title": "Harvest Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by arbitrage on liquidity pools",
+  "attack_vector": "flash_loan",
+  "funds_lost": "33.8 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls deposit() or withdraw() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> deposit() || withdraw() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00f8619d",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Unusual price manipulation in liquidity pools",
+    "Multiple cycles of deposit and withdraw within a short time frame"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "FARM_USDT strategy contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK deposit() || withdraw() after FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "A hacker exploited a flash loan to manipulate the price of USDT in liquidity pools, allowing them to withdraw more tokens than initially deposited. This attack could have been prevented by blocking deposits and withdrawals immediately following a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-b3a7eadfa313403b895dfe973872bb2c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:59.615Z"
+  }
+}

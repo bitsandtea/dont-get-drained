@@ -1,0 +1,39 @@
+{
+  "article_id": "gmx-rekt",
+  "title": "GMX - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-contract reentrancy exploit using GLP token manipulation",
+  "attack_vector": "reentrancy",
+  "funds_lost": "42 million USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls executeDecreaseOrder() with an arbitrary contract address as input.",
+      "trigger": "executeDecreaseOrder() with arbitrary contract address input",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "60 60 60 60 12"
+  ],
+  "red_flags": [
+    "Arbitrary contract address input in executeDecreaseOrder()"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "GMX"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls executeDecreaseOrder() with an arbitrary contract address as input."
+  ],
+  "summary": "GMX lost $42 million due to a reentrancy exploit where the attacker manipulated GLP token pricing by exploiting the arbitrary contract address input in the executeDecreaseOrder() function.",
+  "_meta": {
+    "chatId": "chatcmpl-d23220a0956344c5b4ef90ebc937a1bc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:58.935Z"
+  }
+}

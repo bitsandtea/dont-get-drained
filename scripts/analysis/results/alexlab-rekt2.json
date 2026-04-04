@@ -1,0 +1,40 @@
+{
+  "article_id": "alexlab-rekt2",
+  "title": "AlexLab - Rekt II",
+  "relevance_score": 8,
+  "relevance_summary": "Self-listing verification logic exploited to drain liquidity pools",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "$8,373,227",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates self-listing verification logic to bypass checks",
+      "trigger": "SELF_LISTING_VERIFICATION -> BYPASS_CHECKS",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "self-listing verification logic manipulation"
+  ],
+  "red_flags": [
+    "failed transaction reference",
+    "bypassing checks"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "AlexLab self-listing function"
+  ],
+  "monitoring_rules": [
+    "Monitor for self-listing verification logic manipulation attempts"
+  ],
+  "summary": "AlexLab was exploited through a flaw in their self-listing verification logic, allowing attackers to bypass checks and drain liquidity pools. A critical monitoring rule should block any transaction that manipulates self-listing verification logic to bypass checks.",
+  "_meta": {
+    "chatId": "chatcmpl-3348f0931f7f4453b9ba7ff09c16cdbe",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:29.371Z"
+  }
+}

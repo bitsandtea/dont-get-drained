@@ -1,0 +1,28 @@
+{
+  "article_id": "bancor-lp-rekt",
+  "title": "Bancor LP - REKT",
+  "relevance_score": 4,
+  "relevance_summary": "IL protection pause due to market volatility and large centralized entities dumping BNT rewards",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "large centralized entities dumping BNT rewards",
+    "market volatility leading to unsustainable IL protection"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Bancor v3 protocol"
+  ],
+  "monitoring_rules": [],
+  "summary": "Bancor paused its IL protection due to market volatility and large centralized entities dumping BNT rewards, leading to losses for LPs.",
+  "_meta": {
+    "chatId": "chatcmpl-c348c4b3fc8a46e4a6b4e3a3ee75efdb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:16.615Z"
+  }
+}

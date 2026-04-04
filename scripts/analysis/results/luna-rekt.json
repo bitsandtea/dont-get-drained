@@ -1,0 +1,31 @@
+{
+  "article_id": "luna-rekt",
+  "title": "Luna - REKT",
+  "relevance_score": 3,
+  "relevance_summary": "Market manipulation and liquidity issues leading to a collapse of a stablecoin and its associated ecosystem",
+  "attack_vector": "other",
+  "funds_lost": "Multi-billion dollars",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Unsustainable yield farming",
+    "Market manipulation",
+    "Leverage abuse"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Anchor Protocol",
+    "UST",
+    "LUNA"
+  ],
+  "monitoring_rules": [],
+  "summary": "The collapse of Anchor Protocol due to unsustainable yield farming, market manipulation, and leverage abuse led to the downfall of UST and LUNA, causing significant financial losses.",
+  "_meta": {
+    "chatId": "chatcmpl-4642d8ce230547cc8ca7f68d121d8d2e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:28.617Z"
+  }
+}

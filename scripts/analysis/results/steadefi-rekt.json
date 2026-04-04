@@ -1,0 +1,48 @@
+{
+  "article_id": "steadefi-rekt",
+  "title": "Steadefi - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Deployer address compromise followed by owner-only actions like transferring vault ownership and pausing farms",
+  "attack_vector": "access_control",
+  "funds_lost": "1.14M USD",
+  "chain": "arbitrum | avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers ownership of a vault contract",
+      "trigger": "TRANSFER_VAULT_OWNERSHIP",
+      "severity": "high"
+    },
+    {
+      "rule": "Block any tx that pauses a farms contract",
+      "trigger": "PAUSE_FARMS_CONTRACT",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x06fdde03",
+    "0x08c37995"
+  ],
+  "red_flags": [
+    "Transfer of vault ownership",
+    "Pausing of farms contract"
+  ],
+  "attacker_addresses": [
+    "0x9cf71F2ff126B9743319B60d2D873F0E508810dc"
+  ],
+  "vulnerable_contracts": [
+    "USDC vault on Arbitrum",
+    "farms contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TRANSFER_VAULT_OWNERSHIP",
+    "BLOCK_PAUSE_FARMS_CONTRACT"
+  ],
+  "summary": "Steadefi lost $1.14M when the deployer address was compromised, allowing the attacker to transfer vault ownership and pause farms. A guard could have blocked these actions.",
+  "_meta": {
+    "chatId": "chatcmpl-e5063c1f8a35480c992cd304e004fc1e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:54.118Z"
+  }
+}

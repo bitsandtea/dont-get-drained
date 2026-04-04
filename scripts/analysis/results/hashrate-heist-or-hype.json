@@ -1,0 +1,40 @@
+{
+  "article_id": "hashrate-heist-or-hype",
+  "title": "Hashrate Heist or Hype?",
+  "relevance_score": 8,
+  "relevance_summary": "51% attack on Monero using incentivized mining pool with triple profitability",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "Not specified in the article",
+  "chain": "monero",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves a validator voting to orphan blocks from other miners after achieving 51% hashrate",
+      "trigger": "VALIDATOR_VOTE -> orphan_blocks() after reaching 51% hashrate",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x...orphan_blocks()"
+  ],
+  "red_flags": [
+    "validator vote to orphan blocks",
+    "sudden increase in hashrate"
+  ],
+  "attacker_addresses": [
+    "Not explicitly mentioned but likely related to Qubic validators"
+  ],
+  "vulnerable_contracts": [
+    "Monero validators' voting mechanism"
+  ],
+  "monitoring_rules": [
+    "Block any tx that involves a validator voting to orphan blocks from other miners after achieving 51% hashrate"
+  ],
+  "summary": "Qubic incentivized Monero miners to join their pool, increasing their hashrate to 51%, and then voted to orphan blocks from other miners. This attack could have been prevented by monitoring validator votes after achieving 51% hashrate.",
+  "_meta": {
+    "chatId": "chatcmpl-dc83eefff4c14090bd849a9c1b61a8dd",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:13.915Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "beanstalk-rekt",
+  "title": "Beanstalk - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "181 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls Diamond.vote() or Diamond.emergencyCommit() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> Diamond.vote() or Diamond.emergencyCommit() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00f87f67",
+    "0x24615712"
+  ],
+  "red_flags": [
+    "malicious governance proposal",
+    "flash loan followed by voting"
+  ],
+  "attacker_addresses": [
+    "0x1c5dcdd006ea78a7e4783f9e6021c32935a10fb4"
+  ],
+  "vulnerable_contracts": [
+    "0x79224bc0bf70ec34f0ef56ed8251619499a59def"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls Diamond.vote() or Diamond.emergencyCommit() after a flash loan in the same tx"
+  ],
+  "summary": "A malicious governance proposal was pushed through using a flash loan, allowing the attacker to drain the protocol. A guard could have blocked such transactions by preventing voting after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-dfd6d03dd2404506972a5bce0cdcf63b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:17.030Z"
+  }
+}

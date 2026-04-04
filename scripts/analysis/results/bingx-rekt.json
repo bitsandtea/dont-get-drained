@@ -1,0 +1,43 @@
+{
+  "article_id": "bingx-rekt",
+  "title": "BingX - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Hot wallet compromise leading to multi-chain withdrawal with compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "44.7 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves cross-chain bridge withdrawal from known compromised validator addresses.",
+      "trigger": "BRIDGE_WITHDRAWAL -> COMPROMISED_VALIDATOR_SIGNATURES",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+  ],
+  "red_flags": [
+    "Multi-chain withdrawal",
+    "Compromised validator signatures"
+  ],
+  "attacker_addresses": [
+    "0x...",
+    "0x...",
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "BingX Hot Wallets",
+    "Cross-chain Bridges"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT INVOLVES CROSS-CHAIN BRIDGE WITHDRAWAL FROM KNOWN COMPROMISED VALIDATOR ADDRESSES"
+  ],
+  "summary": "BingX suffered a multi-chain hot wallet compromise resulting in $44.7 million in losses. A guard could have prevented this by blocking cross-chain bridge withdrawals from known compromised validator addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-801f6fa780544df68e0aff01587e75d8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.673Z"
+  }
+}

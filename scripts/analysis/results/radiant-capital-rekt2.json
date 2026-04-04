@@ -1,0 +1,45 @@
+{
+  "article_id": "radiant-capital-rekt2",
+  "title": "Radiant Capital - Rekt II",
+  "relevance_score": 8,
+  "relevance_summary": "Multi-signature wallet exploit involving compromised private keys and low threshold for execution",
+  "attack_vector": "access_control",
+  "funds_lost": "53,000,000 USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers ownership of a critical contract to an external address.",
+      "trigger": "OWNERSHIP_TRANSFER -> external address",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd97b93f633aee356d992b49193e60a571b8c466bf46aaf072368f975dc11841c",
+    "0x7856552db409fe51e17339ab1e0e1ce9c85d68bf0f4de4c110fc4e372ea02fb1"
+  ],
+  "red_flags": [
+    "low threshold for multi-sig wallet execution",
+    "transfer of critical contract ownership to malicious contract"
+  ],
+  "attacker_addresses": [
+    "0x0629b1048298AE9deff0F4100A31967Fb3f98962",
+    "0x97a05becc2e7891d07f382457cd5d57fd242..."
+  ],
+  "vulnerable_contracts": [
+    "ARB: 0xF4B1486DD74D07706052A33d31d7c0AAFD0659E1",
+    "BSC: 0xd50Cf00b6e600Dd036Ba8eF475677d816d6c4281",
+    "BASE: 0x30798cFe2CCa822321ceed7e6085e633aAbC492F",
+    "ETH: 0xA950974f64aA33f27F6C5e017eEE93BF7588ED07"
+  ],
+  "monitoring_rules": [
+    "Block any tx that transfers ownership of a critical contract to an external address."
+  ],
+  "summary": "Radiant Capital suffered a catastrophic security breach due to a multi-signature wallet exploit, resulting in the loss of over $53 million. The attack exploited a low threshold for executing transactions, allowing the attacker to transfer ownership of critical contracts and drain funds. A guard could have detected and blocked such transfers.",
+  "_meta": {
+    "chatId": "chatcmpl-d626a2ef503b474e98064fdfb31bb200",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:54.336Z"
+  }
+}

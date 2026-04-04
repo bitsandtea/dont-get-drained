@@ -1,0 +1,39 @@
+{
+  "article_id": "dmm-rekt",
+  "title": "DMM Bitcoin - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Address spoofing scam involving hot wallet transfer",
+  "attack_vector": "address_spoofing",
+  "funds_lost": "304 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to addresses with partial matching patterns.",
+      "trigger": "PARTIAL_ADDRESS_MATCH -> SEND_FUNDS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "bc1q*"
+  ],
+  "red_flags": [
+    "Partial address matching during transfer"
+  ],
+  "attacker_addresses": [
+    "1B6rJRfjTXwEy36SCs5zofGMmdv2kdZw7P"
+  ],
+  "vulnerable_contracts": [
+    "DMM Bitcoin hot wallet"
+  ],
+  "monitoring_rules": [
+    "PARTIAL_ADDRESS_MATCH -> SEND_FUNDS"
+  ],
+  "summary": "DMM Bitcoin experienced a significant hack where attackers exploited partial address matching during transfers to steal over 4,500 BTC. A guard could have detected and blocked such transactions by monitoring for partial address matches during fund transfers.",
+  "_meta": {
+    "chatId": "chatcmpl-0497bc1fcb534fda875101e02fca8b6a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:14.919Z"
+  }
+}

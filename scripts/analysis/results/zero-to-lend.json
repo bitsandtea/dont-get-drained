@@ -1,0 +1,41 @@
+{
+  "article_id": "zero-to-lend",
+  "title": "Zero To Lend",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by withdrawal with compromised collateral on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "3 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows LBTC and immediately withdraws using PT-LBTC as collateral",
+      "trigger": "FLASHLOAN_BORROW -> WITHDRAW with PT-LBTC collateral in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x43099390"
+  ],
+  "red_flags": [
+    "Unusual withdrawal patterns",
+    "Use of PT-LBTC as collateral"
+  ],
+  "attacker_addresses": [
+    "0x218C572b1Ab6065D74bEbcB708a3f523D14F7719"
+  ],
+  "vulnerable_contracts": [
+    "ZeroLend"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS WITHDRAW() WITH PT-LBTC AS COLLATERAL IMMEDIATELY AFTER A FLASHLOAN_BORROW IN THE SAME TX"
+  ],
+  "summary": "A single wallet borrowed LBTC via a flash loan, used PT-LBTC as collateral, and withdrew the borrowed funds, leaving behind worthless PT-LBTC. This attack could have been detected by monitoring for flash loans followed by withdrawals with PT-LBTC.",
+  "_meta": {
+    "chatId": "chatcmpl-c54f448873484793990a2e21a68b472f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:16.035Z"
+  }
+}

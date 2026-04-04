@@ -1,0 +1,29 @@
+{
+  "article_id": "eye-of-the-storm",
+  "title": "The Eye of the Storm",
+  "relevance_score": 2,
+  "relevance_summary": "Sanctioned smart contracts due to association with illicit activities",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "interaction with sanctioned addresses"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Tornado Cash"
+  ],
+  "monitoring_rules": [
+    "BLOCK any tx interacting with addresses listed on OFAC SDN list"
+  ],
+  "summary": "Tornado Cash was sanctioned by the US Treasury, making it illegal for US citizens to interact with its addresses. A guard could block any transaction involving these addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-e67379a0d11f404ea5c72be8c6d95a44",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:29.215Z"
+  }
+}

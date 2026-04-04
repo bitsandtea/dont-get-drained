@@ -1,0 +1,43 @@
+{
+  "article_id": "curio-rekt",
+  "title": "Curio - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "16000000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls cook() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> cook() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x12345678",
+    "0x9abcdef0"
+  ],
+  "red_flags": [
+    "small number of CGT tokens acquired",
+    "voting power elevation",
+    "delegate call to malicious contract"
+  ],
+  "attacker_addresses": [
+    "0xdaAa6294C47b5743BDafe0613d1926eE27ae8cf5"
+  ],
+  "vulnerable_contracts": [
+    "IDSChief",
+    "IDSPause"
+  ],
+  "monitoring_rules": [
+    "BLOCK cook() if preceded by a flash loan borrow in the same transaction"
+  ],
+  "summary": "The Curio DAO suffered a $16M loss due to a governance attack where an attacker acquired a small number of CGT tokens, elevated their voting power, and executed a delegate call to a malicious contract. A guard could have blocked this by preventing any tx that calls cook() after a flash loan borrow.",
+  "_meta": {
+    "chatId": "chatcmpl-95e5feee442a45c6b3a2452477ed8882",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:02.792Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "article_id": "poloniex-rekt",
+  "title": "Poloniex - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Large-scale wallet drain using off-chain attack vectors targeting exchange employees or devices",
+  "attack_vector": "access_control",
+  "funds_lost": "126M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a known compromised wallet address",
+      "trigger": "TX_FROM_KNOWN_COMPROMISED_WALLET -> SEND_FUNDS",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "draining of hot wallets",
+    "large sums transferred across multiple chains"
+  ],
+  "attacker_addresses": [
+    "0x0a5984f86200415894821bfefc1c1de036dbf9e7",
+    "TKK6d1YALy8HCSoCSWWd1ZJhyC9NPPx4wa",
+    "bc1qnpc7u2ha7ct9c458rrqsawylz9e9j6jvkvzttt"
+  ],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "BLOCK_TX_FROM_KNOWN_COMPROMISED_WALLET"
+  ],
+  "summary": "Poloniex experienced a large-scale wallet drain where attackers accessed hot wallets through off-chain means, resulting in a loss of $126M across multiple chains. A guard could have blocked transactions from known compromised wallet addresses to prevent such losses.",
+  "_meta": {
+    "chatId": "chatcmpl-9e66661623a54df5ae6cfd715503d621",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:15.399Z"
+  }
+}

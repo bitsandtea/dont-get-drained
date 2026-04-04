@@ -1,0 +1,40 @@
+{
+  "article_id": "talesfromchain-deceit",
+  "title": "Tales from the Chain - Decentralized Deceit",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain bridge exploit with low multi-sig wallet threshold",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "100 million in staked ETH",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies a multi-sig wallet with a low threshold for signature verification",
+      "trigger": "LOW_THRESHOLD_MULTI_SIG_MODIFICATION",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "low multi-sig threshold",
+    "unexpected protocol upgrade without credit"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "NewDawn bridge contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_LOW_THRESHOLD_MULTI_SIG_MODIFICATIONS"
+  ],
+  "summary": "The attacker exploited a low multi-sig wallet threshold in a cross-chain bridge, leading to the theft of 100 million staked ETH. A guard could have detected and blocked such transactions by monitoring modifications to multi-sig wallets with low thresholds.",
+  "_meta": {
+    "chatId": "chatcmpl-fa2024a68b494ebcbbe41ee6183cfe1b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:24.074Z"
+  }
+}

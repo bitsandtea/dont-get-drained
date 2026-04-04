@@ -1,0 +1,41 @@
+{
+  "article_id": "midas-capital-rekt",
+  "title": "Midas Capital - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by reentrancy attack on a collateral type with known vulnerability",
+  "attack_vector": "reentrancy",
+  "funds_lost": "660K USD",
+  "chain": "polygon",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows assets after updating collateral supply in the same transaction",
+      "trigger": "BORROW -> UPDATE_COLLATERAL_SUPPLY in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x095ea7b3"
+  ],
+  "red_flags": [
+    "Reentrancy vulnerability in LP token",
+    "Over-estimation of collateral value"
+  ],
+  "attacker_addresses": [
+    "0x1863b74778cf5e1c9c482a1cdc2351362bd08611"
+  ],
+  "vulnerable_contracts": [
+    "0x5bca7ddf1bcccb2ee8e46c56bfc9d3cdc77262bc"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_BORROW_AFTER_UPDATE_COLLATERAL_SUPPLY"
+  ],
+  "summary": "Midas Capital was exploited via a flash loan followed by a reentrancy attack on WMATIC-stMATIC Curve LP tokens, resulting in a loss of $660K. A guard could have blocked such transactions by preventing borrowing after updating collateral supply.",
+  "_meta": {
+    "chatId": "chatcmpl-fdc528b042fc42e096818d31326777a3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:56.451Z"
+  }
+}

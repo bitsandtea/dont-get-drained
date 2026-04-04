@@ -1,0 +1,23 @@
+{
+  "article_id": "politics-and-prescience",
+  "title": "Politics and Prescience",
+  "relevance_score": 0,
+  "relevance_summary": "No specific actionable intelligence for transaction monitoring.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses prediction markets and their predictions for the 2020 U.S. presidential election. It does not contain specific details about a hack or actionable intelligence for transaction monitoring.",
+  "_meta": {
+    "chatId": "chatcmpl-c5dc37892ff54a5ba72d54d7d3f1a082",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:25.530Z"
+  }
+}

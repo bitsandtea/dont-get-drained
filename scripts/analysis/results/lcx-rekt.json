@@ -1,0 +1,37 @@
+{
+  "article_id": "lcx-rekt",
+  "title": "LCX - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Hot wallet private key compromise leading to large fund theft",
+  "attack_vector": "access_control",
+  "funds_lost": "7.94M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from a known compromised hot wallet address",
+      "trigger": "TX_FROM(0x4631018f63d5e31680fb53c11c9e1b11f1503e6f)",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Large transfers from known hot wallet address"
+  ],
+  "attacker_addresses": [
+    "0x165402279f2c081c54b00f0e08812f3fd4560a05"
+  ],
+  "vulnerable_contracts": [
+    "LCX hot wallet: 0x4631018f63d5e31680fb53c11c9e1b11f1503e6f"
+  ],
+  "monitoring_rules": [
+    "Block any tx from known compromised hot wallet address"
+  ],
+  "summary": "LCX, a centralized exchange, suffered a private key compromise resulting in $7.94M theft. A guard could have blocked transactions from the known compromised hot wallet address.",
+  "_meta": {
+    "chatId": "chatcmpl-2025a9d5c3b343cabe9eaa28a10643f4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:10.288Z"
+  }
+}

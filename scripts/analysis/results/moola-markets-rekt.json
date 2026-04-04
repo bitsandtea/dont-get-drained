@@ -1,0 +1,39 @@
+{
+  "article_id": "moola-markets-rekt",
+  "title": "Moola Market - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Price manipulation followed by borrowing large amounts of assets on a lending protocol",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "8.4M USD",
+  "chain": "celo",
+  "prevention": [
+    {
+      "rule": "Block any tx that shows signs of price manipulation followed by large-scale borrowing",
+      "trigger": "PRICE_MANIPULATION -> LARGE_BORROWING in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x95b5579b323ddc6cd290bd4da6e56ba019588efc"
+  ],
+  "red_flags": [
+    "Large-scale borrowing shortly after price manipulation"
+  ],
+  "attacker_addresses": [
+    "0x95b5579b323ddc6cd290bd4da6e56ba019588efc"
+  ],
+  "vulnerable_contracts": [
+    "Moola Market"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_MANIPULATION_FOLLOWED_BY_LARGE_BORROWING"
+  ],
+  "summary": "The attacker manipulated the price of MOO collateral on Moola Market, allowing them to borrow large amounts of assets, resulting in a loss of $8.4M. A guard could have detected this by blocking transactions showing signs of price manipulation followed by large-scale borrowing.",
+  "_meta": {
+    "chatId": "chatcmpl-3c351e361ac64d8e83e58b8d2d6b4d6f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:57.482Z"
+  }
+}

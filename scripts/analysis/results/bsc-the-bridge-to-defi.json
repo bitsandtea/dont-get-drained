@@ -1,0 +1,23 @@
+{
+  "article_id": "bsc-the-bridge-to-defi",
+  "title": "BSC - The Bridge to DeFi",
+  "relevance_score": 0,
+  "relevance_summary": "No specific transaction details provided, no actionable intelligence for on-chain guard.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "bsc",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the rise of Binance Smart Chain (BSC) and its impact on the decentralized finance (DeFi) space. No specific transaction details or attack vectors are provided.",
+  "_meta": {
+    "chatId": "chatcmpl-7d4dccf340884b4e9849315a10c8830d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:37.979Z"
+  }
+}

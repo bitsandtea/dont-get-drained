@@ -1,0 +1,37 @@
+{
+  "article_id": "remitano-rekt",
+  "title": "Remitano - REKT",
+  "relevance_score": 5,
+  "relevance_summary": "Hot wallet draining due to private key compromise",
+  "attack_vector": "access_control",
+  "funds_lost": "2.7M USD",
+  "chain": "ethereum | tron",
+  "prevention": [
+    {
+      "rule": "Block any tx sending funds from known compromised addresses",
+      "trigger": "TX_FROM_COMPROMISED_ADDRESS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Suspicious withdrawals",
+    "Private key compromise"
+  ],
+  "attacker_addresses": [
+    "ETH: 0x74530e81e9f4715c720b6b237f682cd0e298b66c",
+    "TRON: TEDNf1aqk8YJEUdNH9NRd4MqibZmdP49Fm"
+  ],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "TX_FROM_COMPROMISED_ADDRESS"
+  ],
+  "summary": "Remitano lost $2.7M from hot wallets due to a private key compromise. A quick response from Tether froze most of the stolen funds, reducing the loss to $260k.",
+  "_meta": {
+    "chatId": "chatcmpl-6b0982bfd13a4a13b6b2f26bc313c541",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:38.055Z"
+  }
+}

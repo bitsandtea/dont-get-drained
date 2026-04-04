@@ -1,0 +1,42 @@
+{
+  "article_id": "au-dodo-rekt",
+  "title": "DODO - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Crowdpooling smart contract bug exploited via fake token attack, flash loan, and reinitialization",
+  "attack_vector": "flash_loan",
+  "funds_lost": "2,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that initializes a contract with a fake token and then immediately performs a flash loan followed by a reinitialization with a real token.",
+      "trigger": "FAKE_TOKEN_INIT -> FLASH_LOAN -> REAL_TOKEN_INIT",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x18160ddd",
+    "0x6085c529"
+  ],
+  "red_flags": [
+    "Multiple calls to init() with different tokens",
+    "High gas prices",
+    "Frontrunning behavior"
+  ],
+  "attacker_addresses": [
+    "0xa305fab8bda7e1638235b054889b3217441dd645"
+  ],
+  "vulnerable_contracts": [
+    "DODO V2 Crowdpools: WSZO, WCRES, ETHA, FUSI"
+  ],
+  "monitoring_rules": [
+    "Block any tx that initializes a contract with a fake token and then immediately performs a flash loan followed by a reinitialization with a real token."
+  ],
+  "summary": "DODO was hacked using a fake token attack, where the attacker initialized the contract with a fake token, performed a flash loan, and then reinitialized with a real token. A guard could have detected and blocked such transactions by monitoring for multiple calls to init() with different tokens followed by a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-914dbb27da6541dfb3feede3eca78f9f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:59.300Z"
+  }
+}

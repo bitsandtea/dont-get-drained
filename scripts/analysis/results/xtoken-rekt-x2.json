@@ -1,0 +1,40 @@
+{
+  "article_id": "xtoken-rekt-x2",
+  "title": "X-Token - REKT X2",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by price manipulation and sUSD debt swap on xSNX contract",
+  "attack_vector": "flash_loan",
+  "funds_lost": "$4.5 million",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls callFunction() if msg.sender is not the expected flashloan contract address",
+      "trigger": "callFunction() called with msg.sender != expected flashloan contract address",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d5e"
+  ],
+  "red_flags": [
+    "price manipulation",
+    "sUSD debt swap"
+  ],
+  "attacker_addresses": [
+    "0x924e6a6288587b497f73ddcf6ae3c184f15ab35d"
+  ],
+  "vulnerable_contracts": [
+    "xSNXAdmin contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls callFunction() if msg.sender is not the expected flashloan contract address"
+  ],
+  "summary": "The attacker used a flash loan to manipulate the SNX price and then swapped sUSD debt on the xSNX contract, exploiting an erroneously public function call. A guard could have blocked such transactions by ensuring the callFunction() can only be called by the expected flashloan contract.",
+  "_meta": {
+    "chatId": "chatcmpl-0f306db3de954c13b453515cab0da0f4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:45.515Z"
+  }
+}

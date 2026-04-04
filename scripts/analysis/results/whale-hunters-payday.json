@@ -1,0 +1,45 @@
+{
+  "article_id": "whale-hunters-payday",
+  "title": "Whale Hunter's Payday",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack targeting a Maker vault resulting in loss of 55.47 million DAI",
+  "attack_vector": "phishing",
+  "funds_lost": "55,473,618 DAI",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any transaction that changes the ownership of a DSProxy contract.",
+      "trigger": "DSProxyOwnershipChange",
+      "severity": "high"
+    },
+    {
+      "rule": "Monitor for unusual activity involving DSProxy contracts.",
+      "trigger": "UnusualDSProxyActivity",
+      "severity": "medium"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xf70042bf3ae7c22f0680f8afa078c38989ed475dfbe5c8d8f30a50d4d2f45dc4"
+  ],
+  "red_flags": [
+    "Ownership change of DSProxy",
+    "Large transfer of DAI"
+  ],
+  "attacker_addresses": [
+    "0x0000db5c8B030ae20308ac975898E09741e70000"
+  ],
+  "vulnerable_contracts": [
+    "DSProxy"
+  ],
+  "monitoring_rules": [
+    "Block any transaction that changes the ownership of a DSProxy contract."
+  ],
+  "summary": "A crypto whale fell victim to a sophisticated phishing attack, losing 55.47 million DAI by changing the ownership of their DSProxy contract and allowing attackers to withdraw the funds.",
+  "_meta": {
+    "chatId": "chatcmpl-7161e90901b84e8aa2dca94b37500402",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:04.506Z"
+  }
+}

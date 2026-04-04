@@ -1,0 +1,39 @@
+{
+  "article_id": "cork-protocol-rekt",
+  "title": "Cork Protocol - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Fake token deployment followed by manipulation of exchange rate calculations on a lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "12000000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys a new contract and immediately interacts with the protocol's exchange rate calculation functions.",
+      "trigger": "DEPLOY_CONTRACT -> EXCHANGE_RATE_CALCULATION_FUNCTION in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Deployment of new contract followed by immediate interaction with exchange rate calculation functions"
+  ],
+  "attacker_addresses": [
+    "0x47713cb34fabd63b39d7c5c6f675dca39d22762b"
+  ],
+  "vulnerable_contracts": [
+    "Cork Protocol"
+  ],
+  "monitoring_rules": [
+    "Block any tx that deploys a new contract and immediately interacts with the protocol's exchange rate calculation functions."
+  ],
+  "summary": "The attacker deployed fake token contracts and manipulated Cork Protocol’s exchange rate calculations, draining $12 million in wstETH. A guard could have detected and blocked the attack by monitoring for deployments followed by immediate interactions with exchange rate calculation functions.",
+  "_meta": {
+    "chatId": "chatcmpl-020c2ba4074f413994a0cb20393fc817",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:11:01.059Z"
+  }
+}

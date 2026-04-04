@@ -1,0 +1,26 @@
+{
+  "article_id": "time-as-money",
+  "title": "Time as Money",
+  "relevance_score": 2,
+  "relevance_summary": "NFT sale involving sensitive political content, potentially misleading or harmful content",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "sale of politically sensitive content",
+    "potential for misleading or harmful content"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses the sale of an NFT representing a compilation of footage of Donald Trump downplaying the coronavirus. The sale highlights issues with the permanence and potential misuse of NFTs.",
+  "_meta": {
+    "chatId": "chatcmpl-accec9a7cea843448f727fe48ead7347",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:35.435Z"
+  }
+}

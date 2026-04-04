@@ -1,0 +1,27 @@
+{
+  "article_id": "etfgaffe",
+  "title": "Gensler's Grand Gaffe",
+  "relevance_score": 2,
+  "relevance_summary": "Social media manipulation leading to market volatility and liquidations",
+  "attack_vector": "social_engineering",
+  "funds_lost": "over $200M in liquidations",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "unauthorized tweet",
+    "market-wide pump and dump",
+    "sudden price action"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The SEC's official Twitter account was compromised, leading to a false announcement of Bitcoin ETF approval, causing a sudden market downturn and over $200M in liquidations. This incident highlights the importance of robust social media security measures.",
+  "_meta": {
+    "chatId": "chatcmpl-61d4ec6ae5e8437089b1f3dc007f132c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:46:19.691Z"
+  }
+}

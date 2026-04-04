@@ -1,0 +1,28 @@
+{
+  "article_id": "roll-rekt",
+  "title": "Roll - REKT",
+  "relevance_score": 3,
+  "relevance_summary": "Social token platform hack due to fixed supply model and potential insider threat",
+  "attack_vector": "access_control",
+  "funds_lost": "5.7 million USD",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "fixed supply token setup",
+    "hot wallet with multisig sponsorship"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Roll platform"
+  ],
+  "monitoring_rules": [],
+  "summary": "Roll, a social token platform, was hacked resulting in $5.7 million loss. The attack exploited the fixed supply token model and potential insider threat. A hot wallet sponsored by Roll’s multisig owners was compromised.",
+  "_meta": {
+    "chatId": "chatcmpl-f5aa8a76508049999f0b4664dcacea62",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:08.962Z"
+  }
+}

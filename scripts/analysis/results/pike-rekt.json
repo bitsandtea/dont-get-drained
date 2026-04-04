@@ -1,0 +1,43 @@
+{
+  "article_id": "pike-rekt",
+  "title": "Pike Finance - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Storage vulnerability leading to contract misbehavior and fund siphoning via unprotected initializer functions",
+  "attack_vector": "storage_vulnerability",
+  "funds_lost": "1.6 million USD",
+  "chain": "ethereum | arbitrum | optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls initialize() or upgradeToAndCall() with unprotected initializer functions.",
+      "trigger": "UNPROTECTED_INITIALIZER_CALL -> initialize() OR upgradeToAndCall()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "initialize()",
+    "upgradeToAndCall()"
+  ],
+  "red_flags": [
+    "unprotected initializer functions",
+    "contract misbehavior due to storage vulnerability"
+  ],
+  "attacker_addresses": [
+    "0xAdaF1626aEC26A7937aE7d1Fa0664e6E0904C1d0",
+    "0x19066f7431df29a0910d287c8822936bb7d89e23"
+  ],
+  "vulnerable_contracts": [
+    "0x7856493B59cdb1685757A6DcCe12425F6a6666a0",
+    "0x1da4bc596bfb1087f2f7999b0340fc..."
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls initialize() or upgradeToAndCall() with unprotected initializer functions."
+  ],
+  "summary": "Pike Finance fell victim to a storage vulnerability that allowed attackers to upgrade contracts and siphon funds. A guard could have detected and blocked the misuse of unprotected initializer functions.",
+  "_meta": {
+    "chatId": "chatcmpl-aa0ff8c0621e43149c58f986b2683e83",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:20.697Z"
+  }
+}

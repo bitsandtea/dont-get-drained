@@ -1,0 +1,41 @@
+{
+  "article_id": "loop-contagion",
+  "title": "The Loop Contagion",
+  "relevance_score": 8,
+  "relevance_summary": "Recursive stablecoin minting leading to liquidity crisis and significant funds loss",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "93 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints stablecoins using another stablecoin as collateral.",
+      "trigger": "STABLECOIN_MINT -> STABLECOIN_COLLATERALIZE",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb0000000000000000000000000000000000000000000000000000000000000000",
+    "0xf472b4f80000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "Recursive stablecoin minting",
+    "High APY yields",
+    "Leveraged positions"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Stream Finance",
+    "Elixir Network"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints stablecoins using another stablecoin as collateral."
+  ],
+  "summary": "Stream Finance and Elixir Network engaged in recursive stablecoin minting, leading to a liquidity crisis and significant funds loss. A guard could have detected and blocked such transactions by monitoring for stablecoin minting using another stablecoin as collateral.",
+  "_meta": {
+    "chatId": "chatcmpl-d1a8801fc73e4b648e16b4566205d946",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:27.905Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "article_id": "fei-rari-rekt",
+  "title": "Fei Rari - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack exploiting flash loans and Compound code vulnerabilities",
+  "attack_vector": "reentrancy",
+  "funds_lost": "20,251,603.11559831 FEI, 14,278,990.684390573 DAI, 1,948,952.1788665 LUSD, 10,055,556.328173 USDC, 132,959.9008 USDT, 31,615.8714 RAI, 13,101,364.94 FRAX, 2,765,891 UST",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls exitMarket() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> exitMarket() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xb53c1a33",
+    "0xf5c71f65"
+  ],
+  "red_flags": [
+    "flash loan followed by exitMarket()",
+    "reentrancy via call.value"
+  ],
+  "attacker_addresses": [
+    "0x616275..."
+  ],
+  "vulnerable_contracts": [
+    "0xE39f3C...",
+    "0x32075b..."
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS exitMarket() AFTER A FLASH LOAN BORROW IN THE SAME TX"
+  ],
+  "summary": "The attacker exploited a reentrancy vulnerability in the Rari Fuse pools by using flash loans to repeatedly withdraw collateral without updating the borrow records. A guard could have blocked such transactions by preventing exitMarket() calls immediately following flash loan borrows.",
+  "_meta": {
+    "chatId": "chatcmpl-3eab1383717041aaa8e5ccc5543fe71f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:27.504Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "popsicle-rekt",
+  "title": "Popsicle Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by repeated deposit-transfer-collectFees-transfers in multiple pools",
+  "attack_vector": "flash_loan",
+  "funds_lost": "20,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls collectFees() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> collectFees() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22a4b0",
+    "0x2e1a7d76"
+  ],
+  "red_flags": [
+    "Repeated sequence of deposit-transfer-collectFees-transfers in multiple pools"
+  ],
+  "attacker_addresses": [
+    "0xf9E3D08196F76f5078882d98941b71C0884BEa52"
+  ],
+  "vulnerable_contracts": [
+    "Sorbetto Fragola"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS COLLECTFEES() IMMEDIATELY FOLLOWING A FLASHLOAN IN THE SAME TRANSACTION"
+  ],
+  "summary": "The attacker used a flash loan to repeatedly deposit, transfer, and collect fees across multiple pools, exploiting a bug in the fee accounting mechanism. A guard could have blocked such transactions by preventing collectFees() calls following a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-aea3928d944c4100b0b1f2cfcc7debf3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:19.834Z"
+  }
+}

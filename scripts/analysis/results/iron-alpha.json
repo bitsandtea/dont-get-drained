@@ -1,0 +1,41 @@
+{
+  "article_id": "iron-alpha",
+  "title": "Iron Bank vs Alpha Homora",
+  "relevance_score": 8,
+  "relevance_summary": "Repayment agreement breach leading to protocol shutdown and user funds freezing",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "32.4M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that attempts to freeze user funds in a protocol contract.",
+      "trigger": "FREEZE_USER_FUNDS in Alpha Homora contract",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"
+  ],
+  "red_flags": [
+    "repayment agreement breach",
+    "price manipulation",
+    "user funds freezing"
+  ],
+  "attacker_addresses": [
+    "0xAttackerAddress"
+  ],
+  "vulnerable_contracts": [
+    "Alpha Homora"
+  ],
+  "monitoring_rules": [
+    "BLOCK_FREEZE_USER_FUNDS"
+  ],
+  "summary": "Iron Bank exploited a repayment agreement with Alpha Homora, leading to the freezing of user funds. A guard could have detected and blocked the freezing transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-cb417529986547bc9b4abdef3d01222e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:46.823Z"
+  }
+}

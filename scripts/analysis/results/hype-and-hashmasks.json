@@ -1,0 +1,31 @@
+{
+  "article_id": "hype-and-hashmasks",
+  "title": "Hype and Hashmasks",
+  "relevance_score": 2,
+  "relevance_summary": "Fake token scam leveraging FOMO and hype around NFTs",
+  "attack_vector": "other",
+  "funds_lost": "16 ETH",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "fake token",
+    "rug pull",
+    "FOMO-driven purchases"
+  ],
+  "attacker_addresses": [
+    "0xb1"
+  ],
+  "vulnerable_contracts": [
+    "Hashmask NFT contract"
+  ],
+  "monitoring_rules": [],
+  "summary": "A fake Hashmask token was used in a rug pull scam, exploiting FOMO and hype surrounding the NFT project. A guard could monitor for unusual token transfers and rapid price increases associated with such scams.",
+  "_meta": {
+    "chatId": "chatcmpl-210f80f3601047e2bad33e5124a32248",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:35.652Z"
+  }
+}

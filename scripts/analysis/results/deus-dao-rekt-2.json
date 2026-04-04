@@ -1,0 +1,44 @@
+{
+  "article_id": "deus-dao-rekt-2",
+  "title": "Deus DAO - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation followed by flash loan and borrowing on lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "13.4M USD",
+  "chain": "fantom",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle data followed by a flash loan and borrowing on a lending protocol in the same transaction",
+      "trigger": "ORACLE_MANIPULATION -> FLASHLOAN_BORROW -> LENDING_CONTRACT_INTERACTION in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00f894db",
+    "0x70d08698",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Manipulated oracle data",
+    "Flash loan followed by borrowing on lending protocol"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Deus DAO lending contract",
+    "Solidly USDC/DEI pool",
+    "Muon oracle"
+  ],
+  "monitoring_rules": [
+    "BLOCK ORACLE_MANIPULATION -> FLASHLOAN_BORROW -> LENDING_CONTRACT_INTERACTION in single tx"
+  ],
+  "summary": "The attacker manipulated the Muon oracle and then used a flash loan to borrow DEI at a manipulated price, resulting in a significant loss for the protocol.",
+  "_meta": {
+    "chatId": "chatcmpl-8dda164c6cce4657ac85aed58dbf713f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:48.141Z"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "article_id": "take-money-run",
+  "title": "Take the Money and Run",
+  "relevance_score": 8,
+  "relevance_summary": "Ponzi scheme involving fake rewards for watching videos and inviting others, with daily payouts and referral bonuses",
+  "attack_vector": "ponzi_scam",
+  "funds_lost": "millions",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to a contract known to be associated with a ponzi scheme.",
+      "trigger": "TX_TO_KNOWN_PONZI_CONTRACT",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "daily payouts",
+    "referral bonuses",
+    "watch videos for rewards",
+    "promises of effortless riches"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "BLOCK_TX_TO_KNOWN_PONZI_CONTRACT"
+  ],
+  "summary": "MetaMax operated a Ponzi scheme promising daily payouts and referral bonuses for watching videos and inviting others. Users lost millions as the scheme collapsed.",
+  "_meta": {
+    "chatId": "chatcmpl-ad3b28045a0b4a34b3189be7af3f7fd7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:42.152Z"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "infura-issue-of-consensus",
+  "title": "Infura - Issue of Consensus",
+  "relevance_score": 2,
+  "relevance_summary": "Node provider stuck on minority chain due to outdated software",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "node stuck on minority chain",
+    "outdated geth version"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "A consensus flaw caused some nodes, including Infura's, to get stuck on a minority chain, leading to service disruptions for apps relying on these nodes. This highlights the importance of keeping nodes updated.",
+  "_meta": {
+    "chatId": "chatcmpl-1592071eca374f25a8cd1a771439d6c4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:44.244Z"
+  }
+}

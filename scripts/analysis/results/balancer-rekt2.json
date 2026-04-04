@@ -1,0 +1,38 @@
+{
+  "article_id": "balancer-rekt2",
+  "title": "Balancer - Rekt II",
+  "relevance_score": 9,
+  "relevance_summary": "Rate manipulation through rounding errors in Balancer's scaling function",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "128000000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that shows unusual rounding behavior in critical scaling functions",
+      "trigger": "UNUSUAL_ROUNDING_BEHAVIOR_IN_SCALING_FUNCTION",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "_upscale()"
+  ],
+  "red_flags": [
+    "Unusual rounding behavior",
+    "Subtle rounding error flagged in code comments"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Balancer V2 Composable Stable Pools"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_UNUSUAL_ROUNDING_BEHAVIOR_IN_SCALING_FUNCTION"
+  ],
+  "summary": "A rounding error in Balancer's scaling function was exploited to drain over $128 million across multiple chains. A guard could have detected this by blocking transactions showing unusual rounding behavior in critical scaling functions.",
+  "_meta": {
+    "chatId": "chatcmpl-cdd4a8eefee441b5b5f3d787d515e6dd",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:07.171Z"
+  }
+}

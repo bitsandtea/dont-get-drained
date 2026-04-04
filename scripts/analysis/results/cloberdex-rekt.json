@@ -1,0 +1,40 @@
+{
+  "article_id": "cloberdex-rekt",
+  "title": "Clober Dex - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Reentrancy attack on Liquidity Vault leading to $500k loss",
+  "attack_vector": "reentrancy",
+  "funds_lost": "500000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls _burn() with a callback that allows multiple withdrawals",
+      "trigger": "_burn() with callback -> multiple withdrawals in the same transaction",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe985e9cbbdef89fa3b635876122621ad55c012c6"
+  ],
+  "red_flags": [
+    "unguarded _burn function",
+    "callback allowing multiple withdrawals"
+  ],
+  "attacker_addresses": [
+    "0x012Fc6377F1c5CCF6e29967Bce52e3629AaA6025"
+  ],
+  "vulnerable_contracts": [
+    "Liquidity Vault"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls _burn() with a callback that allows multiple withdrawals"
+  ],
+  "summary": "Clober Dex suffered a $500k loss due to a reentrancy exploit targeting their unguarded _burn function. A malicious contract abused the burnHook callback to perform multiple withdrawals, draining the vault. A guard could prevent such attacks by blocking any tx that calls _burn() with a callback allowing multiple withdrawals.",
+  "_meta": {
+    "chatId": "chatcmpl-e583152ec0ac46d085e7aaa9145f7098",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:01.820Z"
+  }
+}

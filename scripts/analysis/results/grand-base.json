@@ -1,0 +1,42 @@
+{
+  "article_id": "grand-base",
+  "title": "Grand Base - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Private key leak leading to unauthorized minting and sale of tokens",
+  "attack_vector": "access_control",
+  "funds_lost": "2,000,000 USD",
+  "chain": "base",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints tokens if the deployer wallet has been compromised.",
+      "trigger": "DEPLOYER_WALLET_COMPROMISED -> mint()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f5888fa"
+  ],
+  "red_flags": [
+    "drastic price movement",
+    "over 90% dump",
+    "private key leak"
+  ],
+  "attacker_addresses": [
+    "0xd8c21702b74d14b68f2580e28c10ecc53304c274",
+    "0xb124546f9f89f178a785d539d299e372b9dc1ec6"
+  ],
+  "vulnerable_contracts": [
+    "GB"
+  ],
+  "monitoring_rules": [
+    "DEPLOYER_WALLET_COMPROMISED -> mint()"
+  ],
+  "summary": "A private key leak allowed an attacker to mint and sell GB tokens, resulting in a significant loss. A guard could have blocked any minting transactions if the deployer wallet was known to be compromised.",
+  "_meta": {
+    "chatId": "chatcmpl-aa49f26f0bc942799dc3f43db138c42d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:57.674Z"
+  }
+}

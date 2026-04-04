@@ -1,0 +1,44 @@
+{
+  "article_id": "odin-fun-rekt",
+  "title": "Odin.Fun - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Liquidity manipulation attack using worthless tokens to inflate prices and drain real assets",
+  "attack_vector": "liquidity_manipulation",
+  "funds_lost": "7000000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deposits worthless tokens followed by a price manipulation and withdrawal of real assets in the same transaction.",
+      "trigger": "DEPOSIT_WORTHLESS_TOKENS -> PRICE_MANIPULATION -> WITHDRAW_REAL_ASSETS in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f9840a8",
+    "0x60a06060",
+    "0x70a070a0"
+  ],
+  "red_flags": [
+    "Depositing worthless tokens",
+    "Manipulating AMM price ratios",
+    "Withdrawing real assets"
+  ],
+  "attacker_addresses": [
+    "0x...",
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Odin.Fun AMM contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_DEPOSITS_OF_WORTHLESS_TOKENS_FOLLOWED_BY_PRICE_MANIPULATION_AND_WITHDRAWAL_OF_REAL_ASSETS"
+  ],
+  "summary": "Hackers manipulated Odin.Fun's AMM by depositing worthless tokens, inflating prices, and withdrawing real Bitcoin, costing users $7 million. A guard could have blocked such transactions by detecting deposits of worthless tokens followed by price manipulation and subsequent withdrawal of real assets.",
+  "_meta": {
+    "chatId": "chatcmpl-870006d3354c490e9b61a510d57f7196",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:31.361Z"
+  }
+}

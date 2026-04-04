@@ -1,0 +1,41 @@
+{
+  "article_id": "the-big-combo",
+  "title": "The Big Combo (Growth DeFi - REKT)",
+  "relevance_score": 8,
+  "relevance_summary": "Liquidity manipulation followed by withdrawal on DeFi protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "2.7 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that removes liquidity from Uniswap after interacting with a staking contract",
+      "trigger": "STAKING_CONTRACT -> UNISWAP_REMOVE_LIQUIDITY",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe41d2487",
+    "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822"
+  ],
+  "red_flags": [
+    "Unusual liquidity pair creation",
+    "Staking contract interaction followed by liquidity removal"
+  ],
+  "attacker_addresses": [
+    "@r0bster97"
+  ],
+  "vulnerable_contracts": [
+    "Growth DeFi staking contract"
+  ],
+  "monitoring_rules": [
+    "STAKING_CONTRACT -> UNISWAP_REMOVE_LIQUIDITY"
+  ],
+  "summary": "Growth DeFi fell victim to a liquidity manipulation attack where a fake token was used to drain liquidity from Uniswap. A guard could have blocked such transactions by monitoring interactions between staking contracts and Uniswap liquidity removal.",
+  "_meta": {
+    "chatId": "chatcmpl-da70cfb907b940ad9f5a73158cf5a316",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:24.449Z"
+  }
+}

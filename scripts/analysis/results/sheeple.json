@@ -1,0 +1,23 @@
+{
+  "article_id": "sheeple",
+  "title": "Sheeple",
+  "relevance_score": 0,
+  "relevance_summary": "No actionable intelligence for on-chain guard detection",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses Beeple's decision to sell his NFT artwork and the subsequent price drop, which led to criticism from the community. There is no relevant information for an on-chain guard to detect and block malicious transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-cc98f8c0637a47298b302b6c11056762",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:19.836Z"
+  }
+}

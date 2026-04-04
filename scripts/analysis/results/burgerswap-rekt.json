@@ -1,0 +1,41 @@
+{
+  "article_id": "burgerswap-rekt",
+  "title": "BurgerSwap - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by reentrancy attack on a decentralized exchange",
+  "attack_vector": "reentrancy",
+  "funds_lost": "7.2M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls swapExactTokensForTokens after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> swapExactTokensForTokens() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x00f81d4a",
+    "0x08ad597c"
+  ],
+  "red_flags": [
+    "Reentrancy attack pattern",
+    "Use of flash loans"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "BurgerSwap"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS swapExactTokensForTokens() IMMEDIATELY FOLLOWING A FLASH LOAN IN THE SAME TRANSACTION"
+  ],
+  "summary": "BurgerSwap fell victim to a reentrancy attack using flash loans, allowing attackers to drain funds. A guard could have blocked such transactions by preventing reentrancy after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-9d11a17f5c344489b1c637367d0589e2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:39.748Z"
+  }
+}

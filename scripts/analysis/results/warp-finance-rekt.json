@@ -1,0 +1,44 @@
+{
+  "article_id": "warp-finance-rekt",
+  "title": "Warp Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by price manipulation on Uniswap LP tokens to borrow more than collateralized amount",
+  "attack_vector": "flash_loan",
+  "funds_lost": "7.8 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls flashLoan() followed by minting LP tokens on Uniswap and depositing them as collateral within the same transaction.",
+      "trigger": "FLASHLOAN -> mint LP tokens -> deposit LP tokens as collateral in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70968807",
+    "0xf164fb65",
+    "0xd9e1c159"
+  ],
+  "red_flags": [
+    "Uniswap LP token price manipulation",
+    "Large flash loan amounts"
+  ],
+  "attacker_addresses": [
+    "0xdf8bee861227ffc5eea819c332a1c170ae3dbacb"
+  ],
+  "vulnerable_contracts": [
+    "WarpVaultSC",
+    "WarpOracle",
+    "WarpControl"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls flashLoan() followed by minting LP tokens on Uniswap and depositing them as collateral within the same transaction."
+  ],
+  "summary": "Warp Finance was hacked through a flash loan followed by price manipulation on Uniswap LP tokens, allowing the attacker to borrow more than their collateralized amount. A guard could have detected and blocked this by monitoring for flash loans followed by LP token minting and collateral deposit in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-7598f01516b74d3bb64cfb1864e9d63d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:04.519Z"
+  }
+}

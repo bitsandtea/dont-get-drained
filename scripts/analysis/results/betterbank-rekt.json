@@ -1,0 +1,48 @@
+{
+  "article_id": "betterbank-rekt",
+  "title": "BetterBank - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Liquidity manipulation followed by bonus minting abuse on lending protocol",
+  "attack_vector": "liquidity_manipulation",
+  "funds_lost": "5000000 USD",
+  "chain": "pulsechain",
+  "prevention": [
+    {
+      "rule": "Block any tx that creates an LP pair involving a newly minted token and a pre-existing token.",
+      "trigger": "CREATE2 -> LP_CREATION with one token being freshly minted and the other existing.",
+      "severity": "high"
+    },
+    {
+      "rule": "Block any tx that performs bulk swaps followed by bonus minting within the same transaction.",
+      "trigger": "BULK_SWAP -> BONUS_MINT in single tx.",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "CREATE2",
+    "BULK_SWAP",
+    "BONUS_MINT"
+  ],
+  "red_flags": [
+    "Creation of homemade liquidity pools",
+    "Bulk swapping followed by bonus minting"
+  ],
+  "attacker_addresses": [
+    "0x...",
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "BetterBank"
+  ],
+  "monitoring_rules": [
+    "Block CREATE2 followed by BULK_SWAP and BONUS_MINT in the same transaction."
+  ],
+  "summary": "BetterBank's bonus minting system was exploited through liquidity manipulation, allowing attackers to create fake liquidity pools and harvest infinite rewards. A guard could have detected and blocked such transactions by monitoring for CREATE2 followed by bulk swaps and bonus minting in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-2e9cd26f53154f4884d4f4fcee745dbe",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:52.462Z"
+  }
+}

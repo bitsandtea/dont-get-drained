@@ -1,0 +1,27 @@
+{
+  "article_id": "ledger-recover",
+  "title": "Ledger's Latest Ledger Recovery Service Raises Concerns",
+  "relevance_score": 4,
+  "relevance_summary": "Hardware wallet seed phrase fragments sent to third-party backup services; potential for identity theft and government access",
+  "attack_vector": "access_control",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "third-party backup services",
+    "identity-based recovery service",
+    "closed-source code"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Ledger introduced a new identity-based recovery service that splits seed phrases into fragments and sends them to third-party backup services. This raises concerns about potential identity theft and government access to private keys.",
+  "_meta": {
+    "chatId": "chatcmpl-e7a58891007e48b095d4a25a9694dbae",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:10.278Z"
+  }
+}

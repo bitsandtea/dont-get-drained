@@ -1,0 +1,40 @@
+{
+  "article_id": "eralend-rekt",
+  "title": "EraLend - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Read-only reentrancy attack on EraLend using SyncSwap LP token burning mechanism",
+  "attack_vector": "reentrancy",
+  "funds_lost": "3.4M USD",
+  "chain": "zkSync",
+  "prevention": [
+    {
+      "rule": "Block any tx that burns LP tokens and immediately calls a function that relies on reserve values.",
+      "trigger": "LP_TOKEN_BURN -> function_call_relying_on_reserve_values() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe41d248f"
+  ],
+  "red_flags": [
+    "callback before update_reserves is called",
+    "inflating oracle price"
+  ],
+  "attacker_addresses": [
+    "0xf1D076c9Be4533086f967e14EE6aFf204D5ECE7a"
+  ],
+  "vulnerable_contracts": [
+    "EraLend"
+  ],
+  "monitoring_rules": [
+    "Block any tx that burns LP tokens and immediately calls a function that relies on reserve values."
+  ],
+  "summary": "EraLend lost $3.4M to a read-only reentrancy attack exploiting a callback in the LP token burning mechanism. A guard could have blocked such transactions by preventing LP token burning followed by a reserve-dependent function call.",
+  "_meta": {
+    "chatId": "chatcmpl-48229b9466be448b9aecc1b5ab6444f5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:48.446Z"
+  }
+}

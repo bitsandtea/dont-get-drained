@@ -1,0 +1,41 @@
+{
+  "article_id": "yearn-rekt",
+  "title": "Yearn - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by repeated deposits and withdrawals on Curve liquidity pool",
+  "attack_vector": "flash_loan",
+  "funds_lost": "$11,000,000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls Curve liquidity pool functions after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> CURVE_LIQUIDITY_POOL_FUNCTION in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7050c9e1",
+    "0xf14e4e40",
+    "0x08fd5b4e"
+  ],
+  "red_flags": [
+    "Repeated deposits and withdrawals on Curve liquidity pool"
+  ],
+  "attacker_addresses": [
+    "0x62494b3ed9663334e57f23532155ea0575c487c5"
+  ],
+  "vulnerable_contracts": [
+    "yDAI vault"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_CALLING_CURVE_LIQUIDITY_POOL_FUNCTIONS_AFTER_FLASH_LOAN"
+  ],
+  "summary": "The Yearn DAI v1 vault was attacked using 9 flash loans, resulting in $11 million loss. The attacker exploited the fact that the withdrawal fee had been turned off for vault migration.",
+  "_meta": {
+    "chatId": "chatcmpl-89008d89698048f99801ab654df56a62",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:15.265Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "swaprum-rekt",
+  "title": "Swaprum - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "500,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7fc66580",
+    "0x4e39b581"
+  ],
+  "red_flags": [
+    "Unusual sequence of flash loan and reserve donation"
+  ],
+  "attacker_addresses": [
+    "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+  ],
+  "vulnerable_contracts": [
+    "LendingProtocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK tx if FLASHLOAN_BORROW -> donateToReserves() in same tx"
+  ],
+  "summary": "The attacker used a flash loan to manipulate the lending protocol's reserves, then donated the funds to the reserves, causing a loss. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-2a4e3eebcc7b4e0e9a3a17e0d2abe58d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:43.358Z"
+  }
+}

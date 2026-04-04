@@ -1,0 +1,23 @@
+{
+  "article_id": "the-whitepaper",
+  "title": "The Whitepaper",
+  "relevance_score": 0,
+  "relevance_summary": "No specific actionable intelligence related to transaction monitoring.",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses the decline of whitepapers in the cryptocurrency space and does not provide actionable intelligence for transaction monitoring.",
+  "_meta": {
+    "chatId": "chatcmpl-eef36e0b090b497497d884f6cb87ddcf",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:22.779Z"
+  }
+}

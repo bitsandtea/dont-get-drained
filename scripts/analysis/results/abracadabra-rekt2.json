@@ -1,0 +1,41 @@
+{
+  "article_id": "abracadabra-rekt2",
+  "title": "Abracadabra - Rekt II",
+  "relevance_score": 9,
+  "relevance_summary": "Liquidation loophole exploited to drain GMX-linked pools",
+  "attack_vector": "liquidation",
+  "funds_lost": "13,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows funds and pushes a position into liquidation within the same transaction.",
+      "trigger": "BORROW -> LIQUIDATE in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x43ef54cd"
+  ],
+  "red_flags": [
+    "Failed deposit followed by liquidation",
+    "Funds bridged from Arbitrum to Ethereum"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Abracadabra gmCauldrons"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT BORROWS FUNDS AND PUSHES A POSITION INTO LIQUIDATION WITHIN THE SAME TRANSACTION"
+  ],
+  "summary": "Attackers exploited a liquidation loophole by failing deposits and pushing positions into liquidation, draining GMX-linked pools of 6,260 ETH worth approximately $13 million. A guard could have blocked such transactions by preventing any borrow and liquidate sequence in a single transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-028079ba732a473293b743b68499170a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:33.431Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "article_id": "ionic-money-rekt",
+  "title": "Ionic Money - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Fake collateral deployment followed by flash loan and withdrawal on DeFi protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "6.9 million USD",
+  "chain": "mode network",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints new tokens and immediately borrows large amounts in the same transaction.",
+      "trigger": "TOKEN_MINT -> FLASHLOAN_BORROW in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x9aa3fd43a6b0f85b4f1bf74f0c9e79773f238591d9c6fe666287bd2c8ac19009",
+    "0x5db6d90a17a44bed6d9ed9ca73d800df2661751fa1a273e71fc2174ad3b6944f"
+  ],
+  "red_flags": [
+    "Unofficial LBTC deployed as collateral",
+    "Large amount of tokens minted and immediately borrowed"
+  ],
+  "attacker_addresses": [
+    "0x9E34d89C013Da3BF65fc02b59B6F27D710850430"
+  ],
+  "vulnerable_contracts": [
+    "Ionic Money",
+    "Lombard Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TOKEN_MINT_FOLLOWED_BY_FLASHLOAN_BORROW"
+  ],
+  "summary": "Ionic Money was defrauded via a fake LBTC token deployment, which was immediately used to mint and borrow large sums of value, ultimately leading to a significant loss. A guard could have detected this by blocking any transaction that mints new tokens and immediately borrows large amounts in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-f1911581c2874708a9a4f7e81a67f9b6",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:57.729Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "woo-rekt",
+  "title": "Woofi - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by oracle manipulation on lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "8,500,000 USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle prices immediately followed by a flash loan repayment.",
+      "trigger": "ORACLE_PRICE_MANIPULATION -> FLASHLOAN_REPAYMENT in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f98431c",
+    "0x40e1b8c7"
+  ],
+  "red_flags": [
+    "Price manipulation outside expected range",
+    "Immediate flash loan repayment after price manipulation"
+  ],
+  "attacker_addresses": [
+    "0x9961190b258897bca7a12b8f37f415e689d281c4"
+  ],
+  "vulnerable_contracts": [
+    "0xD4c633C9A765bC690E1FbA566981c1F4eab52dF0"
+  ],
+  "monitoring_rules": [
+    "Monitor for any tx that manipulates oracle prices and then immediately repays a flash loan in the same transaction."
+  ],
+  "summary": "WooFi suffered an $8.5 million loss due to a flash loan attack where the attacker manipulated the price of WOO using oracle manipulation to repay the flash loan at a cheaper price. A guard could have detected and blocked such transactions by monitoring for oracle price manipulation followed by flash loan repayment.",
+  "_meta": {
+    "chatId": "chatcmpl-9615562ac83b4baf94f23d7c151e8538",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:35.079Z"
+  }
+}

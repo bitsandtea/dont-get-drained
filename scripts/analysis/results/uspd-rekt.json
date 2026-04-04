@@ -1,0 +1,41 @@
+{
+  "article_id": "uspd-rekt",
+  "title": "USPD - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Clandestine Proxy In the Middle of Proxy (CPIMP) attack exploiting a gap between contract deployment and initialization",
+  "attack_vector": "access_control",
+  "funds_lost": "$1,000,000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys and initializes a proxy contract in separate transactions.",
+      "trigger": "DEPLOY_PROXY -> INIT_PROXY in separate txs",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f5888fa",
+    "0x06fdde03"
+  ],
+  "red_flags": [
+    "Gap between contract deployment and initialization",
+    "Shadow regime forwarding legitimate calls"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "USPD"
+  ],
+  "monitoring_rules": [
+    "Block any tx that deploys and initializes a proxy contract in separate transactions."
+  ],
+  "summary": "USPD suffered a $1 million loss due to a CPIMP attack, where an attacker exploited the gap between contract deployment and initialization to install a shadow regime. A guard could have prevented this by blocking any transactions that deploy and initialize a proxy contract in separate transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-d28e039cc14445908c92701b01fd73f4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:18.515Z"
+  }
+}

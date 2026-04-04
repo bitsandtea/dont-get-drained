@@ -1,0 +1,41 @@
+{
+  "article_id": "atlantis-loans-rekt",
+  "title": "Atlantis Loans - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "2.5M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades governance contracts with a governance proposal in the same tx.",
+      "trigger": "UPGRADE_GOVERNANCE_CONTRACTS -> PROPOSAL_EXECUTED in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe8aa1c1f",
+    "0x715018a6"
+  ],
+  "red_flags": [
+    "Governance proposal executed without delay",
+    "Abandoned project with active governance"
+  ],
+  "attacker_addresses": [
+    "0xEADe071FF23bceF312deC938eCE29f7da62CF45b"
+  ],
+  "vulnerable_contracts": [
+    "Atlantis Loans"
+  ],
+  "monitoring_rules": [
+    "BLOCK_UPGRADES_WITHOUT_DELAY"
+  ],
+  "summary": "Atlantis Loans, an abandoned lending protocol on BSC, was exploited via a governance attack where an attacker pushed and voted through a proposal to upgrade the contract with malicious ones, draining funds. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-fa8f7113452e4d92938e8d53d338cfe8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:41.078Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "article_id": "paper-tiger",
+  "title": "Paper Tiger",
+  "relevance_score": 8,
+  "relevance_summary": "Secretive minting and manipulation of collateral ratios on a DeFi protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "Millions",
+  "chain": "polkadot",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints tokens in secret or manipulates collateral ratios without user consent.",
+      "trigger": "SECRET_MINTING -> manipulate_collateral_ratios()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f58885a",
+    "0x6b3e9ac1"
+  ],
+  "red_flags": [
+    "Secretive minting",
+    "Manipulation of collateral ratios",
+    "Batch calls with opaque executions"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Parallel Finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints tokens in secret or manipulates collateral ratios without user consent."
+  ],
+  "summary": "Parallel Finance secretly minted tokens and manipulated collateral ratios, leading to significant losses. A guard could have detected and blocked these actions by monitoring for secret minting and unauthorized collateral ratio changes.",
+  "_meta": {
+    "chatId": "chatcmpl-baf6de1576d74857979753e7c3a41dad",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:07.520Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "gana-payment-rekt",
+  "title": "GANA Payment - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key leak exploited via EIP-7702 delegator contract for repeated stake-unstake loops",
+  "attack_vector": "access_control",
+  "funds_lost": "3.1 million USD",
+  "chain": "bnb smart chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls EIP-7702 delegator contract with compromised owner key",
+      "trigger": "CALL_EIP_7702_DELEGATOR_CONTRACT_WITH_COMPROMISED_OWNER_KEY",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Repeated stake-unstake loops",
+    "Private key leak"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "GANA Payment Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CALL_TO_EIP_7702_DELEGATOR_CONTRACT_WITH_COMPROMISED_OWNER_KEY"
+  ],
+  "summary": "GANA Payment's protocol was exploited due to a private key leak, allowing the attacker to use an EIP-7702 delegator contract for repeated stake-unstake loops, draining $3.1 million from the protocol.",
+  "_meta": {
+    "chatId": "chatcmpl-267fb71df7a3403aa451ea1437510daf",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:00.008Z"
+  }
+}

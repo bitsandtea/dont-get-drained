@@ -1,0 +1,40 @@
+{
+  "article_id": "hopium-diaries-dystopian-dreams",
+  "title": "Hopium Diaries - Dystopian Dreams",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "15 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d6c",
+    "0x1b4e2b3e"
+  ],
+  "red_flags": [
+    "Unusual pattern of flash loan followed by large donation"
+  ],
+  "attacker_addresses": [
+    "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+  ],
+  "vulnerable_contracts": [
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_FLASHLOAN_BORROW_FOLLOWED_BYDonateToReserves"
+  ],
+  "summary": "The attacker used a flash loan to siphon funds from the lending protocol and then donated them to reserves, draining the protocol. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-cf12f547926d4710a5edc0d111cd4265",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:35.843Z"
+  }
+}

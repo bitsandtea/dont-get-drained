@@ -1,0 +1,48 @@
+{
+  "article_id": "curve-vyper-rekt",
+  "title": "Curve, Vyper - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Vyper compiler bug leading to reentrancy attacks on Curve pools",
+  "attack_vector": "reentrancy",
+  "funds_lost": "69M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls add_liquidity() or remove_liquidity() in the same tx if the contract is written in Vyper versions 0.2.15, 0.2.16, or 0.3.0.",
+      "trigger": "add_liquidity() -> remove_liquidity() in the same tx for Vyper versions 0.2.15, 0.2.16, or 0.3.0",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "add_liquidity()",
+    "remove_liquidity()"
+  ],
+  "red_flags": [
+    "reentrancy pattern within the same transaction",
+    "calls to add_liquidity() and remove_liquidity() in the same tx"
+  ],
+  "attacker_addresses": [
+    "0x6ec21d1868743a44318c3c259a6d4953f9978538",
+    "0xdce5d6b41c32f578f875efffc0d422c57a75d7d8",
+    "0xc0ffeebabe5d496b2dde509f9fa189c25cf29671",
+    "0xB1C33b391C2569B737eC387E731E88589e8ec148",
+    "0xb752def3a1fded45d6c4b9f4a8f18e645b41b324"
+  ],
+  "vulnerable_contracts": [
+    "JPEG’D",
+    "Alchemix",
+    "Metronome",
+    "Curve"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls add_liquidity() or remove_liquidity() in the same tx if the contract is written in Vyper versions 0.2.15, 0.2.16, or 0.3.0."
+  ],
+  "summary": "A Vyper compiler bug allowed attackers to exploit reentrancy vulnerabilities in Curve pools, draining millions of dollars across multiple protocols. A guard could have blocked transactions calling both add_liquidity() and remove_liquidity() in the same tx for Vyper versions known to be vulnerable.",
+  "_meta": {
+    "chatId": "chatcmpl-e865af1bf8204ddbbc268548ee93fd80",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:50.345Z"
+  }
+}

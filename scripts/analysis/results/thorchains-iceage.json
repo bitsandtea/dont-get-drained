@@ -1,0 +1,39 @@
+{
+  "article_id": "thorchains-iceage",
+  "title": "THORChain's Ice Age",
+  "relevance_score": 8,
+  "relevance_summary": "Leveraged lending protocol with significant liabilities leading to a death spiral",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "200M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints Rune to cover borrowed assets during market downturns",
+      "trigger": "Borrow -> Mint Rune to cover obligations",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x18160ddd",
+    "0x4e3e1d17"
+  ],
+  "red_flags": [
+    "Large borrow amounts at low prices",
+    "Significant minting of Rune to cover obligations"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "THORFi"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints Rune to cover borrowed assets during market downturns"
+  ],
+  "summary": "THORChain's THORFi lending protocol faced a death spiral due to significant liabilities and market downturns, leading to the minting of Rune to cover borrowed assets. A guard could have prevented this by blocking such transactions during market downturns.",
+  "_meta": {
+    "chatId": "chatcmpl-12bca1d574ee4243a1f5aaff4f656319",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:24.988Z"
+  }
+}

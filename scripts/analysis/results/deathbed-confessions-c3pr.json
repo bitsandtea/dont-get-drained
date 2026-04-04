@@ -1,0 +1,31 @@
+{
+  "article_id": "deathbed-confessions-c3pr",
+  "title": "Compounder Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Rug pull on a DeFi protocol with no active defense mechanisms",
+  "attack_vector": "rug_pull",
+  "funds_lost": "over $12,000,000",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "deleted site and Twitter account",
+    "early conversations with admins expressing concerns",
+    "security audit stating timelock offers no protection"
+  ],
+  "attacker_addresses": [
+    "keccak"
+  ],
+  "vulnerable_contracts": [
+    "compounder.finance"
+  ],
+  "monitoring_rules": [],
+  "summary": "Compounder.finance was rug pulled, resulting in losses exceeding $12 million. Despite a security audit warning about the lack of protection from the timelock, the protocol was abandoned without any active defense mechanisms.",
+  "_meta": {
+    "chatId": "chatcmpl-ea1b52d025ee4803a18cd834511cf63c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:01.867Z"
+  }
+}

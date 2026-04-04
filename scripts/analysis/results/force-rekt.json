@@ -1,0 +1,42 @@
+{
+  "article_id": "force-rekt",
+  "title": "Force - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by withdrawal from xFORCE contract",
+  "attack_vector": "flash_loan",
+  "funds_lost": "14,833 FORCE",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls transferFrom() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> transferFrom() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "transferFrom()"
+  ],
+  "red_flags": [
+    "minted xFORCE and withdrew FORCE",
+    "other hackers arrived to feed on the leftovers"
+  ],
+  "attacker_addresses": [
+    "0xdf05020d5d3c3a975627ce29f24b4eb8ccb8807f9f9c9aa05e644c61fe5f0141",
+    "0x3b60252b36d2de2930a64f360926bfcba44d12ff44719de3c6dd486b9dafe118",
+    "0xfda56d853714860e79512791d065a626e5102d52934c769e981619daf3c85f33"
+  ],
+  "vulnerable_contracts": [
+    "0xdf05020d5d3c3a975627ce29f24b4eb8ccb8807f9f9c9aa05e644c61fe5f0141"
+  ],
+  "monitoring_rules": [
+    "BLOCK transferFrom() calls within 10 seconds of a flash loan"
+  ],
+  "summary": "A white hat hacker exploited a vulnerability in the FORCE/xFORCE contract by taking advantage of a flash loan to withdraw 14,833 FORCE. A guard could have blocked such transactions by monitoring for flash loans followed by calls to transferFrom().",
+  "_meta": {
+    "chatId": "chatcmpl-ea11bb69bdb644a491ebf43a04181ce2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:25.689Z"
+  }
+}

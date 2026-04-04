@@ -1,0 +1,41 @@
+{
+  "article_id": "hyperliquid2",
+  "title": "Hyperliquid II",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation followed by liquidation attack on a manipulated token",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "12M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle data and then triggers liquidation on the same asset",
+      "trigger": "ORACLE_MANIPULATION -> LIQUIDATE( manipulated_asset ) in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xf86d7c92",
+    "0x0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "Oracle manipulation followed by liquidation",
+    "Price manipulation leading to large liquidations"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "Hyperliquid"
+  ],
+  "monitoring_rules": [
+    "BLOCK ORACLE_MANIPULATION -> LIQUIDATE( manipulated_asset ) in single tx"
+  ],
+  "summary": "A trader manipulated the price of $JELLY, causing Hyperliquid's liquidation engine to trigger a massive liquidation, forcing the protocol to either face significant financial loss or reveal its centralized control mechanisms.",
+  "_meta": {
+    "chatId": "chatcmpl-181ef7c107bf4b0ea0417bac066769f8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:37.103Z"
+  }
+}

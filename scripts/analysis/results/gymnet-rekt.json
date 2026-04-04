@@ -1,0 +1,41 @@
+{
+  "article_id": "gymnet-rekt",
+  "title": "Gym Network - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Lack of caller verification leading to fake deposit creation and subsequent withdrawal",
+  "attack_vector": "access_control",
+  "funds_lost": "2.1M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that creates fake deposits without making a payment",
+      "trigger": "CREATE FakeDeposit -> !PAYMENT_MADE",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "CREATE FakeDeposit",
+    "!PAYMENT_MADE"
+  ],
+  "red_flags": [
+    "Lack of caller verification",
+    "Introduction of new code after audits"
+  ],
+  "attacker_addresses": [
+    "0xb2c035eee03b821cbe78644e5da8b8eaa711d2e5"
+  ],
+  "vulnerable_contracts": [
+    "Single Pool Contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that creates fake deposits without making a payment"
+  ],
+  "summary": "Gym Network's Single Pool Contract had a vulnerability due to lack of caller verification, allowing attackers to create fake deposits and withdraw them. A guard could have detected and blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-d691934044b944a78ce0445d4ff62ca5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:13.799Z"
+  }
+}

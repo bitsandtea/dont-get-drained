@@ -1,0 +1,42 @@
+{
+  "article_id": "m2-exchange-rekt",
+  "title": "M2 Exchange - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Access control breach leading to multi-chain asset theft",
+  "attack_vector": "access_control",
+  "funds_lost": "13.7 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers funds to external accounts after accessing internal funds without proper authorization.",
+      "trigger": "ACCESS_CONTROL_BREACH -> transfer_to_external_account() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "transfer_to_external_account()"
+  ],
+  "red_flags": [
+    "Unusual fund transfers to external accounts shortly after accessing internal funds",
+    "Multi-chain activity"
+  ],
+  "attacker_addresses": [
+    "0x968b6984cba14444f23ee51be90652408155e142",
+    "bc1qu4kh7wa38xpkrp8frgxl4sak88wx0jug8n3vfj",
+    "EKko14NvgqdvNttUb8JjXkVGuUs6BTikjfN3hqW4LQoL"
+  ],
+  "vulnerable_contracts": [
+    "M2 Exchange contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that transfers funds to external accounts after accessing internal funds without proper authorization."
+  ],
+  "summary": "M2 Exchange suffered a multi-chain access control breach where attackers transferred millions of dollars worth of assets to external accounts. A guard could have detected and blocked such transactions by monitoring for unauthorized fund transfers following access to internal funds.",
+  "_meta": {
+    "chatId": "chatcmpl-d38bfff9370d46ffa9c212333d16d6ec",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:28.727Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "article_id": "blood-in-the-streets-II",
+  "title": "Blood in the streets II",
+  "relevance_score": 0,
+  "relevance_summary": "Market crash and liquidations, no specific transaction patterns highlighted",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses a market crash and subsequent liquidations in DeFi, but does not provide specific actionable intelligence for detecting malicious transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-058bacae62a14788bafda896fcef98a3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:29.716Z"
+  }
+}

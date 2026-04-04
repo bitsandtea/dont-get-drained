@@ -1,0 +1,23 @@
+{
+  "article_id": "right-to-disappear",
+  "title": "The Right to Disappear",
+  "relevance_score": 0,
+  "relevance_summary": "No actionable intelligence related to on-chain transactions.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses the tension between privacy and regulation in the context of social media and DeFi. It does not provide actionable intelligence for on-chain transaction monitoring.",
+  "_meta": {
+    "chatId": "chatcmpl-88bb9f1ba38a4f8a82162d443d7d7509",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:08.603Z"
+  }
+}

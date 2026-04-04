@@ -1,0 +1,42 @@
+{
+  "article_id": "hypr-network-rekt",
+  "title": "Hypr Network - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Bridge exploit using reinitialized contract to bypass finalizeERC20Withdrawal check",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "2.57M HYPR (~$220k)",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that reinitializes a contract and calls finalizeERC20Withdrawal() in the same transaction.",
+      "trigger": "REINITIALIZE_CONTRACT -> finalizeERC20Withdrawal() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x18160ddd",
+    "0x095ea7b3"
+  ],
+  "red_flags": [
+    "Reinitialization of contract",
+    "Calls to finalizeERC20Withdrawal()"
+  ],
+  "attacker_addresses": [
+    "0x5b8d598b354f5760b2a65f492154e7a3df46d1be",
+    "0x3ea6ba6d3415e4dfd380516c799aafa94e420519"
+  ],
+  "vulnerable_contracts": [
+    "OP monorepo develop branch"
+  ],
+  "monitoring_rules": [
+    "Block any tx that reinitializes a contract and calls finalizeERC20Withdrawal() in the same transaction."
+  ],
+  "summary": "Hypr Network lost 2.57M HYPR (~$220k) to a bridge exploit due to a critical vulnerability in the OP monorepo develop branch. A reinitialized contract was used to bypass the finalizeERC20Withdrawal check, highlighting the importance of staying updated with security patches.",
+  "_meta": {
+    "chatId": "chatcmpl-c5f289b77d884f63a78683af8b8ab032",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:37.180Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "uranium-rekt",
+  "title": "Uranium Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Math bug in forked Uniswap v2 code leading to liquidity drain",
+  "attack_vector": "compiler_bug",
+  "funds_lost": "57,000,000 USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys or interacts with contracts with known vulnerable code patterns.",
+      "trigger": "DEPLOY_CONTRACT -> contains known vulnerable code patterns",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+  ],
+  "red_flags": [
+    "Uniswap v2 code fork with minor changes",
+    "Low-level swap function used"
+  ],
+  "attacker_addresses": [
+    "0xdeadf4ce"
+  ],
+  "vulnerable_contracts": [
+    "UraniumPair"
+  ],
+  "monitoring_rules": [
+    "BLOCK_DEPLOYMENT_OF_KNOWN_VULNERABLE_CONTRACTS"
+  ],
+  "summary": "A math bug in the UraniumPair contract, a fork of Uniswap v2, allowed attackers to drain liquidity. A guard could have blocked deployments or interactions with known vulnerable code patterns.",
+  "_meta": {
+    "chatId": "chatcmpl-39d6735444d74499b744f1d330169e43",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:41.172Z"
+  }
+}

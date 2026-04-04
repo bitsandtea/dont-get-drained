@@ -1,0 +1,23 @@
+{
+  "article_id": "thin-line-privacy",
+  "title": "The Thin Line of Privacy",
+  "relevance_score": 2,
+  "relevance_summary": "No direct relevance to on-chain transactions or DeFi security.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "This article discusses the legal and ethical challenges surrounding privacy and free speech, particularly focusing on Pavel Durov and Telegram. It does not provide actionable intelligence for on-chain transaction monitoring.",
+  "_meta": {
+    "chatId": "chatcmpl-5054b00c396a410ebe4333d812af7ca2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:34.957Z"
+  }
+}

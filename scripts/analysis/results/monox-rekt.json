@@ -1,0 +1,38 @@
+{
+  "article_id": "monox-rekt",
+  "title": "MonoX - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Price manipulation attack on a DEX using a bug in the swap contract",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "31.4M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that updates token info for the same token in both tokenIn and tokenOut parameters.",
+      "trigger": "UPDATE_TOKEN_INFO -> tokenIn == tokenOut",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "_updateTokenInfo(uint256,uint256)"
+  ],
+  "red_flags": [
+    "price of tokenOut overwriting the price of tokenIn",
+    "massive inflation of the price of the platform's native token"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Monoswap"
+  ],
+  "monitoring_rules": [
+    "Block any tx that updates token info for the same token in both tokenIn and tokenOut parameters."
+  ],
+  "summary": "MonoX, a DEX based on Single Token Liquidity pools, was hacked via a price manipulation bug in the swap contract. Hackers inflated the price of the platform's native token and cashed out over $30M worth of assets. A guard could have blocked such transactions by preventing the update of token info for the same token in both tokenIn and tokenOut parameters.",
+  "_meta": {
+    "chatId": "chatcmpl-f7f15c22586d4a40a706d30abdcbecd9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:31.168Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "article_id": "under-the-armor",
+  "title": "Under the Armor",
+  "relevance_score": 4,
+  "relevance_summary": "Social media manipulation and reputation-based attacks",
+  "attack_vector": "governance_attack",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any governance proposal that references ambiguous statements made after the proposal was initiated.",
+      "trigger": "GOVERNANCE_PROPOSAL -> mentions ambiguous statements after proposal initiation",
+      "severity": "medium"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Ambiguous statements used to manipulate governance processes"
+  ],
+  "attacker_addresses": [
+    "N/A"
+  ],
+  "vulnerable_contracts": [
+    "N/A"
+  ],
+  "monitoring_rules": [
+    "Block any governance proposal that references ambiguous statements made after the proposal was initiated."
+  ],
+  "summary": "A governance attack was attempted where a user manipulated the narrative around ambiguous statements to pressure the team into breaking protocol. A guard could have blocked such proposals by monitoring for references to ambiguous statements made after the proposal was initiated.",
+  "_meta": {
+    "chatId": "chatcmpl-f4868f7a8d4e4db8a924fab3ba7c5aeb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:46.763Z"
+  }
+}

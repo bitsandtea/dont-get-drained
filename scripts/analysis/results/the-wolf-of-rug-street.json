@@ -1,0 +1,42 @@
+{
+  "article_id": "the-wolf-of-rug-street",
+  "title": "The Wolf of Rug Street",
+  "relevance_score": 8,
+  "relevance_summary": "Multi-million dollar rug pull involving a sitting president's endorsement, followed by another token launch",
+  "attack_vector": "rug_pull",
+  "funds_lost": "107 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves a sudden large token launch and immediate pump-and-dump strategy",
+      "trigger": "TOKEN_LAUNCH -> IMMEDIATE_PUMP_AND_DUMP",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x18160ddd"
+  ],
+  "red_flags": [
+    "Sudden large token launch",
+    "Immediate pump-and-dump strategy",
+    "Presidential endorsement"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "LIBRA token contract",
+    "WOLF token contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TOKEN_LAUNCH_IMMEDIATE_PUMP_AND_DUMP"
+  ],
+  "summary": "Hayden Davis orchestrated a multi-million dollar rug pull using a sitting president's endorsement for the LIBRA token, then launched another token called WOLF. A guard could have detected and blocked the WOLF token launch due to its sudden nature and immediate pump-and-dump strategy.",
+  "_meta": {
+    "chatId": "chatcmpl-176c8fedede54eff816c53656a3cb67f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:24.854Z"
+  }
+}

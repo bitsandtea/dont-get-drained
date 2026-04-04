@@ -1,0 +1,42 @@
+{
+  "article_id": "deltaprime-rekt",
+  "title": "DeltaPrime - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key compromise followed by contract upgrades and withdrawals on Arbitrum",
+  "attack_vector": "access_control",
+  "funds_lost": "5.98 million USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades a proxy contract within a short timeframe followed by large withdrawals.",
+      "trigger": "PROXY_UPGRADE -> LARGE_WITHDRAWAL within 10 blocks",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd78ba2dcb288e4459ebe5b6b3bfaa5c07768851d358ebd9e8d796d9d859762b0",
+    "0x70a0823100161f56c416e14523d66018e2d534e024ce503839dc30f80661d3bf"
+  ],
+  "red_flags": [
+    "Compromised admin address used to upgrade proxy contracts",
+    "Multiple rapid withdrawals following contract upgrades"
+  ],
+  "attacker_addresses": [
+    "0x40E4172e595Fb5B3076dC6d0A1a24d885b881Afb"
+  ],
+  "vulnerable_contracts": [
+    "0xd550cfeA0BFFDC81B2dEe7B6d915D9D9e31d83A2",
+    "0xD4CA224a176A59ed1a346FA86C3e921e01659E73"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades a proxy contract within a short timeframe followed by large withdrawals."
+  ],
+  "summary": "DeltaPrime suffered a $5.98 million loss due to a private key compromise, where the attacker upgraded proxy contracts and executed rapid withdrawals. A guard could have detected this by blocking upgrades followed by large withdrawals within a short timeframe.",
+  "_meta": {
+    "chatId": "chatcmpl-4d53a7c7f6a84cc881409cc332fabc31",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:05.685Z"
+  }
+}

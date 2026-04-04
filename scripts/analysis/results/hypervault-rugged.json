@@ -1,0 +1,41 @@
+{
+  "article_id": "hypervault-rugged",
+  "title": "Hypervault - Rugged",
+  "relevance_score": 10,
+  "relevance_summary": "Internal ledger system with no share tokens, privileged admin functions, and fake audit claims",
+  "attack_vector": "access_control",
+  "funds_lost": "4,640,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that transfers large amounts of funds to a single wallet without prior token issuance.",
+      "trigger": "large_fund_transfer -> single_wallet_without_token_issuance",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "fake_audit_claims",
+    "privileged_admin_functions",
+    "no_share_tokens"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "HyperVault"
+  ],
+  "monitoring_rules": [
+    "Block any tx that transfers large amounts of funds to a single wallet without prior token issuance."
+  ],
+  "summary": "HyperVault used an internal ledger system without share tokens and exploited privileged admin functions to siphon funds. A guard could have detected and blocked large fund transfers to a single wallet without prior token issuance.",
+  "_meta": {
+    "chatId": "chatcmpl-6589e1dbd1e24cc0a77b909b281a8959",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:12:59.431Z"
+  }
+}

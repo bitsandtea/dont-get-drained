@@ -1,0 +1,23 @@
+{
+  "article_id": "bulls-behind-bars",
+  "title": "Bulls Behind Bars",
+  "relevance_score": 5,
+  "relevance_summary": "Arrests of key figures in past DeFi collapses",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses recent arrests of key figures involved in past DeFi collapses, such as SBF, Su Zhu, and Do Kwon. While these arrests are significant, the article does not provide specific details on any on-chain transactions or vulnerabilities that could be monitored.",
+  "_meta": {
+    "chatId": "chatcmpl-1d5ad8e7c9b3418394d7e8c53f1b88da",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:38.112Z"
+  }
+}

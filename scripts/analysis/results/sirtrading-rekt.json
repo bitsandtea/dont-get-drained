@@ -1,0 +1,40 @@
+{
+  "article_id": "sirtrading-rekt",
+  "title": "SIR Trading - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Transient storage collision in uniswapV3SwapCallback function allowing attacker to bypass security checks",
+  "attack_vector": "transient_storage_collision",
+  "funds_lost": "355K USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that writes to the same transient storage slot used for security checks",
+      "trigger": "WRITE_TO_TRANSIENT_STORAGE_SLOT -> WRITE_SECURITY_CHECK_DATA_IN_SAME_SLOT",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "uniswapV3SwapCallback"
+  ],
+  "red_flags": [
+    "brute-forced vanity address",
+    "bypassed security checks"
+  ],
+  "attacker_addresses": [
+    "<brute-forced_vanity_address>"
+  ],
+  "vulnerable_contracts": [
+    "Vault contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_WRITE_TO_SAME_TRANSIENT_STORAGE_SLOT_USED_FOR_SECURITY_CHECKS"
+  ],
+  "summary": "SIR Trading was hacked due to a transient storage collision vulnerability in the uniswapV3SwapCallback function, allowing attackers to bypass security checks. A guard could have blocked transactions writing to the same transient storage slot used for security checks.",
+  "_meta": {
+    "chatId": "chatcmpl-1be66ba8deb94f6bb690ce7ef81d75d1",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:20.693Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "the-unfinished-proof",
+  "title": "The Unfinished Proof",
+  "relevance_score": 8,
+  "relevance_summary": "Groth16 misconfiguration leading to arbitrary withdrawal of funds",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "2,260,000 USD",
+  "chain": "ethereum | base",
+  "prevention": [
+    {
+      "rule": "Block any tx that withdraws funds without proper verification of Groth16 constants",
+      "trigger": "WITHDRAW -> checkGroth16Constants() fails",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x...withdraw",
+    "0x...checkGroth16Constants"
+  ],
+  "red_flags": [
+    "withdrawal without proper verification",
+    "misconfigured Groth16 verifier"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "FOOMCASH lottery contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that withdraws funds without proper verification of Groth16 constants"
+  ],
+  "summary": "FoomCash, a zero-knowledge proof-powered private lottery protocol, was exploited due to a misconfiguration of the Groth16 verifier, allowing attackers to withdraw funds without proper verification. A guard could have blocked such transactions by checking the Groth16 constants.",
+  "_meta": {
+    "chatId": "chatcmpl-6916c5ebeccb4982ba227c9a6cc49b19",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:25.583Z"
+  }
+}

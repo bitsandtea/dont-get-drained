@@ -1,0 +1,39 @@
+{
+  "article_id": "dforce-network-rekt",
+  "title": "dForce Network - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack exploiting virtual price manipulation through flash loans on Curve pools",
+  "attack_vector": "reentrancy",
+  "funds_lost": "3.65M USD",
+  "chain": "arbitrum | optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls remove_liquidity() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> remove_liquidity() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x45df057e"
+  ],
+  "red_flags": [
+    "flash loan followed by remove_liquidity on Curve pools"
+  ],
+  "attacker_addresses": [
+    "0xe0d551017c0111ac11108641771897aa33b2817c"
+  ],
+  "vulnerable_contracts": [
+    "dForce wstETHCRV-gauge vault"
+  ],
+  "monitoring_rules": [
+    "BLOCK remove_liquidity() if preceded by a flash loan in the same transaction"
+  ],
+  "summary": "The attacker exploited a reentrancy vulnerability by using flash loaned funds to manipulate the virtual price on Curve pools, resulting in a loss of $3.65M across Arbitrum and Optimism. A guard could have blocked such transactions by preventing remove_liquidity() calls after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-a2d9ca742c7b40ddb3e18a1950b7adac",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:48.138Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "article_id": "level-finance-rekt",
+  "title": "Level Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by multiple referral reward claims in the same epoch",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1,100,000 USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls claimMultiple() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> claimMultiple() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe1f25704"
+  ],
+  "red_flags": [
+    "Repeated referral reward claims within the same epoch"
+  ],
+  "attacker_addresses": [
+    "0x70319d1c09e1373fc7b10403c852909e5b20a9d5"
+  ],
+  "vulnerable_contracts": [
+    "0x977087422C008233615b572fBC3F209Ed300063a"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls claimMultiple() after a flash loan borrow in the same tx"
+  ],
+  "summary": "A bug in LevelFinance's LevelReferralControllerV2 contract allowed attackers to repeatedly claim referral rewards using flash loans. A monitoring system could have detected and blocked the flash loan followed by multiple referral reward claims in the same epoch.",
+  "_meta": {
+    "chatId": "chatcmpl-7047c0d6bd5d49cbae5a670fd16d3042",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:19.251Z"
+  }
+}

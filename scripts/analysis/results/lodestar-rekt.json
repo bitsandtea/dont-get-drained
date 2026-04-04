@@ -1,0 +1,41 @@
+{
+  "article_id": "lodestar-rekt",
+  "title": "Lodestar Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation followed by flash loan on lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "6.5M USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle price and then uses flash loan in the same tx",
+      "trigger": "PRICE_MANIPULATION -> FLASHLOAN_BORROW in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x190594d2",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Price oracle manipulation",
+    "Flash loan usage"
+  ],
+  "attacker_addresses": [
+    "0xc29d94386ff784006ff8461c170d1953cc9e2b5c"
+  ],
+  "vulnerable_contracts": [
+    "GLPOracle"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_MANIPULATION_FOLLOWED_BY_FLASH_LOAN"
+  ],
+  "summary": "The attacker manipulated the price oracle of plvGLP collateral, allowing them to use a flash loan to drain the lending pool. A guard could have blocked the transaction if it detected price manipulation followed by a flash loan in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-5ff108ed6e7742069293564ad29944eb",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:19.266Z"
+  }
+}

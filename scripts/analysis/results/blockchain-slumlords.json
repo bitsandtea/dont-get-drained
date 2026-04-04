@@ -1,0 +1,27 @@
+{
+  "article_id": "blockchain-slumlords",
+  "title": "Blockchain Slumlords",
+  "relevance_score": 2,
+  "relevance_summary": "Real estate tokenization without proper maintenance oversight",
+  "attack_vector": "other",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Tokenized properties with no clear maintenance responsibility",
+    "Gentrification by algorithm",
+    "Exploitation of historically redlined areas"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "RealT tokenized Detroit homes without ensuring proper maintenance, leading to neglected properties and financial issues for tenants.",
+  "_meta": {
+    "chatId": "chatcmpl-7edb73ebfef147ce83db9ddc2cbcd3f2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:29.535Z"
+  }
+}

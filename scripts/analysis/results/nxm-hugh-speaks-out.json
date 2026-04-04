@@ -1,0 +1,40 @@
+{
+  "article_id": "nxm-hugh-speaks-out",
+  "title": "Nexus Mutual - Hugh Speaks Out",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack targeting a user with a large balance, leading to the transfer of funds to a hacker.",
+  "attack_vector": "phishing",
+  "funds_lost": "8,000,000 NXM (~$8M)",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to a new address without prior approval or known history.",
+      "trigger": "FUND_TRANSFER -> new recipient address without prior interaction",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Transfer of large amounts to unknown addresses",
+    "Unexpected approval of transactions"
+  ],
+  "attacker_addresses": [
+    "Not explicitly mentioned"
+  ],
+  "vulnerable_contracts": [
+    "NXM token contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that sends funds to a new address without prior approval or known history."
+  ],
+  "summary": "Hugh Karp of Nexus Mutual was tricked into approving a transaction that sent 370,000 NXM to a hacker. A guard could have blocked the transaction by preventing fund transfers to new addresses without prior interaction.",
+  "_meta": {
+    "chatId": "chatcmpl-338d522f521844188bbe06455315a0a1",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:17.183Z"
+  }
+}

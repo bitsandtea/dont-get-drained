@@ -1,0 +1,37 @@
+{
+  "article_id": "on-flash-loans",
+  "title": "The Great Flash Loan",
+  "relevance_score": 5,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "Not specified",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4e3fced4"
+  ],
+  "red_flags": [
+    "donateToReserves() called immediately after flash loan"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Value (Akropolis + Origin + Cheesebank)"
+  ],
+  "monitoring_rules": [
+    "BLOCK tx if FLASHLOAN_BORROW -> donateToReserves() in same tx"
+  ],
+  "summary": "This article discusses flash loan exploits but does not detail specific incidents. However, it highlights the importance of monitoring flash loans followed by actions like donating to reserves.",
+  "_meta": {
+    "chatId": "chatcmpl-04aa866e8f874a2d91fe5a0d07b74efe",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:16.684Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "article_id": "saddle-finance-rekt",
+  "title": "Saddle Finance - REKT",
+  "relevance_score": 2,
+  "relevance_summary": "Forked protocol with no innovation, high slippage issues, and early liquidity provider losses",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "Not specified in the article",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "high slippage",
+    "early liquidity provider losses"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Saddle Finance"
+  ],
+  "monitoring_rules": [],
+  "summary": "Saddle Finance, a fork of Curve Finance with no added value, experienced significant losses due to high slippage and early liquidity provider losses. A guard could monitor for high slippage warnings and block transactions during periods of high volatility.",
+  "_meta": {
+    "chatId": "chatcmpl-20e530ac16934013889b8d44541d9fa7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:08.897Z"
+  }
+}

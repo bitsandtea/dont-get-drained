@@ -1,0 +1,40 @@
+{
+  "article_id": "stable-coins-the-empire-strikes-back",
+  "title": "Stablecoins - The Empire Strikes Back",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by minting stablecoins on a lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "1.5 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints stablecoins immediately after a flash loan",
+      "trigger": "FLASHLOAN_BORROW -> MINT_STABLECOINS in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4e3fced4",
+    "0x7f22a6f2"
+  ],
+  "red_flags": [
+    "Unusual minting activity shortly after a flash loan"
+  ],
+  "attacker_addresses": [
+    "0x7b9c4d18f2f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7"
+  ],
+  "vulnerable_contracts": [
+    "0x1234567890123456789012345678901234567890"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF_FLASHLOAN_BORROW_FOLLOWED_BY_MINT_STABLECOINS"
+  ],
+  "summary": "Attackers used a flash loan to mint stablecoins, exploiting the protocol's logic. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-5426e3fabd254acd9c5ad18a4b9ca965",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:32.321Z"
+  }
+}

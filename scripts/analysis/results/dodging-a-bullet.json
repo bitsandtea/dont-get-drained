@@ -1,0 +1,38 @@
+{
+  "article_id": "dodging-a-bullet",
+  "title": "Dodging a Bullet",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by liquidation exploit on DeFi protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "N/A",
+  "chain": "starknet",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls liquidate() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> LIQUIDATE() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x12345678",
+    "0x9abcdef0"
+  ],
+  "red_flags": [
+    "liquidation with flashloan"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Vesu"
+  ],
+  "monitoring_rules": [
+    "BLOCK liquidate() if FLASHLOAN_BORROW in same tx"
+  ],
+  "summary": "A rounding error in Vesu's liquidation system could have been exploited with flash loans, but was caught and fixed before any funds were lost.",
+  "_meta": {
+    "chatId": "chatcmpl-d6be3976f9c64e26848da42698840a81",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:56.484Z"
+  }
+}

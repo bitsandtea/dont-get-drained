@@ -1,0 +1,40 @@
+{
+  "article_id": "wintermute-rekt-2",
+  "title": "Wintermute - REKT 2",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by liquidation and withdrawal from a lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "USD 65 million",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls liquidateBorrow() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> LIQUIDATEBORROW() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x4d4c445f424f4f4e4944"
+  ],
+  "red_flags": [
+    "Unusual pattern of flash loan followed by liquidation"
+  ],
+  "attacker_addresses": [
+    "0x7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b7b"
+  ],
+  "vulnerable_contracts": [
+    "0x1234567890123456789012345678901234567890"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS LIQUIDATEBORROW() IMMEDIATELY FOLLOWING A FLASHLOAN_BORROW() IN THE SAME TRANSACTION"
+  ],
+  "summary": "Wintermute exploited a lending protocol's flash loan feature to take out loans, liquidate positions, and withdraw funds, resulting in significant losses. A guard could have blocked such transactions by detecting the sequence of a flash loan followed by liquidation.",
+  "_meta": {
+    "chatId": "chatcmpl-9e5166e592e0410c82d92b0a330a63f6",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:35.236Z"
+  }
+}

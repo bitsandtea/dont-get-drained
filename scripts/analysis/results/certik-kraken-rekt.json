@@ -1,0 +1,26 @@
+{
+  "article_id": "certik-kraken-rekt",
+  "title": "Certik/Kraken - Rekt",
+  "relevance_score": 5,
+  "relevance_summary": "Uncooperative response to security vulnerabilities leading to potential exploitation",
+  "attack_vector": "access_control",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Uncooperative response to security disclosures",
+    "Threats against security researchers"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Kraken accused CertiK of extortion after a critical vulnerability was disclosed. CertiK reported that Kraken threatened them and demanded repayment of crypto without providing details. This led to a public dispute over the handling of the vulnerability.",
+  "_meta": {
+    "chatId": "chatcmpl-61525b77ebce4c73b3f995718b7543a3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:51.770Z"
+  }
+}

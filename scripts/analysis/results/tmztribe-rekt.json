@@ -1,0 +1,42 @@
+{
+  "article_id": "tmztribe-rekt",
+  "title": "TMXTribe - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Unverified contract with flawed logic allowing systematic drainage of funds",
+  "attack_vector": "access_control",
+  "funds_lost": "1,400,000 USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves unverified contracts with suspicious minting, staking, and swapping logic.",
+      "trigger": "UNVERIFIED_CONTRACT -> mint() && stake() && swap() in sequence",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f5888fa",
+    "0x70a08231",
+    "0xc00ee4de"
+  ],
+  "red_flags": [
+    "Systematic drainage over 36 hours",
+    "No checks or balances in unverified contract logic"
+  ],
+  "attacker_addresses": [
+    "0xTribePerpetualExploiter"
+  ],
+  "vulnerable_contracts": [
+    "TMXTribe"
+  ],
+  "monitoring_rules": [
+    "BLOCK_UNVERIFIED_CONTRACTS_WITH_SUSPICIOUS_LOGIC"
+  ],
+  "summary": "TMXTribe experienced a systematic fund drainage due to flawed logic in an unverified contract. Attackers repeatedly minted, staked, swapped, and unstaked tokens over 36 hours. A guard could have blocked transactions involving unverified contracts with suspicious logic.",
+  "_meta": {
+    "chatId": "chatcmpl-0f46be71a74d4b57af2ee9ababd34713",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:06.350Z"
+  }
+}

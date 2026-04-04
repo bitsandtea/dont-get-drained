@@ -1,0 +1,40 @@
+{
+  "article_id": "abracadabra-rekt3",
+  "title": "Abracadabra - Rekt III",
+  "relevance_score": 9,
+  "relevance_summary": "Deprecated contract used for unauthorized minting of unbacked stablecoins",
+  "attack_vector": "access_control",
+  "funds_lost": "1,800,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls cook() with action IDs 0 and 1 in the same tx.",
+      "trigger": "cook(0, 1) in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70506d5c"
+  ],
+  "red_flags": [
+    "deprecated contract still active",
+    "insolvency check bypassed"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "CauldronV4"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls cook() with action IDs 0 and 1 in the same tx."
+  ],
+  "summary": "Abracadabra suffered a $1.8 million loss due to a vulnerability in deprecated CauldronV4 contracts where a simple two-action sequence could bypass the insolvency check. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-f518225214fe4f4a9698d03c5eb33e69",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:02:16.156Z"
+  }
+}

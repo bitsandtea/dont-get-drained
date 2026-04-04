@@ -1,0 +1,42 @@
+{
+  "article_id": "rari-capital-rekt",
+  "title": "Rari Capital - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain exploit using fake tokens and liquidity pools on multiple platforms",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "11.1M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that creates a fake token and pools it on multiple platforms within a short timeframe",
+      "trigger": "CREATE_TOKEN -> POOL_TOKEN_ON_MULTIPLE_PLATFORMS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "CREATE_TOKEN",
+    "POOL_TOKEN_ON_MULTIPLE_PLATFORMS"
+  ],
+  "red_flags": [
+    "Creation of fake tokens",
+    "Pooling fake tokens on multiple platforms",
+    "Cross-chain transfers"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Rari Capital ETH pool contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CREATE_FAKE_TOKEN_AND_POOL_ON_MULTIPLE_PLATFORMS"
+  ],
+  "summary": "The attacker created fake tokens and pooled them on multiple platforms to exploit vulnerabilities in Rari Capital's ETH pool contract, resulting in a loss of $11.1M. A guard could have detected and blocked the creation and pooling of fake tokens on multiple platforms.",
+  "_meta": {
+    "chatId": "chatcmpl-3bb244b6577c459dba6add2d7af0fa8c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:37.693Z"
+  }
+}

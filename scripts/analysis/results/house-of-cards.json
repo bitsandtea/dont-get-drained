@@ -1,0 +1,43 @@
+{
+  "article_id": "house-of-cards",
+  "title": "House Of Cards",
+  "relevance_score": 8,
+  "relevance_summary": "Recursive minting and borrowing loop between stablecoins",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "10 million in user funds",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints stablecoin A after borrowing against stablecoin B in the same transaction",
+      "trigger": "STABLECOIN_MINT -> STABLECOIN_BORROW in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x5b5e139f"
+  ],
+  "red_flags": [
+    "Recursive minting and borrowing loop",
+    "Proof of reserves 'coming soon'",
+    "Institutional-grade returns with retail chasing 95% APY"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "StreamVault",
+    "ElixirNetwork"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints stablecoin A after borrowing against stablecoin B in the same transaction"
+  ],
+  "summary": "Stream Finance and Elixir Network created a recursive minting and borrowing loop between their stablecoins, allowing the attacker to mint millions of dollars worth of stablecoins through arbitrage. A guard could have detected and blocked such transactions by monitoring for stablecoin minting immediately following a stablecoin borrow.",
+  "_meta": {
+    "chatId": "chatcmpl-b0cef954bb41498fb54410d12c732431",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:36.106Z"
+  }
+}

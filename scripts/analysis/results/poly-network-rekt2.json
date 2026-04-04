@@ -1,0 +1,40 @@
+{
+  "article_id": "poly-network-rekt2",
+  "title": "Poly Network - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Multisig compromise leading to cross-chain withdrawals",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "4.4M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that withdraws large amounts on one chain after depositing a small amount on another chain within the same transaction.",
+      "trigger": "SMALL_DEPOSIT -> LARGE_WITHDRAWAL in single tx across chains",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1b8f8a38",
+    "0x5c70178e"
+  ],
+  "red_flags": [
+    "small deposit followed by large withdrawal across chains"
+  ],
+  "attacker_addresses": [
+    "0xe0Afadad1d93704761c8550F21A53DE3468Ba599"
+  ],
+  "vulnerable_contracts": [
+    "0x14413419452aaf089762a0c5e95ed2a13bbc488c"
+  ],
+  "monitoring_rules": [
+    "Block any tx that withdraws large amounts on one chain after depositing a small amount on another chain within the same transaction."
+  ],
+  "summary": "Poly Network was hacked through a compromised multisig, allowing attackers to withdraw large amounts across multiple chains after depositing small amounts. A guard could have detected this by blocking transactions that involve small deposits followed by large withdrawals across different chains.",
+  "_meta": {
+    "chatId": "chatcmpl-d72b3bc8aee34f29b6b71a3fb9f16a69",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:20.346Z"
+  }
+}

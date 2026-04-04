@@ -1,0 +1,41 @@
+{
+  "article_id": "gempad-rekt",
+  "title": "GemPad - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Reentrancy attack on lock contract allowing attackers to drain liquidity",
+  "attack_vector": "reentrancy",
+  "funds_lost": "1.9 million USD",
+  "chain": "ethereum | bsc | base",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls collectFees() if it has previously called transfer() within the same transaction.",
+      "trigger": "collectFees() -> transfer() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Multiple protocols bleeding liquidity through the same flaw",
+    "Malicious tokens triggering callbacks during transfers"
+  ],
+  "attacker_addresses": [
+    "0xFDd9b0A7e7e16b5Fd48a3D1e242aF362bC81bCaa"
+  ],
+  "vulnerable_contracts": [
+    "0x8e18Fb32061600A82225CAbD7fecF5b1be477c43"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls collectFees() if it has previously called transfer() within the same transaction."
+  ],
+  "summary": "GemPad suffered a reentrancy attack where attackers exploited missing reentrancy protection on the withdrawal function, draining liquidity from multiple protocols. A guard could have prevented this by blocking transactions calling collectFees() after a transfer().",
+  "_meta": {
+    "chatId": "chatcmpl-7d6b204c0ff348928acdca6428cbe330",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:25.476Z"
+  }
+}

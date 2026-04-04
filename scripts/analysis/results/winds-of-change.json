@@ -1,0 +1,26 @@
+{
+  "article_id": "winds-of-change",
+  "title": "Winds of Change",
+  "relevance_score": 3,
+  "relevance_summary": "Sanctions on Tornado Cash leading to compliance issues and potential censorship",
+  "attack_vector": "regulatory_compliance",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "blacklisting of addresses via TRM Labs",
+    "compliance with OFAC rules affecting regular users"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The sanctions on Tornado Cash have led to compliance issues where legitimate users are being blacklisted due to their proximity to the Tornado Cash contracts. This highlights the need for more nuanced approaches to compliance that do not inadvertently censor legitimate users.",
+  "_meta": {
+    "chatId": "chatcmpl-e7bef11dcf6e4799a174266a69985a6e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:59.135Z"
+  }
+}

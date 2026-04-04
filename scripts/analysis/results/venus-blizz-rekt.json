@@ -1,0 +1,40 @@
+{
+  "article_id": "venus-blizz-rekt",
+  "title": "Blizz Finance, Venus Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to flash loan exploitation on lending protocols",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "21.8M USD",
+  "chain": "bsc, avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows funds with LUNA collateral when LUNA price is significantly below historical average",
+      "trigger": "BORROW_LUNA_COLLATERAL -> LUNA_PRICE << HISTORICAL_AVERAGE",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x95d89b41"
+  ],
+  "red_flags": [
+    "LUNA price significantly below $0.10",
+    "Large quantities of LUNA bought as collateral"
+  ],
+  "attacker_addresses": [
+    "Not specified in the article"
+  ],
+  "vulnerable_contracts": [
+    "Venus Protocol, Blizz Finance"
+  ],
+  "monitoring_rules": [
+    "Monitor LUNA price and block suspicious borrowing activities"
+  ],
+  "summary": "Both Venus Protocol on BSC and Blizz Finance on Avalanche were drained due to inaccurate Chainlink price feeds, allowing users to borrow against overpriced LUNA collateral. A guard could have detected and blocked suspicious borrowing activities when LUNA prices fell significantly below historical averages.",
+  "_meta": {
+    "chatId": "chatcmpl-cd1615fc651b419d91e527b828096f94",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:35.158Z"
+  }
+}

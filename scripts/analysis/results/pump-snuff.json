@@ -1,0 +1,27 @@
+{
+  "article_id": "pump-snuff",
+  "title": "Pump.snuff",
+  "relevance_score": 0,
+  "relevance_summary": "Livestream platform with no oversight leading to dangerous and illegal activities.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "dangerous livestream activities",
+    "illegal behavior",
+    "zero oversight"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The platform pump.fun, which started as a token creation platform, descended into a showcase of increasingly deranged and illegal behavior, including dangerous livestream activities and illegal actions. There was no oversight to prevent such activities.",
+  "_meta": {
+    "chatId": "chatcmpl-8bc72c5798414cf8bc6581f81dc36366",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:36.146Z"
+  }
+}

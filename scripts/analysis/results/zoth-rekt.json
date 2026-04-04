@@ -1,0 +1,40 @@
+{
+  "article_id": "zoth-rekt",
+  "title": "Zoth - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Admin privileges exploited leading to contract swap and fund drain",
+  "attack_vector": "access_control",
+  "funds_lost": "8400000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades a contract with admin privileges and immediately transfers funds.",
+      "trigger": "CONTRACT_UPGRADE -> FUNDS_TRANSFER in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x08c379a0",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Contract upgrade followed by immediate funds transfer"
+  ],
+  "attacker_addresses": [
+    "0x3b33c5Cd948Be5863b72cB3D6e9C0b36E67d01E5"
+  ],
+  "vulnerable_contracts": [
+    "USD0PPSubVaultUpgradeable"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades a contract with admin privileges and immediately transfers funds."
+  ],
+  "summary": "Zoth lost $8.4 million when their contract was compromised and upgraded to drain funds. An on-chain guard could have blocked the transaction by detecting a contract upgrade followed by an immediate funds transfer.",
+  "_meta": {
+    "chatId": "chatcmpl-5103c499dd63477aa9a3de69db2d7428",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:27.948Z"
+  }
+}

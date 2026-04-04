@@ -1,0 +1,40 @@
+{
+  "article_id": "resupplyfi-rekt",
+  "title": "ResupplyFi - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "ERC4626 donation attack on a newly deployed lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "9.8 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() on newly deployed contracts within a short timeframe",
+      "trigger": "NEW_CONTRACT_DEPLOYMENT -> DONATE_TO_RESERVES() in single tx within 24 hours",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa7d70ed9"
+  ],
+  "red_flags": [
+    "donation to reserves shortly after contract deployment",
+    "low-liquidity market"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "ResupplyFi wstUSR market"
+  ],
+  "monitoring_rules": [
+    "BLOCK_NEW_CONTRACT_DONATIONS_WITHIN_24HOURS"
+  ],
+  "summary": "ResupplyFi suffered a $9.8 million loss due to an ERC4626 donation attack exploiting a newly deployed lending protocol with low liquidity. A guard could have blocked donations to newly deployed contracts within a short timeframe.",
+  "_meta": {
+    "chatId": "chatcmpl-ef765a8f76c04e4a947a0647fd8f6d6e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:18.358Z"
+  }
+}

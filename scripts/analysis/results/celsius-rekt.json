@@ -1,0 +1,32 @@
+{
+  "article_id": "celsius-rekt",
+  "title": "Celsius - REKT",
+  "relevance_score": 7,
+  "relevance_summary": "Large-scale liquidation and withdrawal attempts by Celsius leading to potential flash loan abuse and liquidity crises.",
+  "attack_vector": "liquidity_crises",
+  "funds_lost": "Over $120M",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "large amounts of staked ETH",
+    "ETH premium over staked counterpart",
+    "large WBTC holdings at risk of liquidation"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Anchor Protocol",
+    "MakerDAO"
+  ],
+  "monitoring_rules": [
+    "Monitor large-scale liquidation and withdrawal attempts by Celsius for potential flash loan abuse and liquidity crises"
+  ],
+  "summary": "Celsius faced a liquidity crisis due to large amounts of staked ETH and WBTC holdings at risk of liquidation. Potential red flags include large-scale liquidation and withdrawal attempts, which could lead to flash loan abuse and further exacerbate the liquidity crisis.",
+  "_meta": {
+    "chatId": "chatcmpl-81ae77a5abe1442c948c15991578d885",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:49.613Z"
+  }
+}

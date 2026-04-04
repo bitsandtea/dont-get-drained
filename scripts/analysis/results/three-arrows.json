@@ -1,0 +1,23 @@
+{
+  "article_id": "three-arrows",
+  "title": "3AC Contagion",
+  "relevance_score": 2,
+  "relevance_summary": "No specific transaction type highlighted, but general risk management and liquidity issues.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the collapse of 3AC and the subsequent liquidity issues faced by DeFi platforms like Voyager and BlockFi. It does not highlight specific transaction types or vulnerabilities.",
+  "_meta": {
+    "chatId": "chatcmpl-c129547785fb454cb094fbfe7100bd23",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:35.419Z"
+  }
+}

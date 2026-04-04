@@ -1,0 +1,41 @@
+{
+  "article_id": "belt-rekt",
+  "title": "Belt - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by multiple deposits and swaps on BSC",
+  "attack_vector": "flash_loan",
+  "funds_lost": "6.3M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses flash loans followed by multiple deposits and swaps within the same transaction",
+      "trigger": "FLASHLOAN_BORROW -> multiple DEPOSIT and SWAP calls in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x715018a6",
+    "0xc00ee498",
+    "0x43ef54d2"
+  ],
+  "red_flags": [
+    "Use of flash loans for large-scale trading activities"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "bEllipsisBUSD, bVenusBUSD"
+  ],
+  "monitoring_rules": [
+    "BLOCK txs using flash loans followed by multiple deposits and swaps"
+  ],
+  "summary": "The hacker used flash loans to perform multiple deposits and swaps on BSC, exploiting the liquidity of the platforms. A guard could have blocked such transactions to prevent the exploit.",
+  "_meta": {
+    "chatId": "chatcmpl-8fcf291fdaaa48908b2d6d00593eff68",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:04:25.661Z"
+  }
+}

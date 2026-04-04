@@ -1,0 +1,41 @@
+{
+  "article_id": "crema-finance-rekt",
+  "title": "Crema Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by claiming excess LP fees using manipulated tick data",
+  "attack_vector": "flash_loan",
+  "funds_lost": "8.8M USD",
+  "chain": "solana",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls claimLPFees() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> claimLPFees() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "claimLPFees()"
+  ],
+  "red_flags": [
+    "Manipulated tick data",
+    "Excess LP fees claimed"
+  ],
+  "attacker_addresses": [
+    "Esmx2QjmDZMjJ15yBJ2nhqisjEt7Gqro4jSkofdoVsvY",
+    "0x8021b2962dB803b73Aa874030B0B42c202E8458F"
+  ],
+  "vulnerable_contracts": [
+    "Crema Finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls claimLPFees() after a flash loan in the same tx"
+  ],
+  "summary": "Crema Finance was exploited using a flash loan to add liquidity and manipulate tick data to claim excess LP fees. A guard could have blocked such transactions by preventing calls to claimLPFees() immediately following a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-63517417edec4e96adb7761a2e02a803",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:17.787Z"
+  }
+}

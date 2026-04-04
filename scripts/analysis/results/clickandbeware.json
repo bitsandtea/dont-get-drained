@@ -1,0 +1,35 @@
+{
+  "article_id": "clickandbeware",
+  "title": "Click and Beware",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing scams via compromised social media accounts and influencer influence to trick users into connecting their wallets to malicious sites.",
+  "attack_vector": "phishing",
+  "funds_lost": "35 million USD worth of fwDETH",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that connects a wallet to a suspicious URL or redirects to a known phishing domain.",
+      "trigger": "URL_REDIRECT -> suspicious_domain.com",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "phishing scam",
+    "compromised social media account",
+    "malicious link in tweet"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [
+    "BLOCK_URL_REDIRECT suspicious_domain.com"
+  ],
+  "summary": "A user clicked on a phishing link from a compromised social media account, leading to the loss of $35 million worth of fwDETH. A guard could have blocked the transaction by detecting and preventing URL redirections to known phishing domains.",
+  "_meta": {
+    "chatId": "chatcmpl-3ba671595fb44e129b05f229b2bb5136",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:01.642Z"
+  }
+}

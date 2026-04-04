@@ -1,0 +1,40 @@
+{
+  "article_id": "bitclout",
+  "title": "Bitclout",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donateToReserves on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls donateToReserves() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> donateToReserves() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d6c",
+    "0x5e3b9b6f"
+  ],
+  "red_flags": [
+    "Unusual pattern of flash loan followed by large reserves donation"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "0x..."
+  ],
+  "monitoring_rules": [
+    "BLOCK FLASHLOAN_BORROW -> DONATE_TO_RESERVES in single tx"
+  ],
+  "summary": "The attacker used a flash loan to temporarily access funds and then donated a large amount to the reserves, draining the protocol. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-7197423d7db644459b1798fe14d3fe24",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:23.405Z"
+  }
+}

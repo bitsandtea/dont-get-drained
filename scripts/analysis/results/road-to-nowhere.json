@@ -1,0 +1,42 @@
+{
+  "article_id": "road-to-nowhere",
+  "title": "Road to Nowhere",
+  "relevance_score": 7,
+  "relevance_summary": "Cross-chain system with centralized control points leading to user funds being trapped",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends assets to Chainge Finance vaults without corresponding withdrawal confirmation",
+      "trigger": "TX_SEND_TO_VAULT -> NO_WITHDRAWAL_CONFIRMATION",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xaabbccddeeff"
+  ],
+  "red_flags": [
+    "Delayed or non-existent withdrawals",
+    "Blacklisted vaults",
+    "Corrupted databases",
+    "Escalating excuses for delays"
+  ],
+  "attacker_addresses": [
+    "0xdeadbeefcafe"
+  ],
+  "vulnerable_contracts": [
+    "Chainge Finance vault contracts"
+  ],
+  "monitoring_rules": [
+    "TX_SEND_TO_VAULT -> NO_WITHDRAWAL_CONFIRMATION"
+  ],
+  "summary": "Chainge Finance's cross-chain system traps user funds due to centralized control points and failed withdrawals. A guard could prevent funds loss by blocking transactions sending assets to vaults without corresponding withdrawal confirmations.",
+  "_meta": {
+    "chatId": "chatcmpl-0339048b9da449b0abb1538a3ab8c1e4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:40.264Z"
+  }
+}

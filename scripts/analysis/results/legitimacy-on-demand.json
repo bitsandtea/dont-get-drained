@@ -1,0 +1,27 @@
+{
+  "article_id": "legitimacy-on-demand",
+  "title": "Legitimacy on Demand",
+  "relevance_score": 2,
+  "relevance_summary": "Press release spam and pay-to-play schemes used to manufacture credibility",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "High volume of press releases",
+    "Routine operational noise",
+    "Lack of substantive news"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Crypto projects use pay-to-play press release services to manufacture credibility, flooding the market with routine operational noise instead of substantive news. This can mislead investors into believing false information.",
+  "_meta": {
+    "chatId": "chatcmpl-8738155b4e3a468fb46decefee12481b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:16.939Z"
+  }
+}

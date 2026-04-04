@@ -1,0 +1,38 @@
+{
+  "article_id": "bitgets-voxel-meltdown",
+  "title": "Bitget's VOXEL Meltdown",
+  "relevance_score": 8,
+  "relevance_summary": "Leveraged trading bot creating predictable price oscillations leading to market manipulation",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "9 figures",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that shows large, predictable price movements in VOXEL/USDT pair within a short timeframe",
+      "trigger": "Large, predictable price movements in VOXEL/USDT pair within a short timeframe",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x... (price movement detection)"
+  ],
+  "red_flags": [
+    "Predictable price oscillations",
+    "Unusually high trading volume"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Bitget's VOXEL/USDT trading bot"
+  ],
+  "monitoring_rules": [
+    "Monitor VOXEL/USDT pair for large, predictable price movements"
+  ],
+  "summary": "A rogue market-making bot on Bitget caused VOXEL to experience extreme price fluctuations, allowing traders to exploit the situation for massive profits. A guard could have detected this by monitoring for large, predictable price movements in the VOXEL/USDT pair.",
+  "_meta": {
+    "chatId": "chatcmpl-e9c3727d2d3c4bc7b0499a5b78220ccc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:23.138Z"
+  }
+}

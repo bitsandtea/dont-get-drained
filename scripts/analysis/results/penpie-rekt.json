@@ -1,0 +1,43 @@
+{
+  "article_id": "penpie-rekt",
+  "title": "Penpie - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack exploiting batchHarvestMarketRewards() function to inflate staking balance and claim rewards",
+  "attack_vector": "reentrancy",
+  "funds_lost": "27000000",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls batchHarvestMarketRewards() and then immediately calls redeemRewards() in the same transaction.",
+      "trigger": "batchHarvestMarketRewards() -> redeemRewards() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4bc9815b859c8172cee1ab2cd372fd0ebb00eb487",
+    "0x4af4c234b8cb6e060797e87afb724cfb1d320bb7"
+  ],
+  "red_flags": [
+    "Unusual sequence of batchHarvestMarketRewards() followed by redeemRewards()",
+    "Multiple contract addresses involved in the exploit"
+  ],
+  "attacker_addresses": [
+    "0x7a2f4d625fb21f5e51562ce8dc2e722e12a61d1b",
+    "0xc0Eb7e6E2b94aA43BDD0c60E645fe915d5c6eb84"
+  ],
+  "vulnerable_contracts": [
+    "0x4BC9815b859c8172CEe1ab2CD372fD0Eb00eb487",
+    "0x4aF4C234B8CB6e060797e87AFB724cfb1d320Bb7"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls batchHarvestMarketRewards() and then immediately calls redeemRewards() in the same transaction."
+  ],
+  "summary": "Penpie suffered a $27 million loss due to a reentrancy attack exploiting the batchHarvestMarketRewards() function. A guard could have detected and blocked the attack by monitoring for transactions that call batchHarvestMarketRewards() followed by redeemRewards() in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-98dec189efea4b8ba382ead9e74a218f",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:11.098Z"
+  }
+}

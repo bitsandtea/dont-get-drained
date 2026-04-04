@@ -1,0 +1,39 @@
+{
+  "article_id": "templedao-rekt",
+  "title": "TempleDAO - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Unchecked migration in staking contract allowing arbitrary fund transfer",
+  "attack_vector": "access_control",
+  "funds_lost": "2.3M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls migrateStake() without validating oldStaking parameter",
+      "trigger": "migrateStake() called with invalid oldStaking parameter",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7e5f4552bdef0f57b4f6e8512ecf88832eebda78"
+  ],
+  "red_flags": [
+    "Unchecked external contract input in critical function"
+  ],
+  "attacker_addresses": [
+    "0x9c9fb3100a2a521985f0c47de3b4598dafd25b01"
+  ],
+  "vulnerable_contracts": [
+    "StaxLPStaking"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls migrateStake() without validating oldStaking parameter"
+  ],
+  "summary": "TempleDAO's StaxLPStaking contract had an unchecked external contract input in its migrateStake() function, allowing attackers to drain funds. A guard could have blocked such transactions by monitoring for invalid oldStaking parameters.",
+  "_meta": {
+    "chatId": "chatcmpl-bfbf45ab102f4b4c91532057b873c917",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:41.351Z"
+  }
+}

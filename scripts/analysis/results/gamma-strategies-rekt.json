@@ -1,0 +1,40 @@
+{
+  "article_id": "gamma-strategies-rekt",
+  "title": "Gamma Strategies - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by minting of LP tokens with manipulated prices on concentrated liquidity management protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "4.5M USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses flash loans followed by minting of LP tokens within the same transaction.",
+      "trigger": "FLASHLOAN_BORROW -> MINT_LP_TOKENS in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0xf5c71f1b"
+  ],
+  "red_flags": [
+    "Manipulated price changes leading to disproportionate LP token minting"
+  ],
+  "attacker_addresses": [
+    "0x5351536145610aa448a8bf85ba97c71caf31909c"
+  ],
+  "vulnerable_contracts": [
+    "0x4b57adc00ac38f74506d29fc4080e3dc65b78a69"
+  ],
+  "monitoring_rules": [
+    "Block any tx that uses flash loans followed by minting of LP tokens within the same transaction."
+  ],
+  "summary": "Gamma Strategies, an Arbitrum-based concentrated liquidity management protocol, was exploited using flash loans to manipulate deposit values and mint an inflated number of LP tokens. A guard could have blocked such transactions by detecting flash loans followed by LP token minting in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-daed90b2d1bd4bfeb0d7f2d77db41fd4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:00.497Z"
+  }
+}

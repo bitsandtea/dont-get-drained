@@ -1,0 +1,28 @@
+{
+  "article_id": "surviving-digital-danger",
+  "title": "Surviving Digital Danger",
+  "relevance_score": 3,
+  "relevance_summary": "General crypto security and awareness",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "violent headlines",
+    "regulatory crackdowns",
+    "institutional cold feet",
+    "insurance nightmares"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the evolving nature of crypto crimes and their impact on the industry, highlighting the need for increased regulation and security measures.",
+  "_meta": {
+    "chatId": "chatcmpl-e45ced7d76064bf0b8a3c436e1ff48f5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:42.704Z"
+  }
+}

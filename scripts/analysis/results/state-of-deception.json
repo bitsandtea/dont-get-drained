@@ -1,0 +1,23 @@
+{
+  "article_id": "state-of-deception",
+  "title": "State of Deception",
+  "relevance_score": 0,
+  "relevance_summary": "No relevant transaction detected; article discusses a political meme coin launch without any malicious on-chain activity.",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "solana",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses a political meme coin launch by the Central African Republic's president, which resulted in a rapid market cap increase followed by a crash. No malicious on-chain activity is reported.",
+  "_meta": {
+    "chatId": "chatcmpl-264a30416fb347b8878b2c18ac2851c9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:30.279Z"
+  }
+}

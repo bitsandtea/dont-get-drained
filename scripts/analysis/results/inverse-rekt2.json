@@ -1,0 +1,41 @@
+{
+  "article_id": "inverse-rekt2",
+  "title": "Inverse Finance - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation involving flash loan to manipulate collateral price and withdraw inflated amount of DOLA",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "5.8M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates collateral price using flash loans and subsequently borrows an unusually large amount of DOLA",
+      "trigger": "FLASHLOAN -> manipulate_collateral_price -> borrow_large_amount_of_DOLA",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0x60a0",
+    "0x606060405260d08060d0604052600080fdfea26469602..."
+  ],
+  "red_flags": [
+    "Large flash loan followed by manipulation of collateral price and borrowing an unusually large amount of DOLA"
+  ],
+  "attacker_addresses": [
+    "0x7b792e49f640676b3706d666075e903b3a4deec6"
+  ],
+  "vulnerable_contracts": [
+    "0xf508c58ce37ce40a40997c715075172691f92e2d"
+  ],
+  "monitoring_rules": [
+    "BLOCK txs manipulating collateral price using flash loans and borrowing unusually large amounts of DOLA"
+  ],
+  "summary": "The attacker manipulated the oracle to inflate the collateral price using a flash loan, then borrowed an unusually large amount of DOLA, and finally withdrew the inflated value. A guard could have blocked this by detecting flash loans followed by oracle manipulation and large DOLA borrows.",
+  "_meta": {
+    "chatId": "chatcmpl-6c43a6ff38c34697bded7c053975f020",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:50:47.651Z"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "article_id": "indodax-rekt",
+  "title": "Indodax - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Multi-chain withdrawal with compromised hot wallets",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "25.22 million USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that initiates a withdrawal from a known compromised wallet address.",
+      "trigger": "KNOWN_COMPROMISED_WALLET_ADDRESS -> WITHDRAWAL",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Multiple suspicious transactions involving known compromised wallets",
+    "Legitimate-looking withdrawals with change addresses depositing back into the exchange"
+  ],
+  "attacker_addresses": [
+    "0x3C02290922a3618A4646E3BbCa65853eA45FE7C6",
+    "TWe5pEnPDetzxgJS4uN26VFg15wWtdcTXc",
+    "1JUToCyRL5UwgeucjnFAagKs4v1YqhjT1d"
+  ],
+  "vulnerable_contracts": [
+    "Indodax hot wallets"
+  ],
+  "monitoring_rules": [
+    "BLOCK KNOWN_COMPROMISED_WALLET_ADDRESS -> WITHDRAWAL"
+  ],
+  "summary": "Indodax suffered a multi-chain withdrawal exploit where hackers used compromised hot wallets to siphon off millions of dollars worth of assets. A guard could have blocked withdrawals from known compromised wallet addresses to prevent such losses.",
+  "_meta": {
+    "chatId": "chatcmpl-71807aedd0ce43e999a5eef83fa6a28c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:00.483Z"
+  }
+}

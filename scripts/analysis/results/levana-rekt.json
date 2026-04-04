@@ -1,0 +1,40 @@
+{
+  "article_id": "levana-rekt",
+  "title": "Levana Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation attack exploiting price discrepancies in volatile markets with high leverage",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "1146000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block transactions that exploit price discrepancies in volatile markets with high leverage within a short time frame",
+      "trigger": "PRICE_DISCREPANCY -> HIGH_LEVERAGE_MARKET in short time frame",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Price discrepancies in volatile markets",
+    "High leverage trades"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Levana Protocol contracts"
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_DISCREPANCY_HIGH_LEVERAGE_MARKET_SHORT_TIME_FRAME"
+  ],
+  "summary": "Levana Protocol lost over $1.1M due to an oracle manipulation attack exploiting price discrepancies in volatile markets with high leverage. A guard could have detected and blocked such transactions by monitoring for price discrepancies in volatile markets with high leverage within a short time frame.",
+  "_meta": {
+    "chatId": "chatcmpl-9f3825ee51044c13bc7cc5dd391b759a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:10.601Z"
+  }
+}

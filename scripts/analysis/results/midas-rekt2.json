@@ -1,0 +1,40 @@
+{
+  "article_id": "midas-rekt2",
+  "title": "Midas Capital - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Rounding vulnerability in interest rate calculation leading to loss of funds",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "600k USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates interest rate calculations with rounding vulnerabilities",
+      "trigger": "ROUNDING_VULNERABILITY -> manipulate_interest_rate()",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x..."
+  ],
+  "red_flags": [
+    "Interest rate manipulation",
+    "Known vulnerability exploitation"
+  ],
+  "attacker_addresses": [
+    "0x4b92cc3452ef1e37528470495b86d3f976470734"
+  ],
+  "vulnerable_contracts": [
+    "Midas Capital pool contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK ROUNDING_VULNERABILITY -> manipulate_interest_rate()"
+  ],
+  "summary": "Midas Capital suffered a loss of $600k due to a rounding vulnerability in their interest rate calculation, similar to an earlier exploit at Hundred Finance. A guard could have blocked transactions manipulating interest rates with rounding vulnerabilities.",
+  "_meta": {
+    "chatId": "chatcmpl-09e727193e30486d814f0d174c84f4fe",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:10.597Z"
+  }
+}

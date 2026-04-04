@@ -1,0 +1,30 @@
+{
+  "article_id": "tangible-rekt",
+  "title": "Tangible - REKT",
+  "relevance_score": 5,
+  "relevance_summary": "Redemption run on a real-estate-backed stablecoin leading to depegging",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "Not specified",
+  "chain": "polygon",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Depegging of stablecoin due to redemption run",
+    "Overvaluation of off-chain collateral"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "USDR"
+  ],
+  "monitoring_rules": [
+    "Monitor sudden large redemption requests for USDR"
+  ],
+  "summary": "Tangible's real-estate-backed stablecoin USDR depegged due to a redemption run, highlighting potential overvaluation of off-chain collateral.",
+  "_meta": {
+    "chatId": "chatcmpl-40e4d12afa4b49e3992ea976941b466c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:12.166Z"
+  }
+}

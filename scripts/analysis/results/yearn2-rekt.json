@@ -1,0 +1,41 @@
+{
+  "article_id": "yearn2-rekt",
+  "title": "Yearn - REKT 2",
+  "relevance_score": 8,
+  "relevance_summary": "Misconfigured contract leading to massive minting of yUSDT",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "over $10M",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints a large quantity of tokens using a small amount of collateral.",
+      "trigger": "LARGE_MINT -> SMALL_COLLATERAL in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d50"
+  ],
+  "red_flags": [
+    "Large mint with small collateral"
+  ],
+  "attacker_addresses": [
+    "0x5bac20beef31d0eccb369a33514831ed8e9cdfe0",
+    "0x16af29b7efbf019ef30aae9023a5140c012374a5",
+    "0x6f4a6262d06272c8b2e00ce75e76d84b9d6f6ab8"
+  ],
+  "vulnerable_contracts": [
+    "0x398eae2199c1d06e56e8b3b55b8e5c55e5a6f59b"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints a large quantity of tokens using a small amount of collateral."
+  ],
+  "summary": "The attacker exploited a misconfiguration in the yUSDT contract, allowing them to mint a large quantity of yUSDT using a small amount of collateral. A guard could have detected and blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-46e66fcdb3aa4cd98309217c278b0598",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:46.083Z"
+  }
+}

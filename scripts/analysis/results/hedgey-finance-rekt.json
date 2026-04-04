@@ -1,0 +1,43 @@
+{
+  "article_id": "hedgey-finance-rekt",
+  "title": "Hedgey Finance - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by unauthorized token transfer on lending protocol",
+  "attack_vector": "flash_loan",
+  "funds_lost": "44700000",
+  "chain": "ethereum | arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls createLockedCampaign() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> createLockedCampaign() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f229d5e",
+    "0xc793113f"
+  ],
+  "red_flags": [
+    "Unverified User Input",
+    "Manipulation of claimLockup parameter"
+  ],
+  "attacker_addresses": [
+    "0xded2b1a426e1b7d415a40bcad44e98f47181dda2",
+    "0xc7241e27ee4b8d32b59a10e848b48530047a8c5b"
+  ],
+  "vulnerable_contracts": [
+    "0xbc452fdc8f851d7c5b72e1fe74dfb63bb793d511",
+    "0xbb52f1723ddf2c84ba2668f4e04712f572cbf780"
+  ],
+  "monitoring_rules": [
+    "BLOCK createLockedCampaign() if FLASHLOAN_BORROW detected in the same transaction"
+  ],
+  "summary": "Hedgey Finance suffered a $44.7 million flash loan attack where attackers manipulated the claimLockup parameter to approve unauthorized token transfers. A guard could have blocked such transactions by detecting a flash loan followed by a call to createLockedCampaign().",
+  "_meta": {
+    "chatId": "chatcmpl-a97a193f03614cc183414ae08ece56ad",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:01.931Z"
+  }
+}

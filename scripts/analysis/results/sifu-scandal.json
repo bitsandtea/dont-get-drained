@@ -1,0 +1,39 @@
+{
+  "article_id": "sifu-scandal",
+  "title": "Sifu Scandal",
+  "relevance_score": 5,
+  "relevance_summary": "Involves a known criminal working in a DeFi project, potential insider trading and mismanagement of funds.",
+  "attack_vector": "access_control",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx involving known criminals or suspicious addresses.",
+      "trigger": "TX_FROM_KNOWN_CRIMINAL_ADDRESS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "known criminal history",
+    "insider trading suspicion",
+    "lack of transparency"
+  ],
+  "attacker_addresses": [
+    "0xSifu"
+  ],
+  "vulnerable_contracts": [
+    "Wonderland"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_FROM_KNOWN_CRIMINAL_ADDRESS"
+  ],
+  "summary": "The scandal involved a known criminal, Michael Patryn (0xSifu), working in a DeFi project. Lack of transparency and potential insider trading led to the exposure of his criminal past. A guard could have blocked transactions from known criminal addresses to prevent such risks.",
+  "_meta": {
+    "chatId": "chatcmpl-82c5bfb1c3ea49f2a27425ea537ee51d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:20.589Z"
+  }
+}

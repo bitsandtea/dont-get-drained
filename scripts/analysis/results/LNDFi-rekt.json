@@ -1,0 +1,40 @@
+{
+  "article_id": "LNDFi-rekt",
+  "title": "LNDFi - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Admin privileges exploit via contract modification",
+  "attack_vector": "access_control",
+  "funds_lost": "1.18M USD",
+  "chain": "sonic",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies access control for critical functions",
+      "trigger": "MODIFY_ACCESS_CONTROL -> addPoolAdmin() && call to transferUnderlyingTo() in same tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd03b7d80cf7fcd4d14076ca53d42bcfac0115674699adecb99dd3a769d5ea41a"
+  ],
+  "red_flags": [
+    "admin privileges exploit",
+    "contract modification"
+  ],
+  "attacker_addresses": [
+    "0xd03b7d80cf7fcd4d14076ca53d42bcfac0115674699adecb99dd3a769d5ea41a"
+  ],
+  "vulnerable_contracts": [
+    "Aave fork"
+  ],
+  "monitoring_rules": [
+    "Block any tx that modifies access control for critical functions"
+  ],
+  "summary": "LNDFi suffered a $1.18 million loss due to a contract modification that granted admin privileges, allowing the attacker to drain funds. A critical access control change was made 41 days before the exploit, providing the admin with the ability to call functions that should have been restricted.",
+  "_meta": {
+    "chatId": "chatcmpl-df78afa9ba824082b6afe8190cad9631",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:49:31.238Z"
+  }
+}

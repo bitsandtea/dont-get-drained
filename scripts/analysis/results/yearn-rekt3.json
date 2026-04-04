@@ -1,0 +1,41 @@
+{
+  "article_id": "yearn-rekt3",
+  "title": "Yearn - Rekt III",
+  "relevance_score": 8,
+  "relevance_summary": "Unchecked arithmetic underflow in a forgotten yETH relic contract",
+  "attack_vector": "arithmetic_underflow",
+  "funds_lost": "9000000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints tokens in an unchecked arithmetic context",
+      "trigger": "MINT_TOKENS_WITHOUT_CHECKS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "Unusual interactions with Tornado Cash",
+    "Heavy interactions with LST tokens",
+    "yETH supply minted to infinity"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "yETH relic contract"
+  ],
+  "monitoring_rules": [
+    "Monitor for any tx that mints tokens without checks"
+  ],
+  "summary": "A forgotten yETH relic contract with unchecked arithmetic logic minted an astronomical amount of tokens, leading to $9 million in losses. A guard could have blocked such transactions by monitoring for unchecked token minting.",
+  "_meta": {
+    "chatId": "chatcmpl-33c930b2707f47d88cae4f98b080700e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:15.337Z"
+  }
+}

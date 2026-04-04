@@ -1,0 +1,41 @@
+{
+  "article_id": "acala-network-rekt",
+  "title": "Acala Network - REKT",
+  "relevance_score": 7,
+  "relevance_summary": "Misconfiguration in liquidity pool leading to excessive minting of aUSD",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "1.6M USD",
+  "chain": "polkadot",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves minting a large amount of aUSD in a liquidity pool during its initial trading period.",
+      "trigger": "LARGE_MINT_IN_LIQUIDITY_POOL_DURING_BOOTSTRAP",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "incentives.claim_rewards()"
+  ],
+  "red_flags": [
+    "Excessive minting of aUSD",
+    "Large transfers of aUSD to other chains"
+  ],
+  "attacker_addresses": [
+    "23bmUgSeKMD8Y9triphPw5YHuiz3QUJNqcbmb3Eg9QMQDMWN",
+    "253pFTg22JqHbLeLZupexGMDUuXAJLfEriTYkFqvGWPuwcFi"
+  ],
+  "vulnerable_contracts": [
+    "iBTC/aUSD liquidity pool"
+  ],
+  "monitoring_rules": [
+    "BLOCK_LIQUIDITY_POOL_MINTING_DURING_BOOTSTRAP"
+  ],
+  "summary": "A misconfiguration in the iBTC/aUSD liquidity pool led to the minting of a large amount of aUSD, resulting in a loss of funds. A guard could have detected and blocked such transactions during the initial trading period.",
+  "_meta": {
+    "chatId": "chatcmpl-986a0efc27e34ccc8a087c6d28b6285d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:33.781Z"
+  }
+}

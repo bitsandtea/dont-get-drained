@@ -1,0 +1,40 @@
+{
+  "article_id": "wormhole-rekt",
+  "title": "Wormhole - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Signature manipulation and bridge exploit leading to large ETH theft",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "326M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls complete_wrapped() with a SignatureSet created in a previous transaction.",
+      "trigger": "complete_wrapped() -> SignatureSet created in a previous transaction",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "complete_wrapped()"
+  ],
+  "red_flags": [
+    "SignatureSet created in a previous transaction",
+    "Verification discrepancy between solana_program::sysvar::instructions and solana_program"
+  ],
+  "attacker_addresses": [
+    "0x629e7da20197a5429d30da36e77d06cdf796b71a"
+  ],
+  "vulnerable_contracts": [
+    "Wormhole Bridge"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls complete_wrapped() with a SignatureSet created in a previous transaction."
+  ],
+  "summary": "The Wormhole bridge was exploited through a signature manipulation attack, allowing the hacker to mint 120k whETH on Solana and subsequently withdraw 93,750 ETH. A $10M bug bounty was offered but not claimed, leaving the stolen funds in the hacker's wallet.",
+  "_meta": {
+    "chatId": "chatcmpl-9c49df2431fd4e6e916335603019d65c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:15.255Z"
+  }
+}

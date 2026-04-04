@@ -1,0 +1,38 @@
+{
+  "article_id": "compound-errors",
+  "title": "Compound Errors",
+  "relevance_score": 5,
+  "relevance_summary": "Oracle manipulation leading to market freeze due to interface mismatch",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "0",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades the oracle contract if the upgrade introduces interface mismatches with existing contracts.",
+      "trigger": "UPGRADE_ORACLE_CONTRACT -> Interface mismatch detected in post-execution analysis",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe4e0c7b5"
+  ],
+  "red_flags": [
+    "Interface mismatch between cETH and new oracle implementation",
+    "Revert due to empty bytes returned by getUnderlyingPrice"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Compound's oracle contract"
+  ],
+  "monitoring_rules": [
+    "Monitor for interface mismatches during oracle contract upgrades"
+  ],
+  "summary": "A bug in Compound's oracle upgrade caused the cETH market to freeze due to interface mismatches. A guard could prevent such issues by blocking oracle contract upgrades that introduce interface mismatches.",
+  "_meta": {
+    "chatId": "chatcmpl-6a79b51dd03940d48d82654bc4fc6bb1",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:11:01.037Z"
+  }
+}

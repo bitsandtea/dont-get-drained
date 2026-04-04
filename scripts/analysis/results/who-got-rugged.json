@@ -1,0 +1,38 @@
+{
+  "article_id": "who-got-rugged",
+  "title": "Who Got Rugged?",
+  "relevance_score": 8,
+  "relevance_summary": "Proxy upgrade failure leading to permanent lock of funds",
+  "attack_vector": "access_control",
+  "funds_lost": "20 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets a new implementation contract without reinitializing the proxy contract.",
+      "trigger": "NEW_IMPLEMENTATION_CONTRACT_SET -> !REINITIALIZE_PROXY",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe083e207",
+    "0xf5c71f6d"
+  ],
+  "red_flags": [
+    "Proxy upgrade without reinitialization"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "JUDAOGlobal"
+  ],
+  "monitoring_rules": [
+    "BLOCK NEW_IMPLEMENTATION_CONTRACT_SET IF !REINITIALIZE_PROXY"
+  ],
+  "summary": "A botched proxy upgrade caused funds to be permanently locked due to missing reinitialization step. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-cf3be82395f94e0698ab2930c5835828",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:34.820Z"
+  }
+}

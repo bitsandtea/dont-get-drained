@@ -1,0 +1,40 @@
+{
+  "article_id": "mixin-rekt",
+  "title": "Mixin Network - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Database breach leading to private key theft and subsequent large-scale asset transfer",
+  "attack_vector": "access_control",
+  "funds_lost": "200M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends ETH or BTC to known attacker addresses.",
+      "trigger": "TX_TO_KNOWN_ATTACKER_ADDRESS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Private key theft",
+    "Large-scale asset transfer"
+  ],
+  "attacker_addresses": [
+    "0x52E86988bd07447C596e9B0C7765F8500113104c",
+    "0x3B5fb9d9da3546e9CE6E5AA3CCEca14C8D20041e",
+    "0xB5d631A74AD9c9efcF96d6e9e2fAbcB75C67Eafa"
+  ],
+  "vulnerable_contracts": [
+    "Third-party cloud service provider database"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_TO_KNOWN_ATTACKER_ADDRESS"
+  ],
+  "summary": "Mixin Network lost $200M due to a database breach where attackers stole private keys and transferred assets. A guard could have blocked transactions to known attacker addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-aa59dda02e9843988843b740b0c3a179",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:47.187Z"
+  }
+}

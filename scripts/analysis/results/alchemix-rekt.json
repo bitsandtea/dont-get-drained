@@ -1,0 +1,38 @@
+{
+  "article_id": "alchemix-rekt",
+  "title": "Alchemix - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Exploitation of collateralization mechanism leading to undercollateralized state",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "6.5M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints alETH without corresponding debt assignment",
+      "trigger": "ALETH_MINT -> no corresponding DEBT_ASSIGNMENT in same tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f90110d",
+    "0x4e3c26e3"
+  ],
+  "red_flags": [
+    "minting alETH without corresponding debt assignment"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "alETH"
+  ],
+  "monitoring_rules": [
+    "ALETH_MINT -> DEBT_ASSIGNMENT in same tx"
+  ],
+  "summary": "Alchemix protocol allowed minting of alETH without corresponding debt assignment, leading to undercollateralization and potential rug-pull. A guard could have blocked such transactions to prevent the exploit.",
+  "_meta": {
+    "chatId": "chatcmpl-6c3d836f57954f6d97cb19dd073d602a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:04:25.602Z"
+  }
+}

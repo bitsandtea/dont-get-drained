@@ -1,0 +1,40 @@
+{
+  "article_id": "price-impact-kills",
+  "title": "Price Impact Kills",
+  "relevance_score": 8,
+  "relevance_summary": "Large collateral swap through CoW Protocol resulting in significant price impact due to thin liquidity in SushiSwap pool",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "46.34 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any large collateral swaps through CoW Protocol that target pools with insufficient liquidity.",
+      "trigger": "LARGE_COLLATERAL_SWAP -> SUSHISWAP_POOL_WITH_LOW_LIQUIDITY",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x9fa9feab3c1989a33424728c23e6de07a40a26a98ff7ff5139f3492ce430801f"
+  ],
+  "red_flags": [
+    "thin liquidity in SushiSwap pool",
+    "large trade volume relative to pool size"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Aave",
+    "CoW Protocol",
+    "SushiSwap"
+  ],
+  "monitoring_rules": [
+    "Block any large collateral swaps through CoW Protocol that target pools with insufficient liquidity."
+  ],
+  "summary": "A $50 million collateral swap through CoW Protocol resulted in a significant price impact due to thin liquidity in a SushiSwap pool, resulting in a loss of approximately $46.34 million.",
+  "_meta": {
+    "chatId": "chatcmpl-06374f660caf4ad8ac8f6a58703b2b8d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:20.322Z"
+  }
+}

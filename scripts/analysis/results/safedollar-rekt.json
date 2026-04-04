@@ -1,0 +1,40 @@
+{
+  "article_id": "safedollar-rekt",
+  "title": "SafeDollar - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Infinite mint exploit via manipulation of accSdoPerShare value",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "248,000 USD",
+  "chain": "polygon",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates accSdoPerShare value after a series of deposits and withdrawals",
+      "trigger": "accSdoPerShare manipulation -> series of deposits and withdrawals in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "accSdoPerShare"
+  ],
+  "red_flags": [
+    "Manipulation of accSdoPerShare value",
+    "Deposit/withdraw loop"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "SafeDollar"
+  ],
+  "monitoring_rules": [
+    "Block tx manipulating accSdoPerShare value after series of deposits and withdrawals"
+  ],
+  "summary": "The SafeDollar protocol was exploited through an infinite mint exploit by manipulating the accSdoPerShare value. A deposit/withdraw loop was used to inflate the value, allowing the attacker to claim a massive amount of SDO tokens. A guard could have detected and blocked this by monitoring for accSdoPerShare manipulation following a series of deposits and withdrawals.",
+  "_meta": {
+    "chatId": "chatcmpl-339b1d777a454d5db5d53a32e6175e36",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:52.686Z"
+  }
+}

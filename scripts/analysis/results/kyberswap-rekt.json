@@ -1,0 +1,43 @@
+{
+  "article_id": "kyberswap-rekt",
+  "title": "KyberSwap - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Flash loan followed by precise swaps on concentrated liquidity pools",
+  "attack_vector": "flash_loan",
+  "funds_lost": "over $48M",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that borrows a flash loan and then executes swaps in the same transaction",
+      "trigger": "FLASHLOAN_BORROW -> SWAP in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0xa03cc097"
+  ],
+  "red_flags": [
+    "Precision error manipulation",
+    "Tick manipulation",
+    "Double liquidity counting"
+  ],
+  "attacker_addresses": [
+    "0x50275e0b7261559ce1644014d4b78d4aa63be836",
+    "0xc9b826bad20872eb29f9b1d8af4befe8460b50c6"
+  ],
+  "vulnerable_contracts": [
+    "KyberSwap Elastic"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_FLASH_LOAN_FOLLOWED_BY_SWAP"
+  ],
+  "summary": "The attacker exploited KyberSwap Elastic pools by borrowing flash loans and executing precise swaps to manipulate prices and drain liquidity, resulting in a loss of over $48M across multiple chains. A guard could have blocked such transactions by detecting a flash loan followed by swaps in the same transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-d71fb388746340fe8d9c8fbb558bbca7",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:10.272Z"
+  }
+}

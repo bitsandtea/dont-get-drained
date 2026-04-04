@@ -1,0 +1,41 @@
+{
+  "article_id": "alpha-finance-rekt",
+  "title": "Alpha Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Complex multi-transaction attack exploiting rounding miscalculations and manipulation of internal debt numbers in a pre-release protocol.",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "$37.5 million",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates internal debt numbers in a pre-release protocol with no liquidity.",
+      "trigger": "DEBT_MANIPULATION -> no liquidity in the pool",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "calcDebtShare",
+    "calcBorrow"
+  ],
+  "red_flags": [
+    "manipulation of internal debt numbers",
+    "rounding miscalculation"
+  ],
+  "attacker_addresses": [
+    "not disclosed"
+  ],
+  "vulnerable_contracts": [
+    "Alpha Homora v2"
+  ],
+  "monitoring_rules": [
+    "Block tx manipulating internal debt numbers in a pre-release protocol without liquidity."
+  ],
+  "summary": "A complex attack exploited rounding miscalculations and manipulated internal debt numbers in a pre-release Alpha Homora v2 contract, resulting in $37.5 million theft. A guard could have detected this by blocking transactions that manipulate internal debt numbers in contracts without liquidity.",
+  "_meta": {
+    "chatId": "chatcmpl-24c39ff6cca14de482a9fffe7e99fa52",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:02:16.589Z"
+  }
+}

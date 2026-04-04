@@ -1,0 +1,42 @@
+{
+  "article_id": "voltage-finance-rekt",
+  "title": "Voltage Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy attack exploiting ERC677 standard's callAfterTransfer() function",
+  "attack_vector": "reentrancy",
+  "funds_lost": "4000000",
+  "chain": "fuse",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls doTransferOut() after a borrow() in the same tx",
+      "trigger": "BORROW -> doTransferOut() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0d3648bd"
+  ],
+  "red_flags": [
+    "ERC677 callAfterTransfer() abuse",
+    "Multiple repeated transfers"
+  ],
+  "attacker_addresses": [
+    "0x371D7C9e4464576D45f11b27Cf88578983D63d75",
+    "0x632942c9BeF1a1127353E1b99e817651e2390CFF",
+    "0x9E5b7da68e2aE8aB1835428E6E0c83a7153f6112"
+  ],
+  "vulnerable_contracts": [
+    "Ola Finance"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls doTransferOut() after a borrow() in the same tx"
+  ],
+  "summary": "Voltage Finance was exploited via a reentrancy attack on Ola Finance, a Fuse Network Lending-as-a-Service partner, losing around $4M. The attack leveraged the ERC677 standard's callAfterTransfer() function, allowing the attacker to repeatedly withdraw funds.",
+  "_meta": {
+    "chatId": "chatcmpl-01b555d48e7446caba07407d578fda24",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:51.379Z"
+  }
+}

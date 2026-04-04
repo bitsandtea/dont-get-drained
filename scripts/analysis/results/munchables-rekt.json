@@ -1,0 +1,41 @@
+{
+  "article_id": "munchables-rekt",
+  "title": "Munchables - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Manipulation of storage slots followed by large withdrawal on upgradeable proxy contract",
+  "attack_vector": "storage_manipulation",
+  "funds_lost": "62500000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades an upgradeable proxy contract and then immediately withdraws large amounts of funds",
+      "trigger": "UPGRADE_PROXY -> LARGE_WITHDRAWAL in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xf5c19b93",
+    "0xd78ba4d0"
+  ],
+  "red_flags": [
+    "Manipulation of storage slots",
+    "Immediate large withdrawal after contract upgrade"
+  ],
+  "attacker_addresses": [
+    "0x6e8836f050a315611208a5cd7e228701563d09c5"
+  ],
+  "vulnerable_contracts": [
+    "0xea1d9c0d8de4280b538b6fe6dbc3636602075184651dfeb837cb03f8a19ffc4f"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades an upgradeable proxy contract and then immediately withdraws large amounts of funds"
+  ],
+  "summary": "The Munchables exploit involved manipulating storage slots to assign a large Ether balance to the attacker before upgrading the contract and withdrawing the funds. A guard could have detected and blocked such transactions by monitoring upgrades followed by large withdrawals.",
+  "_meta": {
+    "chatId": "chatcmpl-b3493b2a2ca143b8b8ec9107e4d4b7a8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:10.565Z"
+  }
+}

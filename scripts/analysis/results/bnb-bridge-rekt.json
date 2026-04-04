@@ -1,0 +1,40 @@
+{
+  "article_id": "bnb-bridge-rekt",
+  "title": "BNB Bridge - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Bridge withdrawal with compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "586M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints large amounts of native token on the bridge contract.",
+      "trigger": "LARGE_MINT_ON_BRIDGE_CONTRACT",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x...mint_large_amount_of_native_token_signature..."
+  ],
+  "red_flags": [
+    "large mint on bridge contract",
+    "forged proofs of deposit"
+  ],
+  "attacker_addresses": [
+    "0x489a8756c18c0b8b24ec2a2b9ff3d4d447f79bec"
+  ],
+  "vulnerable_contracts": [
+    "BNB Bridge"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_MINTING_LARGE_AMOUNT_OF_NATIVE_TOKEN_ON_BRIDGE_CONTRACT"
+  ],
+  "summary": "The BNB bridge was exploited to mint 2M BNB directly to the hacker's address, resulting in a loss of 586M USD. A critical vulnerability in the bridge's verification process allowed the attacker to forge proofs of deposit.",
+  "_meta": {
+    "chatId": "chatcmpl-67e3eec5981548979c232a3eb84f7657",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:02:31.209Z"
+  }
+}

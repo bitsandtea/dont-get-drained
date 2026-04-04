@@ -1,0 +1,40 @@
+{
+  "article_id": "1inch-rekt",
+  "title": "1Inch - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Integer overflow in deprecated contract leading to fund theft via calldata corruption",
+  "attack_vector": "integer_overflow",
+  "funds_lost": "5,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that interacts with deprecated contracts using negative integers as input parameters.",
+      "trigger": "_settleOrder() with negative interaction length",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x04975648e0db631b0620759ca934861830472678dae82b4bed493f1e1e3ed03a"
+  ],
+  "red_flags": [
+    "Interaction with deprecated contracts",
+    "Use of negative integers as input parameters"
+  ],
+  "attacker_addresses": [
+    "0xa7264a43a57ca17012148c46adbc15a5f951766e"
+  ],
+  "vulnerable_contracts": [
+    "0x019bfc71d43c3492926d4a9a6c781f36706970c9"
+  ],
+  "monitoring_rules": [
+    "Block any tx that interacts with deprecated contracts using negative integers as input parameters"
+  ],
+  "summary": "A calldata corruption vulnerability in deprecated 1inch Fusion v1 resolver contracts led to $5 million being stolen via an integer overflow. A guard could have detected and blocked the attack by monitoring for interactions with deprecated contracts using negative integers.",
+  "_meta": {
+    "chatId": "chatcmpl-563f3b5b8fc04da9871e0ec205abb7c2",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:37:42.097Z"
+  }
+}

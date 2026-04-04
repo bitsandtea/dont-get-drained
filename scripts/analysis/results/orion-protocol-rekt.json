@@ -1,0 +1,41 @@
+{
+  "article_id": "orion-protocol-rekt",
+  "title": "Orion Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Reentrancy exploit using flash loaned stablecoins to double the attacker's balance",
+  "attack_vector": "reentrancy",
+  "funds_lost": "3M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls depositAsset() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> depositAsset() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x...depositAsset"
+  ],
+  "red_flags": [
+    "Manipulated swaps of flash loaned stablecoins",
+    "Artificially depositing assets twice",
+    "Creating a fake token and routing through it"
+  ],
+  "attacker_addresses": [
+    "1..."
+  ],
+  "vulnerable_contracts": [
+    "ExchangeWithAtomic"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS depositAsset() AFTER A FLASH LOAN BORROW IN THE SAME TX"
+  ],
+  "summary": "Orion Protocol lost $3M due to a reentrancy exploit where the attacker used flash loaned stablecoins to artificially deposit assets twice, leading to a doubled balance. A guard could have blocked such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-a83030e900c544c7b357af506413b0cc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:15.286Z"
+  }
+}

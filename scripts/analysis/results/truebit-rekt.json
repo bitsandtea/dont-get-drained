@@ -1,0 +1,42 @@
+{
+  "article_id": "truebit-rekt",
+  "title": "Truebit - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Unchecked integer overflow leading to massive token minting and burning attack",
+  "attack_vector": "integer_overflow",
+  "funds_lost": "26200000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls Attack() function",
+      "trigger": "CALLER -> Attack()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "Unchecked bytecode",
+    "No published audits",
+    "Bonding curve flagged as a 'rug zone'",
+    "Function named 'Attack'"
+  ],
+  "attacker_addresses": [
+    "0x764C64b2A09b09Acb100B80d8c505Aa6a0302EF2"
+  ],
+  "vulnerable_contracts": [
+    "0x764C64b2A09b09Acb100B80d8c505Aa6a0302EF2"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CALL_TO_ATTACK_FUNCTION"
+  ],
+  "summary": "An attacker exploited an unchecked integer overflow in Truebit's proxy contract to mint and burn TRU tokens, draining 8,535 ETH. The attack was detected by security researchers who noted the function was named 'Attack'.",
+  "_meta": {
+    "chatId": "chatcmpl-76ff39e8307a4cfaaa5674de16e0fe68",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:59:19.971Z"
+  }
+}

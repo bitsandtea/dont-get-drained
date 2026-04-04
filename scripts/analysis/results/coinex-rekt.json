@@ -1,0 +1,52 @@
+{
+  "article_id": "coinex-rekt",
+  "title": "CoinEx - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Large-scale wallet drain across multiple blockchain networks using stolen funds.",
+  "attack_vector": "other",
+  "funds_lost": "54.3M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx sending funds to known compromised addresses.",
+      "trigger": "TX_TO_KNOWN_COMPROMISED_ADDRESS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "rapid draining of multiple assets across different blockchains",
+    "use of multisig for remaining funds"
+  ],
+  "attacker_addresses": [
+    "0x8bf8cd7F001D0584F98F53a3d82eD0bA498cC3dE",
+    "0x483D88278Cbc0C9105c4807d558E06782AEFf584",
+    "0xCC1AE485b617c59a7c577C02cd07078a2bcCE454",
+    "TPFUjxQzG88Vwynrpj2W61ZAkQ9W2QYgAQ",
+    "0x6953704e753C6FD70Eb6B083313089e4FC258A20",
+    "rpQxVcjVF2fC23r3xKyJS53jw8d5SRhZQf",
+    "1DSvdmVZGKpCxAR4XexkywxM1whbcvHzbA",
+    "G3udanrxk8stVe8Se2zXmJ3QwU8GSFJMn28mTfn8t1kq",
+    "15VY3MadZvLpXhjzFXwCUmtZcHszju6L9",
+    "k:a9f3672d7ad7a1e4592702d73b220cbc61db1fa17f89a56131d965bc03959913",
+    "0xfEec9F846E2FE529B765d832EBa988a399Fe3cD6",
+    "GBPIDVKDSNF74OAGVBSPKLW73CSCGISBOBRB3ODROTMOEENZFC6WJFPN",
+    "qrgxyhj8rzl4l7fgauu6q6vtu2grct4jeyrnaq2s75",
+    "0x4515bE0067E60d8e49b2425D37e61c791C9B95e9",
+    "0x964c192e54E5eF4176626875BB53071956579fca"
+  ],
+  "vulnerable_contracts": [
+    "CoinEx hot wallets"
+  ],
+  "monitoring_rules": [
+    "TX_TO_KNOWN_COMPROMISED_ADDRESS"
+  ],
+  "summary": "CoinEx suffered a large-scale wallet drain across multiple blockchain networks, losing $54.3M. A guard could have blocked transactions sending funds to known compromised addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-6593eaa25fbf4a4a9a88340dfc035b49",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:08.531Z"
+  }
+}

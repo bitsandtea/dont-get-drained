@@ -1,0 +1,43 @@
+{
+  "article_id": "zkasino-rekt",
+  "title": "ZKasino - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Rug pull involving sudden token conversion and lack of transparency",
+  "attack_vector": "rug_pull",
+  "funds_lost": "33,000,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that converts large amounts of ETH to custom tokens without user interaction.",
+      "trigger": "ETH -> custom token conversion in single tx with large ETH amount",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0dfe57a0"
+  ],
+  "red_flags": [
+    "abruptly canceled token listings",
+    "shady team responses",
+    "pumped tech claims",
+    "unpaid employees/contractors",
+    "token conversion without user consent"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "zkasino-contract-address"
+  ],
+  "monitoring_rules": [
+    "Block any tx that converts large amounts of ETH to custom tokens without user interaction."
+  ],
+  "summary": "ZKasino executed a rug pull by converting over 10,500 ETH ($33 million) into custom tokens without user consent. A guard could have detected this by blocking any transaction that converts large amounts of ETH to custom tokens in a single transaction.",
+  "_meta": {
+    "chatId": "chatcmpl-17ddc2c19cb14669a9b4dee9911be014",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:44.884Z"
+  }
+}

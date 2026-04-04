@@ -1,0 +1,29 @@
+{
+  "article_id": "airdrop-hunters",
+  "title": "Airdrop Hunters",
+  "relevance_score": 2,
+  "relevance_summary": "Governance token airdrop with strict criteria to exclude sybil attacks",
+  "attack_vector": "governance_attack",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "sybil attack prevention through strict criteria"
+  ],
+  "attacker_addresses": [
+    "0xed5728d76b6db03c9f792b8f30ac32951524935e"
+  ],
+  "vulnerable_contracts": [
+    "ENS"
+  ],
+  "monitoring_rules": [],
+  "summary": "ParaSwap and ENS used strict criteria to prevent sybil attacks during their airdrops, but ENS was still exploited by a sybil scheme.",
+  "_meta": {
+    "chatId": "chatcmpl-fb5968a5110041ceaf1a2b37d03792d3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:43:32.813Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "wintermute-rekt",
+  "title": "Wintermute - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Exploit involving nonce collision due to outdated ProxyFactory contract version",
+  "attack_vector": "signature_bypass",
+  "funds_lost": "20M OP worth ~$27.6M",
+  "chain": "optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that deploys a Gnosis Safe proxy with an outdated ProxyFactory contract version.",
+      "trigger": "DEPLOY_GNOXIANSAFE_PROXY_WITH_OUTDATED_PROXYFACTORY_CONTRACT_VERSION",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xf57b2c51"
+  ],
+  "red_flags": [
+    "Outdated ProxyFactory contract version",
+    "Nonce collision exploit"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Gnosis Safe ProxyFactory contract (outdated version)"
+  ],
+  "monitoring_rules": [
+    "BLOCK_DEPLOY_GNOXIANSAFE_PROXY_WITH_OUTDATED_PROXYFACTORY_CONTRACT_VERSION"
+  ],
+  "summary": "Wintermute lost 20M OP due to an outdated ProxyFactory contract version allowing nonce collision. A deployer exploited this to take control of the unowned Gnosis Safe proxy.",
+  "_meta": {
+    "chatId": "chatcmpl-7bd2d571b29a44459c8623184a59884c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:04.494Z"
+  }
+}

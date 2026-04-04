@@ -1,0 +1,41 @@
+{
+  "article_id": "orange-finance-rekt",
+  "title": "Orange Finance - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key leak followed by contract upgrades and token sweeps on Arbitrum-based protocol",
+  "attack_vector": "access_control",
+  "funds_lost": "843,500 USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that upgrades contracts and performs large token transfers in the same transaction.",
+      "trigger": "CONTRACT_UPGRADE -> LARGE_TOKEN_TRANSFER in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Contract upgrade followed by large token transfers",
+    "Multiple token transfers in quick succession"
+  ],
+  "attacker_addresses": [
+    "0x496e5a7ba67735c7ee5eb81ef07b65b909a31345"
+  ],
+  "vulnerable_contracts": [
+    "0x17c8eA17F174B5fa49D5090933ff28cE2DF10a3c"
+  ],
+  "monitoring_rules": [
+    "Block any tx that upgrades contracts and performs large token transfers in the same transaction."
+  ],
+  "summary": "Orange Finance suffered a private key leak, allowing an attacker to upgrade contracts and drain funds across multiple decentralized exchanges. A guard could have detected and blocked the attack by monitoring for contract upgrades followed by large token transfers.",
+  "_meta": {
+    "chatId": "chatcmpl-b1e48c150fd7422a97b9b5488981fec8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:08.760Z"
+  }
+}

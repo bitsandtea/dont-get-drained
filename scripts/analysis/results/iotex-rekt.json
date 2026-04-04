@@ -1,0 +1,40 @@
+{
+  "article_id": "iotex-rekt",
+  "title": "IoTeX - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key leak leading to unauthorized minting and draining of assets from a bridge contract",
+  "attack_vector": "access_control",
+  "funds_lost": "4.4M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints new tokens from a known compromised bridge contract",
+      "trigger": "COMPROMISED_BRIDGE_CONTRACT -> mint()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "mint()"
+  ],
+  "red_flags": [
+    "Unauthorized minting of tokens",
+    "Draining of bridge reserves"
+  ],
+  "attacker_addresses": [
+    "<0x...>"
+  ],
+  "vulnerable_contracts": [
+    "ioTube bridge validator contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints new tokens from a known compromised bridge contract"
+  ],
+  "summary": "An attacker obtained the private key of IoTeX's ioTube bridge validator contract and used it to mint 410 million unbacked CIOTX tokens and drain $4.4M in real bridged assets. A guard could have detected and blocked the unauthorized minting transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-9901cdf95db64e52a7b177ac154f829b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:55.780Z"
+  }
+}

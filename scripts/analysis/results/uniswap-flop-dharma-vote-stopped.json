@@ -1,0 +1,36 @@
+{
+  "article_id": "uniswap-flop-dharma-vote-stopped",
+  "title": "Uniswap Flop - Dharma Vote Stopped",
+  "relevance_score": 5,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that proposes multiple governance changes in a single tx",
+      "trigger": "MULTIPLE_GOVERNANCE_CHANGES_IN_SINGLE_TX",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Proposing multiple governance changes in a single tx",
+    "Lowering quorum threshold significantly"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Uniswap governance contract"
+  ],
+  "monitoring_rules": [
+    "MULTIPLE_GOVERNANCE_CHANGES_IN_SINGLE_TX"
+  ],
+  "summary": "A controversial governance proposal by Dharma aimed at lowering the quorum threshold for Uniswap proposals was rejected. While the proposal itself did not result in funds loss, the attempt highlights the risks of proposing multiple governance changes in a single tx.",
+  "_meta": {
+    "chatId": "chatcmpl-9a2b98107fbf4eb4b12d4bad3aba5f50",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:46.309Z"
+  }
+}

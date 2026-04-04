@@ -1,0 +1,48 @@
+{
+  "article_id": "abra-rekt",
+  "title": "Abracadabra - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "ERC-4626 first depositor exploit followed by flash loan and repeated borrowing/repaying to inflate share price",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "6.5M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls repayForAll() after a flash loan in the same tx",
+      "trigger": "FLASHLOAN -> repayForAll() in single tx",
+      "severity": "high"
+    },
+    {
+      "rule": "Monitor and block repeated borrowing and repaying to inflate share price",
+      "trigger": "REPEATED_BORROW_REPAY -> inflate_share_price() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x2e1a7d4a",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "ERC-4626 first depositor exploit",
+    "flash loan followed by repeated borrowing/repaying"
+  ],
+  "attacker_addresses": [
+    "0x87f585809ce79ae39a5fa0c7c96d0d159eb678c9"
+  ],
+  "vulnerable_contracts": [
+    "yvCrv3Crypto 0x7259e152103756e1616A77Ae982353c3751A6a90",
+    "magicAPE 0x692887E8877C6Dd31593cda44c382DB5b289B684"
+  ],
+  "monitoring_rules": [
+    "BLOCK_ANY_TX_CALLING_REPAYFORALL_AFTER_FLASHLOAN",
+    "MONITOR_REPEATED_BORROW_REPAY_TO_INFLATE_SHARE_PRICE"
+  ],
+  "summary": "The hack involved exploiting the ERC-4626 first depositor vulnerability, followed by a flash loan and repeated borrowing/repaying to inflate the share price. A guard could have blocked the attack by monitoring and preventing these specific actions.",
+  "_meta": {
+    "chatId": "chatcmpl-5aaa7c9139c2434d8fe87c445ad3d952",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:23.310Z"
+  }
+}

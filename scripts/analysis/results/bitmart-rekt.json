@@ -1,0 +1,31 @@
+{
+  "article_id": "bitmart-rekt",
+  "title": "BitMart - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Large-scale theft from centralized exchange with hot wallet compromise",
+  "attack_vector": "other",
+  "funds_lost": "196M USD",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "large-scale theft",
+    "hot wallet compromise",
+    "dismissive initial response"
+  ],
+  "attacker_addresses": [
+    "0x39fb0dcd13945b835d47410ae0de7181d3edf270",
+    "0x4bb7d80282f5e0616705d7f832acfc59f89f7091",
+    "0x25fb126b6c6b5c8ef732b86822fa0f0024e16c61"
+  ],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "BitMart, a centralized cryptocurrency exchange, experienced a large-scale theft from its hot wallets, losing approximately $196 million worth of assets across Ethereum and BSC. The attackers initially transferred funds to multiple addresses and then laundered them through various protocols. Despite the significant loss, BitMart initially dismissed rumors of a hack and only later acknowledged the security breach.",
+  "_meta": {
+    "chatId": "chatcmpl-246a1ff9ba2d4c20ae33a4300b40ffff",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:44:29.730Z"
+  }
+}

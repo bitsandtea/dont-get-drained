@@ -1,0 +1,23 @@
+{
+  "article_id": "stable-future",
+  "title": "A Stable Future",
+  "relevance_score": 0,
+  "relevance_summary": "No specific actionable intelligence extracted.",
+  "attack_vector": "other",
+  "funds_lost": null,
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the potential impact of stablecoins and blockchain technology on the global economy but does not provide specific details about a hack or actionable security measures.",
+  "_meta": {
+    "chatId": "chatcmpl-de27b2ff21c64c139c573da82c22e576",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:29.529Z"
+  }
+}

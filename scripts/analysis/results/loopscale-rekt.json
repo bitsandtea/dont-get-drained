@@ -1,0 +1,41 @@
+{
+  "article_id": "loopscale-rekt",
+  "title": "Loopscale - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle manipulation leading to undercollateralized loan exploitation",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "5.8 million USD",
+  "chain": "solana",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle feeds followed by creating undercollateralized loans",
+      "trigger": "MANIPULATE_ORACLE_FEED -> CREATE_LOAN(undercollateralized)",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xfeedbabe",
+    "0xbadfeed"
+  ],
+  "red_flags": [
+    "stale price feed",
+    "undercollateralized loans"
+  ],
+  "attacker_addresses": [
+    "0xattackeraddress123"
+  ],
+  "vulnerable_contracts": [
+    "Loopscale USDC and SOL Vaults"
+  ],
+  "monitoring_rules": [
+    "BLOCK_MANIPULATE_ORACLE_FEED_FOLLOWED_BY_CREATE_LOAN_UNDERCOLLATERALIZED"
+  ],
+  "summary": "Loopscale suffered a $5.8 million loss due to an attacker manipulating oracle feeds and exploiting undercollateralized loans. A guard could have blocked such transactions by monitoring oracle manipulation followed by the creation of undercollateralized loans.",
+  "_meta": {
+    "chatId": "chatcmpl-4d2ce4906964402298f7e74acafe8b4c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:21.103Z"
+  }
+}

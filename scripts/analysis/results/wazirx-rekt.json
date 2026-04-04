@@ -1,0 +1,40 @@
+{
+  "article_id": "wazirx-rekt",
+  "title": "WazirX - Rekt",
+  "relevance_score": 9,
+  "relevance_summary": "Multisig wallet upgrade with compromised keys and signature phishing",
+  "attack_vector": "access_control",
+  "funds_lost": "235 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that attempts to upgrade a multisig wallet with suspicious signatures.",
+      "trigger": "MULTISIG_UPGRADE -> suspicious signatures detected",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe4e06d79"
+  ],
+  "red_flags": [
+    "Failed USDT transfer just before the hack",
+    "Signature phishing for USDT transfer"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "WazirX multisig wallet"
+  ],
+  "monitoring_rules": [
+    "Block any tx that attempts to upgrade a multisig wallet with suspicious signatures."
+  ],
+  "summary": "WazirX was hacked through a multisig wallet upgrade using compromised keys and signature phishing. A guard could have detected and blocked the upgrade attempt by monitoring for suspicious signatures.",
+  "_meta": {
+    "chatId": "chatcmpl-049ade6afa54417ca276c05d66658a9a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:34.244Z"
+  }
+}

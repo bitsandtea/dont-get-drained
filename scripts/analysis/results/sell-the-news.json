@@ -1,0 +1,23 @@
+{
+  "article_id": "sell-the-news",
+  "title": "Sell The News",
+  "relevance_score": 2,
+  "relevance_summary": "No specific transaction details provided, but the article highlights a failure in positioning and execution of a blockchain project.",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "other",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article discusses the failure of Kadena, a blockchain project led by former JPMorgan engineers, which saw its market cap plummet from over $3 billion to $0.06 per token within a few months. There are no specific transaction details or attack vectors mentioned.",
+  "_meta": {
+    "chatId": "chatcmpl-51965c7bcd5543598c9666854ff2c7dc",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:20.003Z"
+  }
+}

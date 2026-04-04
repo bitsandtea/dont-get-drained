@@ -1,0 +1,40 @@
+{
+  "article_id": "credix-rekt",
+  "title": "Credix - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Admin privileges abuse leading to unbacked token minting and draining liquidity pools",
+  "attack_vector": "access_control",
+  "funds_lost": "4500000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that mints unbacked tokens after gaining BRIDGE role",
+      "trigger": "BRIDGE_ROLE -> mintUnbackedTokens() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22a6f5",
+    "0x0cc3520951a2b41281dcc9a0d37ef3f7f139b75675d83ae72e3b8e903334f35e"
+  ],
+  "red_flags": [
+    "mintUnbackedTokens() called after gaining BRIDGE role"
+  ],
+  "attacker_addresses": [
+    "0xF321683831Be16eeD74dfA58b02a37483cEC662e"
+  ],
+  "vulnerable_contracts": [
+    "ACLManager"
+  ],
+  "monitoring_rules": [
+    "Block any tx that mints unbacked tokens after gaining BRIDGE role"
+  ],
+  "summary": "An attacker with compromised admin privileges used their BRIDGE role to mint unbacked tokens and drain liquidity pools, resulting in a $4.5 million loss. A guard could have blocked such transactions by monitoring for mintUnbackedTokens() calls after gaining BRIDGE role.",
+  "_meta": {
+    "chatId": "chatcmpl-ab19b646a62d47cc9d44042590dcd58a",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:57:47.083Z"
+  }
+}

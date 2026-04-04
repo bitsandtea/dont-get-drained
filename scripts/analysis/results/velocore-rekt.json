@@ -1,0 +1,44 @@
+{
+  "article_id": "velocore-rekt",
+  "title": "Velocore - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Exploit involving flash loan and fee manipulation on a Balancer-style CPMM contract",
+  "attack_vector": "flash_loan",
+  "funds_lost": "6,800,000 USD",
+  "chain": "linea, zkSync",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls velocore__execute() with parameters that manipulate feeMultiplier after a flash loan in the same tx.",
+      "trigger": "FLASHLOAN -> velocore__execute() with feeMultiplier manipulation in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xec378808",
+    "0xd3115a8a"
+  ],
+  "red_flags": [
+    "Direct invocation of velocore__execute() with manipulated parameters",
+    "Manipulation of feeMultiplier leading to underflow and subsequent flash loan execution"
+  ],
+  "attacker_addresses": [
+    "0x8cdc37ed79c5ef116b9dc2a53cb86acaca3716bf"
+  ],
+  "vulnerable_contracts": [
+    "0xed4e130f6f9e68918996f7e1e46a3306b3e12cec",
+    "0xb7f6354b2cfd3018b3261fbc63248a56a24ae91a",
+    "0xc030fba4b741b770f03e715c3a27d02c41fc9dae",
+    "0xf7f76b30a301524fe76508546B1e3762eF2B9267"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls velocore__execute() with parameters that manipulate feeMultiplier after a flash loan in the same tx."
+  ],
+  "summary": "Velocore suffered a $6.8 million loss due to a flash loan exploit that manipulated fee calculations. The attacker directly invoked velocore__execute() to manipulate feeMultiplier, leading to an underflow and subsequent flash loan execution. A guard could have blocked such transactions by monitoring for flash loans followed by feeMultiplier manipulations.",
+  "_meta": {
+    "chatId": "chatcmpl-08ffa1f1eeac46cf9d4d797bcf2dfd81",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:54:06.706Z"
+  }
+}

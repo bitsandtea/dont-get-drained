@@ -1,0 +1,38 @@
+{
+  "article_id": "under-the-influence",
+  "title": "Under the Influence",
+  "relevance_score": 7,
+  "relevance_summary": "Influencers coordinating NFT purchases through private calls and subsequent price manipulation",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "Not explicitly stated, but implied through significant price drops",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any transaction involving NFT purchases from a large number of coordinated wallets within a short timeframe.",
+      "trigger": "NFT_PURCHASE -> multiple wallets within a short timeframe",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x1f98431c"
+  ],
+  "red_flags": [
+    "Private calls involving multiple influencers discussing NFT purchases",
+    "Sudden and coordinated price increases followed by drops"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "NFT contracts involved in the purchases"
+  ],
+  "monitoring_rules": [
+    "Monitor for multiple wallets making NFT purchases in a short timeframe"
+  ],
+  "summary": "Influencers coordinated NFT purchases through private calls, leading to price manipulation and significant losses for other investors. A guard could have detected this by blocking transactions involving multiple coordinated wallets purchasing NFTs within a short period.",
+  "_meta": {
+    "chatId": "chatcmpl-98d668b413b04146815de3a90759a27c",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:34.613Z"
+  }
+}

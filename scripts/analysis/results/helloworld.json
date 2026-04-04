@@ -1,0 +1,23 @@
+{
+  "article_id": "helloworld",
+  "title": "Hello World",
+  "relevance_score": 2,
+  "relevance_summary": "No specific transaction type mentioned",
+  "attack_vector": "other",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The article does not contain specific details about a DeFi hack or actionable intelligence.",
+  "_meta": {
+    "chatId": "chatcmpl-8494b44e890041099a136e5fff45774e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:23.461Z"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "article_id": "shibarium-rekt",
+  "title": "Shibarium - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Validator compromise followed by flash loan usage on cross-chain bridge",
+  "attack_vector": "access_control",
+  "funds_lost": "3 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls flashloan() and has a validator key compromise event in the same block",
+      "trigger": "FLASHLOAN_CALL -> VALIDATOR_KEY_COMPROMISE in same block",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x4e59b446eda7a1b4db05a2089c9f8fa78dc5260c560f2c3f352cbbd6f4d4aeb6"
+  ],
+  "red_flags": [
+    "validator key compromise",
+    "flash loan usage"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Shibarium Bridge"
+  ],
+  "monitoring_rules": [
+    "BLOCK ANY TX THAT CALLS FLASHLOAN() AND HAS A VALIDATOR_KEY_COMPROMISE EVENT IN THE SAME BLOCK"
+  ],
+  "summary": "Shibarium suffered a $3 million loss due to a validator key compromise, where attackers used flash loans to drain the bridge. A guard could have detected and blocked such transactions by monitoring for validator key compromises alongside flash loan calls.",
+  "_meta": {
+    "chatId": "chatcmpl-a63219d0b6684251850084120afe65ca",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:03:28.038Z"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "article_id": "rho-market-rekt",
+  "title": "Rho Market - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Oracle misconfiguration exploited by MEV bot to drain $7.5 million in a matter of minutes",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "7500000",
+  "chain": "scroll",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates price data within a short time frame after oracle configuration changes",
+      "trigger": "PRICE_DATA_MANIPULATION -> ORACLE_CONFIGURATION_CHANGE in short interval",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa0b86991",
+    "0x1f98431c"
+  ],
+  "red_flags": [
+    "Price data manipulation",
+    "Large volume of transactions in a short time frame"
+  ],
+  "attacker_addresses": [
+    "0x...attacker_address..."
+  ],
+  "vulnerable_contracts": [
+    "0x...rho_market_contract_address..."
+  ],
+  "monitoring_rules": [
+    "BLOCK_PRICE_DATA_MANIPULATION_AFTER_ORACLE_CHANGE"
+  ],
+  "summary": "An oracle misconfiguration allowed an MEV bot to manipulate price data, draining $7.5 million from Rho Market in a matter of minutes. A guard could have detected and blocked such transactions by monitoring price data manipulation shortly after oracle configuration changes.",
+  "_meta": {
+    "chatId": "chatcmpl-2650f053aa62401cb6ba5e0825540182",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:17.953Z"
+  }
+}

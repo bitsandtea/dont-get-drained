@@ -1,0 +1,43 @@
+{
+  "article_id": "sonne-finance-rekt",
+  "title": "Sonne Finance - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by donation attack on Compound v2 fork",
+  "attack_vector": "flash_loan",
+  "funds_lost": "20,000,000 USD",
+  "chain": "optimism",
+  "prevention": [
+    {
+      "rule": "Block any tx that sets collateral factor on a market contract after a governance proposal activation.",
+      "trigger": "GOVERNANCE_PROPOSAL_ACTIVATION -> SET_COLLATERAL_FACTOR in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22c575",
+    "0x7f22c575"
+  ],
+  "red_flags": [
+    "Single transaction containing governance proposal activation and attack payload",
+    "Collateral factor set to 35% enabling large withdrawals"
+  ],
+  "attacker_addresses": [
+    "0xae4a7cde7c99fb98b0d5fa414aa40f0300531f43"
+  ],
+  "vulnerable_contracts": [
+    "soVELO: 0xe3b81318b1b6776f0877c3770afddff97b9f5fe5",
+    "SoUSDC: 0xec8fea79026ffed168ccf5c627c7f486d77b765f",
+    "soWETH: 0xf7b5965f5c117eb1b5450187c9dcfccc3c317e8e"
+  ],
+  "monitoring_rules": [
+    "BLOCK_GOVERNANCE_PROPOSAL_ACTIVATION -> SET_COLLATERAL_FACTOR"
+  ],
+  "summary": "Sonne Finance lost $20 million due to a flash loan followed by a donation attack on a Compound v2 fork. A guard could have blocked the transaction by preventing the setting of a low collateral factor after a governance proposal activation.",
+  "_meta": {
+    "chatId": "chatcmpl-6ee71e173b724fde981e549d80ce562e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:26.180Z"
+  }
+}

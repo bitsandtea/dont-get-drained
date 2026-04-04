@@ -1,0 +1,36 @@
+{
+  "article_id": "ycredit-the-ape",
+  "title": "yCredit the Ape",
+  "relevance_score": 7,
+  "relevance_summary": "Withdrawals from a newly deployed contract without proper vetting or public announcement",
+  "attack_vector": "other",
+  "funds_lost": "Not specified",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds to a newly deployed contract without prior public announcement or audit",
+      "trigger": "NEW_CONTRACT_DEPLOYMENT -> FUNDS_SENT_TO_CONTRACT",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Newly deployed contract without public announcement or audit",
+    "Funds sent to a contract shortly after deployment"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "yCredit"
+  ],
+  "monitoring_rules": [
+    "BLOCK_FUNDS_TO_NEW_CONTRACTS_WITHOUT_ANNOUNCEMENT"
+  ],
+  "summary": "A newly deployed contract, yCredit, was exploited due to lack of public announcement or audit. Funds were sent to the contract without proper vetting, leading to potential loss.",
+  "_meta": {
+    "chatId": "chatcmpl-4145753d42b74893866a7eaf6d4de9d5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:55:14.835Z"
+  }
+}

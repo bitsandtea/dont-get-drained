@@ -1,0 +1,42 @@
+{
+  "article_id": "hope-finance-rekt",
+  "title": "Hope Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Multisig approval of fake router deployment followed by token transfer to attacker's wallet",
+  "attack_vector": "access_control",
+  "funds_lost": "1.86M USD",
+  "chain": "arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that updates SwapHelper to use a new router address and then immediately calls a transfer function to an unknown address.",
+      "trigger": "SWAP_HELPER_UPDATED -> TRANSFER_TO_UNKNOWN_ADDRESS",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xc9ee",
+    "0xf188",
+    "0x1b47"
+  ],
+  "red_flags": [
+    "Multisig approval of fake router",
+    "Transfer to unknown address"
+  ],
+  "attacker_addresses": [
+    "0x957d354d853a1ff03dda608f3577d24ea18fcece"
+  ],
+  "vulnerable_contracts": [
+    "GenesisRewardPool"
+  ],
+  "monitoring_rules": [
+    "Block any tx that updates SwapHelper to use a new router address and then immediately calls a transfer function to an unknown address."
+  ],
+  "summary": "Hope Finance was rug pulled through a fake router deployment and subsequent token transfer to the attacker's wallet. A guard could have detected this by blocking any transaction that updates the SwapHelper to use a new router address and then immediately calls a transfer function to an unknown address.",
+  "_meta": {
+    "chatId": "chatcmpl-02543eab94494b06a5d6c542e3e572a9",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:26.302Z"
+  }
+}

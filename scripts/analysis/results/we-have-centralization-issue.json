@@ -1,0 +1,25 @@
+{
+  "article_id": "we-have-centralization-issue",
+  "title": "We Have a Centralization Issue",
+  "relevance_score": 5,
+  "relevance_summary": "Centralized infrastructure dependency affecting Layer 2 networks and wallets",
+  "attack_vector": "centralization",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "AWS US-EAST-1 DNS hiccup causing widespread Layer 2 network outages"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "The AWS US-EAST-1 region's DNS hiccup caused multiple Layer 2 networks and wallet services to go offline, highlighting the reliance on centralized infrastructure in DeFi.",
+  "_meta": {
+    "chatId": "chatcmpl-69edbe732c1b46989d59cad844590303",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:33.676Z"
+  }
+}

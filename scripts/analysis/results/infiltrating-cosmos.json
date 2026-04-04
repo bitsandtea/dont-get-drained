@@ -1,0 +1,37 @@
+{
+  "article_id": "infiltrating-cosmos",
+  "title": "Infiltrating Cosmos",
+  "relevance_score": 8,
+  "relevance_summary": "Developer with alleged North Korean ties involved in Liquid Staking Module (LSM) development, leading to potential security vulnerabilities.",
+  "attack_vector": "access_control",
+  "funds_lost": "N/A",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves known compromised developers on critical modules.",
+      "trigger": "TX_FROM_KNOWN_COMPROMISED_DEVELOPERS -> DEPLOYMENT_OR_SECURITY_PATCHES_ON_CRITICAL_MODULES",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "North Korean developer involvement",
+    "Lack of transparency in code reviews",
+    "Security patches authored by the same developers who introduced vulnerabilities"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Liquid Staking Module (LSM)"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_FROM_KNOWN_COMPROMISED_DEVELOPERS_ON_CRITICAL_MODULES"
+  ],
+  "summary": "The Liquid Staking Module (LSM) development was allegedly compromised by North Korean developers, leading to potential security vulnerabilities. A guard could have detected and blocked transactions involving these developers on critical modules.",
+  "_meta": {
+    "chatId": "chatcmpl-b1d117c56b20463f83314644b97a6843",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:02:52.931Z"
+  }
+}

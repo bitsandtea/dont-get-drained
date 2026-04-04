@@ -1,0 +1,28 @@
+{
+  "article_id": "decentralised-monopoly",
+  "title": "Decentralised Monopoly",
+  "relevance_score": 2,
+  "relevance_summary": "Acquisition and consolidation of DeFi protocols without governance token holder approval",
+  "attack_vector": "access_control",
+  "funds_lost": "",
+  "chain": "ethereum",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Unannounced mergers and acquisitions",
+    "Lack of governance token holder approval"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [
+    "Yearn Finance"
+  ],
+  "monitoring_rules": [],
+  "summary": "Yearn Finance conducted several mergers and acquisitions without governance token holder approval, raising concerns about centralization and control.",
+  "_meta": {
+    "chatId": "chatcmpl-16e29e29c7ab4f7a97a2cbcaffbd22ef",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:34.014Z"
+  }
+}

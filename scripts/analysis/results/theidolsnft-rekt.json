@@ -1,0 +1,41 @@
+{
+  "article_id": "theidolsnft-rekt",
+  "title": "The Idols NFT - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Self-referential transactions creating infinite rewards in the reward system",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "324000",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls _beforeTokenTransfer() with sender and receiver being the same address and sender's balance exactly 1",
+      "trigger": "_beforeTokenTransfer(sender, sender, ...) AND sender.balance == 1",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "_beforeTokenTransfer(address,address,uint256)"
+  ],
+  "red_flags": [
+    "self-referential transactions",
+    "sender and receiver being the same address",
+    "sender's balance exactly 1"
+  ],
+  "attacker_addresses": [
+    "0x26aba26511874128b2bf075c4d5f801b27a42082c1ce7aa25327f61fa0185981"
+  ],
+  "vulnerable_contracts": [
+    "IdolMain"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls _beforeTokenTransfer() with sender and receiver being the same address and sender's balance exactly 1"
+  ],
+  "summary": "An attacker exploited The Idols NFT protocol by making self-referential transactions, causing the reward system to create infinite rewards. The Idols team detected the exploit quickly but lost approximately 97 stETH ($324k). A guard could have prevented this by blocking such transactions.",
+  "_meta": {
+    "chatId": "chatcmpl-29f113885dcc4c01bf7c706c96c63638",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:37.851Z"
+  }
+}

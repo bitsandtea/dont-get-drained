@@ -1,0 +1,39 @@
+{
+  "article_id": "transit-swap-rekt",
+  "title": "Transit Swap - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "TransferFrom() function misuse allowing unauthorized transfers of user-approved tokens",
+  "attack_vector": "access_control",
+  "funds_lost": "21M USD",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls transferFrom() with controllable parameters",
+      "trigger": "TRANSFER_FROM_CALL_WITH_CONTROLLABLE_PARAMS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x23b872dd"
+  ],
+  "red_flags": [
+    "transferFrom() with controllable parameters"
+  ],
+  "attacker_addresses": [
+    "0x75f2aba6a44580d7be2c4e42885d4a1917bffd46"
+  ],
+  "vulnerable_contracts": [
+    "0xed1afc8c4604958c2f38a3408fa63b32e737c428"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TRANSFER_FROM_WITH_CONTROLLABLE_PARAMS"
+  ],
+  "summary": "Transit Swap lost $21M due to a vulnerability in the use of the transferFrom() function, allowing attackers to drain user-approved tokens. A guard could have blocked such transactions by monitoring and blocking calls to transferFrom() with controllable parameters.",
+  "_meta": {
+    "chatId": "chatcmpl-60872ed62bef4659bb9bd40503251b76",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:37.187Z"
+  }
+}

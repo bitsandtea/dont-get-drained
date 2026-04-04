@@ -1,0 +1,41 @@
+{
+  "article_id": "hedera-rekt",
+  "title": "Hedera - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Token service exploit leading to loss of liquidity and stablecoins on DEXs",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "12M USD",
+  "chain": "hedera",
+  "prevention": [
+    {
+      "rule": "Block any tx that burns bridged/wrapped tokens or removes liquidity positions on DEXs using Uniswap v2-derived contract code.",
+      "trigger": "BURN_TOKEN -> REMOVE_LIQUIDITY in Uniswap v2-derived contracts",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "0x0000000000000000000000000000000000000000000000000000000000000001"
+  ],
+  "red_flags": [
+    "burning of bridged/wrapped tokens",
+    "removal of liquidity positions"
+  ],
+  "attacker_addresses": [
+    "0.0.2015717"
+  ],
+  "vulnerable_contracts": [
+    "Uniswap v2-derived contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that burns bridged/wrapped tokens or removes liquidity positions on DEXs using Uniswap v2-derived contract code."
+  ],
+  "summary": "The attack exploited vulnerabilities in the Hedera Token Service, allowing the attacker to burn bridged/wrapped tokens and remove liquidity positions from DEXs. A guard could have blocked such transactions to prevent losses.",
+  "_meta": {
+    "chatId": "chatcmpl-0487c3b07a67484490ba521a3d99904b",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:14.388Z"
+  }
+}

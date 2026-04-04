@@ -1,0 +1,43 @@
+{
+  "article_id": "woox-rekt",
+  "title": "Woo X - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Phishing attack leading to unauthorized withdrawals across multiple networks",
+  "attack_vector": "phishing",
+  "funds_lost": "14000000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves unauthorized withdrawals from known hot wallets",
+      "trigger": "UNAUTHORIZED_WITHDRAWAL -> FROM KNOWN_HOT_WALLETS",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "UNAUTHORIZED_WITHDRAWAL"
+  ],
+  "red_flags": [
+    "unauthorized withdrawals",
+    "hot wallet drain"
+  ],
+  "attacker_addresses": [
+    "0x87aab7bac1308fAF2A0d59DA26b8379e18b26355",
+    "0x889b49ef0bf787c3ddc2950bfc7d1d439320004b",
+    "0x77167f0bc412eb39d004f354869938e7c5acd518",
+    "0x14896E88E0F7dCe1FB88A979439C2f87b416c024"
+  ],
+  "vulnerable_contracts": [
+    "Woo X Hot Wallets"
+  ],
+  "monitoring_rules": [
+    "BLOCK_UNAUTHORIZED_WITHDRAWALS_FROM_KNOWN_HOT_WALLETS"
+  ],
+  "summary": "Woo X suffered a $14 million breach due to a phishing attack compromising a team member's device, allowing attackers to withdraw funds across multiple networks. A guard could have detected and blocked unauthorized withdrawals from known hot wallets.",
+  "_meta": {
+    "chatId": "chatcmpl-28c92fefdcb24e2d94df0fcc31e32b2d",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:36.357Z"
+  }
+}

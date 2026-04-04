@@ -1,0 +1,41 @@
+{
+  "article_id": "punkprotocol-rekt",
+  "title": "Punk Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Missing modifier in initialize() function allowing delegateCall() to replace forgeAddress with malicious contract",
+  "attack_vector": "access_control",
+  "funds_lost": "8.95M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that uses delegateCall() to modify contract state variables like forgeAddress",
+      "trigger": "DELEGATECALL -> modify forgeAddress in initialize()",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "delegatecall",
+    "initialize()"
+  ],
+  "red_flags": [
+    "delegateCall() to modify critical state variables",
+    "missing initializer modifier"
+  ],
+  "attacker_addresses": [
+    "0x7604c7dd6e9bcdba8bac277f1f8e7c1e4c6bb57af"
+  ],
+  "vulnerable_contracts": [
+    "CompoundModel"
+  ],
+  "monitoring_rules": [
+    "Block any tx that uses delegateCall() to modify forgeAddress in initialize()"
+  ],
+  "summary": "Punk Protocol was hacked due to a missing modifier in the initialize() function, allowing a delegateCall() to replace the forgeAddress with a malicious contract. A whitehat managed to intercept some funds but not all, leading to a partial recovery.",
+  "_meta": {
+    "chatId": "chatcmpl-8afd1c3d227d4808a306e4063598087e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:39.989Z"
+  }
+}

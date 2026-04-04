@@ -1,0 +1,39 @@
+{
+  "article_id": "cutting-corners",
+  "title": "Cutting Corners",
+  "relevance_score": 8,
+  "relevance_summary": "Access control bug in staking contract leading to unauthorized access and funds theft",
+  "attack_vector": "access_control",
+  "funds_lost": "730,000 USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that modifies staking contract state without proper authorization checks",
+      "trigger": "STAKING_CONTRACT -> function without proper authorization check in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "<function selector for unauthorized staking modification>"
+  ],
+  "red_flags": [
+    "Unproperly authorized staking contract functions"
+  ],
+  "attacker_addresses": [
+    "<attacker address>"
+  ],
+  "vulnerable_contracts": [
+    "SuperRare staking contract"
+  ],
+  "monitoring_rules": [
+    "Monitor for unauthorized staking contract modifications"
+  ],
+  "summary": "SuperRare's staking contract contained a basic access control bug that allowed attackers to steal funds. A guard could have blocked such transactions by monitoring for unauthorized contract state changes.",
+  "_meta": {
+    "chatId": "chatcmpl-9b6067bd49834b9791c081ee3be766a8",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:34.095Z"
+  }
+}

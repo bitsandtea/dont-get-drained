@@ -1,0 +1,41 @@
+{
+  "article_id": "spartan-rekt",
+  "title": "Spartan Protocol - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by liquidity pool manipulation to withdraw funds",
+  "attack_vector": "flash_loan",
+  "funds_lost": "30.5 million USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls calcLiquidityShare() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> calcLiquidityShare() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f3c7963",
+    "0x0dfebb0b"
+  ],
+  "red_flags": [
+    "Inflating pool balance before burning LP tokens",
+    "Multiple swaps and transfers within the same transaction"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Spartan Protocol"
+  ],
+  "monitoring_rules": [
+    "BLOCK calcLiquidityShare() after FLASHLOAN_BORROW in the same transaction"
+  ],
+  "summary": "The attacker exploited a flaw in the Spartan Protocol's liquidity pool to manipulate the pool balance and withdraw funds using a flash loan. A guard could have blocked the transaction by preventing calls to calcLiquidityShare() after a flash loan.",
+  "_meta": {
+    "chatId": "chatcmpl-37655a756e14431eb33a0b666cf472ea",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:58:52.133Z"
+  }
+}

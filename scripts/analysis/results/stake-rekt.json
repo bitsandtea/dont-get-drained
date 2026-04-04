@@ -1,0 +1,39 @@
+{
+  "article_id": "stake-rekt",
+  "title": "Stake - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Hot wallet compromise leading to large-scale theft across multiple chains",
+  "attack_vector": "access_control",
+  "funds_lost": "41M USD",
+  "chain": "ethereum | polygon | bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that sends funds from known compromised hot wallet addresses",
+      "trigger": "TX_FROM_COMPROMISED_HOT_WALLET_ADDRESS",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "Transfers from known compromised hot wallet addresses"
+  ],
+  "attacker_addresses": [
+    "0x3130662aece32f05753d00a7b95c0444150bcd3c",
+    "0xfe3f568d58919b14aff72bd3f14e6f55bec6c4e0",
+    "0x4464e91002c63a623a8a218bd5dd1f041b61ec04"
+  ],
+  "vulnerable_contracts": [
+    "Stake's hot wallets"
+  ],
+  "monitoring_rules": [
+    "TX_FROM_COMPROMISED_HOT_WALLET_ADDRESS"
+  ],
+  "summary": "Stake's hot wallets were compromised, leading to the theft of over $41M worth of tokens across Ethereum, Polygon, and BSC. A guard could have blocked transactions originating from known compromised hot wallet addresses.",
+  "_meta": {
+    "chatId": "chatcmpl-3a2800ddd9d541aa92d4e521045c691e",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:32.796Z"
+  }
+}

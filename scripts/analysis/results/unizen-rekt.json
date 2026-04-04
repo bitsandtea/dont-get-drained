@@ -1,0 +1,45 @@
+{
+  "article_id": "unizen-rekt",
+  "title": "Unizen - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Unverified external call vulnerability exploited after a contract upgrade",
+  "attack_vector": "reentrancy",
+  "funds_lost": "2.1M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that makes an unverified external call immediately after a contract upgrade.",
+      "trigger": "CONTRACT_UPGRADE -> UNVERIFIED_EXTERNAL_CALL in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "external call function selector"
+  ],
+  "red_flags": [
+    "upgradeable contracts",
+    "unverified external calls"
+  ],
+  "attacker_addresses": [
+    "0xb660cae1a59336676ea1887b15eb3c0badb90d78",
+    "0xc596523b77ceb9567279B572c653ECF4BA763CB7",
+    "0xd440b92739f86b00d1135b5eea871751433da2d7",
+    "0x4e2ce48f0b5d97bfd4be3f6c7b6479db1aa5b365"
+  ],
+  "vulnerable_contracts": [
+    "0xb660cae1a59336676ea1887b15eb3c0badb90d78",
+    "0x90a7482dD7fA28865f440EC0c3B783775AC01266",
+    "0x2f744f784000de0b8f1a7da3f0021ad56c09ce1a"
+  ],
+  "monitoring_rules": [
+    "Block any tx that makes an unverified external call immediately after a contract upgrade."
+  ],
+  "summary": "Unizen experienced a series of attacks exploiting an unverified external call vulnerability shortly after a contract upgrade. A malicious actor took advantage of this to steal over $2.1M in funds. A guard could have detected and blocked these transactions by monitoring for unverified external calls following contract upgrades.",
+  "_meta": {
+    "chatId": "chatcmpl-e883d2b8eb204891b9002cea57fbfaad",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:50.100Z"
+  }
+}

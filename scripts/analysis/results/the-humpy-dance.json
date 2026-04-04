@@ -1,0 +1,41 @@
+{
+  "article_id": "the-humpy-dance",
+  "title": "The Humpy Dance",
+  "relevance_score": 8,
+  "relevance_summary": "Governance proposal with flash-loaned votes on DAO",
+  "attack_vector": "governance_attack",
+  "funds_lost": "24 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls governance functions with flash-loaned tokens in the same transaction.",
+      "trigger": "FLASHLOAN -> GOVERNANCE_FUNCTION in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x715018a6",
+    "0xf0d543b1"
+  ],
+  "red_flags": [
+    "Governance proposal with flash-loaned tokens",
+    "Large vote swings in short periods"
+  ],
+  "attacker_addresses": [
+    "0xHumpyAddress"
+  ],
+  "vulnerable_contracts": [
+    "CompoundFinance"
+  ],
+  "monitoring_rules": [
+    "BLOCK_GOVERNANCE_FLASHLOAN"
+  ],
+  "summary": "Humpy, a DeFi whale, manipulated Compound Finance's governance system by flash-loaning tokens to sway votes, leading to a significant transfer of funds. A guard could have detected and blocked such transactions by monitoring for governance calls following flash loans.",
+  "_meta": {
+    "chatId": "chatcmpl-9c3038d5dc8e4844963562325001d7b3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.420Z"
+  }
+}

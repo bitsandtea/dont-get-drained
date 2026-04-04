@@ -1,0 +1,40 @@
+{
+  "article_id": "btcturk-rekt",
+  "title": "BTCTurk - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Private key leak leading to multi-chain fund drain",
+  "attack_vector": "access_control",
+  "funds_lost": "$51.7 million",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves transferring large sums from hot wallets",
+      "trigger": "TX_VALUE_THRESHOLD_EXCEEDED -> HOT_WALLET_TRANSFER",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa9059cbb"
+  ],
+  "red_flags": [
+    "Large sums transferred from hot wallets",
+    "Multiple blockchain addresses involved"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "BTC Turk's hot wallet contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that involves transferring large sums from hot wallets"
+  ],
+  "summary": "BTCTurk suffered a $51.7 million loss due to a private key leak, leading to a multi-chain fund drain. A guard could have detected and blocked large transfers from hot wallets.",
+  "_meta": {
+    "chatId": "chatcmpl-03c162475a3d4ddf93f8f9c0671c91cd",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:10:19.251Z"
+  }
+}

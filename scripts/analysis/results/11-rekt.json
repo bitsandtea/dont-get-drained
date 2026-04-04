@@ -1,0 +1,40 @@
+{
+  "article_id": "11-rekt",
+  "title": "Eleven Finance - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Flash loan followed by emergencyBurn() exploit on yield aggregator",
+  "attack_vector": "flash_loan",
+  "funds_lost": "4.5M USD",
+  "chain": "bsc",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls emergencyBurn() after a flash loan borrow in the same tx",
+      "trigger": "FLASHLOAN_BORROW -> emergencyBurn() in single tx",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7f22a0b8",
+    "0x7f22a0b80000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "red_flags": [
+    "emergencyBurn() called immediately after flash loan"
+  ],
+  "attacker_addresses": [
+    "0xdb2d590aCe7cAe51DF1fB3312738038Ec032Bf33"
+  ],
+  "vulnerable_contracts": [
+    "Eleven MasterMind farming contract"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls emergencyBurn() after a flash loan borrow in the same tx"
+  ],
+  "summary": "The attacker exploited Eleven Finance's yield aggregator by taking a flash loan, converting the borrowed assets to Nerve tokens, depositing them, and then calling emergencyBurn() to withdraw the entire balance, including the attacker's initial deposit.",
+  "_meta": {
+    "chatId": "chatcmpl-f8c5e999ce984821aa9a1891e9847ce5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:00:50.291Z"
+  }
+}

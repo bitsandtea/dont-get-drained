@@ -1,0 +1,40 @@
+{
+  "article_id": "uniswap-swindle-scammer-speaks-out",
+  "title": "Uniswap Swindle - Scammer Speaks Out",
+  "relevance_score": 7,
+  "relevance_summary": "Flash loan followed by liquidity addition on Uniswap",
+  "attack_vector": "flash_loan",
+  "funds_lost": "N/A",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that adds liquidity immediately after a flash loan",
+      "trigger": "FLASHLOAN_BORROW -> ADD_LIQUIDITY in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x70a08231",
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+  ],
+  "red_flags": [
+    "Quickly adding liquidity after receiving a flash loan"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "UniswapV2Router02"
+  ],
+  "monitoring_rules": [
+    "BLOCK_TX_IF FLASHLOAN_BORROW -> ADD_LIQUIDITY in same tx"
+  ],
+  "summary": "A scammer exploited Uniswap by taking a flash loan and immediately adding liquidity, which was detected through real-time monitoring.",
+  "_meta": {
+    "chatId": "chatcmpl-2788c74e840b41979037daccf520c9d5",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:53:47.694Z"
+  }
+}

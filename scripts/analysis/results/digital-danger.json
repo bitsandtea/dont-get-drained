@@ -1,0 +1,42 @@
+{
+  "article_id": "digital-danger",
+  "title": "Digital Danger",
+  "relevance_score": 8,
+  "relevance_summary": "Multi-chain bridge exploit involving forced transactions and compromised validator signatures",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "Millions in crypto",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that involves multiple chains and has compromised validator signatures.",
+      "trigger": "MULTICHAIN_TX -> COMPROMISED_SIGNATURES",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xa0e0d0c0",
+    "0xb0c0d0e0"
+  ],
+  "red_flags": [
+    "forced transactions",
+    "compromised validator signatures"
+  ],
+  "attacker_addresses": [
+    "0x1234567890abcdef1234567890abcdef12345678"
+  ],
+  "vulnerable_contracts": [
+    "Revelo Intel",
+    "Revelo Ventures"
+  ],
+  "monitoring_rules": [
+    "BLOCK_MULTICHAIN_TX_WITH_COMPROMISED_SIGS"
+  ],
+  "summary": "Nick Drakon's empire was compromised through a multi-chain bridge exploit involving forced transactions and compromised validator signatures, leading to millions in crypto being lost.",
+  "_meta": {
+    "chatId": "chatcmpl-c57c79fc3db2409da12ffb23d5fb1d15",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:57.967Z"
+  }
+}

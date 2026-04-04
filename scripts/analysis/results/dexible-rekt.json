@@ -1,0 +1,39 @@
+{
+  "article_id": "dexible-rekt",
+  "title": "Dexible - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Self-defined routing without on-chain verification leading to token transferFrom attack",
+  "attack_vector": "access_control",
+  "funds_lost": "2,000,000 USD",
+  "chain": "ethereum | arbitrum",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls selfSwap() with a non-DEX router address",
+      "trigger": "selfSwap() -> transferFrom() with non-DEX router address",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "selfSwap(address,address,uint256)"
+  ],
+  "red_flags": [
+    "Non-DEX router address used in selfSwap()"
+  ],
+  "attacker_addresses": [
+    "0x684083f312ac50f538cc4b634d85a2feafaab77a"
+  ],
+  "vulnerable_contracts": [
+    "Dexible v2 contracts"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls selfSwap() with a non-DEX router address"
+  ],
+  "summary": "Dexible's v2 contracts allowed users to define their own routing via selfSwap(), but failed to verify if the router address was a DEX. Hackers exploited this by calling a token contract to transferFrom any account with spend approval on the Dexible contract, resulting in significant losses.",
+  "_meta": {
+    "chatId": "chatcmpl-6b98da6098c04fe4844097f87fd2b6ea",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:45:57.587Z"
+  }
+}

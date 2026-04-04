@@ -1,0 +1,27 @@
+{
+  "article_id": "ledger-rekt",
+  "title": "Ledger - REKT",
+  "relevance_score": 0,
+  "relevance_summary": "Data breach leading to personal information exposure and potential phishing attacks.",
+  "attack_vector": "data_exfiltration",
+  "funds_lost": "N/A",
+  "chain": "other",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "personal_information_exposure",
+    "data_leak",
+    "phishing_attempts"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "A data breach at Ledger exposed personal information of 227,000 customers, leading to increased phishing attempts and potential physical attacks. A guard could monitor for phishing activities and educate users about sharing private information.",
+  "_meta": {
+    "chatId": "chatcmpl-6869ab78a65d405eb46ec0f0b8c58e48",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:17.552Z"
+  }
+}

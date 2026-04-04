@@ -1,0 +1,27 @@
+{
+  "article_id": "plant-a-red-flag",
+  "title": "Plant a Red Flag",
+  "relevance_score": 7,
+  "relevance_summary": "Exchange collapse with technical issues and inaccessible funds, potentially linked to a history of similar incidents.",
+  "attack_vector": "other",
+  "funds_lost": "unknown",
+  "chain": "multi-chain",
+  "prevention": [],
+  "on_chain_signatures": [],
+  "red_flags": [
+    "2FA bypass vulnerability reported",
+    "Critical security failures",
+    "Relying on MongoDB instead of financial-grade relational database"
+  ],
+  "attacker_addresses": [],
+  "vulnerable_contracts": [],
+  "monitoring_rules": [],
+  "summary": "Xeggex, an altcoin exchange, faced a collapse with inaccessible funds and technical issues, potentially linked to previous exchanges like Cryptsy and Altilly. Community investigations suggest the operator might be Paul Vernon, who was involved in earlier exchanges' collapses.",
+  "_meta": {
+    "chatId": "chatcmpl-01d476ffdd464a4fa3813dd2f7d6d338",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:51:28.840Z"
+  }
+}

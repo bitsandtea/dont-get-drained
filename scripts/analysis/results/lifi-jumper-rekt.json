@@ -1,0 +1,40 @@
+{
+  "article_id": "lifi-jumper-rekt",
+  "title": "LiFi/Jumper - Rekt",
+  "relevance_score": 8,
+  "relevance_summary": "Infinite approvals followed by call injection attack on LiFi protocol",
+  "attack_vector": "access_control",
+  "funds_lost": "9730000",
+  "chain": "multi-chain",
+  "prevention": [
+    {
+      "rule": "Block any tx that calls swap() with infinite approval context",
+      "trigger": "INFINITE_APPROVAL -> swap() in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
+  ],
+  "red_flags": [
+    "infinite approvals",
+    "call injection attack"
+  ],
+  "attacker_addresses": [
+    "0x8B3Cb6Bf982798fba233Bca56749e22EEc42DcF3"
+  ],
+  "vulnerable_contracts": [
+    "LiFi protocol"
+  ],
+  "monitoring_rules": [
+    "Block any tx that calls swap() with infinite approval context"
+  ],
+  "summary": "LiFi protocol lost $9.73M due to an attack exploiting infinite approvals and a lack of validation in the swap function. A similar attack occurred in March 2022. A guard could have blocked such transactions by monitoring for infinite approvals followed by calls to swap().",
+  "_meta": {
+    "chatId": "chatcmpl-d3ee581a971f4f12803a0f3a950d0248",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:48:19.442Z"
+  }
+}

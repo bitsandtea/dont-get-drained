@@ -1,0 +1,40 @@
+{
+  "article_id": "snowdog-rekt",
+  "title": "Snowdog - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Custom liquidity pool with front-running protection leading to price manipulation and rug pull",
+  "attack_vector": "price_manipulation",
+  "funds_lost": "Not specified in the article",
+  "chain": "avalanche",
+  "prevention": [
+    {
+      "rule": "Block any tx that creates a custom liquidity pool with front-running protection mechanisms.",
+      "trigger": "CUSTOM_LIQUIDITY_POOL_CREATION_WITH_FRONTRUN_PROTECTION",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "CREATE2"
+  ],
+  "red_flags": [
+    "Front-running protection mechanism",
+    "Unusual price increase shortly after liquidity migration"
+  ],
+  "attacker_addresses": [
+    "Not explicitly mentioned but likely from FTX"
+  ],
+  "vulnerable_contracts": [
+    "Snowdog contract"
+  ],
+  "monitoring_rules": [
+    "BLOCK_CREATE2_CALLS_WITH_FRONTRUN_PROTECTION"
+  ],
+  "summary": "Snowdog used a custom liquidity pool with front-running protection to manipulate the price of SDOG tokens, resulting in a significant loss for most users. A guard could have detected and blocked the creation of such pools.",
+  "_meta": {
+    "chatId": "chatcmpl-281e833ef5094b6682be80c23ca9bcc3",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:52:31.505Z"
+  }
+}

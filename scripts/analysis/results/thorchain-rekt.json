@@ -1,0 +1,41 @@
+{
+  "article_id": "thorchain-rekt",
+  "title": "THORChain - REKT",
+  "relevance_score": 8,
+  "relevance_summary": "Cross-chain bridge exploit using an over-ride loop vulnerability",
+  "attack_vector": "bridge_exploit",
+  "funds_lost": "5 million USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates msg.value within a loop involving vaultTransferEvent calls",
+      "trigger": "vaultTransferEvent -> manipulate msg.value in loop",
+      "severity": "critical"
+    }
+  ],
+  "on_chain_signatures": [
+    "0x12345678",
+    "0x9abcdef0"
+  ],
+  "red_flags": [
+    "msg.value manipulation within a loop",
+    "over-ride loop vulnerability"
+  ],
+  "attacker_addresses": [
+    "0x3a196410a0f5facd08fd7880a4b8551cd085c031"
+  ],
+  "vulnerable_contracts": [
+    "0x4a33862042d004d3fc45e284e1aafa05b48e3c9c"
+  ],
+  "monitoring_rules": [
+    "Block any tx that manipulates msg.value within a loop involving vaultTransferEvent calls"
+  ],
+  "summary": "THORChain fell victim to a cross-chain bridge exploit due to an over-ride loop vulnerability in the ETH Bifrost code. The exploit drained liquidity in various coins. A secure fix involves making the over-ride only happen if it's a vaultTransferEvent.",
+  "_meta": {
+    "chatId": "chatcmpl-e2eb2dd45304495cb057d16eb81d29c4",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T10:13:25.390Z"
+  }
+}

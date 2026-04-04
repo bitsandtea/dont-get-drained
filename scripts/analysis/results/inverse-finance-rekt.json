@@ -1,0 +1,41 @@
+{
+  "article_id": "inverse-finance-rekt",
+  "title": "Inverse Finance - REKT",
+  "relevance_score": 9,
+  "relevance_summary": "Oracle manipulation followed by flash loan and collateralization on lending protocol",
+  "attack_vector": "oracle_manipulation",
+  "funds_lost": "15.6M USD",
+  "chain": "ethereum",
+  "prevention": [
+    {
+      "rule": "Block any tx that manipulates oracle price and then uses flash loan to borrow large amounts",
+      "trigger": "MANIPULATE_ORACLE_PRICE -> FLASH_LOAN_BORROW in single tx",
+      "severity": "high"
+    }
+  ],
+  "on_chain_signatures": [
+    "0xe4e0d7c9",
+    "0x70a08231"
+  ],
+  "red_flags": [
+    "Manipulating oracle price to inflate token value",
+    "Using flash loan to borrow large amounts"
+  ],
+  "attacker_addresses": [
+    "0x..."
+  ],
+  "vulnerable_contracts": [
+    "Inverse Finance"
+  ],
+  "monitoring_rules": [
+    "BLOCK MANIPULATE_ORACLE_PRICE -> FLASH_LOAN_BORROW in single tx"
+  ],
+  "summary": "The attacker manipulated the Inverse Finance oracle price to inflate the value of INV token and then used a flash loan to borrow $15.6M. A guard could have detected and blocked such transactions by monitoring for oracle manipulation followed by flash loan activity.",
+  "_meta": {
+    "chatId": "chatcmpl-11f02669d69c443ab8a206c3365f21f6",
+    "verified": true,
+    "model": "qwen/qwen-2.5-7b-instruct",
+    "provider": "0xa48f01287233509FD694a22Bf840225062E67836",
+    "analyzedAt": "2026-04-04T09:47:45.521Z"
+  }
+}
