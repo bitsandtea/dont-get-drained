@@ -1,0 +1,3478 @@
+{
+  "crawledAt": "2026-04-03T15:36:45.685Z",
+  "totalArticles": 496,
+  "articles": [
+    {
+      "id": "venus-protocol-rekt4",
+      "title": "Venus Protocol - Rekt IV",
+      "url": "https://rekt.news/venus-protocol-rekt4/",
+      "date": "Wednesday, March 18, 2026",
+      "excerpt": "Venus Protocol - Supply Cap Manipulation"
+    },
+    {
+      "id": "price-impact-kills",
+      "title": "Price Impact Kills",
+      "url": "https://rekt.news/price-impact-kills/",
+      "date": "Monday, March 16, 2026",
+      "excerpt": "Aave - CoWSwap - Price Impact"
+    },
+    {
+      "id": "aave-rekt",
+      "title": "Aave - Rekt",
+      "url": "https://rekt.news/aave-rekt/",
+      "date": "Friday, March 13, 2026",
+      "excerpt": "Aave - Liquidation - Configuration Error"
+    },
+    {
+      "id": "solv-rekt",
+      "title": "Solv - Rekt",
+      "url": "https://rekt.news/solv-rekt/",
+      "date": "Tuesday, March 10, 2026",
+      "excerpt": "Solv - BRO - ERC-3525"
+    },
+    {
+      "id": "default-settings",
+      "title": "Default Settings",
+      "url": "https://rekt.news/default-settings/",
+      "date": "Friday, March 6, 2026",
+      "excerpt": "ZK Security - Groth16 - Trusted Setup"
+    },
+    {
+      "id": "the-unfinished-proof",
+      "title": "The Unfinished Proof",
+      "url": "https://rekt.news/the-unfinished-proof/",
+      "date": "Wednesday, March 4, 2026",
+      "excerpt": "FoomCash - Groth16 Misconfiguration - ZK Proof"
+    },
+    {
+      "id": "yieldblox-rekt",
+      "title": "Yieldblox - Rekt",
+      "url": "https://rekt.news/yieldblox-rekt/",
+      "date": "Friday, February 27, 2026",
+      "excerpt": "Yieldblox - Blend V2 - Oracle Manipulation"
+    },
+    {
+      "id": "iotex-rekt",
+      "title": "IoTeX - Rekt",
+      "url": "https://rekt.news/iotex-rekt/",
+      "date": "Wednesday, February 25, 2026",
+      "excerpt": "IoTeX - Private Key Leak - Rekt"
+    },
+    {
+      "id": "moonwell-rekt",
+      "title": "Moonwell - Rekt",
+      "url": "https://rekt.news/moonwell-rekt/",
+      "date": "Friday, February 20, 2026",
+      "excerpt": "Moonwell - Vibe Coding - Rekt"
+    },
+    {
+      "id": "identity-theft-2",
+      "title": "Identity Theft 2.0",
+      "url": "https://rekt.news/identity-theft-2/",
+      "date": "Thursday, February 19, 2026",
+      "excerpt": "AI Agents - Malware - OpenClaw"
+    },
+    {
+      "id": "digital-parasites",
+      "title": "Digital Parasites",
+      "url": "https://rekt.news/digital-parasites/",
+      "date": "Thursday, February 12, 2026",
+      "excerpt": "Nation State Actors - Malware - Espionage"
+    },
+    {
+      "id": "legitimacy-on-demand",
+      "title": "Legitimacy on Demand",
+      "url": "https://rekt.news/legitimacy-on-demand/",
+      "date": "Monday, February 9, 2026",
+      "excerpt": "Pay-to-play - Press Releases - Credibility"
+    },
+    {
+      "id": "step-finance-rekt",
+      "title": "Step Finance - Rekt",
+      "url": "https://rekt.news/step-finance-rekt/",
+      "date": "Wednesday, February 4, 2026",
+      "excerpt": "Step Finance - Admin Privileges - Rekt"
+    },
+    {
+      "id": "frankenclaw",
+      "title": "Frankenclaw",
+      "url": "https://rekt.news/frankenclaw/",
+      "date": "Tuesday, February 3, 2026",
+      "excerpt": "OpenClaw - Moltbot - AI Agents"
+    },
+    {
+      "id": "trove-of-bs",
+      "title": "Trove of BS",
+      "url": "https://rekt.news/trove-of-bs/",
+      "date": "Wednesday, January 28, 2026",
+      "excerpt": "Trove Markets - ICO - Solana - Hyperliquid"
+    },
+    {
+      "id": "saga-rekt",
+      "title": "Saga - Rekt",
+      "url": "https://rekt.news/saga-rekt/",
+      "date": "Monday, January 26, 2026",
+      "excerpt": "Saga - Validation Failure - IBC"
+    },
+    {
+      "id": "makina-rekt",
+      "title": "Makina - Rekt",
+      "url": "https://rekt.news/makina-rekt/",
+      "date": "Thursday, January 22, 2026",
+      "excerpt": "Makina - Oracle Manipulation - Rekt"
+    },
+    {
+      "id": "zero-to-lend",
+      "title": "Zero To Lend",
+      "url": "https://rekt.news/zero-to-lend/",
+      "date": "Tuesday, January 20, 2026",
+      "excerpt": "ZeroLend - Insolvency - Rekt"
+    },
+    {
+      "id": "yo-protocols-slippage-bomb",
+      "title": "Yo Protocol's Slippage Bomb",
+      "url": "https://rekt.news/yo-protocols-slippage-bomb/",
+      "date": "Wednesday, January 14, 2026",
+      "excerpt": "YO Protocol - Automated Harvest Swap - Defi"
+    },
+    {
+      "id": "truebit-rekt",
+      "title": "Truebit - Rekt",
+      "url": "https://rekt.news/truebit-rekt/",
+      "date": "Monday, January 12, 2026",
+      "excerpt": "Truebit - Unchecked integer overflow - Defi"
+    },
+    {
+      "id": "tmztribe-rekt",
+      "title": "TMXTribe - Rekt",
+      "url": "https://rekt.news/tmztribe-rekt/",
+      "date": "Thursday, January 8, 2026",
+      "excerpt": "TMXTribe - Logic Bug - Defi"
+    },
+    {
+      "id": "aave-winter-of-discontent",
+      "title": "Aave's Winter of Discontent",
+      "url": "https://rekt.news/aave-winter-of-discontent/",
+      "date": "Tuesday, January 6, 2026",
+      "excerpt": "Aave - Governance - Defi"
+    },
+    {
+      "id": "yearn-rekt4",
+      "title": "Yearn - Rekt IV",
+      "url": "https://rekt.news/yearn-rekt4/",
+      "date": "Friday, December 19, 2025",
+      "excerpt": "Yearn - Rekt"
+    },
+    {
+      "id": "aevo-rekt",
+      "title": "Aevo - Rekt",
+      "url": "https://rekt.news/aevo-rekt/",
+      "date": "Thursday, December 18, 2025",
+      "excerpt": "Aevo - Ribbon Finance - Rekt"
+    },
+    {
+      "id": "the-big-blind",
+      "title": "The Big Blind",
+      "url": "https://rekt.news/the-big-blind/",
+      "date": "Thursday, December 11, 2025",
+      "excerpt": "PolyMarket - Kalshi - Prediction Markets"
+    },
+    {
+      "id": "uspd-rekt",
+      "title": "USPD - Rekt",
+      "url": "https://rekt.news/uspd-rekt/",
+      "date": "Monday, December 8, 2025",
+      "excerpt": "USPD - CPIMP - Rekt"
+    },
+    {
+      "id": "economy-of-access",
+      "title": "The Economy of Access",
+      "url": "https://rekt.news/economy-of-access/",
+      "date": "Friday, December 5, 2025",
+      "excerpt": "Tokenization - Privacy - Digital ID"
+    },
+    {
+      "id": "yearn-rekt3",
+      "title": "Yearn - Rekt III",
+      "url": "https://rekt.news/yearn-rekt3/",
+      "date": "Tuesday, December 2, 2025",
+      "excerpt": "Yearn - Unchecked Arithmetic Underflow - Legacy Code"
+    },
+    {
+      "id": "megaoops",
+      "title": "Megaoops",
+      "url": "https://rekt.news/megaoops/",
+      "date": "Wednesday, November 26, 2025",
+      "excerpt": "MegaETH - Pre-Deposit - Multisig"
+    },
+    {
+      "id": "gana-payment-rekt",
+      "title": "GANA Payment - Rekt",
+      "url": "https://rekt.news/gana-payment-rekt/",
+      "date": "Tuesday, November 25, 2025",
+      "excerpt": "GANA Payment - Admin Privileges - Rekt"
+    },
+    {
+      "id": "libra2",
+      "title": "Libra II - Electric Boogaloo",
+      "url": "https://rekt.news/libra2/",
+      "date": "Monday, November 24, 2025",
+      "excerpt": "Libra - Rugged - Solana"
+    },
+    {
+      "id": "when-the-web-goes-dark",
+      "title": "When the Web Goes Dark",
+      "url": "https://rekt.news/when-the-web-goes-dark/",
+      "date": "Thursday, November 20, 2025",
+      "excerpt": "Cloudflare - Centralization"
+    },
+    {
+      "id": "loop-contagion",
+      "title": "The Loop Contagion",
+      "url": "https://rekt.news/loop-contagion/",
+      "date": "Tuesday, November 18, 2025",
+      "excerpt": "Stream Finance - Stablecoins - Rekt"
+    },
+    {
+      "id": "balancer-rekt2",
+      "title": "Balancer - Rekt II",
+      "url": "https://rekt.news/balancer-rekt2/",
+      "date": "Friday, November 14, 2025",
+      "excerpt": "Balancer - Rate Manipulation - Rekt"
+    },
+    {
+      "id": "house-of-cards",
+      "title": "House Of Cards",
+      "url": "https://rekt.news/house-of-cards/",
+      "date": "Friday, October 31, 2025",
+      "excerpt": "Stream Finance - Elixir - Stablecoins"
+    },
+    {
+      "id": "bad-vibes",
+      "title": "Bad Vibes",
+      "url": "https://rekt.news/bad-vibes/",
+      "date": "Tuesday, October 28, 2025",
+      "excerpt": "AI - Developers - Vibe Coding"
+    },
+    {
+      "id": "sell-the-news",
+      "title": "Sell The News",
+      "url": "https://rekt.news/sell-the-news/",
+      "date": "Friday, October 24, 2025",
+      "excerpt": "Kadena - Defi"
+    },
+    {
+      "id": "we-have-centralization-issue",
+      "title": "We Have a Centralization Issue",
+      "url": "https://rekt.news/we-have-centralization-issue/",
+      "date": "Tuesday, October 21, 2025",
+      "excerpt": "AWS - L2 - Centralization"
+    },
+    {
+      "id": "paxos-300trillion-oopsie",
+      "title": "Paxos $300 Trillion Oopsie",
+      "url": "https://rekt.news/paxos-300trillion-oopsie/",
+      "date": "Friday, October 17, 2025",
+      "excerpt": "Paxos - PYUSD - Stablecoins"
+    },
+    {
+      "id": "infrastructure-scam-city",
+      "title": "Infrastructure of a Scam City",
+      "url": "https://rekt.news/infrastructure-scam-city/",
+      "date": "Wednesday, October 15, 2025",
+      "excerpt": "Pig Butchering - Human Trafficking - Myanmar"
+    },
+    {
+      "id": "right-to-disappear",
+      "title": "The Right to Disappear",
+      "url": "https://rekt.news/right-to-disappear/",
+      "date": "Thursday, October 9, 2025",
+      "excerpt": "Privacy - Digital ID - Cypherpunks"
+    },
+    {
+      "id": "abracadabra-rekt3",
+      "title": "Abracadabra - Rekt III",
+      "url": "https://rekt.news/abracadabra-rekt3/",
+      "date": "Monday, October 6, 2025",
+      "excerpt": "Abracadabra - MIM - Logic Bug"
+    },
+    {
+      "id": "sbi-crypto-rekt",
+      "title": "SBI Crypto - Rekt",
+      "url": "https://rekt.news/sbi-crypto-rekt/",
+      "date": "Friday, October 3, 2025",
+      "excerpt": "SBI Crypto - Mining - Rekt"
+    },
+    {
+      "id": "hypervault-rugged",
+      "title": "Hypervault - Rugged",
+      "url": "https://rekt.news/hypervault-rugged/",
+      "date": "Tuesday, September 30, 2025",
+      "excerpt": "Hypervault - Rug - Liquidity Extraction"
+    },
+    {
+      "id": "griffinai-rekt",
+      "title": "GriffinAI - Rekt",
+      "url": "https://rekt.news/griffinai-rekt/",
+      "date": "Friday, September 26, 2025",
+      "excerpt": "GriffinAI - Admin Privileges - Rekt"
+    },
+    {
+      "id": "uxlink-rekt",
+      "title": "UXLink - Rekt",
+      "url": "https://rekt.news/uxlink-rekt/",
+      "date": "Thursday, September 25, 2025",
+      "excerpt": "UXLink - Admin Privileges - Rekt"
+    },
+    {
+      "id": "parabolic-mirage",
+      "title": "Parabolic Mirage",
+      "url": "https://rekt.news/parabolic-mirage/",
+      "date": "Tuesday, September 23, 2025",
+      "excerpt": "MYX Finance - Market Manipulation - Sybil Attack"
+    },
+    {
+      "id": "newgold-protocol-rekt",
+      "title": "New Gold Protocol - Rekt",
+      "url": "https://rekt.news/newgold-protocol-rekt/",
+      "date": "Friday, September 19, 2025",
+      "excerpt": "New Gold Protocol - Price Manipulation - Rekt"
+    },
+    {
+      "id": "who-got-rugged",
+      "title": "Who Got Rugged?",
+      "url": "https://rekt.news/who-got-rugged/",
+      "date": "Thursday, September 18, 2025",
+      "excerpt": "Proxy Upgrade - Rekt"
+    },
+    {
+      "id": "shibarium-rekt",
+      "title": "Shibarium - Rekt",
+      "url": "https://rekt.news/shibarium-rekt/",
+      "date": "Tuesday, September 16, 2025",
+      "excerpt": "Shibarium - Validator Compromise - Rekt"
+    },
+    {
+      "id": "npm-heist",
+      "title": "The Great npm Heist That Wasn't",
+      "url": "https://rekt.news/npm-heist/",
+      "date": "Friday, September 12, 2025",
+      "excerpt": "npm - Developers - Phishing"
+    },
+    {
+      "id": "swissborg-rekt",
+      "title": "Swissborg - Rekt",
+      "url": "https://rekt.news/swissborg-rekt/",
+      "date": "Wednesday, September 10, 2025",
+      "excerpt": "Swissborg - Kiln - Third-Party Dependency Risk"
+    },
+    {
+      "id": "bunni-rekt",
+      "title": "Bunni - Rekt",
+      "url": "https://rekt.news/bunni-rekt/",
+      "date": "Tuesday, September 9, 2025",
+      "excerpt": "Bunnie - Rekt - Rounding Bug"
+    },
+    {
+      "id": "cutting-corners",
+      "title": "Cutting Corners",
+      "url": "https://rekt.news/cutting-corners/",
+      "date": "Friday, September 5, 2025",
+      "excerpt": "Bug Bounties - Defi"
+    },
+    {
+      "id": "phished-founder-liquidated-thief",
+      "title": "Phished Founder, Liquidated Thief",
+      "url": "https://rekt.news/phished-founder-liquidated-thief/",
+      "date": "Thursday, September 4, 2025",
+      "excerpt": "Venus Protocol - Phishing - Governance"
+    },
+    {
+      "id": "betterbank-rekt",
+      "title": "BetterBank - Rekt",
+      "url": "https://rekt.news/betterbank-rekt/",
+      "date": "Thursday, August 28, 2025",
+      "excerpt": "BetterBank - Reward Logic Flaw - Rekt"
+    },
+    {
+      "id": "fork-in-the-code",
+      "title": "Fork in the Code",
+      "url": "https://rekt.news/fork-in-the-code/",
+      "date": "Tuesday, August 26, 2025",
+      "excerpt": "Privacy - KYC - Politics"
+    },
+    {
+      "id": "invisible-prompts",
+      "title": "Invisible Prompts",
+      "url": "https://rekt.news/invisible-prompts/",
+      "date": "Friday, August 22, 2025",
+      "excerpt": "AI - Malware - Prompt Injection"
+    },
+    {
+      "id": "drained-by-design",
+      "title": "Drained By Design",
+      "url": "https://rekt.news/drained-by-design/",
+      "date": "Wednesday, August 20, 2025",
+      "excerpt": "Coinbase - MEV - ERC-20 approvals"
+    },
+    {
+      "id": "btcturk-rekt",
+      "title": "BTCTurk - Rekt",
+      "url": "https://rekt.news/btcturk-rekt/",
+      "date": "Tuesday, August 19, 2025",
+      "excerpt": "BTCTurk - CEX - Private Key Leak"
+    },
+    {
+      "id": "odin-fun-rekt",
+      "title": "Odin.Fun - Rekt",
+      "url": "https://rekt.news/odin-fun-rekt/",
+      "date": "Friday, August 15, 2025",
+      "excerpt": "Odin.Fun - ICP - Bitcoin Defi"
+    },
+    {
+      "id": "hashrate-heist-or-hype",
+      "title": "Hashrate Heist or Hype?",
+      "url": "https://rekt.news/hashrate-heist-or-hype/",
+      "date": "Thursday, August 14, 2025",
+      "excerpt": "Qubic - Monero - Hashrate"
+    },
+    {
+      "id": "the-one-that-got-away",
+      "title": "The One That Got Away",
+      "url": "https://rekt.news/the-one-that-got-away/",
+      "date": "Thursday, August 7, 2025",
+      "excerpt": "Lubian - BTC - Bitcoin Mining"
+    },
+    {
+      "id": "credix-rekt",
+      "title": "Credix - Rekt",
+      "url": "https://rekt.news/credix-rekt/",
+      "date": "Tuesday, August 5, 2025",
+      "excerpt": "Credix - Admin Privileges - Sonic"
+    },
+    {
+      "id": "abracadabra",
+      "title": "Abracadabra",
+      "url": "https://rekt.news/abracadabra/",
+      "date": "Monday, August 4, 2025",
+      "excerpt": "Abra - CPRX - Custody"
+    },
+    {
+      "id": "genius-or-gimmick",
+      "title": "GENIUS or Gimmick?",
+      "url": "https://rekt.news/genius-or-gimmick/",
+      "date": "Wednesday, July 30, 2025",
+      "excerpt": "Genius Act - Stablecoins - Politics"
+    },
+    {
+      "id": "woox-rekt",
+      "title": "Woo X - Rekt",
+      "url": "https://rekt.news/woox-rekt/",
+      "date": "Monday, July 28, 2025",
+      "excerpt": "Woo X - Rekt - CEX"
+    },
+    {
+      "id": "coindcx-rekt",
+      "title": "CoinDCX - Rekt",
+      "url": "https://rekt.news/coindcx-rekt/",
+      "date": "Tuesday, July 22, 2025",
+      "excerpt": "CoinDCX - Rekt - CEX"
+    },
+    {
+      "id": "bigone-rekt",
+      "title": "BigONE - Rekt",
+      "url": "https://rekt.news/bigone-rekt/",
+      "date": "Friday, July 18, 2025",
+      "excerpt": "BigONE - Rekt - Supply Chain Attack"
+    },
+    {
+      "id": "arcadiafi-rekt",
+      "title": "ArcadiaFi - Rekt",
+      "url": "https://rekt.news/arcadiafi-rekt/",
+      "date": "Thursday, July 17, 2025",
+      "excerpt": "ArcadiaFi - Rekt - Defi"
+    },
+    {
+      "id": "just-bad-luck",
+      "title": "Just Bad Luck?",
+      "url": "https://rekt.news/just-bad-luck/",
+      "date": "Tuesday, July 15, 2025",
+      "excerpt": "Kinto - Defi - Arbitrum"
+    },
+    {
+      "id": "gmx-rekt",
+      "title": "GMX - Rekt",
+      "url": "https://rekt.news/gmx-rekt/",
+      "date": "Friday, July 11, 2025",
+      "excerpt": "GMX - Rekt - Arbitrum"
+    },
+    {
+      "id": "ton-of-bs",
+      "title": "A TON of BS",
+      "url": "https://rekt.news/ton-of-bs/",
+      "date": "Wednesday, July 9, 2025",
+      "excerpt": "TON - Defi - Immigration"
+    },
+    {
+      "id": "eco-friendly-rug-pull",
+      "title": "The Eco-Friendly Rug Pull",
+      "url": "https://rekt.news/eco-friendly-rug-pull/",
+      "date": "Thursday, July 3, 2025",
+      "excerpt": "Rowan Energy - Rug Pull - Clean Energy"
+    },
+    {
+      "id": "after-post-mortem",
+      "title": "After the Post-Mortem",
+      "url": "https://rekt.news/after-post-mortem/",
+      "date": "Wednesday, July 2, 2025",
+      "excerpt": "Cork Protocol - Audits - Defi Security"
+    },
+    {
+      "id": "resupplyfi-rekt",
+      "title": "ResupplyFi - Rekt",
+      "url": "https://rekt.news/resupplyfi-rekt/",
+      "date": "Friday, June 27, 2025",
+      "excerpt": "ResupplyFi - Rekt - Defi"
+    },
+    {
+      "id": "hacken-rekt",
+      "title": "Hacken - Rekt",
+      "url": "https://rekt.news/hacken-rekt/",
+      "date": "Tuesday, June 24, 2025",
+      "excerpt": "Hacken - Rekt - Bridge Key Compromise"
+    },
+    {
+      "id": "zunami-protocol-rekt2",
+      "title": "Zunami Protocol - Rekt II",
+      "url": "https://rekt.news/zunami-protocol-rekt2/",
+      "date": "Thursday, June 12, 2025",
+      "excerpt": "Zunami Protocol - Rekt - Admin Privileges"
+    },
+    {
+      "id": "alexlab-rekt2",
+      "title": "AlexLab - Rekt II",
+      "url": "https://rekt.news/alexlab-rekt2/",
+      "date": "Monday, June 9, 2025",
+      "excerpt": "AlexLab - Rekt - Defi"
+    },
+    {
+      "id": "force-bridge-rekt",
+      "title": "Force Bridge - Rekt",
+      "url": "https://rekt.news/force-bridge-rekt/",
+      "date": "Friday, June 6, 2025",
+      "excerpt": "Force Bridge - Nervos Network - Defi"
+    },
+    {
+      "id": "dodging-a-bullet",
+      "title": "Dodging a Bullet",
+      "url": "https://rekt.news/dodging-a-bullet/",
+      "date": "Thursday, June 5, 2025",
+      "excerpt": "Vesu - Bug Bounties - Defi"
+    },
+    {
+      "id": "cork-protocol-rekt",
+      "title": "Cork Protocol - Rekt",
+      "url": "https://rekt.news/cork-protocol-rekt/",
+      "date": "Friday, May 30, 2025",
+      "excerpt": "Cork Protocol - Rekt - Defi"
+    },
+    {
+      "id": "slow-roasted-stake",
+      "title": "Slow Roasted Stake",
+      "url": "https://rekt.news/slow-roasted-stake/",
+      "date": "Tuesday, May 27, 2025",
+      "excerpt": "Marinade Finance - Validators - Solana"
+    },
+    {
+      "id": "cetus-rekt",
+      "title": "Cetus - Rekt",
+      "url": "https://rekt.news/cetus-rekt/",
+      "date": "Friday, May 23, 2025",
+      "excerpt": "Cetus - Rekt - Sui Network"
+    },
+    {
+      "id": "road-to-nowhere",
+      "title": "Road to Nowhere",
+      "url": "https://rekt.news/road-to-nowhere/",
+      "date": "Wednesday, May 21, 2025",
+      "excerpt": "Chainge Finance - Fushion Protocol - Defi"
+    },
+    {
+      "id": "LNDFi-rekt",
+      "title": "LNDFi - Rekt",
+      "url": "https://rekt.news/LNDFi-rekt/",
+      "date": "Friday, May 16, 2025",
+      "excerpt": "LNDFi - Admin Privileges - DPRK"
+    },
+    {
+      "id": "brincfi-rekt-coldcase",
+      "title": "BrincFi - Rekt Cold Case",
+      "url": "https://rekt.news/brincfi-rekt-coldcase/",
+      "date": "Wednesday, May 14, 2025",
+      "excerpt": "BrincFi - Rekt - Cold Case"
+    },
+    {
+      "id": "mobiusdao-rekt",
+      "title": "MobiusDAO - Rekt",
+      "url": "https://rekt.news/mobiusdao-rekt/",
+      "date": "Tuesday, May 13, 2025",
+      "excerpt": "MobiusDAO - Rekt"
+    },
+    {
+      "id": "dystopian-diaries",
+      "title": "Dystopian Diaries",
+      "url": "https://rekt.news/dystopian-diaries/",
+      "date": "Wednesday, May 7, 2025",
+      "excerpt": "AI - Surveillance Capitalism - Digital Freedom"
+    },
+    {
+      "id": "all-the-wrong-moves",
+      "title": "All the Wrong Moves",
+      "url": "https://rekt.news/all-the-wrong-moves/",
+      "date": "Tuesday, May 6, 2025",
+      "excerpt": "Movement Network - Defi - Liquidity Extraction"
+    },
+    {
+      "id": "loopscale-rekt",
+      "title": "Loopscale - Rekt",
+      "url": "https://rekt.news/loopscale-rekt/",
+      "date": "Thursday, May 1, 2025",
+      "excerpt": "Loopscale - Rekt - Oracle Manipulation"
+    },
+    {
+      "id": "blockchain-slumlords",
+      "title": "Blockchain Slumlords",
+      "url": "https://rekt.news/blockchain-slumlords/",
+      "date": "Tuesday, April 29, 2025",
+      "excerpt": "RealT - RWA - REIT"
+    },
+    {
+      "id": "bitgets-voxel-meltdown",
+      "title": "Bitget's VOXEL Meltdown",
+      "url": "https://rekt.news/bitgets-voxel-meltdown/",
+      "date": "Tuesday, April 22, 2025",
+      "excerpt": "Bitget - CEX - Trading Bot"
+    },
+    {
+      "id": "kiloex-rekt",
+      "title": "KiloEx - Rekt",
+      "url": "https://rekt.news/kiloex-rekt/",
+      "date": "Thursday, April 17, 2025",
+      "excerpt": "KiloEx - Defi - Oracle Manipulation"
+    },
+    {
+      "id": "mantra-of-misfortune",
+      "title": "Mantra of Misfortune",
+      "url": "https://rekt.news/mantra-of-misfortune/",
+      "date": "Tuesday, April 15, 2025",
+      "excerpt": "Mantra - RWA - Defi"
+    },
+    {
+      "id": "sweet-betrayal",
+      "title": "Sweet Betrayal",
+      "url": "https://rekt.news/sweet-betrayal/",
+      "date": "Friday, April 11, 2025",
+      "excerpt": "Governance - PancakeSwap - Defi"
+    },
+    {
+      "id": "trade-war-theater",
+      "title": "Trade War Theater",
+      "url": "https://rekt.news/trade-war-theater/",
+      "date": "Wednesday, April 9, 2025",
+      "excerpt": "Economy - Tariffs - Politics"
+    },
+    {
+      "id": "the-impersonator",
+      "title": "The Impersonator",
+      "url": "https://rekt.news/the-impersonator/",
+      "date": "Friday, April 4, 2025",
+      "excerpt": "DPRK - Espionage - Scams"
+    },
+    {
+      "id": "sirtrading-rekt",
+      "title": "SIR Trading - Rekt",
+      "url": "https://rekt.news/sirtrading-rekt/",
+      "date": "Tuesday, April 1, 2025",
+      "excerpt": "SIR Trading - Rekt"
+    },
+    {
+      "id": "hyperliquidate2",
+      "title": "Hyperliquidate II",
+      "url": "https://rekt.news/hyperliquidate2/",
+      "date": "Thursday, March 27, 2025",
+      "excerpt": "Hyperliquid - Defi"
+    },
+    {
+      "id": "abracadabra-rekt2",
+      "title": "Abracadabra - Rekt II",
+      "url": "https://rekt.news/abracadabra-rekt2/",
+      "date": "Wednesday, March 26, 2025",
+      "excerpt": "Abracadabra - Rekt"
+    },
+    {
+      "id": "zoth-rekt",
+      "title": "Zoth - Rekt",
+      "url": "https://rekt.news/zoth-rekt/",
+      "date": "Monday, March 24, 2025",
+      "excerpt": "Zoth - Rekt - Admin Privileges"
+    },
+    {
+      "id": "the-wolf-of-rug-street",
+      "title": "The Wolf of Rug Street",
+      "url": "https://rekt.news/the-wolf-of-rug-street/",
+      "date": "Thursday, March 20, 2025",
+      "excerpt": "Memes - Rugs - Rekt - Politifi"
+    },
+    {
+      "id": "you-are-the-exit-liquidity",
+      "title": "You Are the Exit Liquidity",
+      "url": "https://rekt.news/you-are-the-exit-liquidity/",
+      "date": "Monday, March 17, 2025",
+      "excerpt": "Memes - Rugs - Rekt"
+    },
+    {
+      "id": "1inch-rekt",
+      "title": "1Inch - Rekt",
+      "url": "https://rekt.news/1inch-rekt/",
+      "date": "Thursday, March 13, 2025",
+      "excerpt": "1Inch - Rekt"
+    },
+    {
+      "id": "not-so-safe",
+      "title": "Not So Safe",
+      "url": "https://rekt.news/not-so-safe/",
+      "date": "Thursday, March 13, 2025",
+      "excerpt": "Safe - ByBit - DPRK"
+    },
+    {
+      "id": "plant-a-red-flag",
+      "title": "Plant a Red Flag",
+      "url": "https://rekt.news/plant-a-red-flag/",
+      "date": "Wednesday, March 5, 2025",
+      "excerpt": "Xeggex - Defi"
+    },
+    {
+      "id": "emergency-powers",
+      "title": "Emergency Powers",
+      "url": "https://rekt.news/emergency-powers/",
+      "date": "Thursday, February 27, 2025",
+      "excerpt": "MakerDAO - Sky - Governance"
+    },
+    {
+      "id": "infini-rekt",
+      "title": "Infini - Rekt",
+      "url": "https://rekt.news/infini-rekt/",
+      "date": "Monday, February 24, 2025",
+      "excerpt": "Infini - Rekt - Admin Privileges"
+    },
+    {
+      "id": "bybit-rekt",
+      "title": "ByBit - Rekt",
+      "url": "https://rekt.news/bybit-rekt/",
+      "date": "Saturday, February 22, 2025",
+      "excerpt": "ByBit - Rekt - Lazarus"
+    },
+    {
+      "id": "libra-rugged",
+      "title": "Libra - Rugged",
+      "url": "https://rekt.news/libra-rugged/",
+      "date": "Tuesday, February 18, 2025",
+      "excerpt": "Libra - Rug - Solana"
+    },
+    {
+      "id": "zklend-rekt",
+      "title": "zkLend - Rekt",
+      "url": "https://rekt.news/zklend-rekt/",
+      "date": "Friday, February 14, 2025",
+      "excerpt": "zkLend - Rekt - Starknet"
+    },
+    {
+      "id": "state-of-deception",
+      "title": "State of Deception",
+      "url": "https://rekt.news/state-of-deception/",
+      "date": "Tuesday, February 11, 2025",
+      "excerpt": "Memes - Politics"
+    },
+    {
+      "id": "ionic-money-rekt",
+      "title": "Ionic Money - Rekt",
+      "url": "https://rekt.news/ionic-money-rekt/",
+      "date": "Thursday, February 6, 2025",
+      "excerpt": "Ionic Money - Rekt - Mode Network"
+    },
+    {
+      "id": "pwnedbase",
+      "title": "Pwnedbase",
+      "url": "https://rekt.news/pwnedbase/",
+      "date": "Wednesday, February 5, 2025",
+      "excerpt": "Coinbase - Scams - Phishing"
+    },
+    {
+      "id": "blood-on-the-blockchain",
+      "title": "Blood on the Blockchain",
+      "url": "https://rekt.news/blood-on-the-blockchain/",
+      "date": "Tuesday, February 4, 2025",
+      "excerpt": "Kidnapping - Ledger"
+    },
+    {
+      "id": "poetic-justice",
+      "title": "Poetic Justice",
+      "url": "https://rekt.news/poetic-justice/",
+      "date": "Friday, January 31, 2025",
+      "excerpt": "Dogwiftools - Malware - Memes"
+    },
+    {
+      "id": "thorchains-iceage",
+      "title": "THORChain's Ice Age",
+      "url": "https://rekt.news/thorchains-iceage/",
+      "date": "Wednesday, January 29, 2025",
+      "excerpt": "THORChain - Defi - Insolvency"
+    },
+    {
+      "id": "phemex-rekt",
+      "title": "Phemex - Rekt",
+      "url": "https://rekt.news/phemex-rekt/",
+      "date": "Friday, January 24, 2025",
+      "excerpt": "Phemex - Rekt - CEX"
+    },
+    {
+      "id": "trump-casino",
+      "title": "Trump Casino",
+      "url": "https://rekt.news/trump-casino/",
+      "date": "Monday, January 20, 2025",
+      "excerpt": "Memes - Defi - Trump"
+    },
+    {
+      "id": "theidolsnft-rekt",
+      "title": "The Idols NFT - Rekt",
+      "url": "https://rekt.news/theidolsnft-rekt/",
+      "date": "Thursday, January 16, 2025",
+      "excerpt": "The Idols NFT - Rekt"
+    },
+    {
+      "id": "mobytrade-rekt",
+      "title": "Moby Trade - Rekt",
+      "url": "https://rekt.news/mobytrade-rekt/",
+      "date": "Monday, January 13, 2025",
+      "excerpt": "Moby Trade - Rekt - Private Key Leak"
+    },
+    {
+      "id": "unusual-money",
+      "title": "Unusual Money",
+      "url": "https://rekt.news/unusual-money/",
+      "date": "Saturday, January 11, 2025",
+      "excerpt": "Usual Money - Defi - Stablecoin"
+    },
+    {
+      "id": "orange-finance-rekt",
+      "title": "Orange Finance - Rekt",
+      "url": "https://rekt.news/orange-finance-rekt/",
+      "date": "Thursday, January 9, 2025",
+      "excerpt": "Orange Finance - Rekt - Private Key Leak"
+    },
+    {
+      "id": "bad-math-homework",
+      "title": "Bad Math Homework",
+      "url": "https://rekt.news/bad-math-homework/",
+      "date": "Tuesday, January 7, 2025",
+      "excerpt": "Solv Protocol - BTCFi - Bitcoin"
+    },
+    {
+      "id": "trapped-between-protocols",
+      "title": "Trapped Between Protocols",
+      "url": "https://rekt.news/trapped-between-protocols/",
+      "date": "Thursday, January 2, 2025",
+      "excerpt": "Alpha Finance - Iron Bank - Rug"
+    },
+    {
+      "id": "hyperliquidate",
+      "title": "Hyperliquidate",
+      "url": "https://rekt.news/hyperliquidate/",
+      "date": "Tuesday, December 24, 2024",
+      "excerpt": "Hyperliquid - DPRK"
+    },
+    {
+      "id": "patently-absurd",
+      "title": "Patently Absurd",
+      "url": "https://rekt.news/patently-absurd/",
+      "date": "Monday, December 23, 2024",
+      "excerpt": "Privacy - FHE - Encryption"
+    },
+    {
+      "id": "burning-bridges",
+      "title": "Burning Bridges",
+      "url": "https://rekt.news/burning-bridges/",
+      "date": "Thursday, December 19, 2024",
+      "excerpt": "Polygon - Governance - Defi"
+    },
+    {
+      "id": "gempad-rekt",
+      "title": "GemPad - Rekt",
+      "url": "https://rekt.news/gempad-rekt/",
+      "date": "Tuesday, December 17, 2024",
+      "excerpt": "GemPad - Reentrancy - Rekt"
+    },
+    {
+      "id": "false-prophet",
+      "title": "False Prophet",
+      "url": "https://rekt.news/false-prophet/",
+      "date": "Friday, December 13, 2024",
+      "excerpt": "Alpaca Finance - Oracle - Rekt"
+    },
+    {
+      "id": "cloberdex-rekt",
+      "title": "Clober Dex - Rekt",
+      "url": "https://rekt.news/cloberdex-rekt/",
+      "date": "Wednesday, December 11, 2024",
+      "excerpt": "Clober Dex - Reentrancy - Rekt"
+    },
+    {
+      "id": "hawkward-exit",
+      "title": "Hawkward Exit",
+      "url": "https://rekt.news/hawkward-exit/",
+      "date": "Friday, December 6, 2024",
+      "excerpt": "Memes - Pump and Dump - Defi"
+    },
+    {
+      "id": "paper-tiger",
+      "title": "Paper Tiger",
+      "url": "https://rekt.news/paper-tiger/",
+      "date": "Wednesday, December 4, 2024",
+      "excerpt": "Parallel Finance - Rug - Defi"
+    },
+    {
+      "id": "pump-snuff",
+      "title": "Pump.snuff",
+      "url": "https://rekt.news/pump-snuff/",
+      "date": "Wednesday, November 27, 2024",
+      "excerpt": "Pump.fun - Memes - Defi"
+    },
+    {
+      "id": "locked-away",
+      "title": "Locked Away",
+      "url": "https://rekt.news/locked-away/",
+      "date": "Monday, November 25, 2024",
+      "excerpt": "Rari Capital - SEC"
+    },
+    {
+      "id": "slowburn",
+      "title": "Slow Burn",
+      "url": "https://rekt.news/slowburn/",
+      "date": "Wednesday, November 20, 2024",
+      "excerpt": "Manifold Finance - Rug"
+    },
+    {
+      "id": "polter-finance-rekt",
+      "title": "Polter Finance",
+      "url": "https://rekt.news/polter-finance-rekt/",
+      "date": "Monday, November 18, 2024",
+      "excerpt": "Polter Finance - Rekt"
+    },
+    {
+      "id": "in-murky-waters",
+      "title": "In Murky Waters",
+      "url": "https://rekt.news/in-murky-waters/",
+      "date": "Wednesday, November 13, 2024",
+      "excerpt": "FTX - Humpy - CEX - Market Manipulation"
+    },
+    {
+      "id": "deltaprime-rekt2",
+      "title": "DeltaPrime - Rekt II",
+      "url": "https://rekt.news/deltaprime-rekt2/",
+      "date": "Monday, November 11, 2024",
+      "excerpt": "DeltaPrime - Rekt"
+    },
+    {
+      "id": "under-the-influence",
+      "title": "Under the Influence",
+      "url": "https://rekt.news/under-the-influence/",
+      "date": "Monday, November 11, 2024",
+      "excerpt": "Influencers - MrBeast"
+    },
+    {
+      "id": "m2-exchange-rekt",
+      "title": "M2 Exchange - Rekt",
+      "url": "https://rekt.news/m2-exchange-rekt/",
+      "date": "Friday, November 1, 2024",
+      "excerpt": "M2 Exchange - Rekt"
+    },
+    {
+      "id": "crossing-the-line",
+      "title": "Crossing the Line",
+      "url": "https://rekt.news/crossing-the-line/",
+      "date": "Wednesday, October 30, 2024",
+      "excerpt": "Crime - Scandal"
+    },
+    {
+      "id": "truth-terminal-gone-wild",
+      "title": "Truth Terminal Gone Wild",
+      "url": "https://rekt.news/truth-terminal-gone-wild/",
+      "date": "Monday, October 28, 2024",
+      "excerpt": "AI - Twitter - Defi"
+    },
+    {
+      "id": "infiltrating-cosmos",
+      "title": "Infiltrating Cosmos",
+      "url": "https://rekt.news/infiltrating-cosmos/",
+      "date": "Tuesday, October 22, 2024",
+      "excerpt": "Cosmos - Espionage"
+    },
+    {
+      "id": "tapioca-dao-rekt",
+      "title": "Tapioca DAO - Rekt",
+      "url": "https://rekt.news/tapioca-dao-rekt/",
+      "date": "Monday, October 21, 2024",
+      "excerpt": "Tapioca DAO - REKT"
+    },
+    {
+      "id": "radiant-capital-rekt2",
+      "title": "Radiant Capital - Rekt II",
+      "url": "https://rekt.news/radiant-capital-rekt2/",
+      "date": "Thursday, October 17, 2024",
+      "excerpt": "Radiant Capital - Fork - REKT"
+    },
+    {
+      "id": "clickandbeware",
+      "title": "Click and Beware",
+      "url": "https://rekt.news/clickandbeware/",
+      "date": "Monday, October 14, 2024",
+      "excerpt": "Scams - Phishing - Twitter"
+    },
+    {
+      "id": "surviving-digital-danger",
+      "title": "Surviving Digital Danger",
+      "url": "https://rekt.news/surviving-digital-danger/",
+      "date": "Wednesday, October 9, 2024",
+      "excerpt": "Scams - Robbery - REKT"
+    },
+    {
+      "id": "eigenoops",
+      "title": "Eigenoops",
+      "url": "https://rekt.news/eigenoops/",
+      "date": "Monday, October 7, 2024",
+      "excerpt": "Eigenlayer - Phishing - REKT"
+    },
+    {
+      "id": "digital-danger",
+      "title": "Digital Danger",
+      "url": "https://rekt.news/digital-danger/",
+      "date": "Wednesday, October 2, 2024",
+      "excerpt": "Scams - Robbery - REKT"
+    },
+    {
+      "id": "bedrock-rekt",
+      "title": "Bedrock - Rekt",
+      "url": "https://rekt.news/bedrock-rekt/",
+      "date": "Monday, September 30, 2024",
+      "excerpt": "Bedrock - REKT"
+    },
+    {
+      "id": "onyx-protocol-rekt2",
+      "title": "Onyx Protocol - Rekt II",
+      "url": "https://rekt.news/onyx-protocol-rekt2/",
+      "date": "Thursday, September 26, 2024",
+      "excerpt": "Onyx Protocol - Fork - REKT"
+    },
+    {
+      "id": "bananagun-rekt",
+      "title": "Banana Gun - Rekt",
+      "url": "https://rekt.news/bananagun-rekt/",
+      "date": "Wednesday, September 25, 2024",
+      "excerpt": "Banana Gun - REKT"
+    },
+    {
+      "id": "shezmu-rekt",
+      "title": "Shezmu - Rekt",
+      "url": "https://rekt.news/shezmu-rekt/",
+      "date": "Monday, September 23, 2024",
+      "excerpt": "Shezmu - REKT"
+    },
+    {
+      "id": "bingx-rekt",
+      "title": "BingX - Rekt",
+      "url": "https://rekt.news/bingx-rekt/",
+      "date": "Friday, September 20, 2024",
+      "excerpt": "BingX - REKT"
+    },
+    {
+      "id": "deltaprime-rekt",
+      "title": "DeltaPrime - Rekt",
+      "url": "https://rekt.news/deltaprime-rekt/",
+      "date": "Monday, September 16, 2024",
+      "excerpt": "DeltaPrime - REKT"
+    },
+    {
+      "id": "indodax-rekt",
+      "title": "Indodax - Rekt",
+      "url": "https://rekt.news/indodax-rekt/",
+      "date": "Wednesday, September 11, 2024",
+      "excerpt": "Indodax - REKT"
+    },
+    {
+      "id": "bring-tigran-home",
+      "title": "Bring Tigran Home",
+      "url": "https://rekt.news/bring-tigran-home/",
+      "date": "Friday, September 6, 2024",
+      "excerpt": "Binance - Compliance"
+    },
+    {
+      "id": "penpie-rekt",
+      "title": "Penpie - Rekt",
+      "url": "https://rekt.news/penpie-rekt/",
+      "date": "Wednesday, September 4, 2024",
+      "excerpt": "Penpie - REKT"
+    },
+    {
+      "id": "talesfromchain-deceit",
+      "title": "Tales from the Chain - Decentralized Deceit",
+      "url": "https://rekt.news/talesfromchain-deceit/",
+      "date": "Thursday, August 29, 2024",
+      "excerpt": "Hacking - Defi"
+    },
+    {
+      "id": "thin-line-privacy",
+      "title": "The Thin Line of Privacy",
+      "url": "https://rekt.news/thin-line-privacy/",
+      "date": "Wednesday, August 28, 2024",
+      "excerpt": "Telegram - Privacy - Durov"
+    },
+    {
+      "id": "whale-hunters-payday",
+      "title": "Whale Hunter's Payday",
+      "url": "https://rekt.news/whale-hunters-payday/",
+      "date": "Wednesday, August 21, 2024",
+      "excerpt": "REKT - Phishing"
+    },
+    {
+      "id": "hedging-bets",
+      "title": "Hedging Bets",
+      "url": "https://rekt.news/hedging-bets/",
+      "date": "Monday, August 12, 2024",
+      "excerpt": "Polymarket - Uma Protocol - Betting Markets"
+    },
+    {
+      "id": "roninnetwork-rektII",
+      "title": "Ronin Network - Rekt II",
+      "url": "https://rekt.news/roninnetwork-rektII/",
+      "date": "Wednesday, August 7, 2024",
+      "excerpt": "Ronin - REKT"
+    },
+    {
+      "id": "astroport-rekt",
+      "title": "Astroport - Rekt",
+      "url": "https://rekt.news/astroport-rekt/",
+      "date": "Wednesday, July 31, 2024",
+      "excerpt": "Astroport - Rekt"
+    },
+    {
+      "id": "thanks-squarespace",
+      "title": "Thanks Squarespace",
+      "url": "https://rekt.news/thanks-squarespace/",
+      "date": "Wednesday, July 31, 2024",
+      "excerpt": "Squarespace - Rekt"
+    },
+    {
+      "id": "the-humpy-dance",
+      "title": "The Humpy Dance",
+      "url": "https://rekt.news/the-humpy-dance/",
+      "date": "Tuesday, July 30, 2024",
+      "excerpt": "governance - compound finance"
+    },
+    {
+      "id": "the-creeping-line",
+      "title": "The Creeping Line",
+      "url": "https://rekt.news/the-creeping-line/",
+      "date": "Thursday, July 25, 2024",
+      "excerpt": "AI - deepfake"
+    },
+    {
+      "id": "ethtrustfund-rekt",
+      "title": "ETHTrustFund - Rekt",
+      "url": "https://rekt.news/ethtrustfund-rekt/",
+      "date": "Monday, July 22, 2024",
+      "excerpt": "ETHTrustFund - REKT"
+    },
+    {
+      "id": "rho-market-rekt",
+      "title": "Rho Market - Rekt",
+      "url": "https://rekt.news/rho-market-rekt/",
+      "date": "Friday, July 19, 2024",
+      "excerpt": "Rho Market - REKT"
+    },
+    {
+      "id": "wazirx-rekt",
+      "title": "WazirX - Rekt",
+      "url": "https://rekt.news/wazirx-rekt/",
+      "date": "Thursday, July 18, 2024",
+      "excerpt": "WazirX Protocol - REKT"
+    },
+    {
+      "id": "lifi-jumper-rekt",
+      "title": "LiFi/Jumper - Rekt",
+      "url": "https://rekt.news/lifi-jumper-rekt/",
+      "date": "Tuesday, July 16, 2024",
+      "excerpt": "LiFi Protocol - Jumper Exchange - REKT"
+    },
+    {
+      "id": "take-money-run",
+      "title": "Take the Money and Run",
+      "url": "https://rekt.news/take-money-run/",
+      "date": "Saturday, July 13, 2024",
+      "excerpt": "Scams - Ponzi"
+    },
+    {
+      "id": "cryptos-achillesheel",
+      "title": "Crypto's Achilles' Heel",
+      "url": "https://rekt.news/cryptos-achillesheel/",
+      "date": "Thursday, July 11, 2024",
+      "excerpt": "Scams - Phishing"
+    },
+    {
+      "id": "bittensor-rekt",
+      "title": "Bittensor - Rekt",
+      "url": "https://rekt.news/bittensor-rekt/",
+      "date": "Wednesday, July 3, 2024",
+      "excerpt": "Bittensor - Rekt"
+    },
+    {
+      "id": "whitehat-grayarea",
+      "title": "From White Hat to Gray Area",
+      "url": "https://rekt.news/whitehat-grayarea/",
+      "date": "Saturday, June 29, 2024",
+      "excerpt": "Certik - Audits"
+    },
+    {
+      "id": "vulture-culture",
+      "title": "Vulture Culture",
+      "url": "https://rekt.news/vulture-culture/",
+      "date": "Friday, June 21, 2024",
+      "excerpt": "Scams - Defi"
+    },
+    {
+      "id": "certik-kraken-rekt",
+      "title": "Certik/Kraken - Rekt",
+      "url": "https://rekt.news/certik-kraken-rekt/",
+      "date": "Thursday, June 20, 2024",
+      "excerpt": "Certik - Kraken - REKT"
+    },
+    {
+      "id": "pharma-bro",
+      "title": "Pharma Bro's Trump Card",
+      "url": "https://rekt.news/pharma-bro/",
+      "date": "Thursday, June 20, 2024",
+      "excerpt": "Trump - Scams - Shkreli"
+    },
+    {
+      "id": "uwulend-rekt",
+      "title": "Uwulend - Rekt",
+      "url": "https://rekt.news/uwulend-rekt/",
+      "date": "Monday, June 10, 2024",
+      "excerpt": "Uwulend - REKT"
+    },
+    {
+      "id": "velocore-rekt",
+      "title": "Velocore - Rekt",
+      "url": "https://rekt.news/velocore-rekt/",
+      "date": "Monday, June 3, 2024",
+      "excerpt": "Velocore - REKT"
+    },
+    {
+      "id": "dmm-rekt",
+      "title": "DMM Bitcoin - Rekt",
+      "url": "https://rekt.news/dmm-rekt/",
+      "date": "Friday, May 31, 2024",
+      "excerpt": "DMM Bitcoin - REKT"
+    },
+    {
+      "id": "meme-mania",
+      "title": "Meme Mania",
+      "url": "https://rekt.news/meme-mania/",
+      "date": "Wednesday, May 29, 2024",
+      "excerpt": "defi - shitcoin"
+    },
+    {
+      "id": "gala-games-rekt",
+      "title": "Gala Games - Rekt",
+      "url": "https://rekt.news/gala-games-rekt/",
+      "date": "Tuesday, May 21, 2024",
+      "excerpt": "Gala Games - REKT"
+    },
+    {
+      "id": "alexlab-rekt",
+      "title": "AlexLab - Rekt",
+      "url": "https://rekt.news/alexlab-rekt/",
+      "date": "Friday, May 17, 2024",
+      "excerpt": "AlexLab - REKT"
+    },
+    {
+      "id": "sonne-finance-rekt",
+      "title": "Sonne Finance - Rekt",
+      "url": "https://rekt.news/sonne-finance-rekt/",
+      "date": "Thursday, May 16, 2024",
+      "excerpt": "Sonne Finance - REKT"
+    },
+    {
+      "id": "crypto-under-siege",
+      "title": "Crypto Under Siege",
+      "url": "https://rekt.news/crypto-under-siege/",
+      "date": "Wednesday, May 15, 2024",
+      "excerpt": "SEC - Regulation"
+    },
+    {
+      "id": "gamestonk2",
+      "title": "Gamestonk II - Dumb Money is Back",
+      "url": "https://rekt.news/gamestonk2/",
+      "date": "Tuesday, May 14, 2024",
+      "excerpt": "wall st - Rekt"
+    },
+    {
+      "id": "pike-rekt",
+      "title": "Pike Finance - Rekt",
+      "url": "https://rekt.news/pike-rekt/",
+      "date": "Friday, May 3, 2024",
+      "excerpt": "Pike Finance - REKT"
+    },
+    {
+      "id": "growing-pains",
+      "title": "Growing Pains",
+      "url": "https://rekt.news/growing-pains/",
+      "date": "Wednesday, May 1, 2024",
+      "excerpt": "Solana - defi"
+    },
+    {
+      "id": "zkasino-rekt",
+      "title": "ZKasino - Rekt",
+      "url": "https://rekt.news/zkasino-rekt/",
+      "date": "Monday, April 22, 2024",
+      "excerpt": "ZKasino - REKT - Rugpull"
+    },
+    {
+      "id": "hedgey-finance-rekt",
+      "title": "Hedgey Finance - Rekt",
+      "url": "https://rekt.news/hedgey-finance-rekt/",
+      "date": "Friday, April 19, 2024",
+      "excerpt": "Hedgey Finance - REKT"
+    },
+    {
+      "id": "stable-future",
+      "title": "A Stable Future",
+      "url": "https://rekt.news/stable-future/",
+      "date": "Wednesday, April 17, 2024",
+      "excerpt": "stable future - defi"
+    },
+    {
+      "id": "grand-base",
+      "title": "Grand Base - REKT",
+      "url": "https://rekt.news/grand-base/",
+      "date": "Monday, April 15, 2024",
+      "excerpt": "Grand Base - REKT"
+    },
+    {
+      "id": "prismafi-rekt",
+      "title": "PrismaFi - REKT",
+      "url": "https://rekt.news/prismafi-rekt/",
+      "date": "Thursday, March 28, 2024",
+      "excerpt": "PrismaFi - REKT"
+    },
+    {
+      "id": "munchables-rekt",
+      "title": "Munchables - REKT",
+      "url": "https://rekt.news/munchables-rekt/",
+      "date": "Wednesday, March 27, 2024",
+      "excerpt": "Munchables - REKT"
+    },
+    {
+      "id": "curio-rekt",
+      "title": "Curio - REKT",
+      "url": "https://rekt.news/curio-rekt/",
+      "date": "Tuesday, March 26, 2024",
+      "excerpt": "Curio - REKT"
+    },
+    {
+      "id": "sss-rekt",
+      "title": "Super Sushi Samurai - REKT",
+      "url": "https://rekt.news/sss-rekt/",
+      "date": "Friday, March 22, 2024",
+      "excerpt": "Super Sushi Samurai - REKT"
+    },
+    {
+      "id": "slerf-rekt",
+      "title": "Slerf - Rekt",
+      "url": "https://rekt.news/slerf-rekt/",
+      "date": "Tuesday, March 19, 2024",
+      "excerpt": "Slerf - Rekt"
+    },
+    {
+      "id": "sushiswap-somethingsmells-fishy",
+      "title": "Sushi - Something Smells Fishy",
+      "url": "https://rekt.news/sushiswap-somethingsmells-fishy/",
+      "date": "Thursday, March 14, 2024",
+      "excerpt": "Sushi - Governance"
+    },
+    {
+      "id": "unizen-rekt",
+      "title": "Unizen - Rekt",
+      "url": "https://rekt.news/unizen-rekt/",
+      "date": "Tuesday, March 12, 2024",
+      "excerpt": "Unizen - REKT"
+    },
+    {
+      "id": "woo-rekt",
+      "title": "Woofi - Rekt",
+      "url": "https://rekt.news/woo-rekt/",
+      "date": "Wednesday, March 6, 2024",
+      "excerpt": "Woofi - REKT"
+    },
+    {
+      "id": "seneca-protocol-rekt",
+      "title": "Seneca Protocol - REKT",
+      "url": "https://rekt.news/seneca-protocol-rekt/",
+      "date": "Thursday, February 29, 2024",
+      "excerpt": "Seneca Protocol - REKT"
+    },
+    {
+      "id": "communications-breakdown",
+      "title": "Aave - Communication Breakdown",
+      "url": "https://rekt.news/communications-breakdown/",
+      "date": "Monday, February 26, 2024",
+      "excerpt": "Aave - Governance"
+    },
+    {
+      "id": "abra-rekt",
+      "title": "Abracadabra - REKT",
+      "url": "https://rekt.news/abra-rekt/",
+      "date": "Wednesday, January 31, 2024",
+      "excerpt": "Abracadabra - MIM - REKT"
+    },
+    {
+      "id": "socket-rekt",
+      "title": "Socket - REKT",
+      "url": "https://rekt.news/socket-rekt/",
+      "date": "Wednesday, January 17, 2024",
+      "excerpt": "Socket - Bungee - Bridge - REKT"
+    },
+    {
+      "id": "etfgaffe",
+      "title": "Gensler's Grand Gaffe",
+      "url": "https://rekt.news/etfgaffe/",
+      "date": "Wednesday, January 10, 2024",
+      "excerpt": "SEC - Regulation"
+    },
+    {
+      "id": "gamma-strategies-rekt",
+      "title": "Gamma Strategies - REKT",
+      "url": "https://rekt.news/gamma-strategies-rekt/",
+      "date": "Thursday, January 4, 2024",
+      "excerpt": "Gamma Strategies - Arbitrum - REKT"
+    },
+    {
+      "id": "orbit-bridge-rekt",
+      "title": "Orbit Bridge - REKT",
+      "url": "https://rekt.news/orbit-bridge-rekt/",
+      "date": "Wednesday, January 3, 2024",
+      "excerpt": "Orbit Bridge - Bridge - REKT"
+    },
+    {
+      "id": "radiant-capital-rekt",
+      "title": "Radiant Capital - REKT",
+      "url": "https://rekt.news/radiant-capital-rekt/",
+      "date": "Wednesday, January 3, 2024",
+      "excerpt": "Radiant Capital - Fork - REKT"
+    },
+    {
+      "id": "levana-rekt",
+      "title": "Levana Protocol - REKT",
+      "url": "https://rekt.news/levana-rekt/",
+      "date": "Friday, December 29, 2023",
+      "excerpt": "Levana Protocol - Osmosis - REKT"
+    },
+    {
+      "id": "moneyfornothing",
+      "title": "Money for nothing?",
+      "url": "https://rekt.news/moneyfornothing/",
+      "date": "Thursday, December 28, 2023",
+      "excerpt": "MEV - Uniswap - REKT"
+    },
+    {
+      "id": "ape-season-returns",
+      "title": "Ape Season Returns",
+      "url": "https://rekt.news/ape-season-returns/",
+      "date": "Thursday, December 21, 2023",
+      "excerpt": "Ape Szn - Ledger - Thirdweb"
+    },
+    {
+      "id": "hypr-network-rekt",
+      "title": "Hypr Network - REKT",
+      "url": "https://rekt.news/hypr-network-rekt/",
+      "date": "Thursday, December 14, 2023",
+      "excerpt": "Hypr Network - Bridge - REKT"
+    },
+    {
+      "id": "okx-dex-rekt",
+      "title": "OKX DEX - REKT",
+      "url": "https://rekt.news/okx-dex-rekt/",
+      "date": "Wednesday, December 13, 2023",
+      "excerpt": "OKX - REKT"
+    },
+    {
+      "id": "plenty-of-phish",
+      "title": "Plenty of Phish",
+      "url": "https://rekt.news/plenty-of-phish/",
+      "date": "Wednesday, December 6, 2023",
+      "excerpt": "Phishing - Scams"
+    },
+    {
+      "id": "kyberswap-rekt",
+      "title": "KyberSwap - REKT",
+      "url": "https://rekt.news/kyberswap-rekt/",
+      "date": "Thursday, November 23, 2023",
+      "excerpt": "KyberSwap - REKT"
+    },
+    {
+      "id": "heco-htx-rekt",
+      "title": "HECO Bridge, HTX - REKT",
+      "url": "https://rekt.news/heco-htx-rekt/",
+      "date": "Wednesday, November 22, 2023",
+      "excerpt": "HECO Bridge - HTX - REKT"
+    },
+    {
+      "id": "kronos-rekt",
+      "title": "Kronos Research - REKT",
+      "url": "https://rekt.news/kronos-rekt/",
+      "date": "Tuesday, November 21, 2023",
+      "excerpt": "Kronos Research - Woo X - REKT"
+    },
+    {
+      "id": "dydx-rekt",
+      "title": "dYdX - REKT",
+      "url": "https://rekt.news/dydx-rekt/",
+      "date": "Monday, November 20, 2023",
+      "excerpt": "dYdX - YFI - REKT"
+    },
+    {
+      "id": "raft-rekt",
+      "title": "Raft - REKT",
+      "url": "https://rekt.news/raft-rekt/",
+      "date": "Sunday, November 12, 2023",
+      "excerpt": "Raft - REKT"
+    },
+    {
+      "id": "poloniex-rekt",
+      "title": "Poloniex - REKT",
+      "url": "https://rekt.news/poloniex-rekt/",
+      "date": "Friday, November 10, 2023",
+      "excerpt": "Poloniex - Justin Sun - CEX - REKT"
+    },
+    {
+      "id": "ripmevbot2",
+      "title": "RIP MEV Bot 2",
+      "url": "https://rekt.news/ripmevbot2/",
+      "date": "Thursday, November 9, 2023",
+      "excerpt": "MEV Bot - REKT"
+    },
+    {
+      "id": "onyx-protocol-rekt",
+      "title": "Onyx Protocol - REKT",
+      "url": "https://rekt.news/onyx-protocol-rekt/",
+      "date": "Thursday, November 2, 2023",
+      "excerpt": "Onyx Protocol - Fork - REKT"
+    },
+    {
+      "id": "lastpass-users-rekt",
+      "title": "LastPass Users - REKT",
+      "url": "https://rekt.news/lastpass-users-rekt/",
+      "date": "Tuesday, October 31, 2023",
+      "excerpt": "LastPass - REKT"
+    },
+    {
+      "id": "unibot-rekt",
+      "title": "Unibot - REKT",
+      "url": "https://rekt.news/unibot-rekt/",
+      "date": "Tuesday, October 31, 2023",
+      "excerpt": "Unibot - Trading bot - REKT"
+    },
+    {
+      "id": "nightmare-ftm",
+      "title": "Nightmare on FTM Street",
+      "url": "https://rekt.news/nightmare-ftm/",
+      "date": "Wednesday, October 18, 2023",
+      "excerpt": "FTM - Phishing - REKT"
+    },
+    {
+      "id": "platypus-rekt2",
+      "title": "Platypus Finance - REKT 2",
+      "url": "https://rekt.news/platypus-rekt2/",
+      "date": "Friday, October 13, 2023",
+      "excerpt": "Platypus Finance - Avalanche - REKT"
+    },
+    {
+      "id": "tangible-rekt",
+      "title": "Tangible - REKT",
+      "url": "https://rekt.news/tangible-rekt/",
+      "date": "Friday, October 13, 2023",
+      "excerpt": "Tangible - UDSR - RWA - REKT"
+    },
+    {
+      "id": "LSC-FSL-rekt",
+      "title": "Lucky Star Currency, FSL - REKT",
+      "url": "https://rekt.news/LSC-FSL-rekt/",
+      "date": "Wednesday, October 11, 2023",
+      "excerpt": "Lucky Star Currency - FSL - BSC - REKT"
+    },
+    {
+      "id": "stars-arena-rekt",
+      "title": "Stars Arena - REKT",
+      "url": "https://rekt.news/stars-arena-rekt/",
+      "date": "Monday, October 9, 2023",
+      "excerpt": "Stars Arena - Avalanche - REKT"
+    },
+    {
+      "id": "bulls-behind-bars",
+      "title": "Bulls Behind Bars",
+      "url": "https://rekt.news/bulls-behind-bars/",
+      "date": "Wednesday, October 4, 2023",
+      "excerpt": "SBF - 3AC - Do Kwon"
+    },
+    {
+      "id": "htx-huobi-rekt",
+      "title": "HTX (Huobi) - REKT",
+      "url": "https://rekt.news/htx-huobi-rekt/",
+      "date": "Tuesday, September 26, 2023",
+      "excerpt": "HTX - Huobi - CEX - REKT"
+    },
+    {
+      "id": "mixin-rekt",
+      "title": "Mixin Network - REKT",
+      "url": "https://rekt.news/mixin-rekt/",
+      "date": "Monday, September 25, 2023",
+      "excerpt": "Mixin Network - REKT"
+    },
+    {
+      "id": "gone-phishing",
+      "title": "Gone Phishing",
+      "url": "https://rekt.news/gone-phishing/",
+      "date": "Friday, September 22, 2023",
+      "excerpt": "Phishing - Scams"
+    },
+    {
+      "id": "remitano-rekt",
+      "title": "Remitano - REKT",
+      "url": "https://rekt.news/remitano-rekt/",
+      "date": "Friday, September 15, 2023",
+      "excerpt": "Remitano - CEX - REKT"
+    },
+    {
+      "id": "coinex-rekt",
+      "title": "CoinEx - REKT",
+      "url": "https://rekt.news/coinex-rekt/",
+      "date": "Wednesday, September 13, 2023",
+      "excerpt": "CoinEx - CEX - REKT"
+    },
+    {
+      "id": "cat-and-mouse",
+      "title": "Cat and Mouse",
+      "url": "https://rekt.news/cat-and-mouse/",
+      "date": "Friday, September 8, 2023",
+      "excerpt": "Privacy - Regulation - Tornado Cash"
+    },
+    {
+      "id": "stake-rekt",
+      "title": "Stake - REKT",
+      "url": "https://rekt.news/stake-rekt/",
+      "date": "Monday, September 4, 2023",
+      "excerpt": "Stake - Casino - REKT"
+    },
+    {
+      "id": "balancer-rekt",
+      "title": "Balancer - REKT",
+      "url": "https://rekt.news/balancer-rekt/",
+      "date": "Saturday, September 2, 2023",
+      "excerpt": "Balancer - Beethoven X - REKT"
+    },
+    {
+      "id": "exactly-protocol-rekt",
+      "title": "Exactly Protocol - REKT",
+      "url": "https://rekt.news/exactly-protocol-rekt/",
+      "date": "Friday, August 18, 2023",
+      "excerpt": "Exactly Protocol - Optimism - REKT"
+    },
+    {
+      "id": "shibarium-bridge-rekt",
+      "title": "Shibarium Bridge - REKT",
+      "url": "https://rekt.news/shibarium-bridge-rekt/",
+      "date": "Thursday, August 17, 2023",
+      "excerpt": "Shibarium - Bridge - REKT"
+    },
+    {
+      "id": "rocketswap-rekt",
+      "title": "RocketSwap - REKT",
+      "url": "https://rekt.news/rocketswap-rekt/",
+      "date": "Tuesday, August 15, 2023",
+      "excerpt": "RocketSwap - Base - REKT"
+    },
+    {
+      "id": "zunami-protocol-rekt",
+      "title": "Zunami Protocol - REKT",
+      "url": "https://rekt.news/zunami-protocol-rekt/",
+      "date": "Monday, August 14, 2023",
+      "excerpt": "Zunami Protocol - REKT"
+    },
+    {
+      "id": "steadefi-rekt",
+      "title": "Steadefi - REKT",
+      "url": "https://rekt.news/steadefi-rekt/",
+      "date": "Tuesday, August 8, 2023",
+      "excerpt": "Steadefi - REKT"
+    },
+    {
+      "id": "bald-rekt",
+      "title": "BALD on Base - REKT",
+      "url": "https://rekt.news/bald-rekt/",
+      "date": "Wednesday, August 2, 2023",
+      "excerpt": "BALD - Base - Rugpull - REKT"
+    },
+    {
+      "id": "curve-vyper-rekt",
+      "title": "Curve, Vyper - REKT",
+      "url": "https://rekt.news/curve-vyper-rekt/",
+      "date": "Monday, July 31, 2023",
+      "excerpt": "Curve - Vyper - REKT"
+    },
+    {
+      "id": "kannagi-finance-rekt",
+      "title": "Kannagi Finance - REKT",
+      "url": "https://rekt.news/kannagi-finance-rekt/",
+      "date": "Sunday, July 30, 2023",
+      "excerpt": "Kannagi Finance - zksync - Rugpull - REKT"
+    },
+    {
+      "id": "defilabs-rekt",
+      "title": "DeFiLabs - REKT",
+      "url": "https://rekt.news/defilabs-rekt/",
+      "date": "Friday, July 28, 2023",
+      "excerpt": "DeFiLabs - Rugpull - BSC - REKT"
+    },
+    {
+      "id": "alphapo-rekt",
+      "title": "AlphaPo - REKT",
+      "url": "https://rekt.news/alphapo-rekt/",
+      "date": "Wednesday, July 26, 2023",
+      "excerpt": "AlphaPo - REKT"
+    },
+    {
+      "id": "eralend-rekt",
+      "title": "EraLend - REKT",
+      "url": "https://rekt.news/eralend-rekt/",
+      "date": "Wednesday, July 26, 2023",
+      "excerpt": "EraLend - zksync - REKT"
+    },
+    {
+      "id": "conic-finance-rekt",
+      "title": "Conic Finance - REKT",
+      "url": "https://rekt.news/conic-finance-rekt/",
+      "date": "Tuesday, July 25, 2023",
+      "excerpt": "Conic Finance - REKT"
+    },
+    {
+      "id": "multichain-r3kt",
+      "title": "Multichain - R3KT",
+      "url": "https://rekt.news/multichain-r3kt/",
+      "date": "Friday, July 14, 2023",
+      "excerpt": "Multichain - Fantom - R3KT"
+    },
+    {
+      "id": "arkham-asylum",
+      "title": "Arkham Asylum",
+      "url": "https://rekt.news/arkham-asylum/",
+      "date": "Wednesday, July 12, 2023",
+      "excerpt": "Arkham Intelligence - Privacy"
+    },
+    {
+      "id": "multichain-rekt2",
+      "title": "Multichain - REKT 2",
+      "url": "https://rekt.news/multichain-rekt2/",
+      "date": "Friday, July 7, 2023",
+      "excerpt": "Multichain - Bridge - REKT"
+    },
+    {
+      "id": "poly-network-rekt2",
+      "title": "Poly Network - REKT 2",
+      "url": "https://rekt.news/poly-network-rekt2/",
+      "date": "Monday, July 3, 2023",
+      "excerpt": "Poly Network - Bridge - REKT"
+    },
+    {
+      "id": "tradfi-takeover",
+      "title": "TradFi Takeover",
+      "url": "https://rekt.news/tradfi-takeover/",
+      "date": "Friday, June 23, 2023",
+      "excerpt": "TradFi - SEC - Regulation"
+    },
+    {
+      "id": "midas-rekt2",
+      "title": "Midas Capital - REKT 2",
+      "url": "https://rekt.news/midas-rekt2/",
+      "date": "Monday, June 19, 2023",
+      "excerpt": "Midas Capital - BSC - REKT"
+    },
+    {
+      "id": "atomic-wallet-rekt",
+      "title": "Atomic Wallet - REKT",
+      "url": "https://rekt.news/atomic-wallet-rekt/",
+      "date": "Friday, June 16, 2023",
+      "excerpt": "Atomic Wallet - Lazarus Group - REKT"
+    },
+    {
+      "id": "atlantis-loans-rekt",
+      "title": "Atlantis Loans - REKT",
+      "url": "https://rekt.news/atlantis-loans-rekt/",
+      "date": "Tuesday, June 13, 2023",
+      "excerpt": "Atlantis Loans - BSC - REKT"
+    },
+    {
+      "id": "sturdy-rekt",
+      "title": "Sturdy Finance - REKT",
+      "url": "https://rekt.news/sturdy-rekt/",
+      "date": "Monday, June 12, 2023",
+      "excerpt": "Sturdy Finance - REKT"
+    },
+    {
+      "id": "grudgematch-sec",
+      "title": "Grudgematch - SEC vs The CEXs",
+      "url": "https://rekt.news/grudgematch-sec/",
+      "date": "Friday, June 9, 2023",
+      "excerpt": "Regulation - SEC - Binance - Coinbase"
+    },
+    {
+      "id": "jimbo-rekt",
+      "title": "Jimbo's Protocol - REKT",
+      "url": "https://rekt.news/jimbo-rekt/",
+      "date": "Monday, May 29, 2023",
+      "excerpt": "Jimbo's Protocol - Arbitrum - REKT"
+    },
+    {
+      "id": "tornado-gov-rekt",
+      "title": "Tornado Cash Governance - REKT",
+      "url": "https://rekt.news/tornado-gov-rekt/",
+      "date": "Monday, May 22, 2023",
+      "excerpt": "Tornado Cash - Governance - REKT"
+    },
+    {
+      "id": "swaprum-rekt",
+      "title": "Swaprum - REKT",
+      "url": "https://rekt.news/swaprum-rekt/",
+      "date": "Saturday, May 20, 2023",
+      "excerpt": "Swaprum - Arbitrum - Rugpull - REKT"
+    },
+    {
+      "id": "ledger-recover",
+      "title": "Recover - Ledger's Latest L",
+      "url": "https://rekt.news/ledger-recover/",
+      "date": "Tuesday, May 16, 2023",
+      "excerpt": "Ledger - Wallet"
+    },
+    {
+      "id": "deus-dao-r3kt",
+      "title": "Deus DAO - R3KT",
+      "url": "https://rekt.news/deus-dao-r3kt/",
+      "date": "Saturday, May 6, 2023",
+      "excerpt": "Deus DAO - R3KT"
+    },
+    {
+      "id": "level-finance-rekt",
+      "title": "Level Finance - REKT",
+      "url": "https://rekt.news/level-finance-rekt/",
+      "date": "Tuesday, May 2, 2023",
+      "excerpt": "Level Finance - BSC - REKT"
+    },
+    {
+      "id": "merlin-dex-rekt",
+      "title": "Merlin DEX - REKT",
+      "url": "https://rekt.news/merlin-dex-rekt/",
+      "date": "Thursday, April 27, 2023",
+      "excerpt": "Merlin - zksync - Rugpull - REKT"
+    },
+    {
+      "id": "hundred-rekt2",
+      "title": "Hundred Finance - REKT 2",
+      "url": "https://rekt.news/hundred-rekt2/",
+      "date": "Tuesday, April 18, 2023",
+      "excerpt": "Hundred Finance - REKT"
+    },
+    {
+      "id": "yearn2-rekt",
+      "title": "Yearn - REKT 2",
+      "url": "https://rekt.news/yearn2-rekt/",
+      "date": "Thursday, April 13, 2023",
+      "excerpt": "Yearn - REKT"
+    },
+    {
+      "id": "sushi-yoink-rekt",
+      "title": "SushiSwap - REKT",
+      "url": "https://rekt.news/sushi-yoink-rekt/",
+      "date": "Monday, April 10, 2023",
+      "excerpt": "SushiSwap - REKT"
+    },
+    {
+      "id": "safemoon-rekt",
+      "title": "Safemoon - REKT",
+      "url": "https://rekt.news/safemoon-rekt/",
+      "date": "Wednesday, March 29, 2023",
+      "excerpt": "Safemoon - BSC - REKT"
+    },
+    {
+      "id": "kokomo-finance-rekt",
+      "title": "Kokomo Finance - REKT",
+      "url": "https://rekt.news/kokomo-finance-rekt/",
+      "date": "Monday, March 27, 2023",
+      "excerpt": "Kokomo Finance - Optimism - Rugpull - REKT"
+    },
+    {
+      "id": "meltdown",
+      "title": "Meltdown",
+      "url": "https://rekt.news/meltdown/",
+      "date": "Wednesday, March 22, 2023",
+      "excerpt": "Banking - Stablecoins - Regulation"
+    },
+    {
+      "id": "euler-rekt",
+      "title": "Euler Finance - REKT",
+      "url": "https://rekt.news/euler-rekt/",
+      "date": "Tuesday, March 14, 2023",
+      "excerpt": "Euler Finance - REKT"
+    },
+    {
+      "id": "hedera-rekt",
+      "title": "Hedera - REKT",
+      "url": "https://rekt.news/hedera-rekt/",
+      "date": "Friday, March 10, 2023",
+      "excerpt": "Hedera - Ecosystem - REKT"
+    },
+    {
+      "id": "silvergate-rekt",
+      "title": "Silvergate - REKT",
+      "url": "https://rekt.news/silvergate-rekt/",
+      "date": "Thursday, March 9, 2023",
+      "excerpt": "Silvergate - CeFi - REKT"
+    },
+    {
+      "id": "iron-alpha",
+      "title": "Iron Bank vs Alpha Homora",
+      "url": "https://rekt.news/iron-alpha/",
+      "date": "Monday, March 6, 2023",
+      "excerpt": "Iron Bank - Alpha Homora"
+    },
+    {
+      "id": "hope-finance-rekt",
+      "title": "Hope Finance - REKT",
+      "url": "https://rekt.news/hope-finance-rekt/",
+      "date": "Wednesday, February 22, 2023",
+      "excerpt": "Hope Finance - Rugpull - REKT"
+    },
+    {
+      "id": "dexible-rekt",
+      "title": "Dexible - REKT",
+      "url": "https://rekt.news/dexible-rekt/",
+      "date": "Monday, February 20, 2023",
+      "excerpt": "Dexible - REKT"
+    },
+    {
+      "id": "platypus-finance-rekt",
+      "title": "Platypus Finance - REKT",
+      "url": "https://rekt.news/platypus-finance-rekt/",
+      "date": "Thursday, February 16, 2023",
+      "excerpt": "Platypus Finance - Avalanche - REKT"
+    },
+    {
+      "id": "dforce-network-rekt",
+      "title": "dForce Network - REKT",
+      "url": "https://rekt.news/dforce-network-rekt/",
+      "date": "Monday, February 13, 2023",
+      "excerpt": "dForce Network - Arbitrum - Optimism - REKT"
+    },
+    {
+      "id": "orion-protocol-rekt",
+      "title": "Orion Protocol - REKT",
+      "url": "https://rekt.news/orion-protocol-rekt/",
+      "date": "Saturday, February 4, 2023",
+      "excerpt": "Orion Protocol - REKT"
+    },
+    {
+      "id": "bonq-rekt",
+      "title": "BonqDAO - REKT",
+      "url": "https://rekt.news/bonq-rekt/",
+      "date": "Friday, February 3, 2023",
+      "excerpt": "BonqDAO - AllianceBlock - REKT"
+    },
+    {
+      "id": "midas-capital-rekt",
+      "title": "Midas Capital - REKT",
+      "url": "https://rekt.news/midas-capital-rekt/",
+      "date": "Tuesday, January 17, 2023",
+      "excerpt": "Midas Capital - Jarvis Network - REKT"
+    },
+    {
+      "id": "war-on-code",
+      "title": "War On Code - rekt.news meets The Defiant",
+      "url": "https://rekt.news/war-on-code/",
+      "date": "Thursday, December 29, 2022",
+      "excerpt": "Pertsev - Regulation - Interview"
+    },
+    {
+      "id": "avi-arrested",
+      "title": "Highly regrettable trading strategy",
+      "url": "https://rekt.news/avi-arrested/",
+      "date": "Wednesday, December 28, 2022",
+      "excerpt": "Avraham Eisenberg - Mango Markets"
+    },
+    {
+      "id": "raydium-rekt",
+      "title": "Raydium - REKT",
+      "url": "https://rekt.news/raydium-rekt/",
+      "date": "Monday, December 19, 2022",
+      "excerpt": "Raydium - Solana - REKT"
+    },
+    {
+      "id": "lodestar-rekt",
+      "title": "Lodestar Finance - REKT",
+      "url": "https://rekt.news/lodestar-rekt/",
+      "date": "Monday, December 12, 2022",
+      "excerpt": "Lodestar Finance - REKT"
+    },
+    {
+      "id": "ankr-helio-rekt",
+      "title": "Ankr &amp; Helio - REKT",
+      "url": "https://rekt.news/ankr-helio-rekt/",
+      "date": "Friday, December 2, 2022",
+      "excerpt": "Ankr - Helio - REKT"
+    },
+    {
+      "id": "euro-last-stand",
+      "title": "Euro's Last Stand",
+      "url": "https://rekt.news/euro-last-stand/",
+      "date": "Wednesday, November 30, 2022",
+      "excerpt": "ECB - CBDC - regulation"
+    },
+    {
+      "id": "sbf-mask-off",
+      "title": "SBF - MASK OFF",
+      "url": "https://rekt.news/sbf-mask-off/",
+      "date": "Friday, November 18, 2022",
+      "excerpt": "SBF - REKT"
+    },
+    {
+      "id": "ftx-yikes",
+      "title": "FTX - Yikes",
+      "url": "https://rekt.news/ftx-yikes/",
+      "date": "Thursday, November 10, 2022",
+      "excerpt": "yikes - dumb fuckin take - SBF - FTX - CZ - Binance"
+    },
+    {
+      "id": "deribit-rekt",
+      "title": "Deribit - REKT",
+      "url": "https://rekt.news/deribit-rekt/",
+      "date": "Thursday, November 3, 2022",
+      "excerpt": "Deribit - CEX - REKT"
+    },
+    {
+      "id": "skyward-rekt",
+      "title": "Skyward Finance - REKT",
+      "url": "https://rekt.news/skyward-rekt/",
+      "date": "Thursday, November 3, 2022",
+      "excerpt": "Skyward Finance - NEAR - REKT"
+    },
+    {
+      "id": "teamfinance-rekt",
+      "title": "Team Finance - REKT",
+      "url": "https://rekt.news/teamfinance-rekt/",
+      "date": "Thursday, October 27, 2022",
+      "excerpt": "Team Finance - REKT"
+    },
+    {
+      "id": "sbf-regulator",
+      "title": "SBF - The Regulator",
+      "url": "https://rekt.news/sbf-regulator/",
+      "date": "Friday, October 21, 2022",
+      "excerpt": "SBF - Regulation"
+    },
+    {
+      "id": "moola-markets-rekt",
+      "title": "Moola Market - REKT",
+      "url": "https://rekt.news/moola-markets-rekt/",
+      "date": "Wednesday, October 19, 2022",
+      "excerpt": "Moola Market - REKT"
+    },
+    {
+      "id": "dao-maker-community-investigates",
+      "title": "DAO Maker - Community Investigates",
+      "url": "https://rekt.news/dao-maker-community-investigates/",
+      "date": "Friday, October 14, 2022",
+      "excerpt": "DAO Maker"
+    },
+    {
+      "id": "mango-markets-rekt",
+      "title": "Mango Markets - REKT",
+      "url": "https://rekt.news/mango-markets-rekt/",
+      "date": "Wednesday, October 12, 2022",
+      "excerpt": "Mango Markets - REKT"
+    },
+    {
+      "id": "templedao-rekt",
+      "title": "TempleDAO - REKT",
+      "url": "https://rekt.news/templedao-rekt/",
+      "date": "Wednesday, October 12, 2022",
+      "excerpt": "TempleDAO - REKT"
+    },
+    {
+      "id": "sushiswap-grey-area",
+      "title": "Sushiswap's Grey area",
+      "url": "https://rekt.news/sushiswap-grey-area/",
+      "date": "Tuesday, October 11, 2022",
+      "excerpt": "Sushiswap"
+    },
+    {
+      "id": "sovryn-rekt",
+      "title": "Sovryn - REKT",
+      "url": "https://rekt.news/sovryn-rekt/",
+      "date": "Sunday, October 9, 2022",
+      "excerpt": "Sovryn - REKT"
+    },
+    {
+      "id": "bnb-bridge-rekt",
+      "title": "BNB Bridge - REKT",
+      "url": "https://rekt.news/bnb-bridge-rekt/",
+      "date": "Friday, October 7, 2022",
+      "excerpt": "BSC - Bridge - REKT"
+    },
+    {
+      "id": "transit-swap-rekt",
+      "title": "Transit Swap - REKT",
+      "url": "https://rekt.news/transit-swap-rekt/",
+      "date": "Sunday, October 2, 2022",
+      "excerpt": "Transit Swap - REKT"
+    },
+    {
+      "id": "ripmevbot",
+      "title": "RIP MEV BOT",
+      "url": "https://rekt.news/ripmevbot/",
+      "date": "Wednesday, September 28, 2022",
+      "excerpt": "MEV - REKT"
+    },
+    {
+      "id": "wintermute-rekt-2",
+      "title": "Wintermute - REKT 2",
+      "url": "https://rekt.news/wintermute-rekt-2/",
+      "date": "Tuesday, September 20, 2022",
+      "excerpt": "Wintermute - Profanity - REKT"
+    },
+    {
+      "id": "window-of-opportunity",
+      "title": "Window of Opportunity",
+      "url": "https://rekt.news/window-of-opportunity/",
+      "date": "Thursday, September 8, 2022",
+      "excerpt": "Regulation - Sanctions - Maker DAO"
+    },
+    {
+      "id": "compound-errors",
+      "title": "Compound Errors",
+      "url": "https://rekt.news/compound-errors/",
+      "date": "Wednesday, August 31, 2022",
+      "excerpt": "Compound - Governance"
+    },
+    {
+      "id": "winds-of-change",
+      "title": "Winds of Change",
+      "url": "https://rekt.news/winds-of-change/",
+      "date": "Friday, August 26, 2022",
+      "excerpt": "Tornado Cash - Sanctions - Regulation"
+    },
+    {
+      "id": "acala-network-rekt",
+      "title": "Acala Network - REKT",
+      "url": "https://rekt.news/acala-network-rekt/",
+      "date": "Monday, August 15, 2022",
+      "excerpt": "Acala Network - REKT"
+    },
+    {
+      "id": "curve-finance-rekt",
+      "title": "Curve Finance - REKT",
+      "url": "https://rekt.news/curve-finance-rekt/",
+      "date": "Wednesday, August 10, 2022",
+      "excerpt": "Curve Finance - DNS hijack - REKT"
+    },
+    {
+      "id": "eye-of-the-storm",
+      "title": "The Eye of the Storm",
+      "url": "https://rekt.news/eye-of-the-storm/",
+      "date": "Tuesday, August 9, 2022",
+      "excerpt": "Tornado Cash - Privacy - Sanctions"
+    },
+    {
+      "id": "unsolved-mystery",
+      "title": "An Un-SOL-ved Mystery",
+      "url": "https://rekt.news/unsolved-mystery/",
+      "date": "Wednesday, August 3, 2022",
+      "excerpt": "Solana - REKT"
+    },
+    {
+      "id": "nomad-rekt",
+      "title": "Nomad Bridge - REKT",
+      "url": "https://rekt.news/nomad-rekt/",
+      "date": "Tuesday, August 2, 2022",
+      "excerpt": "Nomad Bridge - REKT"
+    },
+    {
+      "id": "nirvana-rekt",
+      "title": "Nirvana Finance - REKT",
+      "url": "https://rekt.news/nirvana-rekt/",
+      "date": "Friday, July 29, 2022",
+      "excerpt": "Nirvana Finance - Solana - REKT"
+    },
+    {
+      "id": "audius-rekt",
+      "title": "Audius - REKT",
+      "url": "https://rekt.news/audius-rekt/",
+      "date": "Monday, July 25, 2022",
+      "excerpt": "Audius - REKT"
+    },
+    {
+      "id": "crema-finance-rekt",
+      "title": "Crema Finance - REKT",
+      "url": "https://rekt.news/crema-finance-rekt/",
+      "date": "Monday, July 4, 2022",
+      "excerpt": "Crema Finance - REKT"
+    },
+    {
+      "id": "harmony-rekt",
+      "title": "Harmony Bridge - REKT",
+      "url": "https://rekt.news/harmony-rekt/",
+      "date": "Friday, June 24, 2022",
+      "excerpt": "Harmony Bridge - REKT"
+    },
+    {
+      "id": "three-arrows",
+      "title": "3AC Contagion",
+      "url": "https://rekt.news/three-arrows/",
+      "date": "Friday, June 24, 2022",
+      "excerpt": "Three Arrows - CeFi - SBF"
+    },
+    {
+      "id": "ethcc-detychey-vs-touts",
+      "title": "EthCC - De Tychey vs Touts",
+      "url": "https://rekt.news/ethcc-detychey-vs-touts/",
+      "date": "Thursday, June 23, 2022",
+      "excerpt": "EthCC"
+    },
+    {
+      "id": "bancor-lp-rekt",
+      "title": "Bancor LP - REKT",
+      "url": "https://rekt.news/bancor-lp-rekt/",
+      "date": "Wednesday, June 22, 2022",
+      "excerpt": "Bancor"
+    },
+    {
+      "id": "everyone-rekt",
+      "title": "Everyone - REKT",
+      "url": "https://rekt.news/everyone-rekt/",
+      "date": "Wednesday, June 22, 2022",
+      "excerpt": "Everyone - REKT"
+    },
+    {
+      "id": "inverse-rekt2",
+      "title": "Inverse Finance - REKT 2",
+      "url": "https://rekt.news/inverse-rekt2/",
+      "date": "Thursday, June 16, 2022",
+      "excerpt": "Inverse Finance - REKT"
+    },
+    {
+      "id": "celsius-rekt",
+      "title": "Celsius - REKT",
+      "url": "https://rekt.news/celsius-rekt/",
+      "date": "Tuesday, June 14, 2022",
+      "excerpt": "CeFi - Celsius - REKT"
+    },
+    {
+      "id": "gymnet-rekt",
+      "title": "Gym Network - REKT",
+      "url": "https://rekt.news/gymnet-rekt/",
+      "date": "Friday, June 10, 2022",
+      "excerpt": "Gym Network - BSC - REKT"
+    },
+    {
+      "id": "wintermute-rekt",
+      "title": "Wintermute - REKT",
+      "url": "https://rekt.news/wintermute-rekt/",
+      "date": "Thursday, June 9, 2022",
+      "excerpt": "Wintermute - Optimism - REKT"
+    },
+    {
+      "id": "mirror-rekt",
+      "title": "Mirror Protocol - REKT",
+      "url": "https://rekt.news/mirror-rekt/",
+      "date": "Tuesday, May 31, 2022",
+      "excerpt": "Mirror - Terra - REKT 2"
+    },
+    {
+      "id": "venus-blizz-rekt",
+      "title": "Blizz Finance, Venus Protocol - REKT",
+      "url": "https://rekt.news/venus-blizz-rekt/",
+      "date": "Friday, May 13, 2022",
+      "excerpt": "Blizz Finance - Venus Protocol"
+    },
+    {
+      "id": "luna-rekt",
+      "title": "Luna - REKT",
+      "url": "https://rekt.news/luna-rekt/",
+      "date": "Wednesday, May 11, 2022",
+      "excerpt": "Luna - UST - Anchor"
+    },
+    {
+      "id": "fortress-rekt",
+      "title": "Fortress Protocol - REKT",
+      "url": "https://rekt.news/fortress-rekt/",
+      "date": "Monday, May 9, 2022",
+      "excerpt": "Fortress - REKT - BSC"
+    },
+    {
+      "id": "madmeerkat-finance-rekt",
+      "title": "MM Finance - REKT",
+      "url": "https://rekt.news/madmeerkat-finance-rekt/",
+      "date": "Friday, May 6, 2022",
+      "excerpt": "MM Finance - REKT"
+    },
+    {
+      "id": "monkey-business",
+      "title": "Monkey Business",
+      "url": "https://rekt.news/monkey-business/",
+      "date": "Thursday, May 5, 2022",
+      "excerpt": "BAYC - NFT"
+    },
+    {
+      "id": "fei-rari-rekt",
+      "title": "Fei Rari - REKT 2",
+      "url": "https://rekt.news/fei-rari-rekt/",
+      "date": "Sunday, May 1, 2022",
+      "excerpt": "Fei - Rari - REKT"
+    },
+    {
+      "id": "saddle-finance-rekt2",
+      "title": "Saddle Finance - REKT 2",
+      "url": "https://rekt.news/saddle-finance-rekt2/",
+      "date": "Sunday, May 1, 2022",
+      "excerpt": "Saddle Finance - REKT"
+    },
+    {
+      "id": "deus-dao-rekt-2",
+      "title": "Deus DAO - REKT 2",
+      "url": "https://rekt.news/deus-dao-rekt-2/",
+      "date": "Thursday, April 28, 2022",
+      "excerpt": "Deus DAO - Fantom - REKT"
+    },
+    {
+      "id": "big-phish",
+      "title": "Big Phish",
+      "url": "https://rekt.news/big-phish/",
+      "date": "Tuesday, April 19, 2022",
+      "excerpt": "North Korea - Ronin"
+    },
+    {
+      "id": "beanstalk-rekt",
+      "title": "Beanstalk - REKT",
+      "url": "https://rekt.news/beanstalk-rekt/",
+      "date": "Monday, April 18, 2022",
+      "excerpt": "Beanstalk - REKT"
+    },
+    {
+      "id": "elephant-money-rekt",
+      "title": "Elephant Money - REKT",
+      "url": "https://rekt.news/elephant-money-rekt/",
+      "date": "Wednesday, April 13, 2022",
+      "excerpt": "Elephant Money - REKT"
+    },
+    {
+      "id": "inverse-finance-rekt",
+      "title": "Inverse Finance - REKT",
+      "url": "https://rekt.news/inverse-finance-rekt/",
+      "date": "Saturday, April 2, 2022",
+      "excerpt": "Inverse Finance - REKT"
+    },
+    {
+      "id": "voltage-finance-rekt",
+      "title": "Voltage Finance - REKT",
+      "url": "https://rekt.news/voltage-finance-rekt/",
+      "date": "Thursday, March 31, 2022",
+      "excerpt": "Voltage Finance - Ola Finance - REKT"
+    },
+    {
+      "id": "ronin-rekt",
+      "title": "Ronin Network - REKT",
+      "url": "https://rekt.news/ronin-rekt/",
+      "date": "Tuesday, March 29, 2022",
+      "excerpt": "Ronin - REKT"
+    },
+    {
+      "id": "revest-finance-rekt",
+      "title": "Revest Finance - REKT",
+      "url": "https://rekt.news/revest-finance-rekt/",
+      "date": "Monday, March 28, 2022",
+      "excerpt": "Revest Finance - REKT"
+    },
+    {
+      "id": "cashio-rekt",
+      "title": "Cashio - REKT",
+      "url": "https://rekt.news/cashio-rekt/",
+      "date": "Wednesday, March 23, 2022",
+      "excerpt": "Cashio - REKT - Solana"
+    },
+    {
+      "id": "agave-hundred-rekt",
+      "title": "Agave DAO, Hundred Finance - REKT",
+      "url": "https://rekt.news/agave-hundred-rekt/",
+      "date": "Tuesday, March 15, 2022",
+      "excerpt": "Agave - Hundred - REKT"
+    },
+    {
+      "id": "deus-dao-rekt",
+      "title": "Deus DAO - REKT",
+      "url": "https://rekt.news/deus-dao-rekt/",
+      "date": "Tuesday, March 15, 2022",
+      "excerpt": "Deus DAO - Fantom - REKT"
+    },
+    {
+      "id": "treasure-dao-rekt",
+      "title": "Treasure DAO - REKT",
+      "url": "https://rekt.news/treasure-dao-rekt/",
+      "date": "Thursday, March 3, 2022",
+      "excerpt": "Treasure DAO - NFT - REKT"
+    },
+    {
+      "id": "airdrop-siren",
+      "title": "Airdrop Siren",
+      "url": "https://rekt.news/airdrop-siren/",
+      "date": "Wednesday, March 2, 2022",
+      "excerpt": "Ukraine - Airdrop"
+    },
+    {
+      "id": "cy-ops",
+      "title": "Cy-Ops",
+      "url": "https://rekt.news/cy-ops/",
+      "date": "Saturday, February 26, 2022",
+      "excerpt": "Propaganda - Russia - Ukraine"
+    },
+    {
+      "id": "dego-finance-rekt",
+      "title": "Dego Finance - REKT",
+      "url": "https://rekt.news/dego-finance-rekt/",
+      "date": "Thursday, February 10, 2022",
+      "excerpt": "Dego Finance - Cocos-BSX - REKT"
+    },
+    {
+      "id": "superfluid-rekt",
+      "title": "Superfluid - REKT",
+      "url": "https://rekt.news/superfluid-rekt/",
+      "date": "Wednesday, February 9, 2022",
+      "excerpt": "Superfluid - REKT"
+    },
+    {
+      "id": "meter-rekt",
+      "title": "Meter - REKT",
+      "url": "https://rekt.news/meter-rekt/",
+      "date": "Monday, February 7, 2022",
+      "excerpt": "Meter - Hundred - REKT"
+    },
+    {
+      "id": "wormhole-rekt",
+      "title": "Wormhole - REKT",
+      "url": "https://rekt.news/wormhole-rekt/",
+      "date": "Thursday, February 3, 2022",
+      "excerpt": "Wormhole - Solana - REKT"
+    },
+    {
+      "id": "qubit-rekt",
+      "title": "Qubit Finance - REKT",
+      "url": "https://rekt.news/qubit-rekt/",
+      "date": "Friday, January 28, 2022",
+      "excerpt": "Qubit Finance - BSC - REKT"
+    },
+    {
+      "id": "sifu-scandal",
+      "title": "Sifu Scandal",
+      "url": "https://rekt.news/sifu-scandal/",
+      "date": "Friday, January 28, 2022",
+      "excerpt": "0xSifu - Sesta - Wonderland"
+    },
+    {
+      "id": "cryptocom-rekt",
+      "title": "Crypto.com - REKT",
+      "url": "https://rekt.news/cryptocom-rekt/",
+      "date": "Wednesday, January 19, 2022",
+      "excerpt": "CEX - REKT"
+    },
+    {
+      "id": "airdrop-hunters2",
+      "title": "Airdrop Hunters II",
+      "url": "https://rekt.news/airdrop-hunters2/",
+      "date": "Saturday, January 15, 2022",
+      "excerpt": "Airdrop"
+    },
+    {
+      "id": "lcx-rekt",
+      "title": "LCX - REKT",
+      "url": "https://rekt.news/lcx-rekt/",
+      "date": "Monday, January 10, 2022",
+      "excerpt": "CEX - CeFi - LCX - REKT"
+    },
+    {
+      "id": "arbix-rekt",
+      "title": "Arbix Finance - REKT",
+      "url": "https://rekt.news/arbix-rekt/",
+      "date": "Tuesday, January 4, 2022",
+      "excerpt": "Arbix Finance - REKT"
+    },
+    {
+      "id": "visor-finance-rekt",
+      "title": "Visor Finance - REKT",
+      "url": "https://rekt.news/visor-finance-rekt/",
+      "date": "Wednesday, December 22, 2021",
+      "excerpt": "Visor Finance - REKT"
+    },
+    {
+      "id": "bent-finance",
+      "title": "Bent Finance - REKT",
+      "url": "https://rekt.news/bent-finance/",
+      "date": "Tuesday, December 21, 2021",
+      "excerpt": "Bent Finance - REKT"
+    },
+    {
+      "id": "grim-finance-rekt",
+      "title": "Grim Finance - REKT",
+      "url": "https://rekt.news/grim-finance-rekt/",
+      "date": "Monday, December 20, 2021",
+      "excerpt": "Grim Finance - REKT"
+    },
+    {
+      "id": "vulcan-forged-rekt",
+      "title": "Vulcan Forged - REKT",
+      "url": "https://rekt.news/vulcan-forged-rekt/",
+      "date": "Monday, December 13, 2021",
+      "excerpt": "Vulcan Forged - CEX - REKT"
+    },
+    {
+      "id": "ascendex-rekt",
+      "title": "Ascendex - REKT",
+      "url": "https://rekt.news/ascendex-rekt/",
+      "date": "Sunday, December 12, 2021",
+      "excerpt": "Ascendex - REKT"
+    },
+    {
+      "id": "8ight-finance-rekt",
+      "title": "8ight Finance - REKT",
+      "url": "https://rekt.news/8ight-finance-rekt/",
+      "date": "Wednesday, December 8, 2021",
+      "excerpt": "8ight Finance - REKT"
+    },
+    {
+      "id": "sushiswap-scandal",
+      "title": "Sushiswap Scandal",
+      "url": "https://rekt.news/sushiswap-scandal/",
+      "date": "Monday, December 6, 2021",
+      "excerpt": "Sushiswap - leak"
+    },
+    {
+      "id": "bitmart-rekt",
+      "title": "BitMart - REKT",
+      "url": "https://rekt.news/bitmart-rekt/",
+      "date": "Sunday, December 5, 2021",
+      "excerpt": "CeFi - BitMart - REKT"
+    },
+    {
+      "id": "ape-tax-vid",
+      "title": "REKT:TV - Ape Tax",
+      "url": "https://rekt.news/ape-tax-vid/",
+      "date": "Friday, December 3, 2021",
+      "excerpt": "ape tax - rektTV"
+    },
+    {
+      "id": "badger-rekt",
+      "title": "Badger - REKT",
+      "url": "https://rekt.news/badger-rekt/",
+      "date": "Thursday, December 2, 2021",
+      "excerpt": "Badger - REKT"
+    },
+    {
+      "id": "monox-rekt",
+      "title": "MonoX - REKT",
+      "url": "https://rekt.news/monox-rekt/",
+      "date": "Tuesday, November 30, 2021",
+      "excerpt": "MonoX - REKT"
+    },
+    {
+      "id": "snowdog-rekt",
+      "title": "Snowdog - REKT",
+      "url": "https://rekt.news/snowdog-rekt/",
+      "date": "Friday, November 26, 2021",
+      "excerpt": "Snowdog - Avalanche - REKT"
+    },
+    {
+      "id": "uniswap-v3-lp-rekt",
+      "title": "Uniswap V3 LP - REKT",
+      "url": "https://rekt.news/uniswap-v3-lp-rekt/",
+      "date": "Thursday, November 18, 2021",
+      "excerpt": "Uniswap"
+    },
+    {
+      "id": "airdrop-hunters",
+      "title": "Airdrop Hunters",
+      "url": "https://rekt.news/airdrop-hunters/",
+      "date": "Wednesday, November 17, 2021",
+      "excerpt": "Airdrop"
+    },
+    {
+      "id": "bzx-rekt",
+      "title": "bZx - REKT",
+      "url": "https://rekt.news/bzx-rekt/",
+      "date": "Saturday, November 6, 2021",
+      "excerpt": "bZx - REKT"
+    },
+    {
+      "id": "cream-rekt-2",
+      "title": "Cream Finance - REKT 2",
+      "url": "https://rekt.news/cream-rekt-2/",
+      "date": "Thursday, October 28, 2021",
+      "excerpt": "Cream - Yearn - REKT"
+    },
+    {
+      "id": "indexed-finance-rekt",
+      "title": "Indexed Finance - REKT",
+      "url": "https://rekt.news/indexed-finance-rekt/",
+      "date": "Friday, October 15, 2021",
+      "excerpt": "Indexed Finance - REKT"
+    },
+    {
+      "id": "ftx-terms-and-commissions",
+      "title": "FTX - Terms &amp; Commissions",
+      "url": "https://rekt.news/ftx-terms-and-commissions/",
+      "date": "Wednesday, October 6, 2021",
+      "excerpt": "FTX - SBF"
+    },
+    {
+      "id": "compound-rekt",
+      "title": "Compound - REKT",
+      "url": "https://rekt.news/compound-rekt/",
+      "date": "Monday, October 4, 2021",
+      "excerpt": "Compound - REKT"
+    },
+    {
+      "id": "overcompensated",
+      "title": "Overcompensated",
+      "url": "https://rekt.news/overcompensated/",
+      "date": "Thursday, September 30, 2021",
+      "excerpt": "Compound"
+    },
+    {
+      "id": "anniversary-auction",
+      "title": "Anniversary Auction",
+      "url": "https://rekt.news/anniversary-auction/",
+      "date": "Monday, September 27, 2021",
+      "excerpt": "Hello World"
+    },
+    {
+      "id": "rekt-is-one",
+      "title": "One year of rekt.news",
+      "url": "https://rekt.news/rekt-is-one/",
+      "date": "Thursday, September 23, 2021",
+      "excerpt": "Hello World"
+    },
+    {
+      "id": "veefinance-rekt",
+      "title": "Vee Finance - REKT",
+      "url": "https://rekt.news/veefinance-rekt/",
+      "date": "Tuesday, September 21, 2021",
+      "excerpt": "Vee Finance - REKT"
+    },
+    {
+      "id": "jaypegs-automart-rekt",
+      "title": "JayPegs Automart - REKT",
+      "url": "https://rekt.news/jaypegs-automart-rekt/",
+      "date": "Saturday, September 18, 2021",
+      "excerpt": "NFT - Sushi - JayPeg - REKT"
+    },
+    {
+      "id": "spotlight-on-solana",
+      "title": "Spotlight on Solana",
+      "url": "https://rekt.news/spotlight-on-solana/",
+      "date": "Monday, September 13, 2021",
+      "excerpt": "Solana - Spotlight"
+    },
+    {
+      "id": "daomaker-rekt",
+      "title": "DAO Maker - REKT",
+      "url": "https://rekt.news/daomaker-rekt/",
+      "date": "Monday, September 6, 2021",
+      "excerpt": "DAO Maker - REKT"
+    },
+    {
+      "id": "tomb-finance-rekt",
+      "title": "Tomb Finance - REKT",
+      "url": "https://rekt.news/tomb-finance-rekt/",
+      "date": "Friday, September 3, 2021",
+      "excerpt": "Tomb Finance - Fantom - REKT"
+    },
+    {
+      "id": "banksy-pranksy-scam",
+      "title": "Banksy Pranksy Scam",
+      "url": "https://rekt.news/banksy-pranksy-scam/",
+      "date": "Wednesday, September 1, 2021",
+      "excerpt": "Banksy - Pranksy - NFT"
+    },
+    {
+      "id": "cream-rekt",
+      "title": "Cream Finance - REKT",
+      "url": "https://rekt.news/cream-rekt/",
+      "date": "Monday, August 30, 2021",
+      "excerpt": "Cream - REKT"
+    },
+    {
+      "id": "xtoken-rekt-x2",
+      "title": "X-Token - REKT X2",
+      "url": "https://rekt.news/xtoken-rekt-x2/",
+      "date": "Monday, August 30, 2021",
+      "excerpt": "X-Token - REKT"
+    },
+    {
+      "id": "a-piece-of-art",
+      "title": "A Piece of Art",
+      "url": "https://rekt.news/a-piece-of-art/",
+      "date": "Friday, August 27, 2021",
+      "excerpt": "NFT - fractionalisation"
+    },
+    {
+      "id": "punkprotocol-rekt",
+      "title": "Punk Protocol - REKT",
+      "url": "https://rekt.news/punkprotocol-rekt/",
+      "date": "Friday, August 13, 2021",
+      "excerpt": "Punk Protocol - REKT"
+    },
+    {
+      "id": "polynetwork-rekt",
+      "title": "Poly Network - REKT",
+      "url": "https://rekt.news/polynetwork-rekt/",
+      "date": "Wednesday, August 11, 2021",
+      "excerpt": "Poly Network - REKT"
+    },
+    {
+      "id": "levyathan-rekt",
+      "title": "Levyathan - REKT",
+      "url": "https://rekt.news/levyathan-rekt/",
+      "date": "Thursday, August 5, 2021",
+      "excerpt": "Levyathan - REKT"
+    },
+    {
+      "id": "popsicle-rekt",
+      "title": "Popsicle Finance - REKT",
+      "url": "https://rekt.news/popsicle-rekt/",
+      "date": "Wednesday, August 4, 2021",
+      "excerpt": "Popsicle - REKT"
+    },
+    {
+      "id": "thorchain-rekt2",
+      "title": "THORChain - REKT 2",
+      "url": "https://rekt.news/thorchain-rekt2/",
+      "date": "Monday, July 26, 2021",
+      "excerpt": "THORChain - REKT"
+    },
+    {
+      "id": "pancakebunny2-rekt",
+      "title": "PancakeBunny - REKT 2",
+      "url": "https://rekt.news/pancakebunny2-rekt/",
+      "date": "Sunday, July 18, 2021",
+      "excerpt": "PancakeBunny - Polygon - REKT"
+    },
+    {
+      "id": "thorchain-rekt",
+      "title": "THORChain - REKT",
+      "url": "https://rekt.news/thorchain-rekt/",
+      "date": "Friday, July 16, 2021",
+      "excerpt": "THORChain - REKT"
+    },
+    {
+      "id": "bondly-rekt",
+      "title": "Bondly - REKT",
+      "url": "https://rekt.news/bondly-rekt/",
+      "date": "Thursday, July 15, 2021",
+      "excerpt": "Bondly - REKT"
+    },
+    {
+      "id": "anyswap-rekt",
+      "title": "Anyswap - REKT",
+      "url": "https://rekt.news/anyswap-rekt/",
+      "date": "Tuesday, July 13, 2021",
+      "excerpt": "Anyswap - REKT"
+    },
+    {
+      "id": "chainswap-rekt",
+      "title": "ChainSwap - REKT",
+      "url": "https://rekt.news/chainswap-rekt/",
+      "date": "Tuesday, July 13, 2021",
+      "excerpt": "ChainSwap - REKT"
+    },
+    {
+      "id": "curve-wars",
+      "title": "Curve Wars",
+      "url": "https://rekt.news/curve-wars/",
+      "date": "Thursday, July 8, 2021",
+      "excerpt": "Curve"
+    },
+    {
+      "id": "merlin3-rekt",
+      "title": "Merlin Labs - R3KT",
+      "url": "https://rekt.news/merlin3-rekt/",
+      "date": "Tuesday, June 29, 2021",
+      "excerpt": "Merlin Labs - R3KT"
+    },
+    {
+      "id": "safedollar-rekt",
+      "title": "SafeDollar - REKT",
+      "url": "https://rekt.news/safedollar-rekt/",
+      "date": "Monday, June 28, 2021",
+      "excerpt": "SafeDollar - Polygon - REKT"
+    },
+    {
+      "id": "stablemagnet-rekt",
+      "title": "StableMagnet - REKT",
+      "url": "https://rekt.news/stablemagnet-rekt/",
+      "date": "Thursday, June 24, 2021",
+      "excerpt": "StableMagnet - BSC - REKT"
+    },
+    {
+      "id": "11-rekt",
+      "title": "Eleven Finance - REKT",
+      "url": "https://rekt.news/11-rekt/",
+      "date": "Wednesday, June 23, 2021",
+      "excerpt": "Eleven Finance - BSC - REKT"
+    },
+    {
+      "id": "alchemix-rekt",
+      "title": "Alchemix - REKT",
+      "url": "https://rekt.news/alchemix-rekt/",
+      "date": "Friday, June 18, 2021",
+      "excerpt": "alchemix - REKT"
+    },
+    {
+      "id": "iron-finance-rekt",
+      "title": "Iron Finance - REKT",
+      "url": "https://rekt.news/iron-finance-rekt/",
+      "date": "Thursday, June 17, 2021",
+      "excerpt": "Iron Finance - algorithmic - rekt"
+    },
+    {
+      "id": "ultravolatile",
+      "title": "Ultravolatile",
+      "url": "https://rekt.news/ultravolatile/",
+      "date": "Tuesday, June 15, 2021",
+      "excerpt": "markets - doge"
+    },
+    {
+      "id": "belt-rekt",
+      "title": "Belt - REKT",
+      "url": "https://rekt.news/belt-rekt/",
+      "date": "Saturday, May 29, 2021",
+      "excerpt": "Belt - BSC - Rekt"
+    },
+    {
+      "id": "burgerswap-rekt",
+      "title": "BurgerSwap - REKT",
+      "url": "https://rekt.news/burgerswap-rekt/",
+      "date": "Friday, May 28, 2021",
+      "excerpt": "BurgerSwap - REKT"
+    },
+    {
+      "id": "merlin2-rekt",
+      "title": "Merlin Labs - REKT 2",
+      "url": "https://rekt.news/merlin2-rekt/",
+      "date": "Thursday, May 27, 2021",
+      "excerpt": "Merlin Labs - REKT 2"
+    },
+    {
+      "id": "merlinlabs-rekt",
+      "title": "Merlin Labs - REKT",
+      "url": "https://rekt.news/merlinlabs-rekt/",
+      "date": "Wednesday, May 26, 2021",
+      "excerpt": "Merlin Labs - REKT"
+    },
+    {
+      "id": "autoshark-rekt",
+      "title": "Autoshark - REKT",
+      "url": "https://rekt.news/autoshark-rekt/",
+      "date": "Tuesday, May 25, 2021",
+      "excerpt": "Autoshark - REKT"
+    },
+    {
+      "id": "hopium-dd-vid",
+      "title": "rekt:TV - Hopium Diaries - Dystopian Dreams",
+      "url": "https://rekt.news/hopium-dd-vid/",
+      "date": "Monday, May 24, 2021",
+      "excerpt": "hopium diaries - rektTV"
+    },
+    {
+      "id": "blood-in-the-streets-II",
+      "title": "Blood in the streets II",
+      "url": "https://rekt.news/blood-in-the-streets-II/",
+      "date": "Thursday, May 20, 2021",
+      "excerpt": "liquidation - markets - rekt"
+    },
+    {
+      "id": "pancakebunny-rekt",
+      "title": "PancakeBunny - REKT",
+      "url": "https://rekt.news/pancakebunny-rekt/",
+      "date": "Thursday, May 20, 2021",
+      "excerpt": "PancakeBunny - BSC - REKT"
+    },
+    {
+      "id": "bearn-rekt",
+      "title": "bEarn - REKT",
+      "url": "https://rekt.news/bearn-rekt/",
+      "date": "Monday, May 17, 2021",
+      "excerpt": "bEarn - REKT"
+    },
+    {
+      "id": "fomo-on-meme-street2",
+      "title": "FOMO on Meme Street II - Vitalik VS Shiba",
+      "url": "https://rekt.news/fomo-on-meme-street2/",
+      "date": "Thursday, May 13, 2021",
+      "excerpt": "fomo - doge - vitalik"
+    },
+    {
+      "id": "xtoken-rekt",
+      "title": "XToken - REKT",
+      "url": "https://rekt.news/xtoken-rekt/",
+      "date": "Wednesday, May 12, 2021",
+      "excerpt": "XToken - REKT"
+    },
+    {
+      "id": "rari-capital-rekt",
+      "title": "Rari Capital - REKT",
+      "url": "https://rekt.news/rari-capital-rekt/",
+      "date": "Saturday, May 8, 2021",
+      "excerpt": "Rari Capital - REKT"
+    },
+    {
+      "id": "value-rekt3",
+      "title": "Value DeFi - REKT 3",
+      "url": "https://rekt.news/value-rekt3/",
+      "date": "Saturday, May 8, 2021",
+      "excerpt": "Value DeFi - REKT"
+    },
+    {
+      "id": "value-rekt2",
+      "title": "Value DeFi - REKT 2",
+      "url": "https://rekt.news/value-rekt2/",
+      "date": "Thursday, May 6, 2021",
+      "excerpt": "Value DeFi - REKT"
+    },
+    {
+      "id": "big-if-truebit",
+      "title": "Big if TrueBit",
+      "url": "https://rekt.news/big-if-truebit/",
+      "date": "Wednesday, May 5, 2021",
+      "excerpt": "TrueBit"
+    },
+    {
+      "id": "spartan-rekt",
+      "title": "Spartan Protocol - REKT",
+      "url": "https://rekt.news/spartan-rekt/",
+      "date": "Sunday, May 2, 2021",
+      "excerpt": "Spartan Protocol - REKT"
+    },
+    {
+      "id": "the-second-layer",
+      "title": "The Second Layer",
+      "url": "https://rekt.news/the-second-layer/",
+      "date": "Friday, April 30, 2021",
+      "excerpt": "Ethereum - L2"
+    },
+    {
+      "id": "uranium-rekt",
+      "title": "Uranium Finance - REKT",
+      "url": "https://rekt.news/uranium-rekt/",
+      "date": "Wednesday, April 28, 2021",
+      "excerpt": "Uranium - REKT"
+    },
+    {
+      "id": "shitcoins",
+      "title": "Shitcoins",
+      "url": "https://rekt.news/shitcoins/",
+      "date": "Monday, April 26, 2021",
+      "excerpt": "shitcoin - safemoon"
+    },
+    {
+      "id": "easyfi-rekt",
+      "title": "EasyFi - REKT",
+      "url": "https://rekt.news/easyfi-rekt/",
+      "date": "Tuesday, April 20, 2021",
+      "excerpt": "REKT"
+    },
+    {
+      "id": "flip-a-coin",
+      "title": "Flip a $COIN",
+      "url": "https://rekt.news/flip-a-coin/",
+      "date": "Thursday, April 15, 2021",
+      "excerpt": "Coinbase - DAO"
+    },
+    {
+      "id": "fei-rekt",
+      "title": "Fei - REKT",
+      "url": "https://rekt.news/fei-rekt/",
+      "date": "Wednesday, April 7, 2021",
+      "excerpt": "Fei Protocol - Stablecoins"
+    },
+    {
+      "id": "force-rekt",
+      "title": "Force - REKT",
+      "url": "https://rekt.news/force-rekt/",
+      "date": "Sunday, April 4, 2021",
+      "excerpt": "Weak - Force"
+    },
+    {
+      "id": "time-as-money",
+      "title": "Time as Money",
+      "url": "https://rekt.news/time-as-money/",
+      "date": "Tuesday, March 30, 2021",
+      "excerpt": "NFT"
+    },
+    {
+      "id": "sheeple",
+      "title": "Sheeple",
+      "url": "https://rekt.news/sheeple/",
+      "date": "Thursday, March 25, 2021",
+      "excerpt": "Beeple - NFT"
+    },
+    {
+      "id": "bitclout",
+      "title": "Bitclout",
+      "url": "https://rekt.news/bitclout/",
+      "date": "Wednesday, March 24, 2021",
+      "excerpt": "Bitclout - Social Tokens"
+    },
+    {
+      "id": "reef-vs-alameda",
+      "title": "Reef VS Alameda",
+      "url": "https://rekt.news/reef-vs-alameda/",
+      "date": "Tuesday, March 16, 2021",
+      "excerpt": "Reef - Alameda - SBF"
+    },
+    {
+      "id": "roll-rekt",
+      "title": "Roll - REKT",
+      "url": "https://rekt.news/roll-rekt/",
+      "date": "Sunday, March 14, 2021",
+      "excerpt": "Roll - Social Tokens - REKT"
+    },
+    {
+      "id": "whale-watching-bdp",
+      "title": "Whale Hunt - Big Data Protocol",
+      "url": "https://rekt.news/whale-watching-bdp/",
+      "date": "Friday, March 12, 2021",
+      "excerpt": "BDP - Whale Hunt"
+    },
+    {
+      "id": "au-dodo-rekt",
+      "title": "DODO - REKT",
+      "url": "https://rekt.news/au-dodo-rekt/",
+      "date": "Tuesday, March 9, 2021",
+      "excerpt": "DODO - REKT"
+    },
+    {
+      "id": "paid-rekt",
+      "title": "Paid Network - REKT",
+      "url": "https://rekt.news/paid-rekt/",
+      "date": "Friday, March 5, 2021",
+      "excerpt": "PAID - REKT"
+    },
+    {
+      "id": "meerkat-finance-bsc-rekt",
+      "title": "Meerkat Finance - BSC - REKT",
+      "url": "https://rekt.news/meerkat-finance-bsc-rekt/",
+      "date": "Thursday, March 4, 2021",
+      "excerpt": "BSC - Meerkat - REKT"
+    },
+    {
+      "id": "unreal-estate",
+      "title": "Unreal Estate",
+      "url": "https://rekt.news/unreal-estate/",
+      "date": "Thursday, March 4, 2021",
+      "excerpt": "VR - NFT"
+    },
+    {
+      "id": "furucombo-rekt",
+      "title": "Furucombo - REKT",
+      "url": "https://rekt.news/furucombo-rekt/",
+      "date": "Monday, March 1, 2021",
+      "excerpt": "Furucombo - rekt"
+    },
+    {
+      "id": "fed-rekt",
+      "title": "FED - REKT",
+      "url": "https://rekt.news/fed-rekt/",
+      "date": "Thursday, February 25, 2021",
+      "excerpt": "FED - rekt - decentralisation"
+    },
+    {
+      "id": "bsc-the-bridge-to-defi",
+      "title": "BSC - The Bridge to DeFi",
+      "url": "https://rekt.news/bsc-the-bridge-to-defi/",
+      "date": "Monday, February 22, 2021",
+      "excerpt": "Binance - BSC - CeDeFi"
+    },
+    {
+      "id": "nft-digital-art-enthusiast",
+      "title": "NFT - Digital Art Enthusiast",
+      "url": "https://rekt.news/nft-digital-art-enthusiast/",
+      "date": "Friday, February 19, 2021",
+      "excerpt": "NFT - Digital Art"
+    },
+    {
+      "id": "alpha-finance-rekt",
+      "title": "Alpha Finance - REKT",
+      "url": "https://rekt.news/alpha-finance-rekt/",
+      "date": "Saturday, February 13, 2021",
+      "excerpt": "Alpha Finance - Cronje - rekt"
+    },
+    {
+      "id": "under-the-armor",
+      "title": "Under the Armor",
+      "url": "https://rekt.news/under-the-armor/",
+      "date": "Saturday, February 13, 2021",
+      "excerpt": "Armor - Azeem - kferret"
+    },
+    {
+      "id": "armor-rekt",
+      "title": "Armor - rekt",
+      "url": "https://rekt.news/armor-rekt/",
+      "date": "Wednesday, February 10, 2021",
+      "excerpt": "Armor - Azeem - rekt"
+    },
+    {
+      "id": "the-big-combo",
+      "title": "The Big Combo (Growth DeFi - REKT)",
+      "url": "https://rekt.news/the-big-combo/",
+      "date": "Tuesday, February 9, 2021",
+      "excerpt": "BT Finance - Growth DeFi"
+    },
+    {
+      "id": "yearn-rekt",
+      "title": "Yearn - REKT",
+      "url": "https://rekt.news/yearn-rekt/",
+      "date": "Friday, February 5, 2021",
+      "excerpt": "Yearn - REKT"
+    },
+    {
+      "id": "return-to-the-dark-forest",
+      "title": "Return to the dark forest",
+      "url": "https://rekt.news/return-to-the-dark-forest/",
+      "date": "Wednesday, February 3, 2021",
+      "excerpt": "dark forest - mempool"
+    },
+    {
+      "id": "hype-and-hashmasks",
+      "title": "Hype and Hashmasks",
+      "url": "https://rekt.news/hype-and-hashmasks/",
+      "date": "Tuesday, February 2, 2021",
+      "excerpt": "hashmasks - NFT"
+    },
+    {
+      "id": "fomo-on-meme-street1",
+      "title": "FOMO on Meme Street",
+      "url": "https://rekt.news/fomo-on-meme-street1/",
+      "date": "Saturday, January 30, 2021",
+      "excerpt": "fomo - doge"
+    },
+    {
+      "id": "gamestonk",
+      "title": "Gamestonk",
+      "url": "https://rekt.news/gamestonk/",
+      "date": "Thursday, January 28, 2021",
+      "excerpt": "wall st - Rekt"
+    },
+    {
+      "id": "badgers-digg-sushi",
+      "title": "Badgers digg sushi",
+      "url": "https://rekt.news/badgers-digg-sushi/",
+      "date": "Tuesday, January 26, 2021",
+      "excerpt": "sushi"
+    },
+    {
+      "id": "saddle-finance-rekt",
+      "title": "Saddle Finance - REKT",
+      "url": "https://rekt.news/saddle-finance-rekt/",
+      "date": "Wednesday, January 20, 2021",
+      "excerpt": "saddle finance - Fork - Rekt"
+    },
+    {
+      "id": "the-whitepaper",
+      "title": "The Whitepaper",
+      "url": "https://rekt.news/the-whitepaper/",
+      "date": "Wednesday, January 13, 2021",
+      "excerpt": "whitepaper - Cronje"
+    },
+    {
+      "id": "blood-in-the-streets",
+      "title": "Blood in the streets",
+      "url": "https://rekt.news/blood-in-the-streets/",
+      "date": "Monday, January 11, 2021",
+      "excerpt": "liquidation - markets - Rekt"
+    },
+    {
+      "id": "schrodingers-stolen-nft",
+      "title": "Schrödinger's Stolen NFT",
+      "url": "https://rekt.news/schrodingers-stolen-nft/",
+      "date": "Tuesday, January 5, 2021",
+      "excerpt": "$meme - NFT - interview"
+    },
+    {
+      "id": "ycredit-the-ape",
+      "title": "yCredit the Ape",
+      "url": "https://rekt.news/ycredit-the-ape/",
+      "date": "Sunday, January 3, 2021",
+      "excerpt": "ycredit - Cronje - interview"
+    },
+    {
+      "id": "cover-rekt",
+      "title": "Cover - REKT",
+      "url": "https://rekt.news/cover-rekt/",
+      "date": "Tuesday, December 29, 2020",
+      "excerpt": "cover - Rekt"
+    },
+    {
+      "id": "nxm-hugh-speaks-out",
+      "title": "Nexus Mutual - Hugh Speaks Out",
+      "url": "https://rekt.news/nxm-hugh-speaks-out/",
+      "date": "Wednesday, December 23, 2020",
+      "excerpt": "nexus mutual - hugh - Rekt"
+    },
+    {
+      "id": "ledger-rekt",
+      "title": "Ledger - REKT",
+      "url": "https://rekt.news/ledger-rekt/",
+      "date": "Monday, December 21, 2020",
+      "excerpt": "ledger - gdpr - Rekt"
+    },
+    {
+      "id": "warp-finance-rekt",
+      "title": "Warp Finance - REKT",
+      "url": "https://rekt.news/warp-finance-rekt/",
+      "date": "Friday, December 18, 2020",
+      "excerpt": "warp finance - Rekt"
+    },
+    {
+      "id": "deepfake",
+      "title": "Deepfake - A Scam so Surreal",
+      "url": "https://rekt.news/deepfake/",
+      "date": "Thursday, December 17, 2020",
+      "excerpt": "deepfake - rugpull"
+    },
+    {
+      "id": "cefi-rekt",
+      "title": "CeFi - REKT",
+      "url": "https://rekt.news/cefi-rekt/",
+      "date": "Monday, December 14, 2020",
+      "excerpt": "fed - cefi - Rekt"
+    },
+    {
+      "id": "stable-coins-the-empire-strikes-back",
+      "title": "Stablecoins - The Empire Strikes Back",
+      "url": "https://rekt.news/stable-coins-the-empire-strikes-back/",
+      "date": "Tuesday, December 8, 2020",
+      "excerpt": "stablecoin - regulation"
+    },
+    {
+      "id": "ape-tax",
+      "title": "Ape Tax",
+      "url": "https://rekt.news/ape-tax/",
+      "date": "Friday, December 4, 2020",
+      "excerpt": "ape tax - defi"
+    },
+    {
+      "id": "deathbed-confessions-c3pr",
+      "title": "Compounder Finance - REKT",
+      "url": "https://rekt.news/deathbed-confessions-c3pr/",
+      "date": "Wednesday, December 2, 2020",
+      "excerpt": "c3pr - audit - rugpull"
+    },
+    {
+      "id": "decentralised-monopoly",
+      "title": "Decentralised Monopoly",
+      "url": "https://rekt.news/decentralised-monopoly/",
+      "date": "Monday, November 30, 2020",
+      "excerpt": "yearn - merger - yfi"
+    },
+    {
+      "id": "sushiswap-saved-0xmaki-speaks-out",
+      "title": "SushiSwap Saved - 0xMaki Speaks Out",
+      "url": "https://rekt.news/sushiswap-saved-0xmaki-speaks-out/",
+      "date": "Sunday, November 29, 2020",
+      "excerpt": "sushiswap - 0xmaki"
+    },
+    {
+      "id": "coinbase-the-oracle",
+      "title": "Coinbase &amp; The Oracle",
+      "url": "https://rekt.news/coinbase-the-oracle/",
+      "date": "Thursday, November 26, 2020",
+      "excerpt": "coinbase - oracle - liquidation"
+    },
+    {
+      "id": "pickle-finance-rekt",
+      "title": "Pickle Finance - REKT",
+      "url": "https://rekt.news/pickle-finance-rekt/",
+      "date": "Sunday, November 22, 2020",
+      "excerpt": "pickle finance - Rekt"
+    },
+    {
+      "id": "on-flash-loans",
+      "title": "The Great Flash Loan",
+      "url": "https://rekt.news/on-flash-loans/",
+      "date": "Friday, November 20, 2020",
+      "excerpt": "flash loan - defi"
+    },
+    {
+      "id": "hack-epidemic",
+      "title": "Hack Epidemic (Origin Protocol - REKT)",
+      "url": "https://rekt.news/hack-epidemic/",
+      "date": "Tuesday, November 17, 2020",
+      "excerpt": "hack - flash loan - origin - cheese bank"
+    },
+    {
+      "id": "value-defi-rekt",
+      "title": "Value DeFi - REKT",
+      "url": "https://rekt.news/value-defi-rekt/",
+      "date": "Saturday, November 14, 2020",
+      "excerpt": "value defi - rekt - flash loan"
+    },
+    {
+      "id": "akropolis-rekt",
+      "title": "Akropolis - REKT",
+      "url": "https://rekt.news/akropolis-rekt/",
+      "date": "Thursday, November 12, 2020",
+      "excerpt": "akropolis - delphi - REKT"
+    },
+    {
+      "id": "infura-issue-of-consensus",
+      "title": "Infura - Issue of Consensus",
+      "url": "https://rekt.news/infura-issue-of-consensus/",
+      "date": "Wednesday, November 11, 2020",
+      "excerpt": "geth - infura - ethereum - Fork"
+    },
+    {
+      "id": "politics-and-prescience",
+      "title": "Politics and Prescience",
+      "url": "https://rekt.news/politics-and-prescience/",
+      "date": "Tuesday, November 3, 2020",
+      "excerpt": "prediction markets - defi - politics"
+    },
+    {
+      "id": "hopium-diaries-dystopian-dreams",
+      "title": "Hopium Diaries - Dystopian Dreams",
+      "url": "https://rekt.news/hopium-diaries-dystopian-dreams/",
+      "date": "Friday, October 30, 2020",
+      "excerpt": "hopium diaries - defi"
+    },
+    {
+      "id": "harvest-finance-rekt",
+      "title": "Harvest Finance - REKT",
+      "url": "https://rekt.news/harvest-finance-rekt/",
+      "date": "Monday, October 26, 2020",
+      "excerpt": "harvest finance - flash loan - hack"
+    },
+    {
+      "id": "rekttv-sbf-vs-julien-bouteloup",
+      "title": "rekt:TV - SBF vs Julien Bouteloup",
+      "url": "https://rekt.news/rekttv-sbf-vs-julien-bouteloup/",
+      "date": "Wednesday, October 21, 2020",
+      "excerpt": "sbf - blue kirby - interview - video"
+    },
+    {
+      "id": "uniswap-flop-dharma-vote-stopped",
+      "title": "Uniswap Flop - Dharma Vote Stopped",
+      "url": "https://rekt.news/uniswap-flop-dharma-vote-stopped/",
+      "date": "Monday, October 19, 2020",
+      "excerpt": "uniswap - governance - dharma"
+    },
+    {
+      "id": "the-return-of-cronje",
+      "title": "The Return of Cronje",
+      "url": "https://rekt.news/the-return-of-cronje/",
+      "date": "Wednesday, October 14, 2020",
+      "excerpt": "Cronje - Rekt"
+    },
+    {
+      "id": "uniswap-swindle-scammer-speaks-out",
+      "title": "Uniswap Swindle - Scammer Speaks Out",
+      "url": "https://rekt.news/uniswap-swindle-scammer-speaks-out/",
+      "date": "Monday, October 12, 2020",
+      "excerpt": "scam - interview"
+    },
+    {
+      "id": "whale-hunt-sbf-blue-kirby",
+      "title": "Whale Hunt - SBF &amp; Blue Kirby",
+      "url": "https://rekt.news/whale-hunt-sbf-blue-kirby/",
+      "date": "Friday, October 9, 2020",
+      "excerpt": "sbf - blue kirby - whale hunt"
+    },
+    {
+      "id": "the-feast-of-defi-summer-is-over",
+      "title": "The DeFi feast is over.",
+      "url": "https://rekt.news/the-feast-of-defi-summer-is-over/",
+      "date": "Thursday, October 8, 2020",
+      "excerpt": "defi - alpha"
+    },
+    {
+      "id": "winter-farming",
+      "title": "Winter Farming",
+      "url": "https://rekt.news/winter-farming/",
+      "date": "Monday, October 5, 2020",
+      "excerpt": "defi - farming - alpha"
+    },
+    {
+      "id": "eminence-refund-do-or-dai",
+      "title": "Eminence Refund - Do or DAI",
+      "url": "https://rekt.news/eminence-refund-do-or-dai/",
+      "date": "Friday, October 2, 2020",
+      "excerpt": "Eminence - Cronje - defi"
+    },
+    {
+      "id": "eminence-rekt-in-prod",
+      "title": "Eminence - Rekt in prod",
+      "url": "https://rekt.news/eminence-rekt-in-prod/",
+      "date": "Tuesday, September 29, 2020",
+      "excerpt": "yfi - defi - hack - Eminence - Cronje"
+    },
+    {
+      "id": "epic-hack-homie",
+      "title": "Kucoin - REKT",
+      "url": "https://rekt.news/epic-hack-homie/",
+      "date": "Tuesday, September 29, 2020",
+      "excerpt": "kucoin - epic - hack"
+    },
+    {
+      "id": "few-gets-rekt",
+      "title": "$FEW gets REKT",
+      "url": "https://rekt.news/few-gets-rekt/",
+      "date": "Monday, September 28, 2020",
+      "excerpt": "few - Rekt - defi"
+    },
+    {
+      "id": "the-crooked-swerve",
+      "title": "The Crooked Swerve",
+      "url": "https://rekt.news/the-crooked-swerve/",
+      "date": "Thursday, September 24, 2020",
+      "excerpt": "Swerve - Fork - Rekt"
+    },
+    {
+      "id": "helloworld",
+      "title": "Hello World",
+      "url": "https://rekt.news/helloworld/",
+      "date": "Wednesday, September 23, 2020",
+      "excerpt": "Hello World"
+    }
+  ]
+}
