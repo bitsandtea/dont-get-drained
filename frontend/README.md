@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Don't Get Drained -- Frontend
+
+Next.js app providing the UI and API routes for the agentic firewall marketplace.
+
+## Features
+
+- Swap interface for configuring token swaps with plain-English intent
+- Agent marketplace for browsing, publishing, and selecting guard agents
+- Review dashboard showing AI agent verdicts, simulation results, and TEE proofs
+- API routes orchestrating inference via 0G Compute, storage via 0G Storage, and simulation via Alchemy
+
+## Tech Stack
+
+- Next.js 16, React 19, TypeScript
+- Tailwind CSS 4
+- ethers.js 6
+- 0G TS SDK, 0G Serving Broker
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- pnpm
+
+### Install
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local` and fill in:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `OG_PRIVATE_KEY` -- Wallet key for 0G operations
+- `OG_RPC_URL` -- 0G testnet RPC
+- `NEXT_PUBLIC_DIRECTORY_ADDRESS` -- AgentDirectory contract address
+- `NEXT_PUBLIC_GUARD_ADDRESS` -- InferenceGuard contract address
+- `NEXT_PUBLIC_SAFE_ADDRESS` -- Safe wallet address
+- `RPC_URL` -- Anvil RPC (localhost:8545)
+- `RELAYER_PRIVATE_KEY` -- Relayer key for submitting approvals
 
-## Learn More
+### Run
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Directories
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Path | Description |
+|------|-------------|
+| `app/page.tsx` | Main swap interface |
+| `app/api/review/` | Core review orchestration |
+| `app/api/agents/` | Agent marketplace APIs |
+| `app/api/rekt/` | Rekt.news exploit indexing |
+| `app/api/og-storage/` | 0G Storage operations |
+| `lib/` | Shared utilities (contracts, inference, Uniswap, prompts) |

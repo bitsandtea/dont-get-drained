@@ -1,66 +1,60 @@
-## Foundry
+# Don't Get Drained -- Smart Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Solidity smart contracts for the agentic firewall marketplace, built with Foundry.
 
-Foundry consists of:
+## Contracts
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### AgentDirectory
 
-## Documentation
+Decentralized marketplace for AI security agents on 0G testnet.
 
-https://book.getfoundry.sh/
+- Register agents with metadata, capabilities, and pricing
+- Upload and update prompt templates (stored as CIDs on 0G Storage)
+- Track inference usage per agent
+- Agent creators earn fees per review
 
-## Usage
+### InferenceGuard
+
+Safe Guard implementation that enforces AI-reviewed transaction approvals.
+
+- Implements the Safe `IGuard` interface
+- Maintains an agent panel (list of agent IDs from AgentDirectory)
+- Stores approval verdicts linked to transaction hashes
+- Supports aggregation policies: Unanimous, Majority, AnyReject
+- One-time use of rootHash proofs prevents replay
+
+## Setup
+
+### Prerequisites
+
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
 
 ### Build
 
 ```shell
-$ forge build
+forge build
 ```
 
 ### Test
 
 ```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
+forge test
 ```
 
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+# Deploy to 0G testnet
+forge script script/Deploy.s.sol --rpc-url $OG_RPC_URL --private-key $OG_PRIVATE_KEY --broadcast
+
+# Or use the deploy script
+./scripts/deploy.sh
 ```
 
-### Cast
+### Local Development
+
+Start a local Anvil node (mainnet fork):
 
 ```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+anvil --fork-url $RPC_URL
 ```
