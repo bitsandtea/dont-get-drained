@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useWallet } from "@/components/WalletProvider";
+import { CONTRACTS, GUARD_STORAGE_SLOT } from "@/lib/contracts";
+import { ethers } from "ethers";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ethers } from "ethers";
-import { CONTRACTS, GUARD_STORAGE_SLOT } from "@/lib/contracts";
-import { useWallet } from "@/components/WalletProvider";
+import { useCallback, useEffect, useState } from "react";
 
 function abbreviate(addr: string) {
   if (!addr) return "---";
@@ -28,7 +28,6 @@ export default function TopNav() {
       );
       if (!res.ok) return;
       const data = await res.json();
-      console.log("[TopNav] panel data:", data);
       setAgentCount(data.panel?.length || 0);
     } catch {
       // silently ignore
@@ -58,6 +57,7 @@ export default function TopNav() {
     { href: "/marketplace", label: "Marketplace", always: true },
     { href: "/guard", label: "Guard", always: true },
     { href: "/agents/create", label: "Create Agent", always: true },
+    { href: "/og-storage", label: "Storage", always: true },
     { href: "/admin", label: "Admin", always: true },
   ];
 

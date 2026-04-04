@@ -14,7 +14,7 @@ import {
 interface TxToast {
   id: number;
   label: string; // e.g. "Agent Registered", "Prompt Stored on 0G"
-  hash: string; // tx hash or root hash
+  hash: string; // tx hash, root hash, or submission index
   kind: "tx" | "storage"; // chain tx vs 0G storage
   ts: number;
 }
@@ -29,8 +29,8 @@ export const useTxToast = () => useContext(Ctx);
 
 // --- Explorer URLs ---
 
-const CHAIN_EXPLORER = "https://chainscan-galileo.0g.ai/tx/";
-const STORAGE_EXPLORER = "https://storagescan-galileo.0g.ai/tx/";
+const CHAIN_EXPLORER = "http://localhost:5100/tx/";
+const STORAGE_EXPLORER = "https://storagescan-galileo.0g.ai/submission/";
 
 function explorerUrl(hash: string, kind: "tx" | "storage") {
   return kind === "storage"

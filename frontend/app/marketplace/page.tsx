@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useWallet } from "@/components/WalletProvider";
+import { CONTRACTS } from "@/lib/contracts";
 
 type Agent = {
   id: string;
@@ -44,46 +45,52 @@ function AgentCard({
 
   return (
     <div className="card p-5 space-y-3 flex flex-col justify-between">
-      {/* Header */}
-      <div>
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-base font-bold text-[var(--accent)] truncate">
-            {agent.name}
-          </h3>
-          <span
-            className={`px-2 py-0.5 text-[10px] font-semibold uppercase rounded-md border ${
-              isFree
-                ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
-                : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
-            }`}
-          >
-            {formatPrice(agent.pricePerInference)}
-          </span>
-        </div>
-        <p className="text-sm text-[var(--sub)] line-clamp-2 leading-relaxed">
-          {agent.description}
-        </p>
-      </div>
-
-      {/* Capability tags */}
-      {agent.capabilities.length > 0 && (
-        <div className="flex flex-wrap gap-1.5">
-          {agent.capabilities.map((cap) => (
+      {/* Clickable area → agent detail page */}
+      <Link
+        href={`/marketplace/${encodeURIComponent(agent.id)}`}
+        className="space-y-3 no-underline block"
+      >
+        {/* Header */}
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-base font-bold text-[var(--accent)] truncate">
+              {agent.name}
+            </h3>
             <span
-              key={cap}
-              className="px-2 py-0.5 text-[10px] font-medium rounded-md bg-[var(--accent-dim)] text-[var(--accent)] border border-[var(--panel-border)]"
+              className={`px-2 py-0.5 text-[10px] font-semibold uppercase rounded-md border ${
+                isFree
+                  ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
+                  : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
+              }`}
             >
-              {cap}
+              {formatPrice(agent.pricePerInference)}
             </span>
-          ))}
+          </div>
+          <p className="text-sm text-[var(--sub)] line-clamp-2 leading-relaxed">
+            {agent.description}
+          </p>
         </div>
-      )}
 
-      {/* Meta */}
-      <div className="flex items-center justify-between text-xs text-[var(--sub)] pt-1 border-t border-white/5">
-        <span>Used {agent.totalInferences}x</span>
-        <span className="font-mono">{abbreviate(agent.creator)}</span>
-      </div>
+        {/* Capability tags */}
+        {agent.capabilities.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {agent.capabilities.map((cap) => (
+              <span
+                key={cap}
+                className="px-2 py-0.5 text-[10px] font-medium rounded-md bg-[var(--accent-dim)] text-[var(--accent)] border border-[var(--panel-border)]"
+              >
+                {cap}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Meta */}
+        <div className="flex items-center justify-between text-xs text-[var(--sub)] pt-1 border-t border-white/5">
+          <span>Used {agent.totalInferences}x</span>
+          <span className="font-mono">{abbreviate(agent.creator)}</span>
+        </div>
+      </Link>
 
       {/* Actions */}
       <div className="flex gap-2">
@@ -231,6 +238,20 @@ export default function MarketplacePage() {
           <>
             <p className="text-xs text-[var(--sub)]">
               {filtered.length} agent{filtered.length !== 1 && "s"} found
+              {CONTRACTS.AGENT_DIRECTORY && (
+                <span>
+                  {" "}[pulled from smart contract on 0G Chain:{" "}
+                  <a
+                    href={`https://chainscan-galileo.0g.ai/address/${CONTRACTS.AGENT_DIRECTORY}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--accent)] underline hover:text-[var(--foreground)]"
+                  >
+                    AgentDirectory
+                  </a>
+                  ]
+                </span>
+              )}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filtered.map((agent) => (

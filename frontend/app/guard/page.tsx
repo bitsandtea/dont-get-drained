@@ -55,6 +55,8 @@ export default function GuardPage() {
   const [policy, setPolicy] = useState(0);
   const [loadingPanel, setLoadingPanel] = useState(false);
   const [pendingAdd, setPendingAdd] = useState<string | null>(addAgentId);
+  const [addInput, setAddInput] = useState("");
+  const [addLoading, setAddLoading] = useState(false);
 
   // Edited state (what user wants to save)
   const [editedPanel, setEditedPanel] = useState<PanelAgent[]>([]);
@@ -215,7 +217,22 @@ export default function GuardPage() {
     if (guardAddress) loadPanel();
   }, [guardAddress, loadPanel]);
 
-  // --- Auto-add agent from ?add= query param ---
+  // --- Auto-load Safe on mount when CONTRACTS.SAFE is set ---
+
+  useEffect(() => {
+    if (safeInput && !safeLoaded && !loadingSafe) {
+      loadSafe();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // --- Sync ?add= query param into pendingAdd (works on re-navigation) ---
+
+  useEffect(() => {
+    if (addAgentId) setPendingAdd(addAgentId);
+  }, [addAgentId]);
+
+  // --- Auto-add agent from pendingAdd ---
 
   useEffect(() => {
     if (!pendingAdd || loadingPanel || !safeLoaded) return;
@@ -225,25 +242,34 @@ export default function GuardPage() {
     }
     const idToAdd = pendingAdd;
     setPendingAdd(null);
-    fetch(`/api/agents`)
-      .then((res) => res.json())
-      .then((agents: { id: string; name: string; description: string; capabilities: string[]; active: boolean }[]) => {
-        const agent = agents.find((a: { id: string }) => a.id === idToAdd);
-        if (agent) {
-          setEditedPanel((prev) => [
-            ...prev,
-            { id: agent.id, name: agent.name, description: agent.description, capabilities: agent.capabilities },
-          ]);
-          setSuccess(`Added "${agent.name}" to panel. Click Save Panel to commit on-chain.`);
-        } else {
-          setEditedPanel((prev) => [
-            ...prev,
-            { id: idToAdd, name: `Agent ${idToAdd.slice(0, 10)}...`, description: "", capabilities: [] },
-          ]);
-        }
-      })
-      .catch(() => {});
+    addAgentById(idToAdd);
   }, [pendingAdd, loadingPanel, safeLoaded]);
+
+  async function addAgentById(idToAdd: string) {
+    if (editedPanel.some((a) => a.id === idToAdd)) {
+      setError("Agent already in panel");
+      return;
+    }
+    setAddLoading(true);
+    try {
+      const res = await fetch(`/api/agents`);
+      const agents: { id: string; name: string; description: string; capabilities: string[]; active: boolean }[] = await res.json();
+      const agent = agents.find((a) => a.id === idToAdd);
+      if (agent) {
+        setEditedPanel((prev) => {
+          if (prev.some((a) => a.id === idToAdd)) return prev;
+          return [...prev, { id: agent.id, name: agent.name, description: agent.description, capabilities: agent.capabilities }];
+        });
+        setSuccess(`Added "${agent.name}" to panel. Click Save Panel to commit on-chain.`);
+      } else {
+        setError(`Agent not found: ${idToAdd.slice(0, 16)}...`);
+      }
+    } catch {
+      setError("Failed to fetch agent info");
+    } finally {
+      setAddLoading(false);
+    }
+  }
 
   // --- Track dirty state ---
 
@@ -255,7 +281,7 @@ export default function GuardPage() {
     setDirty(panelChanged || policyChanged);
   }, [editedPanel, editedPolicy, panel, policy]);
 
-  // --- Remove agent from panel ---
+  // --- Remove agent from edited panel (local only — committed on Save Panel) ---
 
   function removeAgent(id: string) {
     setEditedPanel((prev) => prev.filter((a) => a.id !== id));
@@ -596,10 +622,7 @@ export default function GuardPage() {
             {/* Agent list */}
             {editedPanel.length === 0 ? (
               <div className="bg-black/20 rounded-lg px-4 py-6 border border-white/5 text-center space-y-3">
-                <p className="text-sm text-[var(--sub)]">No agents in panel.</p>
-                <Link href="/marketplace" className="btn btn-green px-4 py-2 text-sm inline-block">
-                  Browse Marketplace
-                </Link>
+                <p className="text-sm text-[var(--sub)]">No agents in panel. Add one below or browse the marketplace.</p>
               </div>
             ) : (
               <div className="space-y-2">
@@ -630,8 +653,9 @@ export default function GuardPage() {
                     </div>
                     <button
                       onClick={() => removeAgent(agent.id)}
-                      className="text-[var(--sub)] hover:text-[var(--orange)] transition-colors text-lg leading-none px-1"
-                      title="Remove from panel"
+                      disabled={saving}
+                      className="text-[var(--sub)] hover:text-[var(--orange)] transition-colors text-lg leading-none px-1 disabled:opacity-30 disabled:cursor-not-allowed"
+                      title="Remove from panel (save to commit)"
                     >
                       &times;
                     </button>
@@ -665,22 +689,49 @@ export default function GuardPage() {
               </div>
             </div>
 
-            {/* Add agent + Save */}
-            <div className="flex gap-3">
-              <Link
-                href="/marketplace"
-                className="btn btn-green flex-1 py-2.5 text-sm text-center"
-              >
-                + Add Agent
+            {/* Add agent by ID */}
+            <div className="space-y-2">
+              <label className="text-xs text-[var(--sub)] block">Add Agent</label>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Paste agent ID (0x...)"
+                  value={addInput}
+                  onChange={(e) => setAddInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && addInput.trim()) {
+                      addAgentById(addInput.trim());
+                      setAddInput("");
+                    }
+                  }}
+                  className="input flex-1 px-3 py-2 text-sm font-mono"
+                />
+                <button
+                  onClick={() => {
+                    if (addInput.trim()) {
+                      addAgentById(addInput.trim());
+                      setAddInput("");
+                    }
+                  }}
+                  disabled={!addInput.trim() || addLoading}
+                  className="btn btn-green px-4 py-2 text-sm"
+                >
+                  {addLoading ? "..." : "Add"}
+                </button>
+              </div>
+              <Link href="/marketplace" className="text-xs text-[var(--accent)] hover:underline">
+                Browse marketplace &rarr;
               </Link>
-              <button
-                onClick={savePanel}
-                disabled={!dirty || saving || !wallet || !isOwner}
-                className="btn btn-accent flex-1 py-2.5 text-sm"
-              >
-                {saving ? "Saving..." : "Save Panel"}
-              </button>
             </div>
+
+            {/* Save */}
+            <button
+              onClick={savePanel}
+              disabled={!dirty || saving || !wallet || !isOwner}
+              className="btn btn-accent w-full py-2.5 text-sm"
+            >
+              {saving ? "Saving..." : dirty ? "Save Panel" : "No changes"}
+            </button>
 
             {!wallet && dirty && (
               <p className="text-xs text-[var(--yellow)] text-center">

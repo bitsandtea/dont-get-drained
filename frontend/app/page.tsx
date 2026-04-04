@@ -61,6 +61,7 @@ type ReviewResult = {
   verified: boolean | null;
   rootHash: string;
   storageTxHash: string;
+  submissionIndex: number | null;
   simulation: SimulationResult | null;
 };
 
@@ -151,26 +152,16 @@ function MrInference({ size = 48, mood = "neutral" }: { size?: number; mood?: "n
   );
 }
 
-const THINKING_MESSAGES = [
-  "Checking token legitimacy...",
-  "Analyzing swap parameters...",
-  "Running risk assessment...",
-  "Consulting the oracle...",
-  "Verifying price feeds...",
-  "Scanning for anomalies...",
-  "Evaluating slippage risk...",
-  "Cross-referencing contracts...",
-];
+type StepProgress = {
+  id: string;
+  label: string;
+  status: "running" | "done" | "error";
+  detail?: string;
+};
 
-function ThinkingScreen() {
-  const [msgIndex, setMsgIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMsgIndex((i) => (i + 1) % THINKING_MESSAGES.length);
-    }, 2200);
-    return () => clearInterval(interval);
-  }, []);
+function ThinkingScreen({ steps }: { steps: StepProgress[] }) {
+  const currentStep = steps.findLast((s) => s.status === "running");
+  const doneCount = steps.filter((s) => s.status === "done").length;
 
   return (
     <div className="card p-8 space-y-6">
@@ -181,25 +172,55 @@ function ThinkingScreen() {
           <h2 className="text-lg font-semibold text-[var(--accent)]">
             Mr. Inference is working...
           </h2>
-          <p
-            key={msgIndex}
-            className="text-sm text-[var(--sub)]"
-            style={{ animation: "fade-in-up 0.3s ease-out" }}
-          >
-            {THINKING_MESSAGES[msgIndex]}
-          </p>
+          {currentStep && (
+            <p
+              key={currentStep.id}
+              className="text-sm text-[var(--sub)]"
+              style={{ animation: "fade-in-up 0.3s ease-out" }}
+            >
+              {currentStep.label}
+            </p>
+          )}
         </div>
 
         {/* Progress bar */}
         <div className="w-full max-w-xs h-1.5 rounded-full bg-black/30 overflow-hidden">
-          <div
-            className="h-full rounded-full"
-            style={{
-              background: "linear-gradient(90deg, transparent, var(--accent), var(--purple), var(--accent), transparent)",
-              backgroundSize: "200% 100%",
-              animation: "progress-sweep 1.5s linear infinite",
-            }}
-          />
+          {steps.length > 0 ? (
+            <div
+              className="h-full rounded-full bg-[var(--accent)] transition-all duration-500 ease-out"
+              style={{ width: `${Math.max(5, (doneCount / Math.max(steps.length, 1)) * 100)}%` }}
+            />
+          ) : (
+            <div
+              className="h-full rounded-full"
+              style={{
+                background: "linear-gradient(90deg, transparent, var(--accent), var(--purple), var(--accent), transparent)",
+                backgroundSize: "200% 100%",
+                animation: "progress-sweep 1.5s linear infinite",
+              }}
+            />
+          )}
+        </div>
+
+        {/* Step list */}
+        <div className="w-full max-w-sm space-y-1.5 text-xs font-mono">
+          {steps.map((s) => (
+            <div key={s.id} className="flex items-center gap-2">
+              {s.status === "running" ? (
+                <span className="w-3.5 text-center text-[var(--accent)]" style={{ animation: "pulse-soft 0.8s infinite" }}>&#9679;</span>
+              ) : s.status === "done" ? (
+                <span className="w-3.5 text-center text-[var(--green)]">&#10003;</span>
+              ) : (
+                <span className="w-3.5 text-center text-[var(--red)]">&#10007;</span>
+              )}
+              <span className={s.status === "running" ? "text-[var(--accent)]" : "text-[var(--sub)]"}>
+                {s.label}
+              </span>
+              {s.detail && s.status !== "running" && (
+                <span className="ml-auto text-[var(--sub)] opacity-60 truncate max-w-[140px]">{s.detail}</span>
+              )}
+            </div>
+          ))}
         </div>
 
         {/* Activity dots */}
@@ -284,6 +305,7 @@ export default function Home() {
   const [quotePreview, setQuotePreview] = useState<QuotePreview | null>(null);
   const [quoteLoading, setQuoteLoading] = useState(false);
   const [quoteError, setQuoteError] = useState("");
+  const [reviewSteps, setReviewSteps] = useState<StepProgress[]>([]);
 
   // Debounced quote fetching when token or amount changes
   useEffect(() => {
@@ -563,6 +585,7 @@ export default function Home() {
     setReview(null);
     setApproveResult(null);
     setExecuted(false);
+    setReviewSteps([]);
 
     try {
       const token = TOKENS[tokenOut];
@@ -577,36 +600,83 @@ export default function Home() {
         }),
       });
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
-
-      // Log Alchemy simulation before/after asset changes
-      if (data.simulation?.changes?.length) {
-        console.log("=== ALCHEMY SIMULATION: ASSET CHANGES ===");
-        for (const c of data.simulation.changes) {
-          const dir = c.changeType === "TRANSFER" && c.to?.toLowerCase() === safeAddress.toLowerCase()
-            ? "IN"
-            : "OUT";
-          console.log(
-            `[${dir}] ${c.amount} ${c.symbol} (${c.changeType})`,
-            `| from: ${c.from} → to: ${c.to}`
-          );
-        }
-        if (data.simulation.gasUsed) {
-          console.log("Simulated gas used:", data.simulation.gasUsed);
-        }
-        console.log("=========================================");
-      } else if (data.simulation === null) {
-        console.log("[SIM] Alchemy simulation returned null — check server logs for details");
-      } else {
-        console.log("[SIM] No asset changes returned from simulation");
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({ error: "Review failed" }));
+        throw new Error(errData.error || `HTTP ${res.status}`);
       }
 
-      setReview(data);
+      const reader = res.body?.getReader();
+      if (!reader) throw new Error("No response stream");
 
-      // Toast chain transactions from the review
-      if (data.storageTxHash) {
-        txToast.push("Verdict stored on 0G", data.storageTxHash, "storage");
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        // Parse SSE events from buffer
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || ""; // keep incomplete last line
+
+        let eventType = "";
+        for (const line of lines) {
+          if (line.startsWith("event: ")) {
+            eventType = line.slice(7);
+          } else if (line.startsWith("data: ") && eventType) {
+            try {
+              const payload = JSON.parse(line.slice(6));
+              if (eventType === "step") {
+                setReviewSteps((prev) => {
+                  const idx = prev.findIndex((s) => s.id === payload.id);
+                  if (idx >= 0) {
+                    const next = [...prev];
+                    next[idx] = payload;
+                    return next;
+                  }
+                  return [...prev, payload];
+                });
+              } else if (eventType === "result") {
+                const data = payload;
+                // Log Alchemy simulation before/after asset changes
+                if (data.simulation?.changes?.length) {
+                  console.log("=== ALCHEMY SIMULATION: ASSET CHANGES ===");
+                  for (const c of data.simulation.changes) {
+                    const dir = c.changeType === "TRANSFER" && c.to?.toLowerCase() === safeAddress.toLowerCase()
+                      ? "IN"
+                      : "OUT";
+                    console.log(
+                      `[${dir}] ${c.amount} ${c.symbol} (${c.changeType})`,
+                      `| from: ${c.from} → to: ${c.to}`
+                    );
+                  }
+                  if (data.simulation.gasUsed) {
+                    console.log("Simulated gas used:", data.simulation.gasUsed);
+                  }
+                  console.log("=========================================");
+                } else if (data.simulation === null) {
+                  console.log("[SIM] Alchemy simulation returned null — check server logs for details");
+                } else {
+                  console.log("[SIM] No asset changes returned from simulation");
+                }
+
+                setReview(data);
+
+                if (data.submissionIndex != null) {
+                  txToast.push("Verdict stored on 0G", String(data.submissionIndex), "storage");
+                }
+              } else if (eventType === "error") {
+                throw new Error(payload.error);
+              }
+            } catch (parseErr) {
+              // If it's our own thrown error, re-throw it
+              if (parseErr instanceof Error && !parseErr.message.startsWith("Unexpected")) throw parseErr;
+              console.warn("[SSE] Failed to parse event:", line);
+            }
+            eventType = "";
+          }
+        }
       }
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Review failed");
@@ -995,7 +1065,7 @@ export default function Home() {
 
         {/* Back to actions */}
         <button
-          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); setSwapIntent(""); }}
+          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); setSwapIntent(""); setReviewSteps([]); }}
           className="text-sm text-[var(--sub)] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
         >
           &larr; Back to actions
@@ -1212,7 +1282,7 @@ export default function Home() {
         {step === 1 && (
           <section className="space-y-4">
             {loading === "review" ? (
-              <ThinkingScreen />
+              <ThinkingScreen steps={reviewSteps} />
             ) : !review ? (
               <div className="card p-6 space-y-4">
                 <div className="flex items-center gap-3">
@@ -1318,7 +1388,7 @@ export default function Home() {
                             <span className="text-[var(--orange)]">Inference failed</span>
                           ) : (
                             <>
-                              <span>TEE: {agent.teeProof ? "Proof received" : "No proof"}</span>
+                              <span>TEE: {agent.teeProof ? (agent.verified ? "Verified" : "Proof received") : "No proof"}</span>
                               <span>Sig: {agent.teeProof?.signature ? "Present" : "None"}</span>
                             </>
                           )}
@@ -1341,7 +1411,7 @@ export default function Home() {
                       <div className="flex items-center gap-2">
                         <span className="text-[var(--sub)]">TEE Proof:</span>
                         <span className={review.teeProof ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
-                          {review.teeProof ? "Received (unverified)" : "None"}
+                          {review.teeProof ? (review.verified ? "Verified" : "Received (unverified)") : "None"}
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
@@ -1377,12 +1447,23 @@ export default function Home() {
 
                   <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-[var(--sub)]">0G Storage Root Hash</span>
+                      <span className="text-xs text-[var(--sub)]">0G Storage</span>
                       <CopyButton text={review.rootHash} />
                     </div>
-                    <code className="text-xs text-[var(--purple)] break-all font-mono leading-relaxed">
-                      {review.rootHash}
-                    </code>
+                    {review.submissionIndex != null ? (
+                      <a
+                        href={`https://storagescan-galileo.0g.ai/submission/${review.submissionIndex}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-[var(--purple)] break-all font-mono leading-relaxed hover:underline"
+                      >
+                        Submission #{review.submissionIndex} ↗
+                      </a>
+                    ) : (
+                      <code className="text-xs text-[var(--purple)] break-all font-mono leading-relaxed">
+                        {review.rootHash}
+                      </code>
+                    )}
                   </div>
 
                   <Collapsible label="Full Response Data">
@@ -1398,6 +1479,7 @@ export default function Home() {
                   <button
                     onClick={() => {
                       setReview(null);
+                      setReviewSteps([]);
                       goBack();
                     }}
                     className="btn btn-accent px-6 py-3 text-base"

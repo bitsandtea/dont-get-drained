@@ -26,17 +26,26 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, description, promptTemplate, pricePerInference, capabilities } = body;
+    const { name, description, promptTemplate, steps, dataSources, pricePerInference, capabilities } = body;
 
-    if (!name || !promptTemplate) {
+    // Validate: either a single promptTemplate or a steps array
+    const hasSteps = Array.isArray(steps) && steps.length > 0;
+    if (!name || (!promptTemplate && !hasSteps)) {
       return NextResponse.json(
-        { error: "name and promptTemplate are required" },
+        { error: "name and either promptTemplate or steps are required" },
         { status: 400 }
       );
     }
 
-    // 1. Store promptTemplate on 0G Storage
-    const { rootHash: promptCid } = await storeOn0G({ promptTemplate });
+    if (hasSteps && steps.length > 8) {
+      return NextResponse.json({ error: "Maximum 8 steps allowed" }, { status: 400 });
+    }
+
+    // 1. Store on 0G Storage — step flow or single prompt
+    const storagePayload = hasSteps
+      ? { steps, dataSources: dataSources || [] }
+      : { promptTemplate };
+    const { rootHash: promptCid, submissionIndex } = await storeOn0G(storagePayload);
 
     // 2. Register on AgentDirectory contract
     const { agentId, tx: txHash } = await registerAgentOnChain({
@@ -47,7 +56,7 @@ export async function POST(req: NextRequest) {
       capabilities: capabilities || "",
     });
 
-    return NextResponse.json({ agentId, promptCid, name, txHash }, { status: 201 });
+    return NextResponse.json({ agentId, promptCid, name, txHash, submissionIndex }, { status: 201 });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json({ error: message }, { status: 500 });

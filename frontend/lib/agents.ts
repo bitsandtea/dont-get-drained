@@ -1,6 +1,27 @@
 import { ethers } from "ethers";
 import { AGENT_DIRECTORY_ABI } from "./contracts";
 
+// --- Step Flow Types ---
+
+export interface AgentStep {
+  type: "curl" | "inference";
+  url?: string;              // curl: URL with {{var}} placeholders
+  method?: "GET" | "POST";   // curl: HTTP method (default GET)
+  body?: string;             // curl POST: request body with {{var}} placeholders
+  prompt?: string;           // inference: prompt template with {{var}} placeholders
+  outputVar: string;         // variable name for this step's output
+}
+
+export interface StepFlow {
+  steps: AgentStep[];
+  dataSources: string[];     // registered URLs — curls must start with one of these
+}
+
+/** Check if stored prompt data is a multi-step flow */
+export function isStepFlow(data: unknown): data is StepFlow {
+  return !!data && typeof data === "object" && Array.isArray((data as any).steps);
+}
+
 // --- Types ---
 
 export interface AgentConfig {
@@ -153,6 +174,20 @@ export async function updateAgentPromptOnChain(
   const directory = getDirectoryContract(wallet);
 
   const tx = await directory.updatePrompt(agentId, newPromptCid);
+  const receipt = await tx.wait();
+  return receipt.hash;
+}
+
+/** Deactivate (delete) an agent on-chain */
+export async function deactivateAgentOnChain(agentId: string): Promise<string> {
+  const key = process.env.OG_PRIVATE_KEY;
+  if (!key) throw new Error("OG_PRIVATE_KEY not set");
+
+  const provider = new ethers.JsonRpcProvider(OG_RPC);
+  const wallet = new ethers.Wallet(key, provider);
+  const directory = getDirectoryContract(wallet);
+
+  const tx = await directory.deactivate(agentId);
   const receipt = await tx.wait();
   return receipt.hash;
 }

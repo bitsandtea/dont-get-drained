@@ -8,10 +8,17 @@ echo "  InferenceGuard + Safe Deployment"
 echo "================================"
 echo ""
 
-# ── Ensure Anvil is running ──
-if curl -s http://127.0.0.1:8545 -X POST -H "Content-Type: application/json" \
-  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' > /dev/null 2>&1; then
-  echo "Anvil already running on port 8545"
+# ── Kill any existing process on port 8545 ──
+EXISTING_PID=$(lsof -ti :8545 2>/dev/null || true)
+if [[ -n "$EXISTING_PID" ]]; then
+  echo "Killing existing process on port 8545 (PID $EXISTING_PID)..."
+  kill -9 $EXISTING_PID 2>/dev/null || true
+  sleep 1
+fi
+
+# ── Start fresh Anvil ──
+if false; then
+  :  # always start fresh
 else
   echo "Starting Anvil (mainnet fork)..."
   anvil --fork-url https://ethereum-rpc.publicnode.com --host 127.0.0.1 --port 8545 --chain-id 31337 &

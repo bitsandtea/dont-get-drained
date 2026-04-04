@@ -126,9 +126,14 @@ export function VerdictPanel({
             <span className="text-xs text-[var(--sub)]">Guard TX Hash</span>
             <CopyButton text={review.txHash} />
           </div>
-          <code className="text-xs text-gray-400 break-all font-mono leading-relaxed">
-            {review.txHash}
-          </code>
+          <a
+            href={`http://localhost:5100/tx/${review.txHash}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-[var(--accent)] break-all font-mono leading-relaxed hover:underline"
+          >
+            {review.txHash} ↗
+          </a>
         </div>
 
         <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
