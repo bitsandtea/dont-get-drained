@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 import "forge-std/Test.sol";
-import "../src/AIGuard.sol";
+import "../src/InferenceGuard.sol";
 
 interface ISafeProxyFactory {
     function createProxyWithNonce(address singleton, bytes memory initializer, uint256 saltNonce)
@@ -56,7 +56,7 @@ interface IERC20 {
     function balanceOf(address) external view returns (uint256);
 }
 
-contract ForkAIGuardTest is Test {
+contract ForkInferenceGuardTest is Test {
     // Mainnet addresses
     address constant SAFE_SINGLETON = 0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552;
     ISafeProxyFactory constant SAFE_FACTORY =
@@ -73,7 +73,7 @@ contract ForkAIGuardTest is Test {
     address relayer;
 
     ISafe safe;
-    AIGuard guard;
+    InferenceGuard guard;
 
     function setUp() public {
         ownerPk = 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80;
@@ -99,10 +99,10 @@ contract ForkAIGuardTest is Test {
         (bool sent,) = safeAddr.call{value: 10 ether}("");
         require(sent);
 
-        // Deploy AIGuard
-        guard = new AIGuard(safeAddr, relayer);
+        // Deploy InferenceGuard
+        guard = new InferenceGuard(safeAddr, relayer);
         console.log("Safe:", safeAddr);
-        console.log("AIGuard:", address(guard));
+        console.log("InferenceGuard:", address(guard));
 
         // Set guard on Safe
         bytes memory setGuardData = abi.encodeCall(ISafe.setGuard, (address(guard)));
@@ -116,7 +116,7 @@ contract ForkAIGuardTest is Test {
         bytes memory signature = _signSafeTx(UNISWAP_V2_ROUTER, 1 ether, swapData);
 
         vm.prank(owner);
-        vm.expectRevert(AIGuard.MissingRootHash.selector);
+        vm.expectRevert(InferenceGuard.MissingRootHash.selector);
         safe.execTransaction(UNISWAP_V2_ROUTER, 1 ether, swapData, 0, 0, 0, 0, address(0), payable(address(0)), signature);
 
         console.log("Swap correctly blocked - no AI approval");
@@ -172,7 +172,7 @@ contract ForkAIGuardTest is Test {
         // Swap should still be blocked
         bytes memory signature = _signSafeTx(UNISWAP_V2_ROUTER, 1 ether, swapData);
         vm.prank(owner);
-        vm.expectRevert(AIGuard.NotApproved.selector);
+        vm.expectRevert(InferenceGuard.NotApproved.selector);
         safe.execTransaction(UNISWAP_V2_ROUTER, 1 ether, swapData, 0, 0, 0, 0, address(0), payable(address(0)), signature);
 
         console.log("Swap correctly blocked - AI said no");
@@ -188,7 +188,7 @@ contract ForkAIGuardTest is Test {
         guard.approveTransaction(txHash1, rootHash, true);
 
         vm.prank(relayer);
-        vm.expectRevert(AIGuard.RootHashReused.selector);
+        vm.expectRevert(InferenceGuard.RootHashReused.selector);
         guard.approveTransaction(txHash2, rootHash, true);
 
         console.log("Root hash reuse correctly blocked");
@@ -200,7 +200,7 @@ contract ForkAIGuardTest is Test {
         bytes32 rootHash = bytes32(uint256(0x5678));
 
         vm.prank(owner);
-        vm.expectRevert(AIGuard.NotRelayer.selector);
+        vm.expectRevert(InferenceGuard.NotRelayer.selector);
         guard.approveTransaction(txHash, rootHash, true);
 
         console.log("Non-relayer correctly blocked");
@@ -218,6 +218,69 @@ contract ForkAIGuardTest is Test {
         _execSafeTxRaw(UNISWAP_V2_ROUTER, 1 ether, swapData);
         uint256 usdcAfter = IERC20(USDC).balanceOf(address(safe));
         console.log("Unguarded swap got", (usdcAfter - usdcBefore) / 1e6, "USDC");
+    }
+
+    // --- Panel / Policy tests ---
+
+    /// @notice Safe can set and read the agent panel
+    function test_SetPanel() public {
+        bytes32[] memory panel = new bytes32[](2);
+        panel[0] = bytes32(uint256(0xaa));
+        panel[1] = bytes32(uint256(0xbb));
+
+        bytes memory data = abi.encodeCall(InferenceGuard.setPanel, (panel));
+        _execSafeTxRaw(address(guard), 0, data);
+
+        bytes32[] memory result = guard.getPanel();
+        assertEq(result.length, 2);
+        assertEq(result[0], panel[0]);
+        assertEq(result[1], panel[1]);
+    }
+
+    /// @notice Safe can set the aggregation policy
+    function test_SetPolicy() public {
+        bytes memory data = abi.encodeCall(InferenceGuard.setPolicy, (1));
+        _execSafeTxRaw(address(guard), 0, data);
+
+        assertEq(guard.policy(), 1);
+    }
+
+    /// @notice Non-Safe cannot set panel
+    function test_SetPanelOnlySafe() public {
+        bytes32[] memory panel = new bytes32[](1);
+        panel[0] = bytes32(uint256(0xcc));
+
+        vm.prank(owner);
+        vm.expectRevert("Only Safe");
+        guard.setPanel(panel);
+    }
+
+    /// @notice Non-Safe cannot set policy
+    function test_SetPolicyOnlySafe() public {
+        vm.prank(owner);
+        vm.expectRevert("Only Safe");
+        guard.setPolicy(1);
+    }
+
+    /// @notice Invalid policy value reverts
+    function test_SetPolicyInvalid() public {
+        bytes memory data = abi.encodeCall(InferenceGuard.setPolicy, (3));
+
+        // Execute via Safe — the inner call should revert, causing Safe execTransaction to return false
+        bytes memory signature = _signSafeTx(address(guard), 0, data);
+        vm.prank(owner);
+        // Safe swallows the revert and emits ExecutionFailure, so just check policy unchanged
+        safe.execTransaction(address(guard), 0, data, 0, 0, 0, 0, address(0), payable(address(0)), signature);
+        assertEq(guard.policy(), 0); // unchanged from default
+    }
+
+    /// @notice Safe can set agentDirectory
+    function test_SetAgentDirectory() public {
+        address dir = address(0x1234);
+        bytes memory data = abi.encodeCall(InferenceGuard.setAgentDirectory, (dir));
+        _execSafeTxRaw(address(guard), 0, data);
+
+        assertEq(guard.agentDirectory(), dir);
     }
 
     // --- Helpers ---

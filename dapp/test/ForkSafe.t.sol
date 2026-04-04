@@ -2,8 +2,6 @@
 pragma solidity ^0.8.19;
 
 import "forge-std/Test.sol";
-import "../src/MyToken.sol";
-
 // Safe v1.3.0 interfaces (deployed on mainnet)
 interface ISafeProxyFactory {
     function createProxyWithNonce(
@@ -116,24 +114,6 @@ contract ForkSafeTest is Test {
 
         console.log("Safe owner:", owner);
         console.log("Threshold: 1 of 1");
-    }
-
-    /// @notice Deploy MyToken, send some to Safe, then transfer out via Safe tx
-    function test_SafeTransferMyToken() public {
-        // Deploy token and send to Safe
-        MyToken token = new MyToken(1_000_000);
-        token.transfer(address(safe), 500_000);
-        assertEq(token.balances(address(safe)), 500_000);
-        console.log("Safe MyToken balance:", token.balances(address(safe)));
-
-        // Build tx: Safe transfers 100 tokens to owner
-        bytes memory txData = abi.encodeCall(MyToken.transfer, (owner, 100));
-
-        _execSafeTx(address(token), 0, txData);
-
-        assertEq(token.balances(owner), 100);
-        assertEq(token.balances(address(safe)), 499_900);
-        console.log("Owner received 100 MyTokens via Safe tx");
     }
 
     /// @notice Safe swaps ETH for USDC on Uniswap

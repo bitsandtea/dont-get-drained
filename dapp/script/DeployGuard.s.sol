@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 import "forge-std/Script.sol";
-import "../src/AIGuard.sol";
+import "../src/InferenceGuard.sol";
 
 interface ISafeProxyFactory {
     function createProxyWithNonce(address singleton, bytes memory initializer, uint256 saltNonce)
@@ -88,9 +88,9 @@ contract DeployGuard is Script {
         console.log("=== DEPLOYED ===");
         console.log("Safe:     ", safeAddr);
 
-        // --- 2. Deploy AIGuard ---
-        AIGuard guard = new AIGuard(safeAddr, relayer);
-        console.log("AIGuard:  ", address(guard));
+        // --- 2. Deploy InferenceGuard ---
+        InferenceGuard guard = new InferenceGuard(safeAddr, relayer);
+        console.log("InferenceGuard:", address(guard));
 
         // --- 3. Fund Safe with ETH (if deployer has balance) ---
         if (owner.balance > 6 ether) {

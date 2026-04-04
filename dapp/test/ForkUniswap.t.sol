@@ -2,8 +2,6 @@
 pragma solidity ^0.8.19;
 
 import "forge-std/Test.sol";
-import "../src/MyToken.sol";
-
 interface IUniswapV2Router02 {
     function getAmountsOut(uint256 amountIn, address[] calldata path)
         external
@@ -90,19 +88,4 @@ contract ForkUniswapTest is Test {
         vm.stopPrank();
     }
 
-    /// @notice Deploy your own contract on the fork alongside mainnet state
-    function test_DeployMyTokenOnFork() public {
-        // Deploy your contract
-        MyToken token = new MyToken(1_000_000);
-        assertEq(token.totalSupply(), 1_000_000);
-        console.log("MyToken deployed at:", address(token));
-
-        // Mainnet Uniswap still works alongside your deployment
-        address[] memory path = new address[](2);
-        path[0] = WETH;
-        path[1] = USDC;
-        uint256[] memory amounts = UNISWAP_V2_ROUTER.getAmountsOut(1 ether, path);
-        console.log("1 ETH =", amounts[1] / 1e6, "USDC (from Uniswap V2)");
-        assertGt(amounts[1], 0);
-    }
 }

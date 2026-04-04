@@ -16,9 +16,14 @@ export const DEFAULT_PROMPT_TEMPLATE = [
   `- Routing: {{routing}}`,
   "- Estimated gas: ${{gasFeeUSD}}",
   `- Transaction target: {{txTarget}}`,
+  `- User's stated intent: {{intent}}`,
   ``,
   `Known safe tokens: USDC ({{USDC}}), DAI ({{DAI}}), WETH ({{WETH}})`,
-  `Flag if: unknown token, suspicious address, or unusually large amount.`,
+  ``,
+  `Transaction simulation results (Alchemy):`,
+  `  {{simulationResults}}`,
+  ``,
+  `Flag if: unknown token, suspicious address, unusually large amount, or simulation shows unexpected asset changes.`,
 ].join("\n");
 
 export function getPromptTemplate(): string {

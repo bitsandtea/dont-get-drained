@@ -1,8 +1,9 @@
 // Contract addresses — update after deployment
 export const CONTRACTS = {
   // Set these after deploying on your fork/testnet
-  AI_GUARD: process.env.NEXT_PUBLIC_GUARD_ADDRESS || "",
+  INFERENCE_GUARD: process.env.NEXT_PUBLIC_GUARD_ADDRESS || "",
   SAFE: process.env.NEXT_PUBLIC_SAFE_ADDRESS || "",
+  AGENT_DIRECTORY: process.env.NEXT_PUBLIC_DIRECTORY_ADDRESS || "",
 
   // Mainnet constants
   UNISWAP_V2_ROUTER: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
@@ -12,12 +13,34 @@ export const CONTRACTS = {
   AAVE: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
 };
 
-export const AI_GUARD_ABI = [
+export const AGENT_DIRECTORY_ABI = [
+  "function registerAgent(string name, string description, bytes32 promptCid, uint256 pricePerInference, string capabilities) external returns (bytes32)",
+  "function updatePrompt(bytes32 agentId, bytes32 newPromptCid) external",
+  "function deactivate(bytes32 agentId) external",
+  "function setPrice(bytes32 agentId, uint256 newPrice) external",
+  "function recordInference(bytes32 agentId) external",
+  "function getAgent(bytes32 id) external view returns (tuple(bytes32 id, address creator, string name, string description, bytes32 promptCid, uint256 pricePerInference, string capabilities, bool active, uint256 totalInferences, uint256 createdAt))",
+  "function getAllAgents() external view returns (tuple(bytes32 id, address creator, string name, string description, bytes32 promptCid, uint256 pricePerInference, string capabilities, bool active, uint256 totalInferences, uint256 createdAt)[])",
+  "function getAgentsByCreator(address creator) external view returns (tuple(bytes32 id, address creator, string name, string description, bytes32 promptCid, uint256 pricePerInference, string capabilities, bool active, uint256 totalInferences, uint256 createdAt)[])",
+  "function getAgentCount() external view returns (uint256)",
+  "event AgentRegistered(bytes32 indexed id, address indexed creator, string name, bytes32 promptCid)",
+  "event AgentUpdated(bytes32 indexed id, bytes32 newPromptCid)",
+];
+
+export const INFERENCE_GUARD_ABI = [
   "function approveTransaction(bytes32 txHash, bytes32 rootHash, bool execute) external",
   "function isApproved(bytes32 txHash) external view returns (bool)",
   "function getRootHash(bytes32 txHash) external view returns (bytes32)",
   "function approvals(bytes32) external view returns (bool approved, bool consumed, bytes32 rootHash)",
+  "function getPanel() external view returns (bytes32[])",
+  "function setPanel(bytes32[]) external",
+  "function policy() external view returns (uint8)",
+  "function setPolicy(uint8) external",
+  "function agentDirectory() external view returns (address)",
+  "function setAgentDirectory(address) external",
   "event TransactionApproved(bytes32 indexed txHash, bytes32 rootHash, bool execute)",
+  "event PanelUpdated(bytes32[] agentIds)",
+  "event PolicyUpdated(uint8 policy)",
 ];
 
 export const UNISWAP_V2_ROUTER_ABI = [
@@ -40,6 +63,8 @@ export const ERC20_ABI = [
   "function symbol() external view returns (string)",
   "function decimals() external view returns (uint8)",
 ];
+
+export const OG_RPC = process.env.OG_RPC_URL || "https://evmrpc-testnet.0g.ai";
 
 // Safe v1.3.0 guard storage slot: keccak256("guard_manager.guard.address")
 export const GUARD_STORAGE_SLOT = "0x4a204f620c8c5ccdca3fd54d003badd85ba500436a431f0cbda4f558c93c34c8";

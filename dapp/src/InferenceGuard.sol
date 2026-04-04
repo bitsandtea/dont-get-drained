@@ -26,7 +26,7 @@ interface IGuard {
     function checkAfterExecution(bytes32 txHash, bool success) external;
 }
 
-contract AIGuard is IGuard {
+contract InferenceGuard is IGuard {
     // --- State ---
 
     address public immutable safe;        // the Safe this guard protects
@@ -42,11 +42,19 @@ contract AIGuard is IGuard {
     mapping(bytes32 => bool) public usedRootHashes;
     bytes32 private _pendingTxHash;  // set in checkTransaction, consumed in checkAfterExecution
 
+    // --- Panel / Policy ---
+
+    bytes32[] public agentPanel;     // agent IDs from AgentDirectory
+    uint8 public policy;             // 0=Unanimous, 1=Majority, 2=AnyReject
+    address public agentDirectory;   // AgentDirectory address on 0G (informational)
+
     // --- Events ---
 
     event TransactionApproved(bytes32 indexed txHash, bytes32 rootHash, bool execute);
     event TransactionBlocked(bytes32 indexed txHash);
     event TransactionConsumed(bytes32 indexed txHash);
+    event PanelUpdated(bytes32[] agentIds);
+    event PolicyUpdated(uint8 policy);
 
     // --- Errors ---
 
@@ -61,6 +69,30 @@ contract AIGuard is IGuard {
     constructor(address _safe, address _relayer) {
         safe = _safe;
         relayer = _relayer;
+    }
+
+    // --- Panel / Policy setters (Safe-only) ---
+
+    function setPanel(bytes32[] calldata agentIds) external {
+        require(msg.sender == safe, "Only Safe");
+        agentPanel = agentIds;
+        emit PanelUpdated(agentIds);
+    }
+
+    function setPolicy(uint8 _policy) external {
+        require(msg.sender == safe, "Only Safe");
+        require(_policy <= 2, "Invalid policy");
+        policy = _policy;
+        emit PolicyUpdated(_policy);
+    }
+
+    function setAgentDirectory(address _dir) external {
+        require(msg.sender == safe, "Only Safe");
+        agentDirectory = _dir;
+    }
+
+    function getPanel() external view returns (bytes32[] memory) {
+        return agentPanel;
     }
 
     // --- Relayer submits AI verdict ---

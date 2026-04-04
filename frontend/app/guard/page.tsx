@@ -190,10 +190,10 @@ export default function GuardPage() {
           {/* Quick buttons */}
           <div className="flex gap-2">
             <button
-              onClick={() => setGuardInput(CONTRACTS.AI_GUARD)}
+              onClick={() => setGuardInput(CONTRACTS.INFERENCE_GUARD)}
               className="text-xs px-2.5 py-1 rounded border border-white/10 text-[var(--sub)] hover:text-[var(--accent)] hover:border-[var(--accent)]/30 transition-colors"
             >
-              AIGuard ({CONTRACTS.AI_GUARD ? CONTRACTS.AI_GUARD.slice(0, 8) + "..." : "not set"})
+              InferenceGuard ({CONTRACTS.INFERENCE_GUARD ? CONTRACTS.INFERENCE_GUARD.slice(0, 8) + "..." : "not set"})
             </button>
             <button
               onClick={() => setGuardInput("0")}

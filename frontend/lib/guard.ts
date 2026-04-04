@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-// Compute the same txHash the AIGuard contract computes
+// Compute the same txHash the InferenceGuard contract computes
 export function computeGuardTxHash(params: {
   to: string;
   value: bigint;

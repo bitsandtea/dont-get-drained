@@ -33,10 +33,23 @@ type SimulationResult = {
   error?: unknown;
 };
 
+type AgentVerdictResult = {
+  agentId: string;
+  name: string;
+  verdict: boolean;
+  notes: string;
+  teeProof: { text: string; signature: string } | null;
+  verified: boolean | null;
+  chatId: string;
+};
+
 type ReviewResult = {
   txHash: string;
   swapTx: { to: string; data: string; value: string; gasLimit?: string };
   verdict: boolean;
+  finalVerdict: boolean;
+  policy: string;
+  agents: AgentVerdictResult[];
   quote: string;
   gasFeeUSD: string;
   routing: string;
@@ -262,7 +275,8 @@ export default function Home() {
   const [safeOwners, setSafeOwners] = useState<string[]>([]);
   const [safeLoaded, setSafeLoaded] = useState(false);
   const [loadingSafe, setLoadingSafe] = useState(false);
-  const [guardInput, setGuardInput] = useState(CONTRACTS.AI_GUARD || "");
+  const [guardInput, setGuardInput] = useState(CONTRACTS.INFERENCE_GUARD || "");
+  const [swapIntent, setSwapIntent] = useState("");
   const [quotePreview, setQuotePreview] = useState<QuotePreview | null>(null);
   const [quoteLoading, setQuoteLoading] = useState(false);
   const [quoteError, setQuoteError] = useState("");
@@ -587,6 +601,7 @@ export default function Home() {
           tokenOut: token.address,
           amountIn: parseFloat(amountIn),
           recipient: safeAddress,
+          intent: swapIntent.trim(),
         }),
       });
 
@@ -610,7 +625,7 @@ export default function Home() {
         }
         console.log("=========================================");
       } else if (data.simulation === null) {
-        console.log("[SIM] Alchemy simulation not configured — set ALCHEMY_RPC_URL in .env.local");
+        console.log("[SIM] Alchemy simulation returned null — check server logs for details");
       } else {
         console.log("[SIM] No asset changes returned from simulation");
       }
@@ -635,7 +650,7 @@ export default function Home() {
         body: JSON.stringify({
           txHash: review.txHash,
           rootHash: review.rootHash,
-          execute: review.verdict,
+          execute: review.finalVerdict,
           guardAddress,
         }),
       });
@@ -739,7 +754,7 @@ export default function Home() {
     }
   }
 
-  const inferMood = loading === "review" ? "thinking" : review ? (review.verdict ? "happy" : "neutral") : "neutral";
+  const inferMood = loading === "review" ? "thinking" : review ? (review.finalVerdict ? "happy" : "neutral") : "neutral";
 
   // Check if connected wallet is a Safe owner/signer
   const isOwner = wallet
@@ -999,7 +1014,7 @@ export default function Home() {
 
         {/* Back to actions */}
         <button
-          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); }}
+          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); setSwapIntent(""); }}
           className="text-sm text-[var(--sub)] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
         >
           &larr; Back to actions
@@ -1089,6 +1104,20 @@ export default function Home() {
                   </button>
                 ))}
               </div>
+            </div>
+
+            <div>
+              <label className="text-sm text-[var(--sub)] block mb-1.5">Swap Intent</label>
+              <textarea
+                value={swapIntent}
+                onChange={(e) => setSwapIntent(e.target.value)}
+                placeholder="Describe why you're making this swap (e.g. 'converting ETH to USDC to cover upcoming vendor payment')"
+                rows={2}
+                className="input w-full px-4 py-3 text-sm resize-none"
+              />
+              {swapIntent.length > 0 && swapIntent.trim().length < 10 && (
+                <p className="text-[10px] text-[var(--yellow)] mt-1">Minimum 10 characters</p>
+              )}
             </div>
 
             {/* Quote Preview */}
@@ -1189,7 +1218,7 @@ export default function Home() {
               </button>
               <button
                 onClick={goNext}
-                disabled={!amountIn}
+                disabled={!amountIn || swapIntent.trim().length < 10}
                 className="btn btn-accent flex-1 py-3 text-base"
               >
                 Next &rarr;
@@ -1219,11 +1248,17 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="bg-black/20 rounded-lg px-4 py-3 border border-white/5 text-sm">
-                  <span className="text-[var(--sub)]">Swap: </span>
-                  <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
-                  <span className="text-[var(--sub)] mx-1.5">&rarr;</span>
-                  <span className="text-[var(--green)] font-mono">{tokenOut}</span>
+                <div className="bg-black/20 rounded-lg px-4 py-3 border border-white/5 text-sm space-y-2">
+                  <div>
+                    <span className="text-[var(--sub)]">Swap: </span>
+                    <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
+                    <span className="text-[var(--sub)] mx-1.5">&rarr;</span>
+                    <span className="text-[var(--green)] font-mono">{tokenOut}</span>
+                  </div>
+                  <div>
+                    <span className="text-[var(--sub)]">Intent: </span>
+                    <span className="text-[var(--foreground)] italic">{swapIntent}</span>
+                  </div>
                 </div>
 
                 <div className="flex gap-3">
@@ -1239,67 +1274,120 @@ export default function Home() {
                 </div>
               </div>
             ) : (
-              <div className={`card ${review.verdict ? "card-green" : "card-orange"} p-6 space-y-4`}>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <MrInference size={36} mood={review.verdict ? "happy" : "neutral"} />
-                    <h2 className="text-lg font-semibold">Mr. Inference&apos;s Verdict</h2>
+              <div className="space-y-4">
+                {/* Final verdict banner */}
+                <div className={`card ${review.finalVerdict ? "card-green" : "card-orange"} p-5`}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <MrInference size={36} mood={review.finalVerdict ? "happy" : "neutral"} />
+                      <div>
+                        <h2 className="text-lg font-semibold">
+                          {review.finalVerdict ? "APPROVED" : "REJECTED"}
+                        </h2>
+                        {review.agents && review.agents.length > 1 && (
+                          <p className="text-xs text-[var(--sub)]">
+                            {review.agents.filter((a) => a.verdict).length}/{review.agents.length} agents approved ({review.policy})
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <span
+                      className={`px-3 py-1.5 text-sm font-bold rounded-md border ${
+                        review.finalVerdict
+                          ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
+                          : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
+                      }`}
+                    >
+                      {review.finalVerdict ? "PASS" : "FAIL"}
+                    </span>
                   </div>
-                  <span
-                    className={`px-3 py-1.5 text-sm font-bold rounded-md border ${
-                      review.verdict
-                        ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
-                        : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
-                    }`}
-                  >
-                    {review.verdict ? "APPROVED" : "REJECTED"}
-                  </span>
                 </div>
 
-                <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
-                  <span className="text-xs text-[var(--sub)] block mb-1">Quote</span>
-                  <p className="text-lg">
-                    <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
-                    <span className="text-[var(--sub)] mx-2">&rarr;</span>
-                    <span className="text-[var(--green)] font-mono">{review.quote} {tokenOut}</span>
-                  </p>
-                </div>
-
-                <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs text-[var(--sub)]">Guard TX Hash</span>
-                    <CopyButton text={review.txHash} />
+                {/* Agent verdict cards */}
+                {review.agents && review.agents.length > 1 && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {review.agents.map((agent) => (
+                      <div
+                        key={agent.agentId}
+                        className={`card p-4 space-y-2 border ${
+                          agent.verdict
+                            ? "border-[var(--green)]/30"
+                            : "border-[var(--orange)]/30"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-semibold text-[var(--accent)] truncate">
+                            {agent.name}
+                          </span>
+                          <span
+                            className={`px-2 py-0.5 text-[10px] font-bold rounded-md border ${
+                              agent.verdict
+                                ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
+                                : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
+                            }`}
+                          >
+                            {agent.verdict ? "PASS" : "FAIL"}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-300 line-clamp-3 leading-relaxed">
+                          {agent.notes}
+                        </p>
+                        <div className="flex items-center gap-3 text-[10px] text-[var(--sub)] pt-1 border-t border-white/5">
+                          <span>TEE: {agent.verified ? "Verified" : "Pending"}</span>
+                          <span>Sig: {agent.teeProof ? "Yes" : "No"}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <code className="text-xs text-gray-400 break-all font-mono leading-relaxed">
-                    {review.txHash}
-                  </code>
-                </div>
+                )}
 
-                <div>
-                  <span className="text-xs text-[var(--sub)] block mb-2">Mr. Inference&apos;s Analysis</span>
-                  <div className="bg-black/40 rounded-lg p-4 border border-white/5 max-h-48 overflow-y-auto">
-                    <p className="text-sm text-gray-300 whitespace-pre-wrap leading-relaxed">
-                      {review.aiAnswer}
+                {/* Single agent analysis (backward compat) */}
+                {review.agents && review.agents.length <= 1 && (
+                  <div className="card p-4">
+                    <span className="text-xs text-[var(--sub)] block mb-2">Mr. Inference&apos;s Analysis</span>
+                    <div className="bg-black/40 rounded-lg p-4 border border-white/5 max-h-48 overflow-y-auto">
+                      <p className="text-sm text-gray-300 whitespace-pre-wrap leading-relaxed">
+                        {review.aiAnswer}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-6 text-sm mt-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[var(--sub)]">TEE Verified:</span>
+                        <span className={review.verified ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
+                          {review.verified ? "Yes" : "Pending"}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[var(--sub)]">Signature:</span>
+                        <span className={review.teeProof ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
+                          {review.teeProof ? "Present" : "None"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Quote + details */}
+                <div className="card p-4 space-y-3">
+                  <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
+                    <span className="text-xs text-[var(--sub)] block mb-1">Quote</span>
+                    <p className="text-lg">
+                      <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
+                      <span className="text-[var(--sub)] mx-2">&rarr;</span>
+                      <span className="text-[var(--green)] font-mono">{review.quote} {tokenOut}</span>
                     </p>
                   </div>
-                </div>
 
-                <div className="flex items-center gap-6 text-sm">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[var(--sub)]">TEE Verified:</span>
-                    <span className={review.verified ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
-                      {review.verified ? "Yes" : "Pending"}
-                    </span>
+                  <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs text-[var(--sub)]">Guard TX Hash</span>
+                      <CopyButton text={review.txHash} />
+                    </div>
+                    <code className="text-xs text-gray-400 break-all font-mono leading-relaxed">
+                      {review.txHash}
+                    </code>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[var(--sub)]">Signature:</span>
-                    <span className={review.teeProof ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
-                      {review.teeProof ? "Present" : "None"}
-                    </span>
-                  </div>
-                </div>
 
-                <div className="space-y-3">
                   <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs text-[var(--sub)]">0G Storage Root Hash</span>
@@ -1309,6 +1397,7 @@ export default function Home() {
                       {review.rootHash}
                     </code>
                   </div>
+
                   <Collapsible label="Full Response Data">
                     <div className="bg-black/50 rounded-lg p-4 border border-white/5 max-h-72 overflow-y-auto">
                       <pre className="text-xs text-gray-400 font-mono whitespace-pre-wrap break-all leading-relaxed">
@@ -1328,7 +1417,7 @@ export default function Home() {
                   >
                     &larr; Back
                   </button>
-                  {review.verdict && (
+                  {review.finalVerdict && (
                     <button
                       onClick={submitApproval}
                       disabled={loading === "approve"}

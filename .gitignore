@@ -1,5 +1,5 @@
 # Docs
-docs/*
+
 
 # Environment files (contain private keys!)
 .env
@@ -20,3 +20,5 @@ dapp/broadcast/
 
 # Logs
 *.log
+
+0g/*

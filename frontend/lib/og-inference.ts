@@ -102,3 +102,21 @@ export async function storeOn0G(data: object): Promise<{ rootHash: string; txHas
   const txHash = "rootHash" in tx ? tx.txHash : tx.txHashes[0];
   return { rootHash, txHash };
 }
+
+// In-memory cache for fetched 0G Storage data
+const fetchCache = new Map<string, string>();
+
+// Fetch data from 0G Storage by rootHash via REST API, returns decoded string
+export async function fetchFrom0G(rootHash: string): Promise<string> {
+  const cached = fetchCache.get(rootHash);
+  if (cached) return cached;
+
+  const res = await fetch(`${STORAGE_INDEXER}/file?root=${rootHash}`);
+  if (!res.ok) {
+    throw new Error(`0G Storage download failed: ${res.status} ${res.statusText}`);
+  }
+
+  const text = await res.text();
+  fetchCache.set(rootHash, text);
+  return text;
+}
