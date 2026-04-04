@@ -2,11 +2,14 @@ import { ethers } from "ethers";
 
 const TRADE_API = "https://trade-api.gateway.uniswap.org/v1";
 
+export const ETH_ADDRESS = "0x0000000000000000000000000000000000000000";
+
 export interface UniswapQuote {
   outputAmount: string;
   outputToken: string;
   gasFeeUSD: string;
   routing: string;
+  priceImpact: string;
   tx: { to: string; data: string; value: string; gasLimit?: string };
 }
 
@@ -20,6 +23,62 @@ export interface QuotePreview {
   executionPrice: string;
 }
 
+export interface ApprovalCheck {
+  isRequired: boolean;
+  allowance: string;
+  token: string;
+  spender: string;
+  amount: string;
+}
+
+/**
+ * Check if token approval is needed for a swap via Uniswap Trading API.
+ * Only relevant for token-to-token swaps (ETH doesn't need approval).
+ */
+export async function checkApproval(params: {
+  tokenIn: string;
+  amount: string;
+  walletAddress: string;
+  chainId?: number;
+}): Promise<ApprovalCheck> {
+  // ETH doesn't need approval
+  if (params.tokenIn === ETH_ADDRESS) {
+    return { isRequired: false, allowance: "0", token: params.tokenIn, spender: "", amount: params.amount };
+  }
+
+  const apiKey = process.env.UNI_KEY;
+  if (!apiKey) throw new Error("UNI_KEY not set");
+
+  const res = await fetch(`${TRADE_API}/check_approval`, {
+    method: "POST",
+    headers: {
+      "x-api-key": apiKey,
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      token: params.tokenIn,
+      amount: params.amount,
+      walletAddress: params.walletAddress,
+      chainId: params.chainId ?? 1,
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(`Approval check failed: ${err.detail || res.statusText}`);
+  }
+
+  const data = await res.json();
+  return {
+    isRequired: data.approval?.isRequired ?? false,
+    allowance: data.approval?.allowance ?? "0",
+    token: params.tokenIn,
+    spender: data.approval?.spender ?? "",
+    amount: params.amount,
+  };
+}
+
 /**
  * Lightweight quote-only call — no executable tx, just pricing info.
  */
@@ -29,7 +88,7 @@ export async function getQuotePreview(params: {
   amountInWei: string;
   swapper: string;
   tokenOutDecimals: number;
-  amountInEth: string;
+  amountInHuman: string;
   chainId?: number;
 }): Promise<QuotePreview> {
   const apiKey = process.env.UNI_KEY;
@@ -71,7 +130,7 @@ export async function getQuotePreview(params: {
 
   // Compute execution price: outputAmount / inputAmount
   const outNum = parseFloat(outputAmount);
-  const inNum = parseFloat(params.amountInEth);
+  const inNum = parseFloat(params.amountInHuman);
   const executionPrice = inNum > 0 ? (outNum / inNum).toFixed(6) : "0";
 
   return {
@@ -93,6 +152,7 @@ export async function getSwapQuote(params: {
   amountInWei: string;
   swapper: string;
   tokenOutDecimals: number;
+  tokenInDecimals?: number;
   chainId?: number;
 }): Promise<UniswapQuote> {
   const apiKey = process.env.UNI_KEY;
@@ -156,11 +216,16 @@ export async function getSwapQuote(params: {
     params.tokenOutDecimals
   );
 
+  const priceImpact = quoteData.quote.priceImpact
+    ? (parseFloat(quoteData.quote.priceImpact) * 100).toFixed(3)
+    : "unknown";
+
   return {
     outputAmount,
     outputToken: params.tokenOut,
     gasFeeUSD: quoteData.quote.gasFeeUSD ?? "unknown",
     routing: quoteData.routing ?? "CLASSIC",
+    priceImpact,
     tx: {
       to: tx.to,
       data: tx.data,

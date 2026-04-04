@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { computeGuardTxHash } from "@/lib/guard";
 import { CONTRACTS, TOKENS, INFERENCE_GUARD_ABI, AGENT_DIRECTORY_ABI, OG_RPC } from "@/lib/contracts";
 import { runInference, storeOn0G, fetchFrom0G } from "@/lib/og-inference";
-import { getSwapQuote } from "@/lib/uniswap";
+import { getSwapQuote, checkApproval, ETH_ADDRESS } from "@/lib/uniswap";
 import { getPromptTemplate, renderPrompt } from "@/lib/prompt-store";
 import { getAgent, AgentVerdict, aggregateVerdicts, policyFromUint8, isStepFlow } from "@/lib/agents";
 import { executeStepFlow } from "@/lib/step-executor";
@@ -23,9 +23,6 @@ async function recordInference(agentId: string): Promise<void> {
     console.warn(`[REVIEW] Failed to record inference for ${agentId}:`, e instanceof Error ? e.message : e);
   }
 }
-
-// ETH native address for the Trading API
-const ETH_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 // Read panel + policy from InferenceGuard contract
 async function readGuardPanel(guardAddress: string): Promise<{ panel: string[]; policy: number }> {
@@ -136,7 +133,8 @@ async function runAgentInference(
 // Body: { tokenOut, amountIn, recipient, signer, intent }
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { tokenOut, amountIn, recipient, signer, intent } = body;
+  const { tokenIn: rawTokenIn, tokenOut, amountIn, recipient, signer, intent } = body;
+  const tokenIn = rawTokenIn || ETH_ADDRESS;
 
   if (!tokenOut || !amountIn || !recipient) {
     return NextResponse.json({ error: "Missing tokenOut, amountIn, or recipient" }, { status: 400 });
@@ -152,20 +150,45 @@ export async function POST(req: NextRequest) {
       try {
         // --- Step 1: Get Uniswap quote ---
         send("step", { id: "quote", label: "Fetching swap quote from Uniswap", status: "running" });
-        const amountInWei = ethers.parseEther(amountIn.toString()).toString();
-        const tokenEntry = Object.values(TOKENS).find(
+        const tokenOutEntry = Object.values(TOKENS).find(
           (t) => t.address.toLowerCase() === tokenOut.toLowerCase()
         );
-        const tokenOutDecimals = tokenEntry?.decimals ?? 18;
+        const tokenInEntry = Object.values(TOKENS).find(
+          (t) => t.address.toLowerCase() === tokenIn.toLowerCase()
+        );
+        const tokenOutDecimals = tokenOutEntry?.decimals ?? 18;
+        const tokenInDecimals = tokenInEntry?.decimals ?? 18;
+        const isEthIn = tokenIn === ETH_ADDRESS;
+
+        const amountInWei = isEthIn
+          ? ethers.parseEther(amountIn.toString()).toString()
+          : ethers.parseUnits(amountIn.toString(), tokenInDecimals).toString();
 
         const uniQuote = await getSwapQuote({
-          tokenIn: ETH_ADDRESS,
+          tokenIn,
           tokenOut,
           amountInWei,
           swapper: recipient,
           tokenOutDecimals,
+          tokenInDecimals,
         });
-        send("step", { id: "quote", label: "Fetching swap quote from Uniswap", status: "done", detail: `${uniQuote.outputAmount} ${tokenEntry?.symbol ?? "tokens"}` });
+        send("step", { id: "quote", label: "Fetching swap quote from Uniswap", status: "done", detail: `${uniQuote.outputAmount} ${tokenOutEntry?.symbol ?? "tokens"}` });
+
+        // --- Step 1b: Check approval (token-to-token only) ---
+        let approvalCheck = null;
+        if (!isEthIn) {
+          send("step", { id: "approval", label: "Checking token approval", status: "running" });
+          try {
+            approvalCheck = await checkApproval({
+              tokenIn,
+              amount: amountInWei,
+              walletAddress: recipient,
+            });
+            send("step", { id: "approval", label: "Checking token approval", status: "done", detail: approvalCheck.isRequired ? "Approval needed" : "Already approved" });
+          } catch (e) {
+            send("step", { id: "approval", label: "Checking token approval", status: "error", detail: e instanceof Error ? e.message : "Failed" });
+          }
+        }
 
         // --- Step 2: Compute guard tx hash ---
         const guardTxHash = computeGuardTxHash({
@@ -190,7 +213,7 @@ export async function POST(req: NextRequest) {
                 jsonrpc: "2.0",
                 method: "alchemy_simulateAssetChanges",
                 params: [{
-                  from: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                  from: recipient,
                   to: uniQuote.tx.to,
                   value: simValue,
                   data: uniQuote.tx.data,
@@ -217,7 +240,8 @@ export async function POST(req: NextRequest) {
         send("step", { id: "simulate", label: "Simulating transaction", status: "done", detail: simulation ? `${(simulation.changes || []).length} asset change(s)` : "Skipped" });
 
         // Build variable context for all agent prompts
-        const tokenSymbol = tokenEntry?.symbol ?? tokenOut;
+        const tokenOutSymbol = tokenOutEntry?.symbol ?? tokenOut;
+        const tokenInSymbol = isEthIn ? "ETH" : (tokenInEntry?.symbol ?? tokenIn);
         const vars: Record<string, string> = {
           signer: signer || recipient,
           recipient,
@@ -227,12 +251,16 @@ export async function POST(req: NextRequest) {
           txValue: uniQuote.tx.value,
           amountIn: String(amountIn),
           outputAmount: uniQuote.outputAmount,
-          tokenSymbol,
+          tokenInSymbol,
+          tokenSymbol: tokenOutSymbol,
+          tokenIn,
           tokenOut,
           routing: uniQuote.routing,
           gasFeeUSD: uniQuote.gasFeeUSD,
+          priceImpact: uniQuote.priceImpact,
           intent: intent || "No intent provided",
           simulationResults: simulationSummary,
+          approvalRequired: approvalCheck ? String(approvalCheck.isRequired) : "N/A (ETH input)",
           USDC: CONTRACTS.USDC,
           DAI: CONTRACTS.DAI,
           WETH: CONTRACTS.WETH,
@@ -247,7 +275,7 @@ export async function POST(req: NextRequest) {
         console.log(`[REVIEW] ================================================`);
         console.log(`[REVIEW] REVIEW REQUEST`);
         console.log(`[REVIEW] Guard address: ${guardAddress}`);
-        console.log(`[REVIEW] Swap: ${amountIn} ETH → ${tokenOut} for ${recipient}`);
+        console.log(`[REVIEW] Swap: ${amountIn} ${tokenInSymbol} → ${tokenOut} for ${recipient}`);
         console.log(`[REVIEW] Guard tx hash: ${guardTxHash}`);
         console.log(`[REVIEW] Quote: ${uniQuote.outputAmount}, Gas: ${uniQuote.gasFeeUSD}`);
         console.log(`[REVIEW] Simulation: ${simulationSummary.slice(0, 300)}`);
@@ -369,8 +397,9 @@ export async function POST(req: NextRequest) {
         const fullResult = {
           timestamp: new Date().toISOString(),
           guardTxHash,
-          swapParams: { tokenOut, amountIn, recipient, signer, intent: intent || "", quote: uniQuote.outputAmount },
-          uniswap: { routing: uniQuote.routing, gasFeeUSD: uniQuote.gasFeeUSD },
+          swapParams: { tokenIn, tokenOut, amountIn, recipient, signer, intent: intent || "", quote: uniQuote.outputAmount },
+          uniswap: { routing: uniQuote.routing, gasFeeUSD: uniQuote.gasFeeUSD, priceImpact: uniQuote.priceImpact },
+          approval: approvalCheck,
           simulation,
           agents: agents.map((a) => ({
             agentId: a.agentId,
@@ -403,6 +432,11 @@ export async function POST(req: NextRequest) {
           quote: uniQuote.outputAmount,
           gasFeeUSD: uniQuote.gasFeeUSD,
           routing: uniQuote.routing,
+          priceImpact: uniQuote.priceImpact,
+          tokenIn,
+          tokenInSymbol,
+          tokenOutSymbol,
+          approval: approvalCheck,
           aiAnswer: agents.map((a) => a.notes).join(" | "),
           teeProof: agents[0]?.teeProof ?? null,
           verified: agents[0]?.verified ?? null,

@@ -99,7 +99,7 @@ export default function TopNav() {
             />
           </svg>
           <span className="text-sm font-bold text-[var(--accent)] hidden sm:inline">
-            Mr. Inference
+            Mr. Don&apos;t Get Drained
           </span>
         </Link>
 

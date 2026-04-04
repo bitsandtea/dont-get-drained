@@ -41,7 +41,7 @@ export function ExecuteStep({
       <p className="text-sm text-[var(--sub)]">
         {executed
           ? "Swap executed successfully through the Safe."
-          : "Mr. Inference approved this swap. Sign the transaction with MetaMask to execute through the Safe."}
+          : "Mr. Don&apos;t Get Drained approved this swap. Sign the transaction with MetaMask to execute through the Safe."}
       </p>
 
       <div className="flex gap-3">

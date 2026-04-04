@@ -55,8 +55,8 @@ export default function GuardPage() {
   const [policy, setPolicy] = useState(0);
   const [loadingPanel, setLoadingPanel] = useState(false);
   const [pendingAdd, setPendingAdd] = useState<string | null>(addAgentId);
-  const [addInput, setAddInput] = useState("");
   const [addLoading, setAddLoading] = useState(false);
+  const [availableAgents, setAvailableAgents] = useState<PanelAgent[]>([]);
 
   // Edited state (what user wants to save)
   const [editedPanel, setEditedPanel] = useState<PanelAgent[]>([]);
@@ -225,6 +225,20 @@ export default function GuardPage() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // --- Fetch available agents for dropdown ---
+
+  useEffect(() => {
+    if (!safeLoaded || !guardAddress) return;
+    fetch("/api/agents")
+      .then((res) => res.json())
+      .then((agents: { id: string; name: string; description: string; capabilities: string[]; active: boolean }[]) => {
+        setAvailableAgents(
+          agents.filter((a) => a.active).map((a) => ({ id: a.id, name: a.name, description: a.description, capabilities: a.capabilities }))
+        );
+      })
+      .catch(() => {});
+  }, [safeLoaded, guardAddress]);
 
   // --- Sync ?add= query param into pendingAdd (works on re-navigation) ---
 
@@ -689,35 +703,33 @@ export default function GuardPage() {
               </div>
             </div>
 
-            {/* Add agent by ID */}
+            {/* Add agent dropdown */}
             <div className="space-y-2">
               <label className="text-xs text-[var(--sub)] block">Add Agent</label>
               <div className="flex gap-2">
-                <input
-                  type="text"
-                  placeholder="Paste agent ID (0x...)"
-                  value={addInput}
-                  onChange={(e) => setAddInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" && addInput.trim()) {
-                      addAgentById(addInput.trim());
-                      setAddInput("");
+                <select
+                  className="input flex-1 px-3 py-2 text-sm"
+                  defaultValue=""
+                  onChange={(e) => {
+                    const agentId = e.target.value;
+                    if (agentId) {
+                      addAgentById(agentId);
+                      e.target.value = "";
                     }
                   }}
-                  className="input flex-1 px-3 py-2 text-sm font-mono"
-                />
-                <button
-                  onClick={() => {
-                    if (addInput.trim()) {
-                      addAgentById(addInput.trim());
-                      setAddInput("");
-                    }
-                  }}
-                  disabled={!addInput.trim() || addLoading}
-                  className="btn btn-green px-4 py-2 text-sm"
+                  disabled={addLoading}
                 >
-                  {addLoading ? "..." : "Add"}
-                </button>
+                  <option value="" disabled>
+                    {availableAgents.length === 0 ? "Loading agents..." : "Select an agent..."}
+                  </option>
+                  {availableAgents
+                    .filter((a) => !editedPanel.some((ep) => ep.id === a.id))
+                    .map((a) => (
+                      <option key={a.id} value={a.id}>
+                        {a.name}
+                      </option>
+                    ))}
+                </select>
               </div>
               <Link href="/marketplace" className="text-xs text-[var(--accent)] hover:underline">
                 Browse marketplace &rarr;

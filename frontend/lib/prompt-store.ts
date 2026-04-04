@@ -20,10 +20,17 @@ export const DEFAULT_PROMPT_TEMPLATE = [
   ``,
   `Known safe tokens: USDC ({{USDC}}), DAI ({{DAI}}), WETH ({{WETH}})`,
   ``,
+  `IMPORTANT routing context: DEX routers (Uniswap, etc.) use multi-hop routes to find the best price. This means:`,
+  `- ETH is automatically wrapped to WETH (treat them as equivalent)`,
+  `- The router may swap through intermediate tokens (e.g. ETH → WETH → USDT → USDC) for better pricing`,
+  `- Seeing WETH, USDT, DAI, or other stablecoins as intermediate hops in the simulation is NORMAL Uniswap behavior`,
+  `- Only the final token received by the recipient matters for evaluating the intent`,
+  `- Judge the intent against the INPUT token (ETH) and the FINAL OUTPUT token received by the recipient, NOT intermediate routing hops`,
+  ``,
   `Transaction simulation results (Alchemy):`,
   `  {{simulationResults}}`,
   ``,
-  `Flag if: unknown token, suspicious address, unusually large amount, or simulation shows unexpected asset changes.`,
+  `Flag if: unknown token as FINAL destination (not intermediate), suspicious recipient address, unusually large amount, or simulation shows the recipient receiving a different token than expected. Do NOT flag intermediate routing tokens (WETH, USDT, DAI, etc.) that appear in multi-hop swaps.`,
 ].join("\n");
 
 export function getPromptTemplate(): string {

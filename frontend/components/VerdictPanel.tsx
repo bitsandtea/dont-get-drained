@@ -87,7 +87,7 @@ export function VerdictPanel({
       {/* Single agent analysis (backward compat) */}
       {review.agents && review.agents.length <= 1 && (
         <div className="card p-4">
-          <span className="text-xs text-[var(--sub)] block mb-2">Mr. Inference&apos;s Analysis</span>
+          <span className="text-xs text-[var(--sub)] block mb-2">Mr. Don&apos;t Get Drained&apos;s Analysis</span>
           <div className="bg-black/40 rounded-lg p-4 border border-white/5 max-h-48 overflow-y-auto">
             <p className="text-sm text-gray-300 whitespace-pre-wrap leading-relaxed">
               {review.aiAnswer}

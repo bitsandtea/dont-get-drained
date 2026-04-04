@@ -46,6 +46,14 @@ type AgentVerdictResult = {
   failed?: boolean;
 };
 
+type ApprovalInfo = {
+  isRequired: boolean;
+  allowance: string;
+  token: string;
+  spender: string;
+  amount: string;
+} | null;
+
 type ReviewResult = {
   txHash: string;
   swapTx: { to: string; data: string; value: string; gasLimit?: string };
@@ -56,6 +64,11 @@ type ReviewResult = {
   quote: string;
   gasFeeUSD: string;
   routing: string;
+  priceImpact: string;
+  tokenIn: string;
+  tokenInSymbol: string;
+  tokenOutSymbol: string;
+  approval: ApprovalInfo;
   aiAnswer: string;
   teeProof: { text: string; signature: string } | null;
   verified: boolean | null;
@@ -70,6 +83,14 @@ type ApproveResult = {
   txHash: string;
   blockNumber: number;
   approved: boolean;
+};
+
+type SwapReceipt = {
+  txHash: string;
+  blockNumber: number;
+  gasUsed: string;
+  balancesBefore: Record<string, string>;
+  balancesAfter: Record<string, string>;
 };
 
 const TARGET_CHAIN_ID = 31337;
@@ -170,7 +191,7 @@ function ThinkingScreen({ steps }: { steps: StepProgress[] }) {
 
         <div className="text-center space-y-2">
           <h2 className="text-lg font-semibold text-[var(--accent)]">
-            Mr. Inference is working...
+            Mr. Don't Get Drained is working...
           </h2>
           {currentStep && (
             <p
@@ -279,11 +300,174 @@ function Collapsible({ label, children }: { label: string; children: React.React
   );
 }
 
-const STEP_LABELS = ["Configure", "Mr. Inference", "Execute"];
+function VerdictModal({
+  agent,
+  review,
+  onClose,
+}: {
+  agent: AgentVerdictResult | null;
+  review: ReviewResult | null;
+  onClose: () => void;
+}) {
+  if (!agent || !review) return null;
+
+  let parsedNotes: { approve?: boolean; note?: string } | null = null;
+  try {
+    parsedNotes = JSON.parse(agent.notes);
+  } catch {
+    // notes is plain text
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      onClick={onClose}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+
+      {/* Modal */}
+      <div
+        className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-xl border border-white/10 bg-[var(--panel-bg)] shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className={`sticky top-0 z-10 flex items-center justify-between px-6 py-4 border-b ${agent.verdict ? "border-[var(--green)]/30 bg-[var(--green-dim)]" : "border-[var(--orange)]/30 bg-[var(--orange-dim)]"}`}>
+          <div className="flex items-center gap-3">
+            <MrInference size={32} mood={agent.verdict ? "happy" : "neutral"} />
+            <div>
+              <h3 className="text-base font-semibold text-[var(--accent)]">{agent.name}</h3>
+              <span className={`text-xs font-bold ${agent.verdict ? "text-[var(--green)]" : "text-[var(--orange)]"}`}>
+                {agent.verdict ? "APPROVED" : "REJECTED"}
+              </span>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-lg flex items-center justify-center border border-white/10 hover:border-white/30 text-[var(--sub)] hover:text-[var(--foreground)] transition-colors"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div className="px-6 py-5 space-y-5">
+          {/* Agent Notes */}
+          <div>
+            <span className="text-xs text-[var(--sub)] block mb-2">Analysis</span>
+            <div className="bg-black/30 rounded-lg p-4 border border-white/5">
+              {parsedNotes ? (
+                <div className="space-y-2">
+                  {parsedNotes.note && (
+                    <p className="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">{parsedNotes.note}</p>
+                  )}
+                </div>
+              ) : (
+                <p className="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">{agent.notes}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Swap Details */}
+          <div>
+            <span className="text-xs text-[var(--sub)] block mb-2">Swap Details</span>
+            <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5 space-y-1.5 text-sm">
+              <div className="flex justify-between">
+                <span className="text-[var(--sub)]">Quote</span>
+                <span className="font-mono text-[var(--foreground)]">{review.quote}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-[var(--sub)]">Gas Fee</span>
+                <span className="font-mono text-[var(--foreground)]">${review.gasFeeUSD}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-[var(--sub)]">Routing</span>
+                <span className="font-mono text-[var(--foreground)]">{review.routing}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* TEE Proof */}
+          <div>
+            <span className="text-xs text-[var(--sub)] block mb-2">TEE Attestation</span>
+            <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5 space-y-2">
+              <div className="flex items-center gap-2 text-sm">
+                <span className="text-[var(--sub)]">Proof:</span>
+                <span className={agent.teeProof ? "text-[var(--green)]" : "text-[var(--yellow)]"}>
+                  {agent.teeProof ? (agent.verified ? "Verified" : "Received") : "None"}
+                </span>
+              </div>
+              {agent.teeProof?.text && (
+                <div>
+                  <span className="text-[10px] text-[var(--sub)] block mb-1">Proof Hash</span>
+                  <code className="text-[10px] text-gray-400 break-all font-mono leading-relaxed block">
+                    {agent.teeProof.text}
+                  </code>
+                </div>
+              )}
+              {agent.teeProof?.signature && (
+                <div>
+                  <span className="text-[10px] text-[var(--sub)] block mb-1">Signature</span>
+                  <code className="text-[10px] text-gray-400 break-all font-mono leading-relaxed block">
+                    {agent.teeProof.signature}
+                  </code>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* 0G Storage */}
+          <div>
+            <span className="text-xs text-[var(--sub)] block mb-2">0G Storage</span>
+            <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5 space-y-1.5">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-[var(--sub)]">Root Hash</span>
+                <CopyButton text={review.rootHash} />
+              </div>
+              <code className="text-[10px] text-[var(--purple)] break-all font-mono leading-relaxed block">
+                {review.rootHash}
+              </code>
+              {review.submissionIndex != null && (
+                <a
+                  href={`https://storagescan-galileo.0g.ai/submission/${review.submissionIndex}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[var(--purple)] hover:underline block mt-1"
+                >
+                  View on StorageScan (#{review.submissionIndex}) ↗
+                </a>
+              )}
+            </div>
+          </div>
+
+          {/* Agent ID */}
+          <div className="text-[10px] text-[var(--sub)] space-y-1">
+            <div className="flex items-center justify-between">
+              <span>Agent ID</span>
+              <CopyButton text={agent.agentId} />
+            </div>
+            <code className="text-gray-500 break-all font-mono block">{agent.agentId}</code>
+            {agent.chatId && (
+              <>
+                <div className="flex items-center justify-between mt-1">
+                  <span>Chat ID</span>
+                  <CopyButton text={agent.chatId} />
+                </div>
+                <code className="text-gray-500 break-all font-mono block">{agent.chatId}</code>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const STEP_LABELS = ["Configure", "Mr. Don't Get Drained", "Execute"];
 
 export default function Home() {
   const txToast = useTxToast();
   const { wallet, connectWallet: globalConnect } = useWallet();
+  const [tokenIn, setTokenIn] = useState("ETH");
   const [tokenOut, setTokenOut] = useState("USDC");
   const [amountIn, setAmountIn] = useState("0.1");
   const [review, setReview] = useState<ReviewResult | null>(null);
@@ -291,7 +475,8 @@ export default function Home() {
   const [loading, setLoading] = useState("");
   const [error, setError] = useState("");
   const [executed, setExecuted] = useState(false);
-  const [step, setStep] = useState(0); // 0=Configure, 1=Mr. Inference, 2=Execute
+  const [swapReceipt, setSwapReceipt] = useState<SwapReceipt | null>(null);
+  const [step, setStep] = useState(0); // 0=Configure, 1=Mr. Don't Get Drained, 2=Execute
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const [safeBalances, setSafeBalances] = useState<{ eth: string; usdc: string; dai: string } | null>(null);
   const [safeAddress, setSafeAddress] = useState(CONTRACTS.SAFE || "");
@@ -306,6 +491,7 @@ export default function Home() {
   const [quoteLoading, setQuoteLoading] = useState(false);
   const [quoteError, setQuoteError] = useState("");
   const [reviewSteps, setReviewSteps] = useState<StepProgress[]>([]);
+  const [modalAgent, setModalAgent] = useState<AgentVerdictResult | null>(null);
 
   // Debounced quote fetching when token or amount changes
   useEffect(() => {
@@ -316,8 +502,16 @@ export default function Home() {
       return;
     }
 
-    const token = TOKENS[tokenOut];
-    if (!token) return;
+    const tokenOutEntry = TOKENS[tokenOut];
+    if (!tokenOutEntry) return;
+    // Prevent same-token swaps
+    if (tokenIn === tokenOut) return;
+
+    const isEthIn = tokenIn === "ETH";
+    const tokenInAddress = isEthIn
+      ? "0x0000000000000000000000000000000000000000"
+      : TOKENS[tokenIn]?.address;
+    if (!isEthIn && !tokenInAddress) return;
 
     setQuoteLoading(true);
     setQuoteError("");
@@ -328,7 +522,8 @@ export default function Home() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          tokenOut: token.address,
+          tokenIn: isEthIn ? undefined : tokenInAddress,
+          tokenOut: tokenOutEntry.address,
           amountIn: amount,
           recipient: safeAddress || undefined,
         }),
@@ -353,7 +548,7 @@ export default function Home() {
       clearTimeout(timeout);
       controller.abort();
     };
-  }, [tokenOut, amountIn, safeAddress]);
+  }, [tokenIn, tokenOut, amountIn, safeAddress]);
 
   async function loadSafe(address?: string) {
     const addr = address || safeInput.trim();
@@ -585,14 +780,20 @@ export default function Home() {
     setReview(null);
     setApproveResult(null);
     setExecuted(false);
+    setSwapReceipt(null);
     setReviewSteps([]);
 
     try {
       const token = TOKENS[tokenOut];
+      const isEthIn = tokenIn === "ETH";
+      const tokenInAddress = isEthIn
+        ? "0x0000000000000000000000000000000000000000"
+        : TOKENS[tokenIn]?.address;
       const res = await fetch("/api/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          tokenIn: isEthIn ? undefined : tokenInAddress,
           tokenOut: token.address,
           amountIn: parseFloat(amountIn),
           recipient: safeAddress,
@@ -731,7 +932,11 @@ export default function Home() {
 
       // Execute through the Safe so the guard can enforce single-use
       const safe = new ethers.Contract(safeAddress, SAFE_ABI, signer);
-      const usdc = new ethers.Contract(CONTRACTS.USDC, ERC20_ABI, provider);
+      const tokenContracts = Object.entries(TOKENS).map(([symbol, t]) => ({
+        symbol,
+        contract: new ethers.Contract(t.address, ERC20_ABI, provider),
+        decimals: t.decimals,
+      }));
       const { to, data, value } = review.swapTx;
       const operation = 0;  // Call
       const safeTxGas = 0n;
@@ -740,14 +945,19 @@ export default function Home() {
       const gasToken = ethers.ZeroAddress;
       const refundReceiver = ethers.ZeroAddress;
 
-      // --- Balances BEFORE ---
-      const safeEthBefore = await provider.getBalance(safeAddress);
-      const safeUsdcBefore = await usdc.balanceOf(safeAddress);
-      const userEthBefore = await provider.getBalance(wallet!);
+      // --- Balances BEFORE (ETH + all tokens) ---
+      const [safeEthBefore, ...tokenBalsBefore] = await Promise.all([
+        provider.getBalance(safeAddress),
+        ...tokenContracts.map((t) => t.contract.balanceOf(safeAddress)),
+      ]);
+      const balancesBefore: Record<string, string> = {
+        ETH: parseFloat(ethers.formatEther(safeEthBefore)).toFixed(6),
+      };
+      tokenContracts.forEach((t, i) => {
+        balancesBefore[t.symbol] = parseFloat(ethers.formatUnits(tokenBalsBefore[i], t.decimals)).toFixed(t.decimals <= 6 ? 2 : 6);
+      });
       console.log("=== PRE-SWAP ===");
-      console.log("Safe  ETH :", ethers.formatEther(safeEthBefore));
-      console.log("Safe  USDC:", ethers.formatUnits(safeUsdcBefore, 6));
-      console.log("User  ETH :", ethers.formatEther(userEthBefore));
+      Object.entries(balancesBefore).forEach(([k, v]) => console.log(`Safe ${k}: ${v}`));
       console.log("Swap value:", ethers.formatEther(value));
       console.log("Swap to:  ", to);
       console.log("================");
@@ -776,24 +986,40 @@ export default function Home() {
       ]);
 
       console.log("Calling Safe.execTransaction...");
-      const tx = await safe.execTransaction(
+      const execTx = await safe.execTransaction(
         to, value, data, operation, safeTxGas, baseGas, gasPrice,
         gasToken, refundReceiver, safeSig,
       );
 
-      const receipt = await tx.wait();
+      const receipt = await execTx.wait();
       console.log("Tx mined:", receipt.hash, "| status:", receipt.status);
       txToast.push("Swap executed via Safe", receipt.hash);
 
-      // --- Balances AFTER ---
-      const safeEthAfter = await provider.getBalance(safeAddress);
-      const safeUsdcAfter = await usdc.balanceOf(safeAddress);
-      const userEthAfter = await provider.getBalance(wallet!);
+      // --- Balances AFTER (ETH + all tokens) ---
+      const [safeEthAfter, ...tokenBalsAfter] = await Promise.all([
+        provider.getBalance(safeAddress),
+        ...tokenContracts.map((t) => t.contract.balanceOf(safeAddress)),
+      ]);
+      const balancesAfter: Record<string, string> = {
+        ETH: parseFloat(ethers.formatEther(safeEthAfter)).toFixed(6),
+      };
+      tokenContracts.forEach((t, i) => {
+        balancesAfter[t.symbol] = parseFloat(ethers.formatUnits(tokenBalsAfter[i], t.decimals)).toFixed(t.decimals <= 6 ? 2 : 6);
+      });
       console.log("=== POST-SWAP ===");
-      console.log("Safe  ETH :", ethers.formatEther(safeEthAfter), `(${ethers.formatEther(safeEthAfter - safeEthBefore)})`);
-      console.log("Safe  USDC:", ethers.formatUnits(safeUsdcAfter, 6), `(+${ethers.formatUnits(safeUsdcAfter - safeUsdcBefore, 6)})`);
-      console.log("User  ETH :", ethers.formatEther(userEthAfter), `(${ethers.formatEther(userEthAfter - userEthBefore)})`);
+      Object.entries(balancesAfter).forEach(([k, v]) => {
+        const diff = parseFloat(v) - parseFloat(balancesBefore[k]);
+        console.log(`Safe ${k}: ${v} (${diff >= 0 ? "+" : ""}${diff.toFixed(6)})`);
+      });
       console.log("=================");
+
+      setSwapReceipt({
+        txHash: receipt.hash,
+        blockNumber: receipt.blockNumber,
+        gasUsed: receipt.gasUsed.toString(),
+        balancesBefore,
+        balancesAfter,
+      });
 
       setExecuted(true);
       loadSafe(safeAddress);
@@ -812,7 +1038,7 @@ export default function Home() {
     ? safeOwners.some((o) => o.toLowerCase() === wallet.toLowerCase())
     : false;
 
-  // Determine which steps are "complete" (3 steps: Configure, Mr. Inference, Execute)
+  // Determine which steps are "complete" (3 steps: Configure, Mr. Don't Get Drained, Execute)
   const stepDone = [safeLoaded && !!amountIn, !!review, !!approveResult];
 
   return (
@@ -825,7 +1051,7 @@ export default function Home() {
             <MrInference size={56} mood={inferMood} />
           </div>
           <h1 className="text-3xl font-bold tracking-wide text-[var(--accent)]">
-            Mr. Inference
+            Mr. Don't Get Drained
           </h1>
           <p className="text-sm text-[var(--sub)]">
             Your personal swap guardian for Safe wallets
@@ -1065,7 +1291,7 @@ export default function Home() {
 
         {/* Back to actions */}
         <button
-          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); setSwapIntent(""); setReviewSteps([]); }}
+          onClick={() => { setActiveAction(null); setStep(0); setReview(null); setApproveResult(null); setExecuted(false); setSwapReceipt(null); setSwapIntent(""); setReviewSteps([]); }}
           className="text-sm text-[var(--sub)] hover:text-[var(--accent)] transition-colors flex items-center gap-1"
         >
           &larr; Back to actions
@@ -1124,8 +1350,46 @@ export default function Home() {
               <h2 className="text-lg font-semibold">Configure Swap</h2>
             </div>
 
+            {/* From token selector */}
             <div>
-              <label className="text-sm text-[var(--sub)] block mb-1.5">Amount (ETH)</label>
+              <label className="text-sm text-[var(--sub)] block mb-1.5">Send Token</label>
+              <div className="grid grid-cols-5 gap-2">
+                <button
+                  onClick={() => { setTokenIn("ETH"); }}
+                  className={`flex flex-col items-center gap-1.5 rounded-xl border px-3 py-3 transition-colors ${
+                    tokenIn === "ETH"
+                      ? "border-[var(--accent)] bg-[var(--accent-dim)]"
+                      : "border-white/5 bg-black/20 hover:border-white/20"
+                  }`}
+                >
+                  <img src="/tokens/eth.svg" alt="ETH" className="w-7 h-7 rounded-full" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                  <span className={`text-xs font-semibold ${tokenIn === "ETH" ? "text-[var(--accent)]" : "text-[var(--sub)]"}`}>ETH</span>
+                </button>
+                {Object.entries(TOKENS).map(([key, token]) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      setTokenIn(key);
+                      // If the new tokenIn matches tokenOut, swap them
+                      if (tokenOut === key) {
+                        setTokenOut(tokenIn === "ETH" ? "USDC" : tokenIn);
+                      }
+                    }}
+                    className={`flex flex-col items-center gap-1.5 rounded-xl border px-3 py-3 transition-colors ${
+                      tokenIn === key
+                        ? "border-[var(--accent)] bg-[var(--accent-dim)]"
+                        : "border-white/5 bg-black/20 hover:border-white/20"
+                    }`}
+                  >
+                    <img src={token.logo} alt={token.symbol} className="w-7 h-7 rounded-full" />
+                    <span className={`text-xs font-semibold ${tokenIn === key ? "text-[var(--accent)]" : "text-[var(--sub)]"}`}>{token.symbol}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="text-sm text-[var(--sub)] block mb-1.5">Amount ({tokenIn})</label>
               <input
                 type="number"
                 step="0.01"
@@ -1137,8 +1401,8 @@ export default function Home() {
 
             <div>
               <label className="text-sm text-[var(--sub)] block mb-1.5">Receive Token</label>
-              <div className="grid grid-cols-4 gap-2">
-                {Object.entries(TOKENS).map(([key, token]) => (
+              <div className={`grid gap-2 ${tokenIn === "ETH" ? "grid-cols-4" : "grid-cols-3"}`}>
+                {Object.entries(TOKENS).filter(([key]) => key !== tokenIn).map(([key, token]) => (
                   <button
                     key={key}
                     onClick={() => setTokenOut(key)}
@@ -1217,7 +1481,7 @@ export default function Home() {
                   <div className="bg-[var(--panel-bg)] px-4 py-2.5">
                     <span className="text-[10px] text-[var(--sub)] block">Rate</span>
                     <span className="text-sm font-mono text-[var(--foreground)]">
-                      1 ETH = {parseFloat(quotePreview.executionPrice).toFixed(
+                      1 {tokenIn} = {parseFloat(quotePreview.executionPrice).toFixed(
                         TOKENS[tokenOut]?.decimals <= 6 ? 2 : 4
                       )} {tokenOut}
                     </span>
@@ -1230,13 +1494,28 @@ export default function Home() {
                   </div>
                   <div className="bg-[var(--panel-bg)] px-4 py-2.5">
                     <span className="text-[10px] text-[var(--sub)] block">Price Impact</span>
-                    <span className={`text-sm font-mono ${
-                      quotePreview.priceImpact !== "unknown" && parseFloat(quotePreview.priceImpact) > 1
-                        ? "text-[var(--orange)]"
-                        : "text-[var(--foreground)]"
-                    }`}>
-                      {quotePreview.priceImpact !== "unknown" ? `${quotePreview.priceImpact}%` : "--"}
-                    </span>
+                    {(() => {
+                      const impact = quotePreview.priceImpact !== "unknown" ? parseFloat(quotePreview.priceImpact) : null;
+                      const color = impact === null ? "text-[var(--foreground)]"
+                        : impact > 2 ? "text-[var(--red,#ef4444)]"
+                        : impact > 1 ? "text-[var(--orange)]"
+                        : impact > 0.5 ? "text-[var(--yellow)]"
+                        : "text-[var(--green)]";
+                      const label = impact === null ? "--"
+                        : impact > 2 ? "High"
+                        : impact > 1 ? "Moderate"
+                        : "Low";
+                      return (
+                        <div className="flex items-center gap-1.5">
+                          <span className={`text-sm font-mono ${color}`}>
+                            {impact !== null ? `${quotePreview.priceImpact}%` : "--"}
+                          </span>
+                          {impact !== null && (
+                            <span className={`text-[9px] px-1.5 py-0.5 rounded font-medium ${color} bg-white/5`}>{label}</span>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </div>
                   <div className="bg-[var(--panel-bg)] px-4 py-2.5">
                     <span className="text-[10px] text-[var(--sub)] block">Routing</span>
@@ -1245,6 +1524,19 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
+
+                {/* Price impact warning banner */}
+                {quotePreview.priceImpact !== "unknown" && parseFloat(quotePreview.priceImpact) > 1 && (
+                  <div className={`px-4 py-2.5 text-xs border-t ${
+                    parseFloat(quotePreview.priceImpact) > 2
+                      ? "border-red-500/30 text-red-400 bg-red-500/5"
+                      : "border-[var(--orange)]/30 text-[var(--orange)] bg-[var(--orange)]/5"
+                  }`}>
+                    {parseFloat(quotePreview.priceImpact) > 2
+                      ? "Warning: High price impact. AI guard agents will likely flag this swap for additional scrutiny."
+                      : "Note: Moderate price impact. AI guard agents will factor this into their risk assessment."}
+                  </div>
+                )}
 
                 {/* Slippage note */}
                 <div className="px-4 py-2 text-[10px] text-[var(--sub)] border-t border-white/5">
@@ -1256,7 +1548,7 @@ export default function Home() {
             {/* Fallback route line when no quote data yet */}
             {!quotePreview && !quoteLoading && !quoteError && (
               <div className="bg-black/20 rounded-lg px-4 py-2.5 border border-white/5 text-sm text-[var(--sub)]">
-                Route: <span className="text-[var(--foreground)]">{amountIn} ETH</span>
+                Route: <span className="text-[var(--foreground)]">{amountIn} {tokenIn}</span>
                 <span className="mx-1.5">&rarr;</span>
                 <span className="text-[var(--accent)]">{tokenOut}</span>
                 <span className="ml-1">via Uniswap Trading API</span>
@@ -1278,7 +1570,7 @@ export default function Home() {
           </section>
         )}
 
-        {/* Step 2: Mr. Inference Review */}
+        {/* Step 2: Mr. Don't Get Drained Review */}
         {step === 1 && (
           <section className="space-y-4">
             {loading === "review" ? (
@@ -1289,20 +1581,20 @@ export default function Home() {
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold border border-[var(--purple)] text-[var(--purple)] bg-[var(--green-dim)]">
                     3
                   </div>
-                  <h2 className="text-lg font-semibold">Mr. Inference Review</h2>
+                  <h2 className="text-lg font-semibold">Mr. Don't Get Drained Review</h2>
                 </div>
 
                 <div className="flex items-center gap-3 bg-black/20 rounded-lg px-4 py-3 border border-white/5">
                   <MrInference size={36} mood="neutral" />
                   <p className="text-sm text-[var(--sub)]">
-                    Send this swap to Mr. Inference for risk analysis inside a 0G TEE enclave.
+                    Send this swap to Mr. Don't Get Drained for risk analysis inside a 0G TEE enclave.
                   </p>
                 </div>
 
                 <div className="bg-black/20 rounded-lg px-4 py-3 border border-white/5 text-sm space-y-2">
                   <div>
                     <span className="text-[var(--sub)]">Swap: </span>
-                    <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
+                    <span className="text-[var(--accent)] font-mono">{amountIn} {tokenIn}</span>
                     <span className="text-[var(--sub)] mx-1.5">&rarr;</span>
                     <span className="text-[var(--green)] font-mono">{tokenOut}</span>
                   </div>
@@ -1320,7 +1612,7 @@ export default function Home() {
                     onClick={submitForReview}
                     className="btn btn-accent flex-1 py-3 text-base"
                   >
-                    Ask Mr. Inference
+                    Ask Mr. Don't Get Drained
                   </button>
                 </div>
               </div>
@@ -1356,52 +1648,78 @@ export default function Home() {
 
                 {/* Agent verdict cards */}
                 {review.agents && review.agents.length > 1 && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {review.agents.map((agent) => (
-                      <div
-                        key={agent.agentId}
-                        className={`card p-4 space-y-2 border ${
-                          agent.verdict
-                            ? "border-[var(--green)]/30"
-                            : "border-[var(--orange)]/30"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-semibold text-[var(--accent)] truncate">
-                            {agent.name}
-                          </span>
-                          <span
-                            className={`px-2 py-0.5 text-[10px] font-bold rounded-md border ${
-                              agent.verdict
-                                ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
-                                : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
-                            }`}
-                          >
-                            {agent.verdict ? "PASS" : "FAIL"}
-                          </span>
+                  <div className="space-y-3">
+                    {review.agents.map((agent) => {
+                      let noteText = agent.notes;
+                      try {
+                        const parsed = JSON.parse(agent.notes);
+                        if (parsed.note) noteText = parsed.note;
+                      } catch { /* plain text */ }
+
+                      return (
+                        <div
+                          key={agent.agentId}
+                          className={`card p-4 space-y-3 border ${
+                            agent.verdict
+                              ? "border-[var(--green)]/30"
+                              : "border-[var(--orange)]/30"
+                          }`}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-semibold text-[var(--accent)]">
+                              {agent.name}
+                            </span>
+                            <span
+                              className={`px-2 py-0.5 text-[10px] font-bold rounded-md border ${
+                                agent.verdict
+                                  ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-dim)]"
+                                  : "border-[var(--orange)] text-[var(--orange)] bg-[var(--orange-dim)]"
+                              }`}
+                            >
+                              {agent.verdict ? "PASS" : "FAIL"}
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-300 leading-relaxed">
+                            {noteText}
+                          </p>
+                          <div className="flex items-center justify-between pt-2 border-t border-white/5">
+                            <div className="flex items-center gap-3 text-[10px] text-[var(--sub)]">
+                              {agent.failed ? (
+                                <span className="text-[var(--orange)]">Inference failed</span>
+                              ) : (
+                                <>
+                                  <span>TEE: {agent.teeProof ? (agent.verified ? "Verified" : "Proof received") : "No proof"}</span>
+                                  <span>Sig: {agent.teeProof?.signature ? "Present" : "None"}</span>
+                                </>
+                              )}
+                            </div>
+                            <button
+                              onClick={() => setModalAgent(agent)}
+                              className="text-[10px] text-[var(--accent)] hover:text-[var(--foreground)] hover:underline transition-colors"
+                            >
+                              View Details →
+                            </button>
+                          </div>
                         </div>
-                        <p className="text-xs text-gray-300 line-clamp-3 leading-relaxed">
-                          {agent.notes}
-                        </p>
-                        <div className="flex items-center gap-3 text-[10px] text-[var(--sub)] pt-1 border-t border-white/5">
-                          {agent.failed ? (
-                            <span className="text-[var(--orange)]">Inference failed</span>
-                          ) : (
-                            <>
-                              <span>TEE: {agent.teeProof ? (agent.verified ? "Verified" : "Proof received") : "No proof"}</span>
-                              <span>Sig: {agent.teeProof?.signature ? "Present" : "None"}</span>
-                            </>
-                          )}
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
 
                 {/* Single agent analysis (backward compat) */}
                 {review.agents && review.agents.length <= 1 && (
                   <div className="card p-4">
-                    <span className="text-xs text-[var(--sub)] block mb-2">Mr. Inference&apos;s Analysis</span>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs text-[var(--sub)]">Mr. Don't Get Drained&apos;s Analysis</span>
+                      {review.agents?.[0] && (
+                        <button
+                          onClick={() => setModalAgent(review.agents[0])}
+                          className="text-[10px] text-[var(--accent)] hover:text-[var(--foreground)] hover:underline transition-colors"
+                        >
+                          View Details →
+                        </button>
+                      )}
+                    </div>
                     <div className="bg-black/40 rounded-lg p-4 border border-white/5 max-h-48 overflow-y-auto">
                       <p className="text-sm text-gray-300 whitespace-pre-wrap leading-relaxed">
                         {review.aiAnswer}
@@ -1429,11 +1747,51 @@ export default function Home() {
                   <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
                     <span className="text-xs text-[var(--sub)] block mb-1">Quote</span>
                     <p className="text-lg">
-                      <span className="text-[var(--accent)] font-mono">{amountIn} ETH</span>
+                      <span className="text-[var(--accent)] font-mono">{amountIn} {tokenIn}</span>
                       <span className="text-[var(--sub)] mx-2">&rarr;</span>
                       <span className="text-[var(--green)] font-mono">{review.quote} {tokenOut}</span>
                     </p>
                   </div>
+
+                  {/* Uniswap details row */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="bg-black/30 rounded-lg px-3 py-2.5 border border-white/5">
+                      <span className="text-[10px] text-[var(--sub)] block mb-0.5">Routing</span>
+                      <span className="text-xs font-mono text-[var(--foreground)]">{review.routing}</span>
+                    </div>
+                    <div className="bg-black/30 rounded-lg px-3 py-2.5 border border-white/5">
+                      <span className="text-[10px] text-[var(--sub)] block mb-0.5">Price Impact</span>
+                      {(() => {
+                        const impact = review.priceImpact && review.priceImpact !== "unknown" ? parseFloat(review.priceImpact) : null;
+                        const color = impact === null ? "text-[var(--foreground)]"
+                          : impact > 2 ? "text-[var(--red,#ef4444)]"
+                          : impact > 1 ? "text-[var(--orange)]"
+                          : impact > 0.5 ? "text-[var(--yellow)]"
+                          : "text-[var(--green)]";
+                        return <span className={`text-xs font-mono ${color}`}>{impact !== null ? `${review.priceImpact}%` : "--"}</span>;
+                      })()}
+                    </div>
+                    <div className="bg-black/30 rounded-lg px-3 py-2.5 border border-white/5">
+                      <span className="text-[10px] text-[var(--sub)] block mb-0.5">Gas Fee</span>
+                      <span className="text-xs font-mono text-[var(--foreground)]">
+                        ${review.gasFeeUSD !== "unknown" ? parseFloat(review.gasFeeUSD).toFixed(2) : "--"}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Approval check status (token-to-token) */}
+                  {review.approval && (
+                    <div className={`bg-black/30 rounded-lg px-4 py-2.5 border text-xs ${
+                      review.approval.isRequired
+                        ? "border-[var(--yellow)]/30 text-[var(--yellow)]"
+                        : "border-[var(--green)]/30 text-[var(--green)]"
+                    }`}>
+                      <span className="font-semibold">Token Approval: </span>
+                      {review.approval.isRequired
+                        ? "Required — Safe needs to approve the Uniswap router before this swap can execute"
+                        : "Already approved — no additional approval needed"}
+                    </div>
+                  )}
 
                   <div className="bg-black/30 rounded-lg px-4 py-3 border border-white/5">
                     <div className="flex items-center justify-between mb-1">
@@ -1526,24 +1884,109 @@ export default function Home() {
               <code className="text-lg text-[var(--accent)] font-mono">#{approveResult.blockNumber}</code>
             </div>
 
-            <p className="text-sm text-[var(--sub)]">
-              {executed
-                ? "Swap executed successfully through the Safe."
-                : "Mr. Inference approved this swap. Sign the transaction with MetaMask to execute through the Safe."}
-            </p>
+            {!executed && (
+              <p className="text-sm text-[var(--sub)]">
+                Mr. Don't Get Drained approved this swap. Sign the transaction with MetaMask to execute through the Safe.
+              </p>
+            )}
 
-            <div className="flex gap-3">
-              <button onClick={goBack} className="btn btn-accent px-6 py-3 text-base">
-                &larr; Back
-              </button>
-              <button
-                onClick={executeSwap}
-                disabled={loading === "execute" || executed}
-                className="btn btn-green flex-1 py-3 text-base"
-              >
-                {executed ? "Executed ✓" : loading === "execute" ? "Awaiting signature..." : "Execute Swap via Safe"}
-              </button>
-            </div>
+            {!executed && (
+              <div className="flex gap-3">
+                <button onClick={goBack} className="btn btn-accent px-6 py-3 text-base">
+                  &larr; Back
+                </button>
+                <button
+                  onClick={executeSwap}
+                  disabled={loading === "execute"}
+                  className="btn btn-green flex-1 py-3 text-base"
+                >
+                  {loading === "execute" ? "Awaiting signature..." : "Execute Swap via Safe"}
+                </button>
+              </div>
+            )}
+
+            {/* Post-swap confirmation */}
+            {executed && swapReceipt && (
+              <div className="space-y-3">
+                <div className="bg-black/30 rounded-lg px-4 py-3 border border-[var(--green)]/30">
+                  <div className="flex items-center gap-2 mb-2">
+                    <MrInference size={24} mood="happy" />
+                    <span className="text-sm font-semibold text-[var(--green)]">Swap Executed Successfully</span>
+                  </div>
+                  <div className="space-y-1.5 text-xs">
+                    <div className="flex justify-between">
+                      <span className="text-[var(--sub)]">TX Hash</span>
+                      <div className="flex items-center gap-2">
+                        <code className="text-[var(--green)] font-mono">{abbreviate(swapReceipt.txHash)}</code>
+                        <CopyButton text={swapReceipt.txHash} />
+                      </div>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[var(--sub)]">Block</span>
+                      <code className="text-[var(--accent)] font-mono">#{swapReceipt.blockNumber}</code>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[var(--sub)]">Gas Used</span>
+                      <code className="text-[var(--foreground)] font-mono">{parseInt(swapReceipt.gasUsed).toLocaleString()}</code>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Balance changes table */}
+                <div className="bg-black/30 rounded-lg border border-white/5 overflow-hidden">
+                  <div className="px-4 py-2 border-b border-white/5">
+                    <span className="text-xs font-semibold text-[var(--sub)]">Safe Balance Changes</span>
+                  </div>
+                  <table className="w-full text-xs font-mono">
+                    <thead>
+                      <tr className="text-[var(--sub)] border-b border-white/5">
+                        <th className="px-4 py-2 text-left font-medium">Token</th>
+                        <th className="px-4 py-2 text-right font-medium">Before</th>
+                        <th className="px-4 py-2 text-right font-medium">After</th>
+                        <th className="px-4 py-2 text-right font-medium">Change</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.keys(swapReceipt.balancesBefore).map((token) => {
+                        const before = parseFloat(swapReceipt.balancesBefore[token]);
+                        const after = parseFloat(swapReceipt.balancesAfter[token]);
+                        const diff = after - before;
+                        if (Math.abs(diff) < 1e-8) return null;
+                        const decimals = token === "ETH" ? 6 : (TOKENS[token]?.decimals ?? 18) <= 6 ? 2 : 6;
+                        return (
+                          <tr key={token} className="border-b border-white/5 last:border-0">
+                            <td className="px-4 py-2 text-[var(--accent)]">{token}</td>
+                            <td className="px-4 py-2 text-right text-[var(--sub)]">{swapReceipt.balancesBefore[token]}</td>
+                            <td className="px-4 py-2 text-right text-[var(--foreground)]">{swapReceipt.balancesAfter[token]}</td>
+                            <td className={`px-4 py-2 text-right font-semibold ${diff > 0 ? "text-[var(--green)]" : "text-[var(--orange)]"}`}>
+                              {diff > 0 ? "+" : ""}{diff.toFixed(decimals)}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => {
+                      setActiveAction(null);
+                      setStep(0);
+                      setReview(null);
+                      setApproveResult(null);
+                      setExecuted(false);
+                      setSwapReceipt(null);
+                      setSwapIntent("");
+                      setReviewSteps([]);
+                    }}
+                    className="btn btn-accent flex-1 py-3 text-base"
+                  >
+                    New Swap
+                  </button>
+                </div>
+              </div>
+            )}
           </section>
         )}
         </>}
@@ -1562,11 +2005,18 @@ export default function Home() {
         {/* Footer */}
         <footer className="text-center pt-6 space-y-1">
           <p className="text-xs text-gray-600">
-            Mr. Inference &middot; 0G Compute Network &middot; Safe Protocol &middot; Uniswap
+            Mr. Don't Get Drained &middot; 0G Compute Network &middot; Safe Protocol &middot; Uniswap
           </p>
           <p className="text-xs text-gray-700">ETH Cannes 2026</p>
         </footer>
       </div>
+
+      {/* Verdict Detail Modal */}
+      <VerdictModal
+        agent={modalAgent}
+        review={review}
+        onClose={() => setModalAgent(null)}
+      />
     </main>
   );
 }

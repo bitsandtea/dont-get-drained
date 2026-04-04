@@ -31,7 +31,7 @@ export function ThinkingScreen() {
 
         <div className="text-center space-y-2">
           <h2 className="text-lg font-semibold text-[var(--accent)]">
-            Mr. Inference is working...
+            Mr. Don&apos;t Get Drained is working...
           </h2>
           <p
             key={msgIndex}

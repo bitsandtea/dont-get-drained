@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import TopNav from "@/components/TopNav";
 import { TxToasterProvider } from "@/components/TxToaster";
 import { WalletProvider } from "@/components/WalletProvider";
+import { WelcomeModal } from "@/components/WelcomeModal";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Swap Guard",
+  title: "Mr. Don't Get Drained",
   description: "AI-powered transaction firewall for Safe wallets",
 };
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <WalletProvider>
           <TxToasterProvider>
             <TopNav />
+            <WelcomeModal />
             {children}
           </TxToasterProvider>
         </WalletProvider>

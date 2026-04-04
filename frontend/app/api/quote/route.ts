@@ -1,20 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { TOKENS } from "@/lib/contracts";
-import { getQuotePreview } from "@/lib/uniswap";
+import { getQuotePreview, ETH_ADDRESS } from "@/lib/uniswap";
 import { ethers } from "ethers";
-
-const ETH_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 // A default swapper address for quote-only requests (doesn't need to be the actual user)
 const QUOTE_SWAPPER = "0x0000000000000000000000000000000000000001";
 
 // POST /api/quote
 // Lightweight quote preview — no executable tx, just pricing
-// Body: { tokenOut, amountIn, recipient? }
+// Body: { tokenIn?, tokenOut, amountIn, recipient? }
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { tokenOut, amountIn, recipient } = body;
+    const { tokenIn: rawTokenIn, tokenOut, amountIn, recipient } = body;
+    const tokenIn = rawTokenIn || ETH_ADDRESS;
 
     if (!tokenOut || !amountIn) {
       return NextResponse.json({ error: "Missing tokenOut or amountIn" }, { status: 400 });
@@ -25,20 +24,28 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid amountIn" }, { status: 400 });
     }
 
-    const amountInWei = ethers.parseEther(amount.toString()).toString();
+    const isEthIn = tokenIn === ETH_ADDRESS;
+    const tokenInEntry = Object.values(TOKENS).find(
+      (t) => t.address.toLowerCase() === tokenIn.toLowerCase()
+    );
+    const tokenInDecimals = isEthIn ? 18 : (tokenInEntry?.decimals ?? 18);
 
-    const tokenEntry = Object.values(TOKENS).find(
+    const amountInWei = isEthIn
+      ? ethers.parseEther(amount.toString()).toString()
+      : ethers.parseUnits(amount.toString(), tokenInDecimals).toString();
+
+    const tokenOutEntry = Object.values(TOKENS).find(
       (t) => t.address.toLowerCase() === tokenOut.toLowerCase()
     );
-    const tokenOutDecimals = tokenEntry?.decimals ?? 18;
+    const tokenOutDecimals = tokenOutEntry?.decimals ?? 18;
 
     const preview = await getQuotePreview({
-      tokenIn: ETH_ADDRESS,
+      tokenIn,
       tokenOut,
       amountInWei,
       swapper: recipient || QUOTE_SWAPPER,
       tokenOutDecimals,
-      amountInEth: amount.toString(),
+      amountInHuman: amount.toString(),
     });
 
     return NextResponse.json(preview);
