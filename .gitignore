@@ -22,3 +22,5 @@ dapp/broadcast/
 *.log
 
 0g/*
+
+otterscan/*
