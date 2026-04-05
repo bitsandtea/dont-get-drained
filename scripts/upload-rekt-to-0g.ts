@@ -1,21 +1,22 @@
 /**
  * upload-rekt-to-0g.ts
  *
- * Uploads rekt analysis result JSONs to 0G Storage and produces a registry
- * mapping article_id → rootHash. Also registers each file in the frontend
- * storage-index.json so they show up on the /og-storage page.
+ * Uploads rekt analysis result JSONs to 0G Storage concurrently using
+ * ethers.NonceManager for safe parallel tx submission from one wallet.
+ *
+ * Idempotent — skips articles already in the registry.
  *
  * Usage:
- *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts          # upload 5 test files
- *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts --all    # upload all files
+ *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts              # upload 5 test files
+ *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts --all        # upload all files
  *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts --limit=20
+ *   OG_PRIVATE_KEY=<key> npx tsx scripts/upload-rekt-to-0g.ts --all --batch=10
  */
 
 import fs from "fs";
 import path from "path";
 import { createRequire } from "module";
 
-// Resolve dependencies from frontend/node_modules (no root package.json)
 const require = createRequire(
   path.resolve(__dirname, "../frontend/package.json")
 );
@@ -30,10 +31,9 @@ const RESULTS_DIR = path.join(__dirname, "analysis", "results");
 const REGISTRY_PATH = path.join(__dirname, "analysis", "0g-registry.json");
 const STORAGE_INDEX_PATH = path.join(__dirname, "..", "frontend", "storage-index.json");
 
-// Parse submission index from tx receipt
 const SUBMIT_SIG = ethers.id("Submit(address,bytes32,uint256,uint256,uint256,uint256)");
 
-async function parseSubmissionIndex(provider: ethers.Provider, txHash: string): Promise<number | null> {
+async function parseSubmissionIndex(provider: any, txHash: string): Promise<number | null> {
   try {
     const receipt = await provider.getTransactionReceipt(txHash);
     if (!receipt) return null;
@@ -69,24 +69,76 @@ function saveRegistry(reg: Record<string, RegistryEntry>) {
   fs.writeFileSync(REGISTRY_PATH, JSON.stringify(reg, null, 2));
 }
 
-// Append to frontend storage-index.json so files show on /og-storage page
-function addToStorageIndex(entry: RegistryEntry, wallet: string) {
-  let entries: any[] = [];
+function flushToStorageIndex(entries: RegistryEntry[], wallet: string) {
+  let existing: any[] = [];
   try {
-    entries = JSON.parse(fs.readFileSync(STORAGE_INDEX_PATH, "utf-8"));
+    existing = JSON.parse(fs.readFileSync(STORAGE_INDEX_PATH, "utf-8"));
   } catch { /* empty */ }
-  if (entries.some((e: any) => e.rootHash === entry.rootHash)) return;
-  entries.unshift({
-    rootHash: entry.rootHash,
-    txHash: entry.txHash,
-    submissionIndex: entry.submissionIndex,
-    name: `rekt/${entry.article_id}.json`,
-    size: entry.size,
-    wallet,
-    timestamp: Date.now(),
-    contentType: "application/json",
-  });
-  fs.writeFileSync(STORAGE_INDEX_PATH, JSON.stringify(entries, null, 2));
+  const existingHashes = new Set(existing.map((e: any) => e.rootHash));
+  const newEntries = entries
+    .filter((e) => !existingHashes.has(e.rootHash))
+    .map((e) => ({
+      rootHash: e.rootHash,
+      txHash: e.txHash,
+      submissionIndex: e.submissionIndex,
+      name: `rekt/${e.article_id}.json`,
+      size: e.size,
+      wallet,
+      timestamp: Date.now(),
+      contentType: "application/json",
+    }));
+  if (newEntries.length === 0) return;
+  fs.writeFileSync(
+    STORAGE_INDEX_PATH,
+    JSON.stringify([...newEntries, ...existing], null, 2)
+  );
+}
+
+// Upload one file — each call gets its own Indexer instance + the shared NonceManager wallet
+async function uploadOne(
+  file: string,
+  label: string,
+  managedWallet: any,
+  provider: any,
+): Promise<RegistryEntry | null> {
+  const articleId = file.replace(".json", "");
+  const filePath = path.join(RESULTS_DIR, file);
+  const jsonStr = fs.readFileSync(filePath, "utf-8");
+  const jsonBytes = new TextEncoder().encode(jsonStr);
+
+  try {
+    const memData = new MemData(jsonBytes);
+    const [, treeErr] = await memData.merkleTree();
+    if (treeErr) throw new Error(`Merkle tree: ${treeErr}`);
+
+    // Each concurrent upload needs its own indexer (internal state)
+    const indexer = new Indexer(STORAGE_INDEXER);
+
+    const [tx, uploadErr] = await indexer.upload(
+      memData, OG_RPC, managedWallet as any, undefined,
+      { Retries: 3, Interval: 5, MaxGasPrice: 0 },
+    );
+    if (uploadErr !== null) throw new Error(`Upload: ${uploadErr}`);
+
+    const rootHash = "rootHash" in tx ? tx.rootHash : tx.rootHashes[0];
+    const txHash = "rootHash" in tx ? tx.txHash : tx.txHashes[0];
+    const submissionIndex = await parseSubmissionIndex(provider, txHash);
+
+    console.log(`  ${label} OK ${articleId} -> ${rootHash.slice(0, 20)}...`);
+
+    return {
+      article_id: articleId,
+      rootHash,
+      txHash,
+      submissionIndex,
+      size: jsonBytes.length,
+      uploadedAt: new Date().toISOString(),
+    };
+  } catch (err) {
+    const msg = err instanceof Error ? err.message.slice(0, 100) : String(err);
+    console.error(`  ${label} FAIL ${articleId}: ${msg}`);
+    return null;
+  }
 }
 
 async function main() {
@@ -97,123 +149,97 @@ async function main() {
   }
 
   const provider = new ethers.JsonRpcProvider(OG_RPC);
-  const wallet = new ethers.Wallet(key, provider);
-  const indexer = new Indexer(STORAGE_INDEXER);
-  const walletAddr = wallet.address;
+  const baseWallet = new ethers.Wallet(key, provider);
+  // NonceManager queues concurrent sendTransaction calls with sequential nonces
+  const managedWallet = new ethers.NonceManager(baseWallet);
+  const walletAddr = baseWallet.address;
 
   // Parse args
   const args = process.argv.slice(2);
   const all = args.includes("--all");
-  const limitArg = args.find((a) => a.startsWith("--limit="));
+  const limitArg = args.find((a: string) => a.startsWith("--limit="));
+  const batchArg = args.find((a: string) => a.startsWith("--batch="));
   const limit = all ? Infinity : (limitArg ? parseInt(limitArg.split("=")[1], 10) : 5);
+  const batchSize = batchArg ? parseInt(batchArg.split("=")[1], 10) : 5;
 
-  // Load existing registry to skip already-uploaded files
   const registry = loadRegistry();
   const alreadyUploaded = new Set(Object.keys(registry));
 
-  // Get files to upload
-  const allFiles = fs.readdirSync(RESULTS_DIR).filter((f) => f.endsWith(".json"));
+  const allFiles = fs.readdirSync(RESULTS_DIR).filter((f: string) => f.endsWith(".json"));
   const toUpload = allFiles
-    .filter((f) => !alreadyUploaded.has(f.replace(".json", "")))
+    .filter((f: string) => !alreadyUploaded.has(f.replace(".json", "")))
     .slice(0, limit);
 
-  console.log(`\n=== 0G Storage Upload ===`);
+  console.log(`\n=== 0G Storage Concurrent Upload ===`);
   console.log(`Wallet:           ${walletAddr}`);
   console.log(`Total results:    ${allFiles.length}`);
   console.log(`Already uploaded: ${alreadyUploaded.size}`);
   console.log(`To upload:        ${toUpload.length}`);
+  console.log(`Batch size:       ${batchSize} concurrent`);
   console.log();
 
-  // Check wallet balance before starting
-  const balance = await provider.getBalance(walletAddr);
-  const balEth = ethers.formatEther(balance);
-  console.log(`Wallet balance:   ${balEth} A0GI`);
-  console.log();
+  const balanceBefore = await provider.getBalance(walletAddr);
+  console.log(`Wallet balance:   ${ethers.formatEther(balanceBefore)} A0GI\n`);
 
-  let totalGasUsed = BigInt(0);
-  let totalCostWei = BigInt(0);
   let successCount = 0;
+  let failCount = 0;
+  const t0 = Date.now();
 
-  for (let i = 0; i < toUpload.length; i++) {
-    const file = toUpload[i];
-    const articleId = file.replace(".json", "");
-    const filePath = path.join(RESULTS_DIR, file);
-    const jsonStr = fs.readFileSync(filePath, "utf-8");
-    const jsonBytes = new TextEncoder().encode(jsonStr);
+  for (let batchStart = 0; batchStart < toUpload.length; batchStart += batchSize) {
+    const batch = toUpload.slice(batchStart, batchStart + batchSize);
+    const batchNum = Math.floor(batchStart / batchSize) + 1;
+    const totalBatches = Math.ceil(toUpload.length / batchSize);
+    const elapsed = ((Date.now() - t0) / 1000).toFixed(0);
+    const rate = successCount > 0 ? (successCount / ((Date.now() - t0) / 1000)).toFixed(2) : "---";
 
-    console.log(`[${i + 1}/${toUpload.length}] Uploading ${articleId} (${jsonBytes.length} bytes)...`);
+    console.log(`\n--- Batch ${batchNum}/${totalBatches} (${batch.length} files) [${elapsed}s, ${rate} files/s] ---`);
 
-    try {
-      const memData = new MemData(jsonBytes);
-      const [, treeErr] = await memData.merkleTree();
-      if (treeErr) throw new Error(`Merkle tree: ${treeErr}`);
+    // Fire all uploads in this batch concurrently — NonceManager handles nonces
+    const results = await Promise.allSettled(
+      batch.map((file: string, i: number) =>
+        uploadOne(file, `[${batchStart + i + 1}/${toUpload.length}]`, managedWallet, provider)
+      )
+    );
 
-      const balBefore = await provider.getBalance(walletAddr);
-
-      const [tx, uploadErr] = await indexer.upload(
-        memData, OG_RPC, wallet as any, undefined,
-        { Retries: 3, Interval: 5, MaxGasPrice: 0 },
-      );
-      if (uploadErr !== null) throw new Error(`Upload: ${uploadErr}`);
-
-      const rootHash = "rootHash" in tx ? tx.rootHash : tx.rootHashes[0];
-      const txHash = "rootHash" in tx ? tx.txHash : tx.txHashes[0];
-
-      const balAfter = await provider.getBalance(walletAddr);
-      const costWei = balBefore - balAfter;
-      totalCostWei += costWei;
-
-      // Get gas details from receipt
-      const receipt = await provider.getTransactionReceipt(txHash);
-      const gasUsed = receipt?.gasUsed ?? BigInt(0);
-      totalGasUsed += gasUsed;
-
-      const submissionIndex = await parseSubmissionIndex(provider, txHash);
-
-      const entry: RegistryEntry = {
-        article_id: articleId,
-        rootHash,
-        txHash,
-        submissionIndex,
-        size: jsonBytes.length,
-        uploadedAt: new Date().toISOString(),
-      };
-
-      registry[articleId] = entry;
-      saveRegistry(registry);
-      addToStorageIndex(entry, walletAddr);
-      successCount++;
-
-      console.log(`  -> rootHash: ${rootHash.slice(0, 20)}...`);
-      console.log(`  -> cost: ${ethers.formatEther(costWei)} A0GI  (gas: ${gasUsed.toString()})`);
-      if (submissionIndex !== null) {
-        console.log(`  -> explorer: https://storagescan-galileo.0g.ai/submission/${submissionIndex}`);
+    const batchEntries: RegistryEntry[] = [];
+    for (const result of results) {
+      if (result.status === "fulfilled" && result.value) {
+        const entry = result.value;
+        registry[entry.article_id] = entry;
+        batchEntries.push(entry);
+        successCount++;
+      } else {
+        failCount++;
       }
-      console.log();
-    } catch (err) {
-      console.error(`  -> FAILED: ${err instanceof Error ? err.message : err}`);
-      console.log();
+    }
+
+    // Flush after each batch
+    if (batchEntries.length > 0) {
+      saveRegistry(registry);
+      flushToStorageIndex(batchEntries, walletAddr);
     }
   }
 
   // Summary
+  const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
   const balanceAfter = await provider.getBalance(walletAddr);
-  console.log(`\n=== Summary ===`);
-  console.log(`Uploaded:       ${successCount}/${toUpload.length}`);
-  console.log(`Total gas:      ${totalGasUsed.toString()}`);
-  console.log(`Total cost:     ${ethers.formatEther(totalCostWei)} A0GI`);
-  console.log(`Balance after:  ${ethers.formatEther(balanceAfter)} A0GI`);
-  console.log(`Registry:       ${Object.keys(registry).length} entries in ${REGISTRY_PATH}`);
+  const totalCost = balanceBefore - balanceAfter;
 
-  if (successCount > 0 && toUpload.length <= 10) {
-    // Extrapolate cost for all files
-    const avgCost = totalCostWei / BigInt(successCount);
+  console.log(`\n=== Summary ===`);
+  console.log(`Uploaded:       ${successCount}/${toUpload.length} (${failCount} failed)`);
+  console.log(`Time:           ${elapsed}s`);
+  console.log(`Total cost:     ${ethers.formatEther(totalCost)} A0GI`);
+  console.log(`Balance after:  ${ethers.formatEther(balanceAfter)} A0GI`);
+  console.log(`Registry:       ${Object.keys(registry).length}/${allFiles.length} entries`);
+
+  if (successCount > 0) {
+    const avgCost = totalCost / BigInt(successCount);
     const remaining = allFiles.length - Object.keys(registry).length;
-    const estTotal = avgCost * BigInt(remaining);
-    console.log(`\n=== Cost Estimate (all ${allFiles.length} files) ===`);
-    console.log(`Avg cost/file:  ${ethers.formatEther(avgCost)} A0GI`);
-    console.log(`Remaining:      ${remaining} files`);
-    console.log(`Est. remaining: ${ethers.formatEther(estTotal)} A0GI`);
+    if (remaining > 0) {
+      console.log(`\nAvg cost/file:  ${ethers.formatEther(avgCost)} A0GI`);
+      console.log(`Remaining:      ${remaining} files`);
+      console.log(`Est. remaining: ${ethers.formatEther(avgCost * BigInt(remaining))} A0GI`);
+    }
   }
 }
 

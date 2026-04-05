@@ -1,42 +1,4222 @@
 {
   "11-rekt": {
     "article_id": "11-rekt",
-    "rootHash": "0xaae8e34ad1b46bbabab38c2e9c7590475a4cda47f6e9bbec899cc81fb9d8e2f5",
-    "txHash": "0xe7716a5d6b08b5a5842f644589e584f212fe4e5a3fc5a655fe33bec97a4fe24a",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
     "submissionIndex": null,
-    "size": 1490,
-    "uploadedAt": "2026-04-04T22:19:10.502Z"
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.158Z",
+    "bundle": true
   },
   "1inch-rekt": {
     "article_id": "1inch-rekt",
-    "rootHash": "0xa34e38f6887f46dd5ac92f20854ea6ada4bbde10b7a7842a17b196928a122845",
-    "txHash": "0x82004d0b13c5b3f1c058d23038888b7d81ba600dac08d924bc679cddc62f1bac",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
     "submissionIndex": null,
-    "size": 1594,
-    "uploadedAt": "2026-04-04T22:19:26.471Z"
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
   },
   "8ight-finance-rekt": {
     "article_id": "8ight-finance-rekt",
-    "rootHash": "0x4797e95fa9c7568a443aa36264a207c9854f24d54120909f103bc7beb45a2666",
-    "txHash": "0xfcce29c927ac0773356cb49f7cc47508f9021a3e35c75f9de5bc0c6b469e26b4",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
     "submissionIndex": null,
-    "size": 1522,
-    "uploadedAt": "2026-04-04T22:19:46.474Z"
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
   },
   "LNDFi-rekt": {
     "article_id": "LNDFi-rekt",
-    "rootHash": "0x4a53ae5c18a8d563b231a8fc14b9abee2e469c9c1319fc791a3500a29885dc92",
-    "txHash": "0x8560d36429fd47de7481043df8a83e793367c513becb6f0ee1b44e2163e9dfd1",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
     "submissionIndex": null,
-    "size": 1496,
-    "uploadedAt": "2026-04-04T22:20:02.527Z"
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
   },
   "LSC-FSL-rekt": {
     "article_id": "LSC-FSL-rekt",
-    "rootHash": "0xa219df57cbdd0b40771fa57d436f9df1f7d13cea783881b02fc980893328716b",
-    "txHash": "0x6589361857f876d7afae3381d6258519311f692262e434ea7a2c21e749c4ad86",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
     "submissionIndex": null,
-    "size": 1720,
-    "uploadedAt": "2026-04-04T22:20:22.510Z"
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "aave-rekt": {
+    "article_id": "aave-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "aevo-rekt": {
+    "article_id": "aevo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "airdrop-hunters": {
+    "article_id": "airdrop-hunters",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "all-the-wrong-moves": {
+    "article_id": "all-the-wrong-moves",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ankr-helio-rekt": {
+    "article_id": "ankr-helio-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "arbix-rekt": {
+    "article_id": "arbix-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "astroport-rekt": {
+    "article_id": "astroport-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "au-dodo-rekt": {
+    "article_id": "au-dodo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bad-math-homework": {
+    "article_id": "bad-math-homework",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "balancer-rekt2": {
+    "article_id": "balancer-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bananagun-rekt": {
+    "article_id": "bananagun-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "beanstalk-rekt": {
+    "article_id": "beanstalk-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bedrock-rekt": {
+    "article_id": "bedrock-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bitgets-voxel-meltdown": {
+    "article_id": "bitgets-voxel-meltdown",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "blockchain-slumlords": {
+    "article_id": "blockchain-slumlords",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bondly-rekt": {
+    "article_id": "bondly-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bsc-the-bridge-to-defi": {
+    "article_id": "bsc-the-bridge-to-defi",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bzx-rekt": {
+    "article_id": "bzx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cat-and-mouse": {
+    "article_id": "cat-and-mouse",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cetus-rekt": {
+    "article_id": "cetus-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "clickandbeware": {
+    "article_id": "clickandbeware",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "compound-errors": {
+    "article_id": "compound-errors",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "compound-rekt": {
+    "article_id": "compound-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "credix-rekt": {
+    "article_id": "credix-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "crossing-the-line": {
+    "article_id": "crossing-the-line",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "curve-vyper-rekt": {
+    "article_id": "curve-vyper-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "curve-wars": {
+    "article_id": "curve-wars",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dao-maker-community-investigates": {
+    "article_id": "dao-maker-community-investigates",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dego-finance-rekt": {
+    "article_id": "dego-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dexible-rekt": {
+    "article_id": "dexible-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dforce-network-rekt": {
+    "article_id": "dforce-network-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dmm-rekt": {
+    "article_id": "dmm-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "drained-by-design": {
+    "article_id": "drained-by-design",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eigenoops": {
+    "article_id": "eigenoops",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "emergency-powers": {
+    "article_id": "emergency-powers",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ethtrustfund-rekt": {
+    "article_id": "ethtrustfund-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eye-of-the-storm": {
+    "article_id": "eye-of-the-storm",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fei-rari-rekt": {
+    "article_id": "fei-rari-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fomo-on-meme-street1": {
+    "article_id": "fomo-on-meme-street1",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "force-bridge-rekt": {
+    "article_id": "force-bridge-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "furucombo-rekt": {
+    "article_id": "furucombo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gmx-rekt": {
+    "article_id": "gmx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "griffinai-rekt": {
+    "article_id": "griffinai-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "harvest-finance-rekt": {
+    "article_id": "harvest-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hedera-rekt": {
+    "article_id": "hedera-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hopium-diaries-dystopian-dreams": {
+    "article_id": "hopium-diaries-dystopian-dreams",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hundred-rekt2": {
+    "article_id": "hundred-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hypervault-rugged": {
+    "article_id": "hypervault-rugged",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hypr-network-rekt": {
+    "article_id": "hypr-network-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "infini-rekt": {
+    "article_id": "infini-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "iotex-rekt": {
+    "article_id": "iotex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "iron-finance-rekt": {
+    "article_id": "iron-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "lastpass-users-rekt": {
+    "article_id": "lastpass-users-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ledger-rekt": {
+    "article_id": "ledger-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "levana-rekt": {
+    "article_id": "levana-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "level-finance-rekt": {
+    "article_id": "level-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "m2-exchange-rekt": {
+    "article_id": "m2-exchange-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "mantra-of-misfortune": {
+    "article_id": "mantra-of-misfortune",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "meter-rekt": {
+    "article_id": "meter-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "moneyfornothing": {
+    "article_id": "moneyfornothing",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "munchables-rekt": {
+    "article_id": "munchables-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "nft-digital-art-enthusiast": {
+    "article_id": "nft-digital-art-enthusiast",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "overcompensated": {
+    "article_id": "overcompensated",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "paper-tiger": {
+    "article_id": "paper-tiger",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "parabolic-mirage": {
+    "article_id": "parabolic-mirage",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "penpie-rekt": {
+    "article_id": "penpie-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "plant-a-red-flag": {
+    "article_id": "plant-a-red-flag",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "poloniex-rekt": {
+    "article_id": "poloniex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "polynetwork-rekt": {
+    "article_id": "polynetwork-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "radiant-capital-rekt": {
+    "article_id": "radiant-capital-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "reef-vs-alameda": {
+    "article_id": "reef-vs-alameda",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "remitano-rekt": {
+    "article_id": "remitano-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "revest-finance-rekt": {
+    "article_id": "revest-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "right-to-disappear": {
+    "article_id": "right-to-disappear",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ripmevbot2": {
+    "article_id": "ripmevbot2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ronin-rekt": {
+    "article_id": "ronin-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "safemoon-rekt": {
+    "article_id": "safemoon-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sheeple": {
+    "article_id": "sheeple",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "shibarium-bridge-rekt": {
+    "article_id": "shibarium-bridge-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "socket-rekt": {
+    "article_id": "socket-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "solv-rekt": {
+    "article_id": "solv-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sturdy-rekt": {
+    "article_id": "sturdy-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "talesfromchain-deceit": {
+    "article_id": "talesfromchain-deceit",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "tangible-rekt": {
+    "article_id": "tangible-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "the-creeping-line": {
+    "article_id": "the-creeping-line",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-whitepaper": {
+    "article_id": "the-whitepaper",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "thorchains-iceage": {
+    "article_id": "thorchains-iceage",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "ton-of-bs": {
+    "article_id": "ton-of-bs",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "trump-casino": {
+    "article_id": "trump-casino",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uranium-rekt": {
+    "article_id": "uranium-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "voltage-finance-rekt": {
+    "article_id": "voltage-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "whale-hunt-sbf-blue-kirby": {
+    "article_id": "whale-hunt-sbf-blue-kirby",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "who-got-rugged": {
+    "article_id": "who-got-rugged",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "a-piece-of-art": {
+    "article_id": "a-piece-of-art",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "aave-winter-of-discontent": {
+    "article_id": "aave-winter-of-discontent",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "abra-rekt": {
+    "article_id": "abra-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "abracadabra-rekt2": {
+    "article_id": "abracadabra-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "abracadabra-rekt3": {
+    "article_id": "abracadabra-rekt3",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "abracadabra": {
+    "article_id": "abracadabra",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "acala-network-rekt": {
+    "article_id": "acala-network-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "after-post-mortem": {
+    "article_id": "after-post-mortem",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "agave-hundred-rekt": {
+    "article_id": "agave-hundred-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "airdrop-hunters2": {
+    "article_id": "airdrop-hunters2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "airdrop-siren": {
+    "article_id": "airdrop-siren",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "akropolis-rekt": {
+    "article_id": "akropolis-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "alchemix-rekt": {
+    "article_id": "alchemix-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "alexlab-rekt": {
+    "article_id": "alexlab-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "alexlab-rekt2": {
+    "article_id": "alexlab-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "alpha-finance-rekt": {
+    "article_id": "alpha-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "alphapo-rekt": {
+    "article_id": "alphapo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "anniversary-auction": {
+    "article_id": "anniversary-auction",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "anyswap-rekt": {
+    "article_id": "anyswap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ape-season-returns": {
+    "article_id": "ape-season-returns",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ape-tax-vid": {
+    "article_id": "ape-tax-vid",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ape-tax": {
+    "article_id": "ape-tax",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "arcadiafi-rekt": {
+    "article_id": "arcadiafi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "arkham-asylum": {
+    "article_id": "arkham-asylum",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "armor-rekt": {
+    "article_id": "armor-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ascendex-rekt": {
+    "article_id": "ascendex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "atlantis-loans-rekt": {
+    "article_id": "atlantis-loans-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "audius-rekt": {
+    "article_id": "audius-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "autoshark-rekt": {
+    "article_id": "autoshark-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "avi-arrested": {
+    "article_id": "avi-arrested",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bad-vibes": {
+    "article_id": "bad-vibes",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "badger-rekt": {
+    "article_id": "badger-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "badgers-digg-sushi": {
+    "article_id": "badgers-digg-sushi",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "balancer-rekt": {
+    "article_id": "balancer-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bald-rekt": {
+    "article_id": "bald-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bancor-lp-rekt": {
+    "article_id": "bancor-lp-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "banksy-pranksy-scam": {
+    "article_id": "banksy-pranksy-scam",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bearn-rekt": {
+    "article_id": "bearn-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "belt-rekt": {
+    "article_id": "belt-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bent-finance": {
+    "article_id": "bent-finance",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "betterbank-rekt": {
+    "article_id": "betterbank-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "big-if-truebit": {
+    "article_id": "big-if-truebit",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "big-phish": {
+    "article_id": "big-phish",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bigone-rekt": {
+    "article_id": "bigone-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bingx-rekt": {
+    "article_id": "bingx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bitclout": {
+    "article_id": "bitclout",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bitmart-rekt": {
+    "article_id": "bitmart-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bittensor-rekt": {
+    "article_id": "bittensor-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "blood-in-the-streets-II": {
+    "article_id": "blood-in-the-streets-II",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "blood-in-the-streets": {
+    "article_id": "blood-in-the-streets",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "blood-on-the-blockchain": {
+    "article_id": "blood-on-the-blockchain",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bnb-bridge-rekt": {
+    "article_id": "bnb-bridge-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bonq-rekt": {
+    "article_id": "bonq-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "brincfi-rekt-coldcase": {
+    "article_id": "brincfi-rekt-coldcase",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bring-tigran-home": {
+    "article_id": "bring-tigran-home",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "btcturk-rekt": {
+    "article_id": "btcturk-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bulls-behind-bars": {
+    "article_id": "bulls-behind-bars",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bunni-rekt": {
+    "article_id": "bunni-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "burgerswap-rekt": {
+    "article_id": "burgerswap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "burning-bridges": {
+    "article_id": "burning-bridges",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "bybit-rekt": {
+    "article_id": "bybit-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cefi-rekt": {
+    "article_id": "cefi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "celsius-rekt": {
+    "article_id": "celsius-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "certik-kraken-rekt": {
+    "article_id": "certik-kraken-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "chainswap-rekt": {
+    "article_id": "chainswap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cloberdex-rekt": {
+    "article_id": "cloberdex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "coinbase-the-oracle": {
+    "article_id": "coinbase-the-oracle",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "coindcx-rekt": {
+    "article_id": "coindcx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "coinex-rekt": {
+    "article_id": "coinex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "communications-breakdown": {
+    "article_id": "communications-breakdown",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "conic-finance-rekt": {
+    "article_id": "conic-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cork-protocol-rekt": {
+    "article_id": "cork-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cover-rekt": {
+    "article_id": "cover-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cream-rekt-2": {
+    "article_id": "cream-rekt-2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cream-rekt": {
+    "article_id": "cream-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "crema-finance-rekt": {
+    "article_id": "crema-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "crypto-under-siege": {
+    "article_id": "crypto-under-siege",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cryptocom-rekt": {
+    "article_id": "cryptocom-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cryptos-achillesheel": {
+    "article_id": "cryptos-achillesheel",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "curio-rekt": {
+    "article_id": "curio-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "curve-finance-rekt": {
+    "article_id": "curve-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cutting-corners": {
+    "article_id": "cutting-corners",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "cy-ops": {
+    "article_id": "cy-ops",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "daomaker-rekt": {
+    "article_id": "daomaker-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deathbed-confessions-c3pr": {
+    "article_id": "deathbed-confessions-c3pr",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "decentralised-monopoly": {
+    "article_id": "decentralised-monopoly",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deepfake": {
+    "article_id": "deepfake",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "default-settings": {
+    "article_id": "default-settings",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "defilabs-rekt": {
+    "article_id": "defilabs-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deltaprime-rekt": {
+    "article_id": "deltaprime-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deltaprime-rekt2": {
+    "article_id": "deltaprime-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deribit-rekt": {
+    "article_id": "deribit-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deus-dao-r3kt": {
+    "article_id": "deus-dao-r3kt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deus-dao-rekt-2": {
+    "article_id": "deus-dao-rekt-2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "deus-dao-rekt": {
+    "article_id": "deus-dao-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "digital-danger": {
+    "article_id": "digital-danger",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "digital-parasites": {
+    "article_id": "digital-parasites",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dodging-a-bullet": {
+    "article_id": "dodging-a-bullet",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dydx-rekt": {
+    "article_id": "dydx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "dystopian-diaries": {
+    "article_id": "dystopian-diaries",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "easyfi-rekt": {
+    "article_id": "easyfi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eco-friendly-rug-pull": {
+    "article_id": "eco-friendly-rug-pull",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "elephant-money-rekt": {
+    "article_id": "elephant-money-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eminence-refund-do-or-dai": {
+    "article_id": "eminence-refund-do-or-dai",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eminence-rekt-in-prod": {
+    "article_id": "eminence-rekt-in-prod",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "epic-hack-homie": {
+    "article_id": "epic-hack-homie",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "eralend-rekt": {
+    "article_id": "eralend-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "etfgaffe": {
+    "article_id": "etfgaffe",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ethcc-detychey-vs-touts": {
+    "article_id": "ethcc-detychey-vs-touts",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "euler-rekt": {
+    "article_id": "euler-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "euro-last-stand": {
+    "article_id": "euro-last-stand",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "exactly-protocol-rekt": {
+    "article_id": "exactly-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "false-prophet": {
+    "article_id": "false-prophet",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fei-rekt": {
+    "article_id": "fei-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "few-gets-rekt": {
+    "article_id": "few-gets-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fomo-on-meme-street2": {
+    "article_id": "fomo-on-meme-street2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "force-rekt": {
+    "article_id": "force-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fork-in-the-code": {
+    "article_id": "fork-in-the-code",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "fortress-rekt": {
+    "article_id": "fortress-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "frankenclaw": {
+    "article_id": "frankenclaw",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ftx-terms-and-commissions": {
+    "article_id": "ftx-terms-and-commissions",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ftx-yikes": {
+    "article_id": "ftx-yikes",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gala-games-rekt": {
+    "article_id": "gala-games-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gamestonk": {
+    "article_id": "gamestonk",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gamestonk2": {
+    "article_id": "gamestonk2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gamma-strategies-rekt": {
+    "article_id": "gamma-strategies-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gana-payment-rekt": {
+    "article_id": "gana-payment-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gempad-rekt": {
+    "article_id": "gempad-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gone-phishing": {
+    "article_id": "gone-phishing",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "grand-base": {
+    "article_id": "grand-base",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "grim-finance-rekt": {
+    "article_id": "grim-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "grudgematch-sec": {
+    "article_id": "grudgematch-sec",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "gymnet-rekt": {
+    "article_id": "gymnet-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hack-epidemic": {
+    "article_id": "hack-epidemic",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hacken-rekt": {
+    "article_id": "hacken-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "harmony-rekt": {
+    "article_id": "harmony-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hashrate-heist-or-hype": {
+    "article_id": "hashrate-heist-or-hype",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "heco-htx-rekt": {
+    "article_id": "heco-htx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hedgey-finance-rekt": {
+    "article_id": "hedgey-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hedging-bets": {
+    "article_id": "hedging-bets",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "helloworld": {
+    "article_id": "helloworld",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hope-finance-rekt": {
+    "article_id": "hope-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "house-of-cards": {
+    "article_id": "house-of-cards",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "htx-huobi-rekt": {
+    "article_id": "htx-huobi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hype-and-hashmasks": {
+    "article_id": "hype-and-hashmasks",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hyperliquidate": {
+    "article_id": "hyperliquidate",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "hyperliquidate2": {
+    "article_id": "hyperliquidate2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "identity-theft-2": {
+    "article_id": "identity-theft-2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "in-murky-waters": {
+    "article_id": "in-murky-waters",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "indexed-finance-rekt": {
+    "article_id": "indexed-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "indodax-rekt": {
+    "article_id": "indodax-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "infiltrating-cosmos": {
+    "article_id": "infiltrating-cosmos",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "infrastructure-scam-city": {
+    "article_id": "infrastructure-scam-city",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "infura-issue-of-consensus": {
+    "article_id": "infura-issue-of-consensus",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "inverse-finance-rekt": {
+    "article_id": "inverse-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "inverse-rekt2": {
+    "article_id": "inverse-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "invisible-prompts": {
+    "article_id": "invisible-prompts",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ionic-money-rekt": {
+    "article_id": "ionic-money-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "iron-alpha": {
+    "article_id": "iron-alpha",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "jaypegs-automart-rekt": {
+    "article_id": "jaypegs-automart-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "jimbo-rekt": {
+    "article_id": "jimbo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "just-bad-luck": {
+    "article_id": "just-bad-luck",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "kannagi-finance-rekt": {
+    "article_id": "kannagi-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "kiloex-rekt": {
+    "article_id": "kiloex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "kokomo-finance-rekt": {
+    "article_id": "kokomo-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "kronos-rekt": {
+    "article_id": "kronos-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "kyberswap-rekt": {
+    "article_id": "kyberswap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "lcx-rekt": {
+    "article_id": "lcx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ledger-recover": {
+    "article_id": "ledger-recover",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "legitimacy-on-demand": {
+    "article_id": "legitimacy-on-demand",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "levyathan-rekt": {
+    "article_id": "levyathan-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "lifi-jumper-rekt": {
+    "article_id": "lifi-jumper-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "locked-away": {
+    "article_id": "locked-away",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "lodestar-rekt": {
+    "article_id": "lodestar-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "loop-contagion": {
+    "article_id": "loop-contagion",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "loopscale-rekt": {
+    "article_id": "loopscale-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "luna-rekt": {
+    "article_id": "luna-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "madmeerkat-finance-rekt": {
+    "article_id": "madmeerkat-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "makina-rekt": {
+    "article_id": "makina-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "meerkat-finance-bsc-rekt": {
+    "article_id": "meerkat-finance-bsc-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "megaoops": {
+    "article_id": "megaoops",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "meltdown": {
+    "article_id": "meltdown",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "merlin-dex-rekt": {
+    "article_id": "merlin-dex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "merlin2-rekt": {
+    "article_id": "merlin2-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "merlin3-rekt": {
+    "article_id": "merlin3-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "merlinlabs-rekt": {
+    "article_id": "merlinlabs-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "midas-capital-rekt": {
+    "article_id": "midas-capital-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "midas-rekt2": {
+    "article_id": "midas-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "mirror-rekt": {
+    "article_id": "mirror-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "mixin-rekt": {
+    "article_id": "mixin-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "mobiusdao-rekt": {
+    "article_id": "mobiusdao-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "mobytrade-rekt": {
+    "article_id": "mobytrade-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "monkey-business": {
+    "article_id": "monkey-business",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "monox-rekt": {
+    "article_id": "monox-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "moola-markets-rekt": {
+    "article_id": "moola-markets-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "moonwell-rekt": {
+    "article_id": "moonwell-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "multichain-r3kt": {
+    "article_id": "multichain-r3kt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "multichain-rekt2": {
+    "article_id": "multichain-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "newgold-protocol-rekt": {
+    "article_id": "newgold-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "nightmare-ftm": {
+    "article_id": "nightmare-ftm",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "nomad-rekt": {
+    "article_id": "nomad-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "not-so-safe": {
+    "article_id": "not-so-safe",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "npm-heist": {
+    "article_id": "npm-heist",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "nxm-hugh-speaks-out": {
+    "article_id": "nxm-hugh-speaks-out",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "odin-fun-rekt": {
+    "article_id": "odin-fun-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "okx-dex-rekt": {
+    "article_id": "okx-dex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "on-flash-loans": {
+    "article_id": "on-flash-loans",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "onyx-protocol-rekt": {
+    "article_id": "onyx-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "onyx-protocol-rekt2": {
+    "article_id": "onyx-protocol-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "orange-finance-rekt": {
+    "article_id": "orange-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "orbit-bridge-rekt": {
+    "article_id": "orbit-bridge-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "orion-protocol-rekt": {
+    "article_id": "orion-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "paid-rekt": {
+    "article_id": "paid-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pancakebunny-rekt": {
+    "article_id": "pancakebunny-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pancakebunny2-rekt": {
+    "article_id": "pancakebunny2-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "patently-absurd": {
+    "article_id": "patently-absurd",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "paxos-300trillion-oopsie": {
+    "article_id": "paxos-300trillion-oopsie",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "phemex-rekt": {
+    "article_id": "phemex-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "phished-founder-liquidated-thief": {
+    "article_id": "phished-founder-liquidated-thief",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pickle-finance-rekt": {
+    "article_id": "pickle-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pike-rekt": {
+    "article_id": "pike-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "platypus-finance-rekt": {
+    "article_id": "platypus-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "platypus-rekt2": {
+    "article_id": "platypus-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "plenty-of-phish": {
+    "article_id": "plenty-of-phish",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "politics-and-prescience": {
+    "article_id": "politics-and-prescience",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "polter-finance-rekt": {
+    "article_id": "polter-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "poly-network-rekt2": {
+    "article_id": "poly-network-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "popsicle-rekt": {
+    "article_id": "popsicle-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "price-impact-kills": {
+    "article_id": "price-impact-kills",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "prismafi-rekt": {
+    "article_id": "prismafi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pump-snuff": {
+    "article_id": "pump-snuff",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "punkprotocol-rekt": {
+    "article_id": "punkprotocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "pwnedbase": {
+    "article_id": "pwnedbase",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "qubit-rekt": {
+    "article_id": "qubit-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "radiant-capital-rekt2": {
+    "article_id": "radiant-capital-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "raft-rekt": {
+    "article_id": "raft-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "rari-capital-rekt": {
+    "article_id": "rari-capital-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "rekt-is-one": {
+    "article_id": "rekt-is-one",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "resupplyfi-rekt": {
+    "article_id": "resupplyfi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "return-to-the-dark-forest": {
+    "article_id": "return-to-the-dark-forest",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "rho-market-rekt": {
+    "article_id": "rho-market-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "ripmevbot": {
+    "article_id": "ripmevbot",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "road-to-nowhere": {
+    "article_id": "road-to-nowhere",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "rocketswap-rekt": {
+    "article_id": "rocketswap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "roll-rekt": {
+    "article_id": "roll-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "roninnetwork-rektII": {
+    "article_id": "roninnetwork-rektII",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "saddle-finance-rekt": {
+    "article_id": "saddle-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "saddle-finance-rekt2": {
+    "article_id": "saddle-finance-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "safedollar-rekt": {
+    "article_id": "safedollar-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "saga-rekt": {
+    "article_id": "saga-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sbf-mask-off": {
+    "article_id": "sbf-mask-off",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sbf-regulator": {
+    "article_id": "sbf-regulator",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sbi-crypto-rekt": {
+    "article_id": "sbi-crypto-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "schrodingers-stolen-nft": {
+    "article_id": "schrodingers-stolen-nft",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sell-the-news": {
+    "article_id": "sell-the-news",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "seneca-protocol-rekt": {
+    "article_id": "seneca-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "shezmu-rekt": {
+    "article_id": "shezmu-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "shibarium-rekt": {
+    "article_id": "shibarium-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "shitcoins": {
+    "article_id": "shitcoins",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sifu-scandal": {
+    "article_id": "sifu-scandal",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "silvergate-rekt": {
+    "article_id": "silvergate-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sirtrading-rekt": {
+    "article_id": "sirtrading-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "skyward-rekt": {
+    "article_id": "skyward-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "slowburn": {
+    "article_id": "slowburn",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "snowdog-rekt": {
+    "article_id": "snowdog-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sonne-finance-rekt": {
+    "article_id": "sonne-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sovryn-rekt": {
+    "article_id": "sovryn-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "spartan-rekt": {
+    "article_id": "spartan-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "spotlight-on-solana": {
+    "article_id": "spotlight-on-solana",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sss-rekt": {
+    "article_id": "sss-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "stable-coins-the-empire-strikes-back": {
+    "article_id": "stable-coins-the-empire-strikes-back",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "stable-future": {
+    "article_id": "stable-future",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "stablemagnet-rekt": {
+    "article_id": "stablemagnet-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "stake-rekt": {
+    "article_id": "stake-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "stars-arena-rekt": {
+    "article_id": "stars-arena-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "state-of-deception": {
+    "article_id": "state-of-deception",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "steadefi-rekt": {
+    "article_id": "steadefi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "superfluid-rekt": {
+    "article_id": "superfluid-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "surviving-digital-danger": {
+    "article_id": "surviving-digital-danger",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sushi-yoink-rekt": {
+    "article_id": "sushi-yoink-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sushiswap-grey-area": {
+    "article_id": "sushiswap-grey-area",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sushiswap-saved-0xmaki-speaks-out": {
+    "article_id": "sushiswap-saved-0xmaki-speaks-out",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sushiswap-scandal": {
+    "article_id": "sushiswap-scandal",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sushiswap-somethingsmells-fishy": {
+    "article_id": "sushiswap-somethingsmells-fishy",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "swaprum-rekt": {
+    "article_id": "swaprum-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "sweet-betrayal": {
+    "article_id": "sweet-betrayal",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "take-money-run": {
+    "article_id": "take-money-run",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "tapioca-dao-rekt": {
+    "article_id": "tapioca-dao-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "teamfinance-rekt": {
+    "article_id": "teamfinance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "templedao-rekt": {
+    "article_id": "templedao-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "thanks-squarespace": {
+    "article_id": "thanks-squarespace",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "the-big-blind": {
+    "article_id": "the-big-blind",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "the-big-combo": {
+    "article_id": "the-big-combo",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.160Z",
+    "bundle": true
+  },
+  "the-crooked-swerve": {
+    "article_id": "the-crooked-swerve",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-feast-of-defi-summer-is-over": {
+    "article_id": "the-feast-of-defi-summer-is-over",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-humpy-dance": {
+    "article_id": "the-humpy-dance",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-impersonator": {
+    "article_id": "the-impersonator",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-one-that-got-away": {
+    "article_id": "the-one-that-got-away",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-return-of-cronje": {
+    "article_id": "the-return-of-cronje",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-second-layer": {
+    "article_id": "the-second-layer",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-unfinished-proof": {
+    "article_id": "the-unfinished-proof",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "the-wolf-of-rug-street": {
+    "article_id": "the-wolf-of-rug-street",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "theidolsnft-rekt": {
+    "article_id": "theidolsnft-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "thin-line-privacy": {
+    "article_id": "thin-line-privacy",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "thorchain-rekt": {
+    "article_id": "thorchain-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "thorchain-rekt2": {
+    "article_id": "thorchain-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "three-arrows": {
+    "article_id": "three-arrows",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "time-as-money": {
+    "article_id": "time-as-money",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "tmztribe-rekt": {
+    "article_id": "tmztribe-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "tomb-finance-rekt": {
+    "article_id": "tomb-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "tornado-gov-rekt": {
+    "article_id": "tornado-gov-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "trade-war-theater": {
+    "article_id": "trade-war-theater",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "tradfi-takeover": {
+    "article_id": "tradfi-takeover",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "transit-swap-rekt": {
+    "article_id": "transit-swap-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "trapped-between-protocols": {
+    "article_id": "trapped-between-protocols",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "treasure-dao-rekt": {
+    "article_id": "treasure-dao-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "trove-of-bs": {
+    "article_id": "trove-of-bs",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "truebit-rekt": {
+    "article_id": "truebit-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "truth-terminal-gone-wild": {
+    "article_id": "truth-terminal-gone-wild",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "ultravolatile": {
+    "article_id": "ultravolatile",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "under-the-armor": {
+    "article_id": "under-the-armor",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "under-the-influence": {
+    "article_id": "under-the-influence",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "unibot-rekt": {
+    "article_id": "unibot-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uniswap-flop-dharma-vote-stopped": {
+    "article_id": "uniswap-flop-dharma-vote-stopped",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uniswap-swindle-scammer-speaks-out": {
+    "article_id": "uniswap-swindle-scammer-speaks-out",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uniswap-v3-lp-rekt": {
+    "article_id": "uniswap-v3-lp-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "unizen-rekt": {
+    "article_id": "unizen-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "unusual-money": {
+    "article_id": "unusual-money",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uspd-rekt": {
+    "article_id": "uspd-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uwulend-rekt": {
+    "article_id": "uwulend-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "uxlink-rekt": {
+    "article_id": "uxlink-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "value-defi-rekt": {
+    "article_id": "value-defi-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "value-rekt2": {
+    "article_id": "value-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "value-rekt3": {
+    "article_id": "value-rekt3",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "veefinance-rekt": {
+    "article_id": "veefinance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "velocore-rekt": {
+    "article_id": "velocore-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "venus-blizz-rekt": {
+    "article_id": "venus-blizz-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "venus-protocol-rekt4": {
+    "article_id": "venus-protocol-rekt4",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "visor-finance-rekt": {
+    "article_id": "visor-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "vulcan-forged-rekt": {
+    "article_id": "vulcan-forged-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "war-on-code": {
+    "article_id": "war-on-code",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "warp-finance-rekt": {
+    "article_id": "warp-finance-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "wazirx-rekt": {
+    "article_id": "wazirx-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "we-have-centralization-issue": {
+    "article_id": "we-have-centralization-issue",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "whale-hunters-payday": {
+    "article_id": "whale-hunters-payday",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "whitehat-grayarea": {
+    "article_id": "whitehat-grayarea",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "window-of-opportunity": {
+    "article_id": "window-of-opportunity",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "winds-of-change": {
+    "article_id": "winds-of-change",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "winter-farming": {
+    "article_id": "winter-farming",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "wintermute-rekt-2": {
+    "article_id": "wintermute-rekt-2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "wintermute-rekt": {
+    "article_id": "wintermute-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "woo-rekt": {
+    "article_id": "woo-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "woox-rekt": {
+    "article_id": "woox-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "wormhole-rekt": {
+    "article_id": "wormhole-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "xtoken-rekt-x2": {
+    "article_id": "xtoken-rekt-x2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "xtoken-rekt": {
+    "article_id": "xtoken-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "ycredit-the-ape": {
+    "article_id": "ycredit-the-ape",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yearn-rekt": {
+    "article_id": "yearn-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yearn-rekt3": {
+    "article_id": "yearn-rekt3",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yearn-rekt4": {
+    "article_id": "yearn-rekt4",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yearn2-rekt": {
+    "article_id": "yearn2-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yieldblox-rekt": {
+    "article_id": "yieldblox-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "yo-protocols-slippage-bomb": {
+    "article_id": "yo-protocols-slippage-bomb",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "you-are-the-exit-liquidity": {
+    "article_id": "you-are-the-exit-liquidity",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zero-to-lend": {
+    "article_id": "zero-to-lend",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zkasino-rekt": {
+    "article_id": "zkasino-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zklend-rekt": {
+    "article_id": "zklend-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zoth-rekt": {
+    "article_id": "zoth-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zunami-protocol-rekt": {
+    "article_id": "zunami-protocol-rekt",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "zunami-protocol-rekt2": {
+    "article_id": "zunami-protocol-rekt2",
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "uploadedAt": "2026-04-04T23:15:10.161Z",
+    "bundle": true
+  },
+  "__bundle": {
+    "rootHash": "0x60c5b8e11a6a515362efd7e1e06995190a2b40084390e62951024d5d2f7379f7",
+    "txHash": "0x33758be1ddc09b9a67c1095ce0913601a17099c7eee054ab5331b84f4d3f75ce",
+    "submissionIndex": null,
+    "size": 572535,
+    "entries": 468,
+    "uploadedAt": "2026-04-04T23:15:10.161Z"
   }
 }

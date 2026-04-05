@@ -116,8 +116,8 @@ async function runAgentInference(
     const jsonMatch = finalAnswer.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       const p = JSON.parse(jsonMatch[0]);
-      verdict = p.approved === 1;
-      notes = p.notes || finalAnswer;
+      verdict = p.approved === 1 || p.approved === true || p.approve === 1 || p.approve === true;
+      notes = p.notes || p.note || finalAnswer;
     }
   } catch {
     verdict = false;
@@ -213,7 +213,7 @@ export async function POST(req: NextRequest) {
                 jsonrpc: "2.0",
                 method: "alchemy_simulateAssetChanges",
                 params: [{
-                  from: recipient,
+                  from: CONTRACTS.WETH,
                   to: uniQuote.tx.to,
                   value: simValue,
                   data: uniQuote.tx.data,
@@ -353,8 +353,8 @@ export async function POST(req: NextRequest) {
             const jsonMatch = inference.answer.match(/\{[\s\S]*\}/);
             if (jsonMatch) {
               const parsed = JSON.parse(jsonMatch[0]);
-              verdict = parsed.approved === 1;
-              notes = parsed.notes || inference.answer;
+              verdict = parsed.approved === 1 || parsed.approved === true || parsed.approve === 1 || parsed.approve === true;
+              notes = parsed.notes || parsed.note || inference.answer;
             }
           } catch {
             verdict = false;
